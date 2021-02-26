@@ -67,6 +67,15 @@ class SiteController extends Controller
         ];
     }
 
+    public function beforeAction($action)
+    {
+        $this->layout = 'v1';
+        if (!parent::beforeAction($action)) {
+            return false;
+        }
+        return true; // or false to not run the action
+    }
+
     /**
      * Displays homepage.
      *
@@ -84,6 +93,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = 'empty';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
