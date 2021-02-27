@@ -9,6 +9,7 @@ use yii\helpers\Url;
 use frontend\assets\AppAsset;
 
 AppAsset::register($this);
+$cdnUrl = Yii::$app->params['frontend'];
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -54,11 +55,11 @@ AppAsset::register($this);
                     <!--                    </li>-->
                     <?php if (Yii::$app->user->isGuest) : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="./site/login">Login</a>
+                            <a class="nav-link" href="<?= $cdnUrl ?>/site/login">Login</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="./site/login">Logout</a>
+                            <a class="nav-link" href="<?= $cdnUrl ?>/site/logout">Logout</a>
                         </li>
                     <?php endif; ?>
                 </ul>
