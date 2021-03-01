@@ -27,6 +27,28 @@ $cdnUrl = Yii::$app->params['frontend'];
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+    <div class="container-fluid pt-3 bg-danger">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <p class="mb-2">Xin chào! Đăng nhập hoặc đăng ký <a class="text-warning font-weight-bold" href="<?php echo $cdnUrl ?>/site/login" target="_blank" title="Đăng nhập"> tại đây</a></p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 text-right d-none d-sm-none d-md-block">
+                    <ul class="list-unstyled">
+                        <li class="d-inline text-white pl-2">
+                            <a class="text-warning font-weight-bold" href="<?php echo $cdnUrl ?>/#" target="_blank" title="Kiểm tra bảo hành">Kiểm tra bảo hành |</a>
+                        </li>
+                        <li class="d-inline text-white pl-2">
+                            <a class="text-warning font-weight-bold" href="<?php echo $cdnUrl ?>/#" target="_blank" title="Tuyển dụng">Tuyển dụng |</a>
+                        </li>
+                        <li class="d-inline text-white pl-2">
+                            <a class="text-warning font-weight-bold" href="<?php echo $cdnUrl ?>/#" target="_blank" title="Liên hệ">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container pt-3">
         <div class="row">
             <div class="col-12 col-sm-3 col-md-3 col-lg-3">
@@ -37,7 +59,7 @@ $cdnUrl = Yii::$app->params['frontend'];
             <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
                 <div class="row">
                     <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
-                        <i class="fas fa-house-user fa-3x"></i>
+                        <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
                     </div>
                     <div class="col-8 col-md-8 col-sm-8 col-lg-8 pl-0">
                         <h6>Thanh toán tại nhà</h6>
@@ -45,8 +67,28 @@ $cdnUrl = Yii::$app->params['frontend'];
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
+                <div class="row">
+                    <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
+                        <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
+                    </div>
+                    <div class="col-8 col-md-8 col-sm-8 col-lg-8 pl-0">
+                        <h6>Thanh toán tại nhà</h6>
+                        <p>Khu vực phía Bắc</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
+                <div class="row">
+                    <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
+                        <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
+                    </div>
+                    <div class="col-8 col-md-8 col-sm-8 col-lg-8 pl-0">
+                        <h6>Thanh toán tại nhà</h6>
+                        <p>Khu vực phía Bắc</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark bg-danger sticky-top py-0">
