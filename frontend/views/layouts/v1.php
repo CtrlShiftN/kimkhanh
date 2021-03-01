@@ -51,41 +51,56 @@ $cdnUrl = Yii::$app->params['frontend'];
     </div>
     <div class="container pt-3">
         <div class="row">
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="col-12 col-sm-2 col-md-2 col-lg-2">
                 <a class="navbar-brand" href="<?php echo Url::home() ?>" target="_blank" title="Trang chủ GoEnGroup">
                     <img src="<?php echo Url::base() . '/img/logo.png' ?>" alt="JobsGO" height="60px" width="170px">
                 </a>
             </div>
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
+            <div class="col-12 col-sm-10 col-md-10 col-lg-10 pr-0 pl-3">
                 <div class="row">
-                    <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
-                        <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
+                        <div class="row">
+                            <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
+                                <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
+                            </div>
+                            <div class="col-8 col-md-8 col-sm-8 col-lg-8 px-0">
+                                <h6>Vận chuyển thần tốc</h6>
+                                <p>Khu vực miền Bắc</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-8 col-md-8 col-sm-8 col-lg-8 pl-0">
-                        <h6>Thanh toán tại nhà</h6>
-                        <p>Khu vực phía Bắc</p>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
+                        <div class="row">
+                            <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
+                                <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
+                            </div>
+                            <div class="col-8 col-md-8 col-sm-8 col-lg-8 px-0">
+                                <h6>Chất lượng tuyệt vời</h6>
+                                <p>bảo hành miễn phí</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
-                <div class="row">
-                    <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
-                        <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
+                        <div class="row">
+                            <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
+                                <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
+                            </div>
+                            <div class="col-8 col-md-8 col-sm-8 col-lg-8 px-0">
+                                <h6>Support nhiệt tình</h6>
+                                <p>Hotline: 19001900</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-8 col-md-8 col-sm-8 col-lg-8 pl-0">
-                        <h6>Thanh toán tại nhà</h6>
-                        <p>Khu vực phía Bắc</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
-                <div class="row">
-                    <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
-                        <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
-                    </div>
-                    <div class="col-8 col-md-8 col-sm-8 col-lg-8 pl-0">
-                        <h6>Thanh toán tại nhà</h6>
-                        <p>Khu vực phía Bắc</p>
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
+                        <div class="row">
+                            <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
+                                <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
+                            </div>
+                            <div class="col-8 col-md-8 col-sm-8 col-lg-8 px-0">
+                                <h6>Hỗ trợ kỹ thuật</h6>
+                                <p>24/7 trừ ngày lễ, Tết</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
