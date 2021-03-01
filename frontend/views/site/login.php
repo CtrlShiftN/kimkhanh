@@ -70,10 +70,8 @@ $this->title = 'Login';
                 </div>
             </div>
             <?php ActiveForm::end(); ?>
-            <div class="text-center">
-                <div class="horizontal-line">
-                    <span class="bg-light">Do you already have an account?</span>
-                </div>
+            <div class="horizontal-line">
+                <span class="bg-light">Do you already have an account?</span>
             </div>
             <a href="<?= $cdnUrl ?>/site/signup" class="form-control btn btn-info">Signup</a>
         </div>
