@@ -14,6 +14,8 @@ $this->title = 'Signup';
 <style>
     .wrap {
         background-image: url('<?= $cdnUrl ?>/img/background-signup.jpg');
+        width: 100%;
+        height: auto;
         background-size: cover;
     }
 
@@ -31,7 +33,7 @@ $this->title = 'Signup';
     }
 </style>
 
-<div class="site-signup p-3 pt-4">
+<div class="site-signup p-3">
     <div class="row pt-5">
         <div class="col-lg-1"></div>
         <div class="col-lg-5 bg-light rounded p-3">
