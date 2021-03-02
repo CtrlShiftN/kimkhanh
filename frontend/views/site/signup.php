@@ -18,10 +18,6 @@ $this->title = 'Signup';
         height: auto;
     }
 
-    .wrap > .container {
-       padding: 70px 15px 20px;
-    }
-
     .horizontal-line {
         width: 100%;
         text-align: center;
@@ -37,7 +33,7 @@ $this->title = 'Signup';
 </style>
 
 <div class="site-signup">
-    <div class="row pt-5">
+    <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-5 bg-light rounded p-3">
             <h1>Đăng Kí</h1>
