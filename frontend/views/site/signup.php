@@ -43,19 +43,19 @@ $this->title = 'Signup';
                 <div class="mb-4">
                     <?php $form = ActiveForm::begin(); ?>
                     <?= $form->field($model, 'name')->textInput(['placeholder'=>'Nhập họ và tên'])->label(false) ?>
-                    <?= $form->field($model, 'email')->textInput()->label(false) ?>
-                    <?= $form->field($model, 'password')->passwordInput()->label(false) ?>
-                    <?= $form->field($model, 'tel')->textInput()->label(false) ?>
+                    <?= $form->field($model, 'email')->textInput(['placeholder'=>'Nhập email'])->label(false) ?>
+                    <?= $form->field($model, 'password')->passwordInput(['placeholder'=>'Mật khẩu'])->label(false) ?>
+                    <?= $form->field($model, 'tel')->textInput(['placeholder'=>'Nhập số điện thoại'])->label(false) ?>
                 </div>
                 <div class="form-group">
-                    <?= Html::submitButton(Yii::t('app', 'Signup'), ['class' => 'form-control btn btn-primary']) ?>
+                    <?= Html::submitButton(Yii::t('app', 'Đăng Kí'), ['class' => 'form-control btn btn-primary']) ?>
                 </div>
             </div>
             <?php ActiveForm::end(); ?>
             <div class="horizontal-line">
                 <span class="bg-light">Bạn Đã Có Tài Khoản?</span>
             </div>
-            <a href="<?= $cdnUrl ?>/site/login" class="form-control btn btn-info">Login</a>
+            <a href="<?= $cdnUrl ?>/site/login" class="form-control btn btn-info">Đăng Nhập</a>
         </div>
         <div class="col-lg-6"></div>
     </div>

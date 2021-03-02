@@ -32,8 +32,8 @@ $this->title = 'Login';
     }
 </style>
 
-<div class="site-login p-3">
-    <div class="row pt-5">
+<div class="site-login">
+    <div class="row">
         <div class="col-lg-7"></div>
         <div class="col-lg-5 bg-light p-3 rounded">
             <div>
@@ -52,20 +52,20 @@ $this->title = 'Login';
                 </div>
                 <div>
                     <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
-                    <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
-                    <?= $form->field($model, 'password')->passwordInput() ?>
+                    <?= $form->field($model, 'email')->textInput(['autofocus' => true, 'placeholder' => 'Nhập Email'])->label(false) ?>
+                    <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Nhập mật khẩu'])->label(false) ?>
                     <div class="float-left">
-                        <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                        <?= $form->field($model, 'rememberMe')->checkbox()->label('Nhớ mật khẩu') ?>
                     </div>
                     <div class="float-right">
-                        <?= Html::a('Forgot your password?', ['site/request-password-reset']) ?>
+                        <?= Html::a('Quên mật khẩu?', ['site/request-password-reset']) ?>
                     </div>
                     <br>
                     <div class="my-4">
-                        Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
+                        Cần email xác minh mới? <?= Html::a('Gửi lại', ['site/resend-verification-email']) ?>
                     </div>
                     <div class="form-group">
-                        <?= Html::submitButton('Login', ['class' => 'form-control btn btn-primary', 'name' => 'login-button']) ?>
+                        <?= Html::submitButton('Đăng Nhập', ['class' => 'form-control btn btn-primary', 'name' => 'login-button']) ?>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@ $this->title = 'Login';
             <div class="horizontal-line">
                 <span class="bg-light">Bạn Chưa Có Tài Khoản</span>
             </div>
-            <a href="<?= $cdnUrl ?>/site/signup" class="form-control btn btn-info">Signup</a>
+            <a href="<?= $cdnUrl ?>/site/signup" class="form-control btn btn-info">Đăng Kí</a>
         </div>
     </div>
 </div>
