@@ -38,7 +38,7 @@ $this->title = 'Login';
         <div class="col-lg-5 bg-light p-3 rounded">
             <div>
                 <div class="horizontal-line">
-                    <span class="bg-light">LOGIN WITH</span>
+                    <span class="bg-light">Đăng Nhập Với</span>
                 </div>
                 <div class="text-center">
                     <div class="mx-auto p-1">
@@ -48,7 +48,7 @@ $this->title = 'Login';
                     </div>
                 </div>
                 <div class="horizontal-line">
-                    <span class="bg-light">OR</span>
+                    <span class="bg-light">Hoặc</span>
                 </div>
                 <div>
                     <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
@@ -61,7 +61,7 @@ $this->title = 'Login';
                         <?= Html::a('Forgot your password?', ['site/request-password-reset']) ?>
                     </div>
                     <br>
-                    <div class="mt-4 mb-3">
+                    <div class="my-4">
                         Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
                     </div>
                     <div class="form-group">
@@ -71,7 +71,7 @@ $this->title = 'Login';
             </div>
             <?php ActiveForm::end(); ?>
             <div class="horizontal-line">
-                <span class="bg-light">Do you already have an account?</span>
+                <span class="bg-light">Bạn Chưa Có Tài Khoản</span>
             </div>
             <a href="<?= $cdnUrl ?>/site/signup" class="form-control btn btn-info">Signup</a>
         </div>
