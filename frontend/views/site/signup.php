@@ -16,7 +16,10 @@ $this->title = 'Signup';
         background-image: url('<?= $cdnUrl ?>/img/background-signup.jpg');
         width: 100%;
         height: auto;
-        background-size: cover;
+    }
+
+    .wrap > .container {
+       padding: 70px 15px 20px;
     }
 
     .horizontal-line {
@@ -33,7 +36,7 @@ $this->title = 'Signup';
     }
 </style>
 
-<div class="site-signup p-3">
+<div class="site-signup">
     <div class="row pt-5">
         <div class="col-lg-1"></div>
         <div class="col-lg-5 bg-light rounded p-3">
