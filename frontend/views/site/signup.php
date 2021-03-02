@@ -42,10 +42,10 @@ $this->title = 'Signup';
             <div class="mx-auto">
                 <div class="mb-4">
                     <?php $form = ActiveForm::begin(); ?>
-                    <?= $form->field($model, 'name') ?>
-                    <?= $form->field($model, 'email') ?>
-                    <?= $form->field($model, 'password') ?>
-                    <?= $form->field($model, 'tel') ?>
+                    <?= $form->field($model, 'name')->textInput(['placeholder'=>'Nhập họ và tên'])->label(false) ?>
+                    <?= $form->field($model, 'email')->textInput()->label(false) ?>
+                    <?= $form->field($model, 'password')->passwordInput()->label(false) ?>
+                    <?= $form->field($model, 'tel')->textInput()->label(false) ?>
                 </div>
                 <div class="form-group">
                     <?= Html::submitButton(Yii::t('app', 'Signup'), ['class' => 'form-control btn btn-primary']) ?>
