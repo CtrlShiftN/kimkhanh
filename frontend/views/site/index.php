@@ -489,47 +489,47 @@ $this->title = 'Kim Khánh Group';
         <h2 class="text-light text-center col-12 p-5">Hãy cho chúng tôi biết nhu cầu bảo mật của bạn</h2>
         <form>
             <div class="row">
-                <h4 class="col-12 text-light">Interested In:</h4>
+                <h4 class="col-12 text-light">Lựa chọn của bạn:</h4>
                 <div class="row m-0 p-3 h5">
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <label class="form-check-label" for="exampleCheck1">Bảo mật video</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
                         <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                        <label class="form-check-label" for="exampleCheck2">Check me out</label>
+                        <label class="form-check-label" for="exampleCheck2">Kiểm soát truy cập</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
                         <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                        <label class="form-check-label" for="exampleCheck3">Check me out</label>
+                        <label class="form-check-label" for="exampleCheck3">Kiểm soát ra vào</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
                         <input type="checkbox" class="form-check-input" id="exampleCheck4">
-                        <label class="form-check-label" for="exampleCheck4">Check me out</label>
+                        <label class="form-check-label" for="exampleCheck4">Ghi lại chuyển động</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
                         <input type="checkbox" class="form-check-input" id="exampleCheck5">
-                        <label class="form-check-label" for="exampleCheck5">Check me out</label>
+                        <label class="form-check-label" for="exampleCheck5">VideoIP</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck6">
-                        <label class="form-check-label" for="exampleCheck6">Check me out</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Bảo mật video</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck7">
-                        <label class="form-check-label" for="exampleCheck7">Check me out</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                        <label class="form-check-label" for="exampleCheck2">Kiểm soát truy cập</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck8">
-                        <label class="form-check-label" for="exampleCheck8">Check me out</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                        <label class="form-check-label" for="exampleCheck3">Kiểm soát ra vào</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck9">
-                        <label class="form-check-label" for="exampleCheck9">Check me out</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                        <label class="form-check-label" for="exampleCheck4">Ghi lại chuyển động</label>
                     </div>
                     <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck10">
-                        <label class="form-check-label" for="exampleCheck10">Check me out</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck5">
+                        <label class="form-check-label" for="exampleCheck5">VideoIP</label>
                     </div>
                 </div>
                 <div class="col-12"></div>
