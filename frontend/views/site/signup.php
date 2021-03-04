@@ -14,8 +14,10 @@ $this->title = 'Signup';
 <style>
     .wrap {
         background-image: url('<?= $cdnUrl ?>/img/background-signup.jpg');
-        width: 100%;
-        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
     }
 
     .horizontal-line {
@@ -34,7 +36,6 @@ $this->title = 'Signup';
 
 <div class="site-signup">
     <div class="row">
-        <div class="col-lg-1"></div>
         <div class="col-lg-5 bg-light rounded p-3">
             <h1>Đăng Kí</h1>
             <p>Vui lòng điền vào biểu mẫu này để tạo một tài khoản? </p>
@@ -57,6 +58,5 @@ $this->title = 'Signup';
             </div>
             <a href="<?= $cdnUrl ?>/site/login" class="form-control btn btn-info">Đăng Nhập</a>
         </div>
-        <div class="col-lg-6"></div>
     </div>
 </div><!-- site-signup -->
