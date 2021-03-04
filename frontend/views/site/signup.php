@@ -19,19 +19,6 @@ $this->title = 'Signup';
         background-size: cover;
         height: 100%;
     }
-
-    .horizontal-line {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #C0C0C0;
-        line-height: 0.1em;
-        margin: 10px 0 20px;
-    }
-
-    .horizontal-line span {
-        background: #fff;
-        padding: 0 10px;
-    }
 </style>
 
 <div class="site-signup">
@@ -43,10 +30,10 @@ $this->title = 'Signup';
             <div class="mx-auto">
                 <div class="mb-4">
                     <?php $form = ActiveForm::begin(); ?>
-                    <?= $form->field($model, 'name')->textInput(['placeholder'=>'Nhập họ và tên'])->label(false) ?>
-                    <?= $form->field($model, 'email')->textInput(['placeholder'=>'Nhập email'])->label(false) ?>
-                    <?= $form->field($model, 'password')->passwordInput(['placeholder'=>'Mật khẩu'])->label(false) ?>
-                    <?= $form->field($model, 'tel')->textInput(['placeholder'=>'Nhập số điện thoại'])->label(false) ?>
+                    <?= $form->field($model, 'name')->textInput(['placeholder' => 'Nhập họ và tên'])->label(false) ?>
+                    <?= $form->field($model, 'email')->textInput(['placeholder' => 'Nhập email'])->label(false) ?>
+                    <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Mật khẩu'])->label(false) ?>
+                    <?= $form->field($model, 'tel')->textInput(['placeholder' => 'Nhập số điện thoại'])->label(false) ?>
                 </div>
                 <div class="form-group">
                     <?= Html::submitButton(Yii::t('app', 'Đăng Kí'), ['class' => 'form-control btn btn-primary']) ?>
