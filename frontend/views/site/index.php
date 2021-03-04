@@ -9,11 +9,17 @@ $this->title = 'Kim Khánh Group';
     .wrap > .container {
         padding: 0 15px 20px;
     }
+
+    #v-pills-tab .active {
+        background: #dc3545 !important;
+    }
+
     .full-width {
         width: 100vw;
         margin-left: -50vw;
-        left: 50%;
+        left: 49%;
     }
+
     .bottom {
         bottom: 0;
     }
@@ -45,7 +51,7 @@ $this->title = 'Kim Khánh Group';
 </style>
 
 <div class="site-index row">
-<!--    Carouel -->
+    <!--    Carouel -->
     <div id="carouselExampleControls" class=" carousel slide full-width" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -96,7 +102,8 @@ $this->title = 'Kim Khánh Group';
             </div>
             <div class="col-lg-9">
                 <p class="font-weight-bold">Hệ thống bệnh viện</p>
-                <p class="text-muted">Nhằm quản lý, giám sát, tạo thêm lòng tin cho bệnh nhân khi đặt chân đến bệnh viện.</p>
+                <p class="text-muted">Nhằm quản lý, giám sát, tạo thêm lòng tin cho bệnh nhân khi đặt chân đến bệnh
+                    viện.</p>
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
@@ -136,7 +143,8 @@ $this->title = 'Kim Khánh Group';
             </div>
             <div class="col-lg-9">
                 <p class="font-weight-bold">Giám sát chuyến đi</p>
-                <p class="text-muted">Camera hành trình giúp bạn ghi lại mọi sự kiện trên đường đi , đảm bảo rõ ràng , chi tiết</p>
+                <p class="text-muted">Camera hành trình giúp bạn ghi lại mọi sự kiện trên đường đi , đảm bảo rõ ràng ,
+                    chi tiết</p>
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
@@ -146,7 +154,8 @@ $this->title = 'Kim Khánh Group';
             </div>
             <div class="col-lg-9">
                 <p class="font-weight-bold">Hệ thống công sở</p>
-                <p class="text-muted">Quản lý công sở , chung cư một cách chi tiết, rõ ràng, lắp đặt được ở nhiều vị trí và góc nhìn.</p>
+                <p class="text-muted">Quản lý công sở , chung cư một cách chi tiết, rõ ràng, lắp đặt được ở nhiều vị trí
+                    và góc nhìn.</p>
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
@@ -156,7 +165,8 @@ $this->title = 'Kim Khánh Group';
             </div>
             <div class="col-lg-9">
                 <p class="font-weight-bold">Truyền thông và viễn thông</p>
-                <p class="text-muted">Lắp đặt dịch vụ truyền thông và viễn thông, đảm bảo chất lượng hình ảnh và âm thanh.</p>
+                <p class="text-muted">Lắp đặt dịch vụ truyền thông và viễn thông, đảm bảo chất lượng hình ảnh và âm
+                    thanh.</p>
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
@@ -184,7 +194,9 @@ $this->title = 'Kim Khánh Group';
                 </div>
                 <div class="col-lg-9">
                     <p class="font-weight-bold">Tiết kiệm</p>
-                    <p class="text-muted">Chính sách ưu đãi và khuyến mại cực tốt cho mọi khách <hàng class=""></hàng></p>
+                    <p class="text-muted">Chính sách ưu đãi và khuyến mại cực tốt cho mọi khách
+                        <hàng class=""></hàng>
+                    </p>
                 </div>
             </div>
             <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
@@ -208,32 +220,41 @@ $this->title = 'Kim Khánh Group';
         </div>
     </div>
     <!--    Our Best Features-->
-    <div class="row m-0 p-5">
+    <div class="row m-0 p-5 w-100">
         <h2 class="col-12 p-5 text-danger text-center">Chức năng tốt nhất </h2>
-        <div class="col-3">
+        <div class="col-lg-3">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                   aria-controls="v-pills-home" aria-selected="true">Home</a>
+                   aria-controls="v-pills-home" aria-selected="true">
+                    <i class="fas fa-camera"></i> Lắp đặt camera an toàn
+                </a>
                 <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                   aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                   aria-controls="v-pills-profile" aria-selected="false">
+                    <i class="fas fa-desktop"></i> Hệ thống màn hình
+                </a>
                 <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-                   aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                   aria-controls="v-pills-messages" aria-selected="false">
+                    <i class="fas fa-user-shield"></i> Bảo mật chống trộm
+                </a>
                 <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
-                   aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                   aria-controls="v-pills-settings" aria-selected="false">
+                    <i class="fas fa-brain"></i>Hệ thống thông minh
+                </a>
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-lg-9">
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                      aria-labelledby="v-pills-home-tab">
+                    Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
                     <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button"
+                                    <button class="btn  btn-block text-left" type="button"
                                             data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                                             aria-controls="collapseOne">
-                                        Collapsible Group Item #1
+                                        Camera 3G ,4G
                                     </button>
                                 </h2>
                             </div>
@@ -241,46 +262,42 @@ $this->title = 'Kim Khánh Group';
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                  data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Some placeholder content for the first accordion panel. This panel is shown by
-                                    default, thanks to the <code>.show</code> class.
+                                    Giới thiệu camera 3G ,4G .
                                 </div>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    <button class="btn  btn-block text-left collapsed" type="button"
                                             data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                                             aria-controls="collapseTwo">
-                                        Collapsible Group Item #2
+                                        Camera HVR
                                     </button>
                                 </h2>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                  data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Some placeholder content for the second accordion panel. This panel is hidden by
-                                    default.
+                                    Giới thiệu camera HVR
                                 </div>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-header" id="headingThree">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    <button class="btn  btn-block text-left collapsed" type="button"
                                             data-toggle="collapse" data-target="#collapseThree"
                                             aria-expanded="false"
                                             aria-controls="collapseThree">
-                                        Collapsible Group Item #3
+                                        Camera Wifi
                                     </button>
                                 </h2>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                  data-parent="#accordionExample">
                                 <div class="card-body">
-                                    And lastly, the placeholder content for the third and final accordion panel.
-                                    This
-                                    panel is hidden by default.
+                                    Giới thiệu camera Wifi
                                 </div>
                             </div>
                         </div>
@@ -288,15 +305,26 @@ $this->title = 'Kim Khánh Group';
                 </div>
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                      aria-labelledby="v-pills-profile-tab">
-                    ...
+                    Hệ thống màn hình luôn được chú trọng giúp quản lý hình ảnh từ camera chất lượng hơn . <br>Chúng tôi
+                    tự hào là đon vị đi đầu trong việc đầu tư màn hình cho thiết bị giám sát
                 </div>
                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                      aria-labelledby="v-pills-messages-tab">
-                    ...
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </div>
                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                      aria-labelledby="v-pills-settings-tab">
-                    ...
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </div>
             </div>
         </div>
@@ -334,7 +362,7 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
             <h2 class="col-12 text-center text-light">
-               Bạn cần tư vấn thêm , gãy gọi cho chúng tôi: <span class="text-danger">(00) 1234567890</span>
+                Bạn cần tư vấn thêm , gãy gọi cho chúng tôi: <span class="text-danger">(00) 1234567890</span>
             </h2>
         </div>
     </div>
@@ -535,7 +563,8 @@ $this->title = 'Kim Khánh Group';
                     Phản hồi từ khách hàng
                 </h4>
                 <h4 class="font-weight-light">
-                    <q><i>Chất lượng camera rất tốt, đảm bảo hình ảnh không bị mờ , âm thanh tuyệt vời .Ngoài ra đội ngũ hỗ trợ cũng rất nhiệt tình.</i></q>
+                    <q><i>Chất lượng camera rất tốt, đảm bảo hình ảnh không bị mờ , âm thanh tuyệt vời .Ngoài ra đội ngũ
+                            hỗ trợ cũng rất nhiệt tình.</i></q>
                 </h4>
                 <h5>
                     Steve AustinManaging- <span class="text-danger">Đạo diễn</span>
@@ -586,9 +615,9 @@ $this->title = 'Kim Khánh Group';
         <button class="btn btn-secondary align-self-center">Gửi phản hồi</button>
     </div>
     <!--    Companies We Have as Clients-->
-    <div class="row p-5">
+    <div class="row p-5 text-muted">
         <h2 class="text-danger text-center col-12 p-5">Đối tác của chúng tôi</h2>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left ">
+        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border ">
             <div class="col-lg-3">
                 <i class="fas fa-user-shield h4"></i>
             </div>
@@ -596,7 +625,7 @@ $this->title = 'Kim Khánh Group';
                 <h5 class="font-weight-light">Công ty ABC</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left ">
+        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
             <div class="col-lg-3">
                 <i class="fas fa-user-shield h4"></i>
             </div>
@@ -604,7 +633,7 @@ $this->title = 'Kim Khánh Group';
                 <h5 class="font-weight-light">Công ty ABC</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left ">
+        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
             <div class="col-lg-3">
                 <i class="fas fa-user-shield h4"></i>
             </div>
@@ -612,7 +641,7 @@ $this->title = 'Kim Khánh Group';
                 <h5 class="font-weight-light">Công ty ABC</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left ">
+        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
             <div class="col-lg-3">
                 <i class="fas fa-user-shield h4"></i>
             </div>
@@ -620,7 +649,7 @@ $this->title = 'Kim Khánh Group';
                 <h5 class="font-weight-light">Công ty ABC</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left ">
+        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
             <div class="col-lg-3">
                 <i class="fas fa-user-shield h4"></i>
             </div>
@@ -628,7 +657,7 @@ $this->title = 'Kim Khánh Group';
                 <h5 class="font-weight-light">Công ty ABC</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left ">
+        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
             <div class="col-lg-3">
                 <i class="fas fa-user-shield h4"></i>
             </div>
@@ -636,7 +665,7 @@ $this->title = 'Kim Khánh Group';
                 <h5 class="font-weight-light">Công ty ABC</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left ">
+        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
             <div class="col-lg-3">
                 <i class="fas fa-user-shield h4"></i>
             </div>
@@ -644,7 +673,7 @@ $this->title = 'Kim Khánh Group';
                 <h5 class="font-weight-light">Công ty ABC</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left ">
+        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
             <div class="col-lg-3">
                 <i class="fas fa-user-shield h4"></i>
             </div>
