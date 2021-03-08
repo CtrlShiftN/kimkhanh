@@ -36,7 +36,7 @@ $this->title = 'Signup';
                     <?= $form->field($model, 'tel')->textInput(['placeholder' => 'Nhập số điện thoại'])->label(false) ?>
                 </div>
                 <div class="form-group">
-                    <?= Html::submitButton(Yii::t('app', 'Đăng Kí'), ['class' => 'form-control btn btn-primary']) ?>
+                    <?= Html::submitButton(Yii::t('app', 'Đăng Ký'), ['class' => 'form-control btn btn-primary']) ?>
                 </div>
             </div>
             <?php ActiveForm::end(); ?>
