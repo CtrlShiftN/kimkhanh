@@ -45,9 +45,9 @@ $this->title = 'Login';
             </div>
             <div class="text-white text-center">
                 <div class="row mx-auto">
-                    <div class="col-xs-4 pr-0"><a class=" btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a></div>
-                    <div class="col-xs-4 pr-0"><a class="px-3 btn btn-danger"><i class="fab fa-google"></i> Google</a></div>
-                    <div class="col-xs-4"><a class="px-3 btn btn-success"><i class="fas fa-phone"></i> Phone</a></div>
+                    <div class="col-xs-4"><a class="col-11 btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a></div>
+                    <div class="col-xs-4"><a class="col-11 px-3 btn btn-danger"><i class="fab fa-google"></i> Google</a></div>
+                    <div class="col-xs-4"><a class="col-11 px-3 btn btn-success"><i class="fas fa-phone"></i> Phone</a></div>
                 </div>
             </div>
             <div class="horizontal-line">
