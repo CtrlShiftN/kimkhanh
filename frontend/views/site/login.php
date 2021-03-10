@@ -17,9 +17,7 @@ $this->title = 'Login';
         background-image: url('<?= $cdnUrl ?>/img/background2.jpg');
         background-size: cover;
     }
-
-
-
+    
     .horizontal-line {
         width: 100%;
         text-align: center;
