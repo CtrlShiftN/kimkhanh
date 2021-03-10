@@ -18,18 +18,6 @@ $this->title = 'Login';
         background-size: cover;
     }
     
-    .horizontal-line {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #C0C0C0;
-        line-height: 0.1em;
-        margin: 10px 0 20px;
-    }
-
-    .horizontal-line span {
-        background: #fff;
-        padding: 0 10px;
-    }
 </style>
 
 <div class="site-login">
