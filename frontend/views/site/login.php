@@ -18,9 +18,7 @@ $this->title = 'Login';
         background-size: cover;
     }
 
-    .col-xs-4 {
-        width: 33.33333333%;
-    }
+
 
     .horizontal-line {
         width: 100%;
@@ -45,9 +43,9 @@ $this->title = 'Login';
             </div>
             <div class="text-white text-center">
                 <div class="row mx-auto">
-                    <div class="col-xs-4"><a class="col-11 btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a></div>
-                    <div class="col-xs-4"><a class="col-11 px-3 btn btn-danger"><i class="fab fa-google"></i> Google</a></div>
-                    <div class="col-xs-4"><a class="col-11 px-3 btn btn-success"><i class="fas fa-phone"></i> Phone</a></div>
+                    <div class="col-md-4 col-lg-4 col-sm-4 py-2"><a class="col-12 btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a></div>
+                    <div class="col-md-4 col-lg-4 col-sm-4 py-2"><a class="col-12 btn btn-danger"><i class="fab fa-google"></i> Google</a></div>
+                    <div class="col-md-4 col-lg-4 col-sm-4 py-2"><a class="col-12 btn btn-success"><i class="fas fa-phone"></i> Phone</a></div>
                 </div>
             </div>
             <div class="horizontal-line">
