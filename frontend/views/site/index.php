@@ -484,130 +484,68 @@ $this->title = 'Kim Khánh Group';
 
         </div>
     </div>
-    <!--    Tell Your Security Needs-->
-    <div class="row p-5 form-background">
-        <h2 class="text-light text-center col-12 p-5">Hãy cho chúng tôi biết nhu cầu bảo mật của bạn</h2>
-        <form>
-            <div class="row">
-                <h4 class="col-12 text-light">Lựa chọn của bạn:</h4>
-                <div class="row m-0 p-3 h5">
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Bảo mật video</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                        <label class="form-check-label" for="exampleCheck2">Kiểm soát truy cập</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                        <label class="form-check-label" for="exampleCheck3">Kiểm soát ra vào</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck4">
-                        <label class="form-check-label" for="exampleCheck4">Ghi lại chuyển động</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck5">
-                        <label class="form-check-label" for="exampleCheck5">VideoIP</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Bảo mật video</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                        <label class="form-check-label" for="exampleCheck2">Kiểm soát truy cập</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                        <label class="form-check-label" for="exampleCheck3">Kiểm soát ra vào</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck4">
-                        <label class="form-check-label" for="exampleCheck4">Ghi lại chuyển động</label>
-                    </div>
-                    <div class="form-check text-light col-lg-3 col-md-6 col-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck5">
-                        <label class="form-check-label" for="exampleCheck5">VideoIP</label>
-                    </div>
-                </div>
-                <div class="col-12"></div>
-                <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" placeholder="Tên của bạn">
-                </div>
-                <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" placeholder="Địa chỉ email">
-                </div>
-                <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" placeholder="Số điện thoại">
-                </div>
-                <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" placeholder="Tên công ty">
-                </div>
-                <div class="form-group col-12">
-                    <textarea type="text" class="form-control" name="custommer-address"
-                              placeholder="Lời nhắn"></textarea>
-                </div>
-            </div>
-            <div class="text-right">
-                <button type="submit" class="btn bg-white">Gửi đi</button>
-            </div>
-        </form>
-    </div>
     <!--    Hear from our clients-->
-    <div class="row p-5 justify-content-between align-items-center">
-        <div class="col-lg-6 p-lg-5 ">
-            <div class="p-lg-3 bg-dark text-center text-light border-danger border-right ">
-                <h4 class=" p-3 font-weight-bold border-bottom border-danger">
-                    Phản hồi từ khách hàng
-                </h4>
-                <h4 class="font-weight-light">
-                    <q><i>Chất lượng camera rất tốt, đảm bảo hình ảnh không bị mờ , âm thanh tuyệt vời .Ngoài ra đội ngũ
-                            hỗ trợ cũng rất nhiệt tình.</i></q>
-                </h4>
-                <h5>
-                    Steve AustinManaging- <span class="text-danger">Đạo diễn</span>
-                </h5>
+    <div class="p-5 text-danger text-center m-auto">
+        <h2>Phản hồi của khách hàng</h2>
+    </div>
+    <div class="row p-5 m-0 bg-light border-danger border">
+        <div class="col-lg-4 col-12">
+            <div class="card d-flex mx-auto">
+                <div class="card-image"><img class="img-fluid d-flex mx-auto" src="<?=$cdnUrl?>/img/introduction/client-01.jpg">
+                </div>
+                <div class="card-text p-3">
+                    <div class="h2 text-danger">Tuyệt vời</div>
+                    <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                        độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
+                        chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
+                        nhiều chế độ căn chỉnh nổi bật</p>
+                </div>
+                <div class="p-3 bg-danger text-white text-center">
+                    <h3 id="name">Micheal SmitH</h3>
+                    <p>Đạo diễn</p>
+                </div>
             </div>
         </div>
-        <div class="col-lg-6 row">
-            <div class="col-lg-3 col-md-6 col-12 row m-0 rounded text-center p-2">
-                <img class="w-100"
-                     src="<?= $cdnUrl ?>/img/introduction/client.jpg">
+        <div class="col-lg-4 col-12">
+            <div class="card d-flex mx-auto">
+                <div class="card-image"><img class="img-fluid d-flex mx-auto" src="<?=$cdnUrl?>/img/introduction/client-02.jpg">
+                </div>
+                <div class="card-text p-3">
+                    <div class="h2 text-danger">Trên cả hoàn hảo</div>
+                    <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                        độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
+                        chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
+                        nhiều chế độ căn chỉnh nổi bật</p>
+                </div>
+                <div class="p-3 bg-danger text-white text-center">
+                    <h3 id="name">Samama Ader</h3>
+                    <p>Chủ Shop</p>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 row m-0 rounded text-center p-2">
-                <img class="w-100"
-                     src="<?= $cdnUrl ?>/img/introduction/client.jpg">
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="card d-flex mx-auto">
+                <div class="card-image"><img class="img-fluid d-flex mx-auto" src="<?=$cdnUrl?>/img/introduction/client-03.jpg"">
+                </div>
+                <div class="card-text p-3">
+                    <div class="h2 text-danger">Rất hài lòng</div>
+                    <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                        độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
+                        chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
+                        nhiều chế độ căn chỉnh nổi bật</p>
+                </div>
+                <div class="p-3 bg-danger text-white text-center">
+                    <h3 id="name">Nami Oala</h3>
+                    <p>Streamer</p>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 row m-0 rounded text-center p-2">
-                <img class="w-100"
-                     src="<?= $cdnUrl ?>/img/introduction/client.jpg">
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 row m-0 rounded text-center p-2">
-                <img class="w-100"
-                     src="<?= $cdnUrl ?>/img/introduction/client.jpg">
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 row m-0 rounded text-center p-2">
-                <img class="w-100"
-                     src="<?= $cdnUrl ?>/img/introduction/client.jpg">
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 row m-0 rounded text-center p-2">
-                <img class="w-100"
-                     src="<?= $cdnUrl ?>/img/introduction/client.jpg">
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 row m-0 rounded text-center p-2">
-                <img class="w-100"
-                     src="<?= $cdnUrl ?>/img/introduction/client.jpg">
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 row m-0 rounded text-center p-2">
-                <img class="w-100"
-                     src="<?= $cdnUrl ?>/img/introduction/client.jpg">
-            </div>
+        </div>
+        <div class="mx-auto mt-5">
+            <button class="btn btn-danger">Xem thêm phản hồi</button>
         </div>
     </div>
     <!--    Have any ideas in your mind?-->
-    <div class="p-5 row col-12 justify-content-between align-self-center bg-danger">
+    <div class="p-5 row m-0 col-12 justify-content-between align-self-center bg-danger">
         <div>
             <h4>Bạn có ý kiến như thế nào ?</h4>
             <h3 class="text-light">Hãy cho chúng tôi biết nhé !</h3>
