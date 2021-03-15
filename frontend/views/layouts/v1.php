@@ -27,82 +27,38 @@ $cdnUrl = Yii::$app->params['frontend'];
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <div class="container-fluid pt-3 bg-danger">
+    <div class="container-fluid bg-danger">
         <div class="container text-white">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-6">
-                    <p class="mb-2">Xin chào! Đăng nhập hoặc đăng ký <a class="text-warning font-weight-bold" href="<?php echo $cdnUrl ?>/site/login" target="_blank" title="Đăng nhập"> tại đây</a></p>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-3 py-2 px-0 bg-warning text-center font-weight-bold">
+                    <i class="far fa-clock"></i> <?= date('l, d F Y') ?>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6 text-right d-none d-sm-none d-md-block">
-                    <ul class="list-unstyled">
-                        <li class="d-inline text-white pl-2">
-                            <a class="text-warning font-weight-bold" href="<?php echo $cdnUrl ?>/#" target="_blank" title="Kiểm tra bảo hành">Kiểm tra bảo hành |</a>
-                        </li>
-                        <li class="d-inline text-white pl-2">
-                            <a class="text-warning font-weight-bold" href="<?php echo $cdnUrl ?>/#" target="_blank" title="Tuyển dụng">Tuyển dụng |</a>
-                        </li>
-                        <li class="d-inline text-white pl-2">
-                            <a class="text-warning font-weight-bold" href="<?php echo $cdnUrl ?>/#" target="_blank" title="Liên hệ">Liên hệ</a>
-                        </li>
-                    </ul>
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 px-0 py-2 text-center font-weight-bold">
+                    <div class="typewriter-text">Welcome to Kim Khanh's website!</div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-2 col-lg-2 px-0 text-center py-2 font-weight-bold">
+                    <a class="text-white" href="tel:555-555-5555"><i class="fas fa-headset"></i> 0908.090.503</a>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-2 px-0 text-center py-2 font-weight-bold">
+                    <a class="text-white" href="mailto:kimkhanh@gmail.com"><i class="fas fa-envelope"></i> kimkhanh@gmail.com</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="container pt-3">
         <div class="row">
-            <div class="col-12 col-sm-2 col-md-2 col-lg-2">
-                <a class="navbar-brand" href="<?php echo Url::home() ?>" target="_blank" title="Trang chủ GoEnGroup">
-                    <img src="<?php echo Url::base() . '/img/logo.png' ?>" alt="JobsGO" height="60px" width="170px">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 px-0 text-center pt-3 d-none d-sm-none d-md-block">
+                <a class="navbar-brand pt-0" href="<?php echo Url::home() ?>" target="_blank"
+                   title="Trang chủ GoEnGroup">
+                    <img class="img-fluid img-responsive" src="<?php echo Url::base() . '/img/logo.png' ?>"
+                         alt="JobsGO">
                 </a>
             </div>
-            <div class="col-12 col-sm-10 col-md-10 col-lg-10 pr-0 pl-3">
-                <div class="row">
-                    <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
-                        <div class="row">
-                            <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
-                                <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
-                            </div>
-                            <div class="col-8 col-md-8 col-sm-8 col-lg-8 px-0">
-                                <h6>Vận chuyển thần tốc</h6>
-                                <p>Khu vực miền Bắc</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
-                        <div class="row">
-                            <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
-                                <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
-                            </div>
-                            <div class="col-8 col-md-8 col-sm-8 col-lg-8 px-0">
-                                <h6>Chất lượng tuyệt vời</h6>
-                                <p>bảo hành miễn phí</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
-                        <div class="row">
-                            <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
-                                <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
-                            </div>
-                            <div class="col-8 col-md-8 col-sm-8 col-lg-8 px-0">
-                                <h6>Support nhiệt tình</h6>
-                                <p>Hotline: 19001900</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-3 col-md-3 col-lg-3 pt-2 pb-0">
-                        <div class="row">
-                            <div class="col-4 col-md-4 col-sm-4 col-lg-4 pr-0">
-                                <i class="fab fa-fort-awesome-alt fa-3x" style="color: #e51b23"></i>
-                            </div>
-                            <div class="col-8 col-md-8 col-sm-8 col-lg-8 px-0">
-                                <h6>Hỗ trợ kỹ thuật</h6>
-                                <p>24/7 trừ ngày lễ, Tết</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-12 col-sm-12 col-md-9 col-lg-9 px-0 text-center pl-3 pl-sm-0">
+                <a class="navbar-brand" href="<?php echo Url::home() ?>" target="_blank" title="Trang chủ GoEnGroup">
+                    <img class="img-fluid img-responsive" src="<?php echo Url::base() . '/img/khuyenmai.jpg' ?>"
+                         alt="JobsGO">
+                </a>
             </div>
         </div>
     </div>
@@ -150,8 +106,7 @@ $cdnUrl = Yii::$app->params['frontend'];
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        this is a footer
     </div>
 </footer>
 
