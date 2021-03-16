@@ -120,6 +120,7 @@ a.desc:after {
     margin-top: 0;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #fff3cd !important;
+.help-block-error{
+    color: red;
+    font-weight: bold;
 }
