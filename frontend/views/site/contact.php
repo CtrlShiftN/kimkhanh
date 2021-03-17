@@ -12,38 +12,7 @@ use yii\captcha\Captcha;
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<style>
-    a {
-        text-decoration: none !important;
-    }
-    #tel{
-        border: 1px solid #198754;
-        transition: 0.35s;
-    }
-    #gmail{
-        border: 1px solid #dc3545;
-        transition: 0.35s;
-    }
-    #fb{
-        border: 1px solid #0d6efd;
-        transition: 0.35s;
-    }
-    a:hover>#tel{
-        transform: scale(1.05,1.05);
-        border: 4px solid #198754;
-        box-shadow: 0 10px 10px 6px gray;
-    }
-    a:hover>#gmail{
-        transform: scale(1.05,1.05);
-        border: 4px solid #dc3545;
-        box-shadow: 0 10px 10px 6px gray;
-    }
-    a:hover>#fb{
-        transform: scale(1.05,1.05);
-        border: 4px solid #0d6efd;
-        box-shadow: 0 10px 10px 6px gray;
-    }
-</style>
+<link href="<?= $cdnUrl ?>/css/contact.css" rel="stylesheet" type="text/css">
 <div class="row shadow-lg">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.201257961549!2d105.7639463153368!3d21.04019029276296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b60773a811%3A0xe064604bcb54667f!2zMTI4IMSQxrDhu51uZyBI4buTIFTDuW5nIE3huq11LCBNYWkgROG7i2NoLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1615878737843!5m2!1svi!2s"
             width="100%" height="400px" style="border:0;padding:0;margin:0" allowfullscreen="" loading="lazy"></iframe>
