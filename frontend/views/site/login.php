@@ -48,9 +48,6 @@ $this->title = 'Login';
                     <?= Html::a('Quên mật khẩu?', ['site/request-password-reset']) ?>
                 </div>
                 <br>
-                <div class="my-4">
-                    Cần email xác minh mới? <?= Html::a('Gửi lại', ['site/resend-verification-email']) ?>
-                </div>
                 <div class="form-group">
                     <?= Html::submitButton('Đăng Nhập', ['class' => 'form-control btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
