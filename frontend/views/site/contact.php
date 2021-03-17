@@ -29,21 +29,21 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="float-start">
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-                <?= $form->field($model, 'name')->textInput(['autofocus' => true,])->label('Họ và tên')->textInput(['placeholder' => 'Nguyễn Văn A']) ?>
+                <?= $form->field($model, 'name')->textInput(['autofocus' => true],['placeholder' => 'Nguyễn Văn A'],) ?>
 
                 <div class="row">
                     <div class="col-6 col-sm-7 col-md-7 col-lg-6 col-xl-6">
-                        <?= $form->field($model, 'email')->label('Email')->textInput(['placeholder' => '123abc@gmail.com'],) ?>
+                        <?= $form->field($model, 'email')->textInput(['placeholder' => 'info@kimkhanh.vn'],) ?>
                     </div>
 
                     <div class="col-6 col-sm-5 col-md-5 col-lg-6 col-xl-6">
-                        <?= $form->field($model, 'phone')->label('Số điện thoại')->textInput(['placeholder' => '(+84)123456789'],) ?>
+                        <?= $form->field($model, 'phone')->textInput(['placeholder' => '(+84)123456789'],) ?>
                     </div>
                 </div>
 
-                <?= $form->field($model, 'subject')->label('Chủ đề')->textInput(['placeholder' => 'Bạn đang gặp vấn đề gì?']) ?>
+                <?= $form->field($model, 'subject')->textInput(['placeholder' => 'Bạn đang gặp vấn đề gì?']) ?>
 
-                <?= $form->field($model, 'body')->textarea(['rows' => 6])->label('Nội dung chi tiết') ?>
+                <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
                 <div class="form-group">
                     <?= Html::submitButton('Submit', ['class' => 'btn btn-success col-12', 'name' => 'contact-button']) ?>
