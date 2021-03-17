@@ -30,17 +30,23 @@ $cdnUrl = Yii::$app->params['frontend'];
     <div class="container-fluid bg-danger">
         <div class="container text-white">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-4 col-lg-3 py-2 px-0 bg-warning text-center font-weight-bold">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-3 px-0 bg-warning text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
                     <i class="far fa-clock"></i> <?= date('l, d F Y') ?>
                 </div>
-                <div class="col-12 col-sm-12 col-md-5 col-lg-5 px-0 py-2 text-center font-weight-bold">
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 px-0 text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
                     <div class="typewriter-text">Welcome to Kim Khanh's website!</div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-3 col-lg-4 px-0 pl-md-3 text-center text-lg-left py-2 font-weight-bold">
-                    <a class="text-white" href="tel:555-555-5555"><i class="fas fa-headset"></i> 0908.090.503</a>
-                    <br>
-                    <a class="text-white" href="mailto:kimkhanh@gmail.com"><i class="fas fa-envelope"></i>
-                        kimkhanh@gmail.com</a>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0">
+                            <a class="text-white" href="tel:555-555-5555"><i class="fas fa-headset"></i>
+                                0908.090.503</a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0">
+                            <a class="text-white" href="mailto:kimkhanh@gmail.com"><i class="fas fa-envelope"></i>
+                                kimkhanh@gmail.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +69,7 @@ $cdnUrl = Yii::$app->params['frontend'];
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-md navbar-dark bg-danger sticky-top py-0">
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger sticky-top py-1">
         <div class="container font-weight-bold">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,11 +91,11 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </a>
                         <ul class="dropdown-menu">
                             <!-- Camera -->
-                            <li><a class="dropdown-item" href="<?= $cdnUrl ?>/abc"> Camera &#9654 </a>
+                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/abc"><i class="fas fa-camera"></i> Camera &#9654 </a>
                                 <ul class="submenu dropdown-menu">
                                     <li><a class="dropdown-item" href=""> Third level 1</a></li>
                                     <li><a class="dropdown-item" href=""> Third level 2</a></li>
-                                    <li><a class="dropdown-item" href=""> Third level 3 &raquo </a>
+                                    <li><a class="dropdown-item" href=""> Third level 3 &#9654 </a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href=""> Fourth level 1</a></li>
                                             <li><a class="dropdown-item" href=""> Fourth level 2</a></li>
@@ -100,11 +106,11 @@ $cdnUrl = Yii::$app->params['frontend'];
                                 </ul>
                             </li>
                             <!-- Elevator -->
-                            <li><a class="dropdown-item" href="<?= $cdnUrl ?>/abc"> Elevator &#9654 </a>
+                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/abc"><i class="fas fa-hotel"></i> Thang máy &#9654 </a>
                                 <ul class="submenu dropdown-menu">
                                     <li><a class="dropdown-item" href=""> Third level 1</a></li>
                                     <li><a class="dropdown-item" href=""> Third level 2</a></li>
-                                    <li><a class="dropdown-item" href=""> Third level 3 &raquo </a>
+                                    <li><a class="dropdown-item" href=""> Third level 3 &#9654 </a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href=""> Fourth level 1</a></li>
                                             <li><a class="dropdown-item" href=""> Fourth level 2</a></li>
@@ -116,8 +122,50 @@ $cdnUrl = Yii::$app->params['frontend'];
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#"> First level 1 </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"> First level 2 </a></li>
+                    <!-- Support -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
+                           role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-compass"></i> Hỗ trợ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Recruit -->
+                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i
+                                            class="fas fa-globe-asia"></i>
+                                    Tuyển dụng</a></li>
+                            <!-- Software -->
+                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i
+                                            class="fas fa-download"></i>
+                                    Phần mềm</a></li>
+                            <!-- Tech support -->
+                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i class="fas fa-cogs"></i>
+                                    Hỗ trợ kỹ thuật</a></li>
+                            <!-- Contact -->
+                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/site/contact"><i
+                                            class="fas fa-globe-asia"></i>
+                                    Liên hệ</a></li>
+                        </ul>
+                    </li>
+                    <?php if (Yii::$app->user->isGuest) : ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="<?= $cdnUrl ?>/site/login">Login</a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="userDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hi, <?= Yii::$app->user->identity->name; ?>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="userDropdown">
+                                <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/user/profile"><i
+                                            class="fas fa-portrait"></i> Hồ sơ cá nhân</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/site/logout"><i
+                                            class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div> <!-- navbar-collapse.// -->
