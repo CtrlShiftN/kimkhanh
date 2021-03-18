@@ -171,6 +171,42 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
     </div>
+    <!--Best services -->
+    <div class="row m-0 bg-light w-100 p-5 my-lg-5">
+        <h2 class="col-12 text-center text-danger text-center p-5">Tối ưu sản phẩm</h2>
+        <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+            <div class="h1 text-center">
+                <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <div class="text-center font-weight-bold">
+                <div class="h2 text-uppercase">Tốc độ xử lý</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+            <div class="h1 text-center">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div class="text-center font-weight-bold">
+                <div class="h2 text-uppercase">Độ chính xác</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+            <div class="h1 text-center">
+                <i class="fas fa-unlock-alt"></i>
+            </div>
+            <div class="text-center font-weight-bold">
+                <div class="h2 text-uppercase">Tính bảo mật</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+            <div class="h1 text-center">
+                <i class="fas fa-photo-video"></i>
+            </div>
+            <div class="text-center font-weight-bold">
+                <div class="h2 text-uppercase">Hình ảnh</div>
+            </div>
+        </div>
+    </div>
     <!--    Reasons Why Should Choose Us?-->
     <div class="row  m-0 reason-background">
         <div class="col-lg-5 d-flex p-5 align-items-center">
@@ -195,7 +231,7 @@ $this->title = 'Kim Khánh Group';
                 <div class="col-lg-9">
                     <p class="font-weight-bold">Tiết kiệm</p>
                     <p class="text-muted">Chính sách ưu đãi và khuyến mại cực tốt cho mọi khách
-                        <hàng class=""></hàng>
+                        hàng
                     </p>
                 </div>
             </div>
@@ -220,88 +256,40 @@ $this->title = 'Kim Khánh Group';
         </div>
     </div>
     <!--    Our Best Features-->
-    <div class="row m-0 p-5 w-100">
-        <h2 class="col-12 p-5 text-danger text-center">Chức năng tốt nhất </h2>
-        <div class="col-lg-3">
+    <div class="row m-0 p-5 w-100 bg-danger">
+        <h2 class="col-12 p-5 text-white text-center">Chức năng tốt nhất </h2>
+        <div class="col-lg-3 bg-light p-3 rounded">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                   aria-controls="v-pills-home" aria-selected="true">
+                <div class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                     aria-controls="v-pills-home" aria-selected="true">
                     <i class="fas fa-camera"></i> Lắp đặt camera an toàn
-                </a>
-                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                   aria-controls="v-pills-profile" aria-selected="false">
+                </div>
+                <div class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                     aria-controls="v-pills-profile" aria-selected="false">
                     <i class="fas fa-desktop"></i> Hệ thống màn hình
-                </a>
-                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-                   aria-controls="v-pills-messages" aria-selected="false">
+                </div>
+                <div class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                     aria-controls="v-pills-messages" aria-selected="false">
                     <i class="fas fa-user-shield"></i> Bảo mật chống trộm
-                </a>
-                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
-                   aria-controls="v-pills-settings" aria-selected="false">
+                </div>
+                <div class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                     aria-controls="v-pills-settings" aria-selected="false">
                     <i class="fas fa-brain"></i>Hệ thống thông minh
-                </a>
+                </div>
             </div>
         </div>
-        <div class="col-lg-9">
-            <div class="tab-content" id="v-pills-tabContent">
+        <div class="col-lg-9 px-lg-1 px-0 py-lg-0 py-1 ">
+            <div class="tab-content bg-white h-100 p-5 rounded" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                      aria-labelledby="v-pills-home-tab">
                     Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn  btn-block text-left" type="button"
-                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                        Camera 3G ,4G
-                                    </button>
-                                </h2>
-                            </div>
+                    Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
+                    nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                    trộm cho chủ nhân biết và xử lý.
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                 data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Giới thiệu camera 3G ,4G .
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn  btn-block text-left collapsed" type="button"
-                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">
-                                        Camera HVR
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                 data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Giới thiệu camera HVR
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn  btn-block text-left collapsed" type="button"
-                                            data-toggle="collapse" data-target="#collapseThree"
-                                            aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                        Camera Wifi
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                 data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Giới thiệu camera Wifi
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
+                    chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
+                    thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
                 </div>
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                      aria-labelledby="v-pills-profile-tab">
@@ -367,7 +355,7 @@ $this->title = 'Kim Khánh Group';
         </div>
     </div>
     <!--    Our Product-->
-    <div class="row p-5">
+    <div class="row p-5 m-0">
         <h2 class="text-danger text-center col-12 p-5">Sản phẩm nổi bật</h2>
         <div class="col-lg-4 col-md-6 col-12 text-center p-3">
             <div class="bg-light p-3">
@@ -396,40 +384,18 @@ $this->title = 'Kim Khánh Group';
                 <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 text-center p-3">
-            <div class="bg-light p-3">
-                <p class="font-weight-bold ">
-                    <i>Thiết bị bảo mật (1)</i
-                </p>
-                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12 text-center p-3">
-            <div class="bg-light p-3">
-                <p class="font-weight-bold ">
-                    <i>Thiết bị điều khiển từ xa (1)</i
-                </p>
-                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12 text-center p-3">
-            <div class="bg-light p-3">
-                <p class="font-weight-bold ">
-                    <i>Thiết bị âm thanh (1)</i
-                </p>
-                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-            </div>
-        </div>
         <div class="col-12 text-center">
             <button class="btn btn-danger">Xem tất cả</button>
         </div>
     </div>
     <!--    Security Alarm System-->
-    <div class="row p-5 justify-content-lg-end security-backgorund m-0">
-        <div class="col-lg-6 p-3 overflow-auto bg-light  d-inline-block">
+    <div class="row p-5 security-backgorund m-0">
+        <div class="col-lg-6 d-none d-lg-block">
+            <div class="">
+                <img src="<?= $cdnUrl?>/img/introduction/protect-image.jpg" class="m-auto"/>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 p-3 overflow-auto bg-light  d-inline-block">
             <h2>Hệ thống báo động an ninh</h2>
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
                 felis,
@@ -448,7 +414,7 @@ $this->title = 'Kim Khánh Group';
         </div>
     </div>
     <!--    Security Solutions-->
-    <div class="row p-5">
+    <div class="row p-5 m-0">
         <h2 class="text-danger text-center col-12 p-5">Giải pháp bảo mật</h2>
         <div class="col-lg-4 p-3 ">
             <div class="position-relative">
@@ -491,52 +457,52 @@ $this->title = 'Kim Khánh Group';
     <div class="row p-5 m-0 bg-light border-danger border">
         <div class="col-lg-4 col-12">
             <div class="card d-flex mx-auto">
-                <div class="card-image"><img class="img-fluid d-flex mx-auto" src="<?=$cdnUrl?>/img/introduction/client-01.jpg">
-                </div>
-                <div class="card-text p-3">
-                    <div class="h2 text-danger">Tuyệt vời</div>
-                    <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
-                        độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
-                        chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
-                        nhiều chế độ căn chỉnh nổi bật</p>
+                <div class="card-image"><img class="img-fluid d-flex mx-auto"
+                                             src="<?= $cdnUrl ?>/img/introduction/client-01.jpg">
                 </div>
                 <div class="p-3 bg-danger text-white text-center">
                     <h3 id="name">Micheal SmitH</h3>
                     <p>Đạo diễn</p>
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-12">
-            <div class="card d-flex mx-auto">
-                <div class="card-image"><img class="img-fluid d-flex mx-auto" src="<?=$cdnUrl?>/img/introduction/client-02.jpg">
-                </div>
                 <div class="card-text p-3">
-                    <div class="h2 text-danger">Trên cả hoàn hảo</div>
                     <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
                         độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
                         chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
                         nhiều chế độ căn chỉnh nổi bật</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="card d-flex mx-auto">
+                <div class="card-image"><img class="img-fluid d-flex mx-auto"
+                                             src="<?= $cdnUrl ?>/img/introduction/client-02.jpg">
                 </div>
                 <div class="p-3 bg-danger text-white text-center">
                     <h3 id="name">Samama Ader</h3>
                     <p>Chủ Shop</p>
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-12">
-            <div class="card d-flex mx-auto">
-                <div class="card-image"><img class="img-fluid d-flex mx-auto" src="<?=$cdnUrl?>/img/introduction/client-03.jpg"">
-                </div>
                 <div class="card-text p-3">
-                    <div class="h2 text-danger">Rất hài lòng</div>
                     <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
                         độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
                         chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
                         nhiều chế độ căn chỉnh nổi bật</p>
                 </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="card d-flex mx-auto">
+                <div class="card-image"><img class="img-fluid d-flex mx-auto"
+                                             src="<?= $cdnUrl ?>/img/introduction/client-03.jpg"">
+                </div>
                 <div class="p-3 bg-danger text-white text-center">
                     <h3 id="name">Nami Oala</h3>
                     <p>Streamer</p>
+                </div>
+                <div class="card-text p-3">
+                    <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                        độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
+                        chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
+                        nhiều chế độ căn chỉnh nổi bật</p>
                 </div>
             </div>
         </div>
@@ -545,81 +511,92 @@ $this->title = 'Kim Khánh Group';
         </div>
     </div>
     <!--    Have any ideas in your mind?-->
-    <div class="p-5 row m-0 col-12 justify-content-between align-self-center bg-danger">
-        <div>
-            <h4>Bạn có ý kiến như thế nào ?</h4>
-            <h3 class="text-light">Hãy cho chúng tôi biết nhé !</h3>
+    <div class="text-center p-5 w-100 bg-danger text-white">
+        <div class="p-lg-5">
+            <p class="h1 text-uppercase">Đăng ký nhận thông tin mới nhất</p>
+            <p>Chúng tôi sẽ gửi email cho bạn mỗi khi có chương trình mới , email của bạn sẽ không bị công khai</p>
+            <form action="subcribe.php" method="post" class="px-lg-5">
+                <div class="input-group mb-3 rounded-0">
+                    <input type="email" class="form-control" placeholder="Email của bạn" required>
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary oswald text-uppercase" type="submit">Đăng ký</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <button class="btn btn-secondary align-self-center">Gửi phản hồi</button>
     </div>
     <!--    Companies We Have as Clients-->
-    <div class="row p-5 text-muted">
+    <div class="row m-0 py-5 text-muted">
         <h2 class="text-danger text-center col-12 p-5">Đối tác của chúng tôi</h2>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border ">
-            <div class="col-lg-3">
-                <i class="fas fa-user-shield h4"></i>
+        <div id="brand" class="carousel slide w-100" data-ride="carousel" >
+            <div class="carousel-inner">
+                <div class="carousel-item brand-md active">
+                    <div class="row inner-row">
+                        <div class="col-md-3 brand active">
+                            <img src="<?= $cdnUrl?>/img/brand/sony.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-3 brand">
+                            <img src="<?= $cdnUrl?>/img/brand/hitachi.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class=" col-md-3 brand">
+                            <img src="<?= $cdnUrl?>/img/brand/lg.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class=" col-md-3 brand">
+                            <img src="<?= $cdnUrl?>/img/brand/fpt.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item brand-md">
+                    <div class="row inner-row">
+                        <div class=" col-md-3 brand">
+                            <img src="<?= $cdnUrl?>/img/brand/hikvision.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class=" col-md-3 brand">
+                            <img src="<?= $cdnUrl?>/img/brand/samtech.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class=" col-md-3 brand">
+                            <img src="<?= $cdnUrl?>/img/brand/imou.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class=" col-md-3 brand">
+                            <img src="<?= $cdnUrl?>/img/brand/logitech.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-9">
-                <h5 class="font-weight-light">Công ty ABC</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
-            <div class="col-lg-3">
-                <i class="fas fa-user-shield h4"></i>
-            </div>
-            <div class="col-lg-9">
-                <h5 class="font-weight-light">Công ty ABC</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
-            <div class="col-lg-3">
-                <i class="fas fa-user-shield h4"></i>
-            </div>
-            <div class="col-lg-9">
-                <h5 class="font-weight-light">Công ty ABC</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
-            <div class="col-lg-3">
-                <i class="fas fa-user-shield h4"></i>
-            </div>
-            <div class="col-lg-9">
-                <h5 class="font-weight-light">Công ty ABC</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
-            <div class="col-lg-3">
-                <i class="fas fa-user-shield h4"></i>
-            </div>
-            <div class="col-lg-9">
-                <h5 class="font-weight-light">Công ty ABC</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
-            <div class="col-lg-3">
-                <i class="fas fa-user-shield h4"></i>
-            </div>
-            <div class="col-lg-9">
-                <h5 class="font-weight-light">Công ty ABC</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
-            <div class="col-lg-3">
-                <i class="fas fa-user-shield h4"></i>
-            </div>
-            <div class="col-lg-9">
-                <h5 class="font-weight-light">Công ty ABC</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-12 p-3 row m-0 text-center text-lg-left border">
-            <div class="col-lg-3">
-                <i class="fas fa-user-shield h4"></i>
-            </div>
-            <div class="col-lg-9">
-                <h5 class="font-weight-light">Công ty ABC</h5>
-            </div>
+            <a class="carousel-control-prev" href="#brand" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bg-danger rounded" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next " href="#brand" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bg-danger rounded" aria-hidden="false"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
     <!--    Padding bottom -->
     <div class="pb-5"></div>
+    <script>
+        $(window).resize(function() {
+           if( $(window).width() <= 768 ){
+               $('.brand').addClass('carousel-item');
+               $('.brand-md').removeClass('carousel-item');
+               $('.brand-md').removeClass('carousel-item');
+               $('.inner-row').removeClass('row');
+           }
+        });
+        if( $(window).width() <= 768 ){
+            $('.brand').addClass('carousel-item');
+            $('.brand-md').removeClass('carousel-item');
+            $('.brand-md').removeClass('carousel-item');
+            $('.inner-row').removeClass('row');
+            $(window).resize(function() {
+                if( $(window).width() > 768 ){
+                    $('.brand').removeClass('carousel-item');
+                    $('.brand-md').addClass('carousel-item');
+                    $('.brand-md').addClass('carousel-item');
+                    $('.inner-row').addClass('row');
+                }
+            });
+        }
+    </script>
 </div>
