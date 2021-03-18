@@ -84,7 +84,12 @@ $cdnUrl = Yii::$app->params['frontend'];
                     </li>
                     <!-- Product -->
                     <li class="nav-item dropdown pr-md-3 border-md-right">
-                        <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
+                        <a class="nav-link dropdown-toggle text-light d-lg-none" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
+                           role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bars px-md-2"></i> Sản phẩm </i>
+                        </a>
+                        <a class="nav-link dropdown-toggle text-light d-none d-lg-block" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bars px-md-2"></i> Danh mục sản phẩm </i>
@@ -93,7 +98,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                             <!-- Camera -->
                             <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/abc"><i
                                             class="fas fa-camera"></i> Camera <i
-                                            class="fas fa-caret-right float-right pr-3"></i></a>
+                                            class="fas fa-caret-right float-right px-3"></i></a>
                                 <ul class="submenu dropdown-menu shadow-lg">
                                     <li><a class="dropdown-item" href=""> Third level 1</a></li>
                                     <li><a class="dropdown-item" href=""> Third level 2</a></li>
@@ -111,7 +116,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                             <!-- Elevator -->
                             <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/abc"><i
                                             class="fas fa-hotel"></i> Thang máy <i
-                                            class="fas fa-caret-right float-right pr-3"></i></a>
+                                            class="fas fa-caret-right float-right px-3"></i></a>
                                 <ul class="submenu dropdown-menu">
                                     <li><a class="dropdown-item" href=""> Third level 1</a></li>
                                     <li><a class="dropdown-item" href=""> Third level 2</a></li>
@@ -128,13 +133,24 @@ $cdnUrl = Yii::$app->params['frontend'];
                             </li>
                         </ul>
                     </li>
+                </ul>
+
+
+
+
+
+                <ul class="navbar-nav text-white ml-auto">
                     <!-- Software -->
-                    <li class="nav-item">
+                    <li class="nav-item m-0 mr-lg-3 mr-xl-5">
                         <a class="nav-link text-light" href="<?= $cdnUrl ?>/#"><i class="fas fa-download"></i>Phần
                             mềm</a>
                     </li>
+                    <li class="nav-item m-0 mr-lg-3 mr-xl-5">
+                        <a class="nav-link text-light" href="<?= $cdnUrl ?>/#"><i
+                                    class="fas fa-globe-asia"></i>
+                            Tuyển dụng</a></li>
                     <!-- Support -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown m-0 mr-lg-3 mr-xl-5">
                         <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -142,16 +158,13 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </a>
                         <ul class="dropdown-menu">
                             <!-- Recruit -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i
-                                            class="fas fa-globe-asia"></i>
-                                    Tuyển dụng</a></li>
                             <!-- Tech support -->
                             <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i class="fas fa-cogs"></i>
                                     Hỗ trợ kỹ thuật</a></li>
                             <!-- Contact -->
                             <li>
                                 <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/site/contact">
-                                    <i class="fas fa-globe-asia"></i>Liên hệ
+                                    <i class="fas fa-globe-asia"></i> Liên hệ
 
                                 </a>
                             </li>
@@ -159,7 +172,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                     </li>
                     <?php if (Yii::$app->user->isGuest) : ?>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="<?= $cdnUrl ?>/site/login">Login</a>
+                            <a class="nav-link text-light" href="<?= $cdnUrl ?>/site/login"><i class="fas fa-sign-in-alt"></i> Login</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item dropdown">
