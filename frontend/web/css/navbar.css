@@ -1,0 +1,9 @@
+@media (min-width: 768px){
+    .border-md-right {
+        border-right: 1px solid white;
+    }
+    .borderX {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+}
