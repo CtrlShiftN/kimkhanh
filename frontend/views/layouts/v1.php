@@ -78,18 +78,20 @@ $cdnUrl = Yii::$app->params['frontend'];
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav text-white">
                     <!-- Home -->
-                    <li class="nav-item borderX px-md-3">
+                    <li class="nav-item borderX px-md-1 px-lg-3">
                         <a class="nav-link text-light" href="<?= $cdnUrl ?>"><i class="fas fa-home"><span
                                         class="d-md-none"> Trang chủ</span></i></a>
                     </li>
                     <!-- Product -->
                     <li class="nav-item dropdown pr-md-3 border-md-right">
-                        <a class="nav-link dropdown-toggle text-light d-lg-none" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
+                        <a class="nav-link dropdown-toggle text-light d-lg-none" href="<?= $cdnUrl ?>/abc"
+                           id="categoryDropdown"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bars px-md-2"></i> Sản phẩm </i>
                         </a>
-                        <a class="nav-link dropdown-toggle text-light d-none d-lg-block" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
+                        <a class="nav-link dropdown-toggle text-light d-none d-lg-block" href="<?= $cdnUrl ?>/abc"
+                           id="categoryDropdown"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bars px-md-2"></i> Danh mục sản phẩm </i>
@@ -136,9 +138,6 @@ $cdnUrl = Yii::$app->params['frontend'];
                 </ul>
 
 
-
-
-
                 <ul class="navbar-nav text-white ml-auto">
                     <!-- Software -->
                     <li class="nav-item m-0 mr-lg-3 mr-xl-5">
@@ -172,13 +171,20 @@ $cdnUrl = Yii::$app->params['frontend'];
                     </li>
                     <?php if (Yii::$app->user->isGuest) : ?>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="<?= $cdnUrl ?>/site/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            <a class="nav-link text-light" href="<?= $cdnUrl ?>/site/login"><i
+                                        class="fas fa-sign-in-alt"></i> Login</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" id="userDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Hi, <?= Yii::$app->user->identity->name; ?>
+                            <a class="nav-link dropdown-toggle text-light d-md-none d-lg-block shortName" href="#" id="userDropdown"
+                               role="button"
+                               data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false"><i class="far fa-user"></i> Hi, <?= Yii::$app->user->identity->name; ?> !
+                            </a>
+                            <a class="nav-link dropdown-toggle text-light d-sm-none d-md-block d-lg-none" href="#" id="userDropdown"
+                               role="button"
+                               data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false"><i class="far fa-user"></i> Tài khoản
                             </a>
                             <div class="dropdown-menu" aria-labelledby="userDropdown">
                                 <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/user/profile"><i

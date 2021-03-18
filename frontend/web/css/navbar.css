@@ -7,3 +7,9 @@
         border-left: 1px solid white;
     }
 }
+.shortName {
+    white-space: nowrap;
+    width: 176px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
