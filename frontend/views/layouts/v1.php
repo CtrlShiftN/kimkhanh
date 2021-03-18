@@ -181,7 +181,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                                data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="false"><i class="far fa-user"></i> Hi, <?= Yii::$app->user->identity->name; ?> !
                             </a>
-                            <a class="nav-link dropdown-toggle text-light d-sm-none d-md-block d-lg-none" href="#" id="userDropdown"
+                            <a class="nav-link dropdown-toggle text-light d-none d-md-block d-lg-none" href="#" id="userDropdown"
                                role="button"
                                data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="false"><i class="far fa-user"></i> Tài khoản
