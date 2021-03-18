@@ -91,7 +91,8 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </a>
                         <ul class="dropdown-menu">
                             <!-- Camera -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/abc"><i class="fas fa-camera"></i> Camera &#9654 </a>
+                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/abc"><i
+                                            class="fas fa-camera"></i> Camera &#9654 </a>
                                 <ul class="submenu dropdown-menu">
                                     <li><a class="dropdown-item" href=""> Third level 1</a></li>
                                     <li><a class="dropdown-item" href=""> Third level 2</a></li>
@@ -106,7 +107,8 @@ $cdnUrl = Yii::$app->params['frontend'];
                                 </ul>
                             </li>
                             <!-- Elevator -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/abc"><i class="fas fa-hotel"></i> Thang máy &#9654 </a>
+                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/abc"><i class="fas fa-hotel"></i>
+                                    Thang máy &#9654 </a>
                                 <ul class="submenu dropdown-menu">
                                     <li><a class="dropdown-item" href=""> Third level 1</a></li>
                                     <li><a class="dropdown-item" href=""> Third level 2</a></li>
@@ -176,9 +178,56 @@ $cdnUrl = Yii::$app->params['frontend'];
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        this is a footer
+<footer class="footer bg-danger">
+    <div class="container text-light">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 d-none d-sm-block">
+                        <h4 class="font-weight-bolder">Về Kim Khánh Groups</h4>
+                        <ul class="list-unstyled">
+                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>">Giới
+                                    thiệu</a></li>
+                            <li class="pb-2"><a class="text-light text-decoration-none"
+                                                href="<?= $cdnUrl ?>/user/agreements">Thỏa
+                                    thuận sử dụng</a></li>
+                            <li class="pb-2"><a class="text-light text-decoration-none"
+                                                href="<?= $cdnUrl ?>/user/terms">Quy
+                                    định bảo mật</a></li>
+                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>/cooperate">Hợp
+                                    tác</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 d-none d-sm-block">
+                        <h4>Công cụ</h4>
+                        <ul class="list-unstyled">
+                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>/download">Tải
+                                    phần mềm</a></li>
+                            <li class="pb-2"><a class="text-light text-decoration-none"
+                                                href="<?= $cdnUrl ?>/tech">Hỗ trợ kỹ thuật</a></li>
+                            <li class="pb-2"><a class="text-light text-decoration-none" href="/quy-dinh-bao-mat">Chỉnh
+                                    sách bảo mật</a></li>
+                            <li class="pb-2"><a class="text-light text-decoration-none"
+                                                href="/Co_che_giai_quyet_tranh_chap_MW.pdf">Giải quyết tranh chấp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                <h4>Công ty cổ phần Kim Khánh Groups</h4>
+                <div class="about_address">Trụ sở: Tòa nhà Siêu Việt, 23 Trần Cao Vân, Phường Đa Kao, Quận 1, TP Hồ Chí
+                    Minh
+                </div>
+                <div class="about_address">Chi nhánh: Tầng 12A, Tòa nhà Center Building, Số 1 Nguyễn Huy Tưởng, Quận
+                    Thanh Xuân, Hà Nội.
+                </div>
+                <div class="about_address"> Điện thoại: <a class="text-light" href="tel:090809090909">0908090909</a> |
+                    <a class="text-light" href="tel:19001888">19001888</a></div>
+                <div class="about_address">Email: <a class="text-light" href="mailto:hotro@mywork.com.vn">hotro@kimkhanhgroups.com</a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 
