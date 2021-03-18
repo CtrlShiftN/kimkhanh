@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="float-start">
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-                <?= $form->field($model, 'name')->textInput(['autofocus' => true],['placeholder' => 'Nguyễn Văn A'],) ?>
+                <?= $form->field($model, 'name')->textInput(['autofocus' => true, 'placeholder' => 'Nguyễn Văn A']) ?>
 
                 <div class="row">
                     <div class="col-6 col-sm-7 col-md-7 col-lg-6 col-xl-6">
