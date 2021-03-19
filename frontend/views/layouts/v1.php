@@ -176,12 +176,15 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </li>
                     <?php else : ?>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light d-md-none d-lg-block shortName" href="#" id="userDropdown"
+                            <a class="nav-link dropdown-toggle text-light d-md-none d-lg-block shortName" href="#"
+                               id="userDropdown"
                                role="button"
                                data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false"><i class="far fa-user"></i> Hi, <?= Yii::$app->user->identity->name; ?> !
+                               aria-expanded="false"><i class="far fa-user"></i>
+                                Hi, <?= Yii::$app->user->identity->name; ?> !
                             </a>
-                            <a class="nav-link dropdown-toggle text-light d-none d-md-block d-lg-none" href="#" id="userDropdown"
+                            <a class="nav-link dropdown-toggle text-light d-none d-md-block d-lg-none" href="#"
+                               id="userDropdown"
                                role="button"
                                data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="false"><i class="far fa-user"></i> Tài khoản
@@ -294,24 +297,28 @@ $cdnUrl = Yii::$app->params['frontend'];
         </div>
     </section>
     <section class="kh-copyright">
-        
     </section>
 </footer>
-<div class="fix-footer bg-danger">
-    <div class="container">
+<div class="fix-footer bg-danger d-none d-sm-none d-md-block">
+    <div class="container text-white">
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><i class="fa fa-pencil"></i> Đăng ký đại lý: <a
-                        href="http://hikvision.vn/danh-cho-dai-ly/dang-ky-dai-ly" target="_blank">Click vào
-                    đây</a></div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><i class="fa fa-phone"></i> HN: <a
-                        href="tel:0988320885">0988 320 885</a> / HCM: <a href="tel:0977555804">0977 555 804</a>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a href="http://hikvision.vn/danh-cho-dai-ly/dang-ky-dai-ly" target="_blank"
+                   class="text-white font-weight-bold">
+                    <i class="fa fa-pencil-alt text-white"></i> Đăng ký đại lý
+                </a>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><i class="fa fa-facebook-official"></i><a
-                        href="https://www.facebook.com/nhaantoan/" target="_blank"> Fanpage Nhà An Toàn</a>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a href="tel:0916354248" class="text-white font-weight-bold">
+                    <i class="fa fa-phone-alt text-white"></i> 0916 354 248
+                </a>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><i class="fa fa-youtube-play"></i><a
-                        href="https://www.youtube.com/user/nhaantoanjsc" target="_blank"> Channel Nhà An
-                    Toàn</a></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a href="http://hikvision.vn/danh-cho-dai-ly/dang-ky-dai-ly" target="_blank"
+                   class="text-white font-weight-bold">
+                    <i class="fab fa-facebook text-white"></i> FB Kim Khánh
+                </a>
+            </div>
         </div>
     </div>
 </div>
