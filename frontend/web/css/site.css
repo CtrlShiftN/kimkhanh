@@ -174,3 +174,45 @@ a.desc:after {
 footer {
     font-family: Roboto, sans-serif;
 }
+
+.effect {
+    cursor: pointer;
+}
+
+p.effect {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.my-border-radius {
+    color: #d71921;
+    background: #FFF;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    margin: 0 10px 0 0;
+}
+
+.social-others {
+    font-size: 150%;
+}
+
+.fix-footer {
+    border-top: 1px solid #ddd;
+    padding: .5em 0;
+}
+
+.kh-copyright{
+    padding: 1.2em 0;
+}
+
+.fix-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
