@@ -179,57 +179,115 @@ $cdnUrl = Yii::$app->params['frontend'];
 </div>
 
 <footer class="footer bg-danger">
-    <div class="container text-light">
-        <div class="row">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                <div class="row">
-                    <div class="col-6 col-sm-6 col-md-6 d-none d-sm-block">
-                        <h4 class="font-weight-bolder">Về Kim Khánh Groups</h4>
-                        <ul class="list-unstyled">
-                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>">Giới
-                                    thiệu</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none"
-                                                href="<?= $cdnUrl ?>/user/agreements">Thỏa
-                                    thuận sử dụng</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none"
-                                                href="<?= $cdnUrl ?>/user/terms">Quy
-                                    định bảo mật</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>/cooperate">Hợp
-                                    tác</a></li>
-                        </ul>
+    <section class="kh-footer">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="pb-4">Kim Khánh Groups</h3>
+                    <address>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Trụ sở: Số 1 đường
+                            Khương
+                            Đình, Kim Giang, Hà Nội</p>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Văn phòng: Số 1 đường
+                            Khương
+                            Đình, Kim Giang, Hà Nội</p>
+                        <p class="effect"><i class="fa fa-phone-alt my-border-radius"></i> <a class="text-white"
+                                                                                              href="tel:0916354248">0916354248</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
+                                                                                             href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
+                                                                                               href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
+                            - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                        <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
+                            <a class="text-white"
+                               href="https://www.google.com/maps/place/Kim+Giang,+Thanh+Xu%C3%A2n,+Hanoi,+Vietnam/@20.9823843,105.8095188,16z/data=!3m1!4b1!4m5!3m4!1s0x3135acec14cdcfb9:0xb4f53c8207b23974!8m2!3d20.9828413!4d105.8121513">Bản
+                                đồ đường đi</a>
+                        </p>
+                    </address>
+                    <div class="social-others">
+                        <a class="pr-1" href="https://www.facebook.com/nhaantoan/" target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="fab fa-facebook-square fa-2x text-white"></i>
+                        </a>
+                        <a href="https://www.facebook.com/nhaantoan/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube-square fa-2x text-white"></i>
+                        </a>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-6 d-none d-sm-block">
-                        <h4>Công cụ</h4>
-                        <ul class="list-unstyled">
-                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>/download">Tải
-                                    phần mềm</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none"
-                                                href="<?= $cdnUrl ?>/tech">Hỗ trợ kỹ thuật</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none" href="/quy-dinh-bao-mat">Chỉnh
-                                    sách bảo mật</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none"
-                                                href="/Co_che_giai_quyet_tranh_chap_MW.pdf">Giải quyết tranh chấp</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                <h4>Công ty cổ phần Kim Khánh Groups</h4>
-                <div class="about_address">Trụ sở: Tòa nhà Siêu Việt, 23 Trần Cao Vân, Phường Đa Kao, Quận 1, TP Hồ Chí
-                    Minh
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="pb-4">Chi nhánh miền Nam</h3>
+                    <address>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Văn phòng: Số 1 đường
+                            Khương
+                            Đình, Kim Giang, Hà Nội</p>
+                        <p class="effect"><i class="fa fa-phone-alt my-border-radius"></i> <a class="text-white"
+                                                                                              href="tel:0916354248">0916354248</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
+                                                                                             href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
+                                                                                               href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
+                            - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                        <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
+                            <a class="text-white"
+                               href="https://www.google.com/maps/place/Kim+Giang,+Thanh+Xu%C3%A2n,+Hanoi,+Vietnam/@20.9823843,105.8095188,16z/data=!3m1!4b1!4m5!3m4!1s0x3135acec14cdcfb9:0xb4f53c8207b23974!8m2!3d20.9828413!4d105.8121513">Bản
+                                đồ đường đi</a>
+                        </p>
+                    </address>
                 </div>
-                <div class="about_address">Chi nhánh: Tầng 12A, Tòa nhà Center Building, Số 1 Nguyễn Huy Tưởng, Quận
-                    Thanh Xuân, Hà Nội.
-                </div>
-                <div class="about_address"> Điện thoại: <a class="text-light" href="tel:090809090909">0908090909</a> |
-                    <a class="text-light" href="tel:19001888">19001888</a></div>
-                <div class="about_address">Email: <a class="text-light" href="mailto:hotro@mywork.com.vn">hotro@kimkhanhgroups.com</a>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="pb-4">Chi nhánh miền Trung</h3>
+                    <address>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Văn phòng: Số 1 đường
+                            Khương
+                            Đình, Kim Giang, Hà Nội</p>
+                        <p class="effect"><i class="fa fa-phone-alt my-border-radius"></i> <a class="text-white"
+                                                                                              href="tel:0916354248">0916354248</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
+                                                                                             href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
+                                                                                               href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
+                            - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                        <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
+                            <a class="text-white"
+                               href="https://www.google.com/maps/place/Kim+Giang,+Thanh+Xu%C3%A2n,+Hanoi,+Vietnam/@20.9823843,105.8095188,16z/data=!3m1!4b1!4m5!3m4!1s0x3135acec14cdcfb9:0xb4f53c8207b23974!8m2!3d20.9828413!4d105.8121513">Bản
+                                đồ đường đi</a>
+                        </p>
+                    </address>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="kh-copyright">
+        
+    </section>
 </footer>
+<div class="fix-footer bg-danger">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><i class="fa fa-pencil"></i> Đăng ký đại lý: <a
+                        href="http://hikvision.vn/danh-cho-dai-ly/dang-ky-dai-ly" target="_blank">Click vào
+                    đây</a></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><i class="fa fa-phone"></i> HN: <a
+                        href="tel:0988320885">0988 320 885</a> / HCM: <a href="tel:0977555804">0977 555 804</a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><i class="fa fa-facebook-official"></i><a
+                        href="https://www.facebook.com/nhaantoan/" target="_blank"> Fanpage Nhà An Toàn</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><i class="fa fa-youtube-play"></i><a
+                        href="https://www.youtube.com/user/nhaantoanjsc" target="_blank"> Channel Nhà An
+                    Toàn</a></div>
+        </div>
+    </div>
+</div>
 
 <?php $this->endBody() ?>
 <script>
