@@ -16,3 +16,4 @@ $cdnUrl = Yii::$app->params['frontend'];
 <link href="<?= $cdnUrl ?>/css/fontawesome/CSS/all.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/style.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/site.css" rel="stylesheet" type="text/css">
+<link href="<?= $cdnUrl ?>/css/navbar.css" rel="stylesheet" type="text/css">
