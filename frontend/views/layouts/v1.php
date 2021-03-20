@@ -76,28 +76,37 @@ $cdnUrl = Yii::$app->params['frontend'];
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto text-white">
+                <ul class="navbar-nav text-white">
                     <!-- Home -->
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="<?= $cdnUrl ?>"><i class="fas fa-globe-asia"></i> Trang
-                            chủ</a>
+                    <li class="nav-item borderX px-md-1 px-lg-3">
+                        <a class="nav-link text-light" href="<?= $cdnUrl ?>"><i class="fas fa-home"><span
+                                        class="d-md-none"> Trang chủ</span></i></a>
                     </li>
                     <!-- Product -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
+                    <li class="nav-item dropdown pr-md-3 border-md-right">
+                        <a class="nav-link dropdown-toggle text-light d-lg-none" href="<?= $cdnUrl ?>/abc"
+                           id="categoryDropdown"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-tags"></i> Sản phẩm
+                            <i class="fas fa-bars px-md-2"></i> Sản phẩm </i>
                         </a>
-                        <ul class="dropdown-menu">
+                        <a class="nav-link dropdown-toggle text-light d-none d-lg-block" href="<?= $cdnUrl ?>/abc"
+                           id="categoryDropdown"
+                           role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bars px-md-2"></i> Danh mục sản phẩm </i>
+                        </a>
+                        <ul class="dropdown-menu shadow-lg">
                             <!-- Camera -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/abc"><i
-                                            class="fas fa-camera"></i> Camera &#9654 </a>
-                                <ul class="submenu dropdown-menu">
+                            <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/abc"><i
+                                            class="fas fa-camera"></i> Camera <i
+                                            class="fas fa-caret-right float-right px-3"></i></a>
+                                <ul class="submenu dropdown-menu shadow-lg">
                                     <li><a class="dropdown-item" href=""> Third level 1</a></li>
                                     <li><a class="dropdown-item" href=""> Third level 2</a></li>
-                                    <li><a class="dropdown-item" href=""> Third level 3 &#9654 </a>
-                                        <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href=""> Third level 3 <i
+                                                    class="fas fa-caret-right float-right"></i></a>
+                                        <ul class="submenu dropdown-menu shadow-lg">
                                             <li><a class="dropdown-item" href=""> Fourth level 1</a></li>
                                             <li><a class="dropdown-item" href=""> Fourth level 2</a></li>
                                         </ul>
@@ -107,13 +116,15 @@ $cdnUrl = Yii::$app->params['frontend'];
                                 </ul>
                             </li>
                             <!-- Elevator -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/abc"><i class="fas fa-hotel"></i>
-                                    Thang máy &#9654 </a>
+                            <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/abc"><i
+                                            class="fas fa-hotel"></i> Thang máy <i
+                                            class="fas fa-caret-right float-right px-3"></i></a>
                                 <ul class="submenu dropdown-menu">
                                     <li><a class="dropdown-item" href=""> Third level 1</a></li>
                                     <li><a class="dropdown-item" href=""> Third level 2</a></li>
-                                    <li><a class="dropdown-item" href=""> Third level 3 &#9654 </a>
-                                        <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href=""> Third level 3 <i
+                                                    class="fas fa-caret-right float-right"></i></a>
+                                        <ul class="submenu dropdown-menu shadow-lg">
                                             <li><a class="dropdown-item" href=""> Fourth level 1</a></li>
                                             <li><a class="dropdown-item" href=""> Fourth level 2</a></li>
                                         </ul>
@@ -124,8 +135,21 @@ $cdnUrl = Yii::$app->params['frontend'];
                             </li>
                         </ul>
                     </li>
+                </ul>
+
+
+                <ul class="navbar-nav text-white ml-auto">
+                    <!-- Software -->
+                    <li class="nav-item m-0 mr-lg-3 mr-xl-5">
+                        <a class="nav-link text-light" href="<?= $cdnUrl ?>/#"><i class="fas fa-download"></i>Phần
+                            mềm</a>
+                    </li>
+                    <li class="nav-item m-0 mr-lg-3 mr-xl-5">
+                        <a class="nav-link text-light" href="<?= $cdnUrl ?>/#"><i
+                                    class="fas fa-globe-asia"></i>
+                            Tuyển dụng</a></li>
                     <!-- Support -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown m-0 mr-lg-3 mr-xl-5">
                         <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -133,31 +157,37 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </a>
                         <ul class="dropdown-menu">
                             <!-- Recruit -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i
-                                            class="fas fa-globe-asia"></i>
-                                    Tuyển dụng</a></li>
-                            <!-- Software -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i
-                                            class="fas fa-download"></i>
-                                    Phần mềm</a></li>
                             <!-- Tech support -->
                             <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i class="fas fa-cogs"></i>
                                     Hỗ trợ kỹ thuật</a></li>
                             <!-- Contact -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/site/contact"><i
-                                            class="fas fa-globe-asia"></i>
-                                    Liên hệ</a></li>
+                            <li>
+                                <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/site/contact">
+                                    <i class="fas fa-globe-asia"></i> Liên hệ
+
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <?php if (Yii::$app->user->isGuest) : ?>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="<?= $cdnUrl ?>/site/login">Login</a>
+                            <a class="nav-link text-light" href="<?= $cdnUrl ?>/site/login"><i
+                                        class="fas fa-sign-in-alt"></i> Login</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" id="userDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Hi, <?= Yii::$app->user->identity->name; ?>
+                            <a class="nav-link dropdown-toggle text-light d-md-none d-lg-block shortName" href="#"
+                               id="userDropdown"
+                               role="button"
+                               data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false"><i class="far fa-user"></i>
+                                Hi, <?= Yii::$app->user->identity->name; ?> !
+                            </a>
+                            <a class="nav-link dropdown-toggle text-light d-none d-md-block d-lg-none" href="#"
+                               id="userDropdown"
+                               role="button"
+                               data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false"><i class="far fa-user"></i> Tài khoản
                             </a>
                             <div class="dropdown-menu" aria-labelledby="userDropdown">
                                 <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/user/profile"><i
@@ -179,57 +209,119 @@ $cdnUrl = Yii::$app->params['frontend'];
 </div>
 
 <footer class="footer bg-danger">
-    <div class="container text-light">
-        <div class="row">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                <div class="row">
-                    <div class="col-6 col-sm-6 col-md-6 d-none d-sm-block">
-                        <h4 class="font-weight-bolder">Về Kim Khánh Groups</h4>
-                        <ul class="list-unstyled">
-                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>">Giới
-                                    thiệu</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none"
-                                                href="<?= $cdnUrl ?>/user/agreements">Thỏa
-                                    thuận sử dụng</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none"
-                                                href="<?= $cdnUrl ?>/user/terms">Quy
-                                    định bảo mật</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>/cooperate">Hợp
-                                    tác</a></li>
-                        </ul>
+    <section class="kh-footer">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="pb-4">Kim Khánh Groups</h3>
+                    <address>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Trụ sở: Số 1 đường
+                            Khương
+                            Đình, Kim Giang, Hà Nội</p>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Văn phòng: Số 1 đường
+                            Khương
+                            Đình, Kim Giang, Hà Nội</p>
+                        <p class="effect"><i class="fa fa-phone-alt my-border-radius"></i> <a class="text-white"
+                                                                                              href="tel:0916354248">0916354248</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
+                                                                                             href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
+                                                                                               href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
+                            - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                        <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
+                            <a class="text-white"
+                               href="https://www.google.com/maps/place/Kim+Giang,+Thanh+Xu%C3%A2n,+Hanoi,+Vietnam/@20.9823843,105.8095188,16z/data=!3m1!4b1!4m5!3m4!1s0x3135acec14cdcfb9:0xb4f53c8207b23974!8m2!3d20.9828413!4d105.8121513">Bản
+                                đồ đường đi</a>
+                        </p>
+                    </address>
+                    <div class="social-others">
+                        <a class="pr-1" href="https://www.facebook.com/nhaantoan/" target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="fab fa-facebook-square fa-2x text-white"></i>
+                        </a>
+                        <a href="https://www.facebook.com/nhaantoan/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube-square fa-2x text-white"></i>
+                        </a>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-6 d-none d-sm-block">
-                        <h4>Công cụ</h4>
-                        <ul class="list-unstyled">
-                            <li class="pb-2"><a class="text-light text-decoration-none" href="<?= $cdnUrl ?>/download">Tải
-                                    phần mềm</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none"
-                                                href="<?= $cdnUrl ?>/tech">Hỗ trợ kỹ thuật</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none" href="/quy-dinh-bao-mat">Chỉnh
-                                    sách bảo mật</a></li>
-                            <li class="pb-2"><a class="text-light text-decoration-none"
-                                                href="/Co_che_giai_quyet_tranh_chap_MW.pdf">Giải quyết tranh chấp</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                <h4>Công ty cổ phần Kim Khánh Groups</h4>
-                <div class="about_address">Trụ sở: Tòa nhà Siêu Việt, 23 Trần Cao Vân, Phường Đa Kao, Quận 1, TP Hồ Chí
-                    Minh
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="pb-4">Chi nhánh miền Nam</h3>
+                    <address>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Văn phòng: Số 1 đường
+                            Khương
+                            Đình, Kim Giang, Hà Nội</p>
+                        <p class="effect"><i class="fa fa-phone-alt my-border-radius"></i> <a class="text-white"
+                                                                                              href="tel:0916354248">0916354248</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
+                                                                                             href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
+                                                                                               href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
+                            - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                        <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
+                            <a class="text-white"
+                               href="https://www.google.com/maps/place/Kim+Giang,+Thanh+Xu%C3%A2n,+Hanoi,+Vietnam/@20.9823843,105.8095188,16z/data=!3m1!4b1!4m5!3m4!1s0x3135acec14cdcfb9:0xb4f53c8207b23974!8m2!3d20.9828413!4d105.8121513">Bản
+                                đồ đường đi</a>
+                        </p>
+                    </address>
                 </div>
-                <div class="about_address">Chi nhánh: Tầng 12A, Tòa nhà Center Building, Số 1 Nguyễn Huy Tưởng, Quận
-                    Thanh Xuân, Hà Nội.
-                </div>
-                <div class="about_address"> Điện thoại: <a class="text-light" href="tel:090809090909">0908090909</a> |
-                    <a class="text-light" href="tel:19001888">19001888</a></div>
-                <div class="about_address">Email: <a class="text-light" href="mailto:hotro@mywork.com.vn">hotro@kimkhanhgroups.com</a>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <h3 class="pb-4">Chi nhánh miền Trung</h3>
+                    <address>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Văn phòng: Số 1 đường
+                            Khương
+                            Đình, Kim Giang, Hà Nội</p>
+                        <p class="effect"><i class="fa fa-phone-alt my-border-radius"></i> <a class="text-white"
+                                                                                              href="tel:0916354248">0916354248</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
+                                                                                             href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                        </p>
+                        <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
+                                                                                               href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
+                            - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                        <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
+                        <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
+                            <a class="text-white"
+                               href="https://www.google.com/maps/place/Kim+Giang,+Thanh+Xu%C3%A2n,+Hanoi,+Vietnam/@20.9823843,105.8095188,16z/data=!3m1!4b1!4m5!3m4!1s0x3135acec14cdcfb9:0xb4f53c8207b23974!8m2!3d20.9828413!4d105.8121513">Bản
+                                đồ đường đi</a>
+                        </p>
+                    </address>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="kh-copyright">
+    </section>
 </footer>
+<div class="fix-footer bg-danger d-none d-sm-none d-md-block">
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a href="http://hikvision.vn/danh-cho-dai-ly/dang-ky-dai-ly" target="_blank"
+                   class="text-white font-weight-bold">
+                    <i class="fa fa-pencil-alt text-white"></i> Đăng ký đại lý
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a href="tel:0916354248" class="text-white font-weight-bold">
+                    <i class="fa fa-phone-alt text-white"></i> 0916 354 248
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a href="http://hikvision.vn/danh-cho-dai-ly/dang-ky-dai-ly" target="_blank"
+                   class="text-white font-weight-bold">
+                    <i class="fab fa-facebook text-white"></i> FB Kim Khánh
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php $this->endBody() ?>
 <script>
