@@ -1,0 +1,33 @@
+@media (min-width: 768px){
+    .border-md-right {
+        border-right: 1px solid white;
+    }
+    .borderX {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+}
+@media (max-width: 572px) {
+    .shortName {
+        white-space: nowrap;
+        width: 288px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .shortName {
+        white-space: nowrap;
+        width: 176px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media (min-width: 1200px) {
+    .shortName {
+        white-space: nowrap;
+        width: 288px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
