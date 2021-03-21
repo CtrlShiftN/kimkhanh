@@ -98,7 +98,8 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </a>
                         <ul class="dropdown-menu shadow-lg">
                             <!-- Camera -->
-                            <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/abc"><i
+                            <li class="dropdown-item"><a class="nav-link text-dark"
+                                                         href="<?= $cdnUrl ?>/abc"><i
                                             class="fas fa-camera"></i> Camera <i
                                             class="fas fa-caret-right float-right px-3"></i></a>
                                 <ul class="submenu dropdown-menu shadow-lg">
@@ -116,7 +117,8 @@ $cdnUrl = Yii::$app->params['frontend'];
                                 </ul>
                             </li>
                             <!-- Elevator -->
-                            <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/abc"><i
+                            <li class="dropdown-item"><a class="nav-link text-dark"
+                                                         href="<?= $cdnUrl ?>/abc"><i
                                             class="fas fa-hotel"></i> Thang máy <i
                                             class="fas fa-caret-right float-right px-3"></i></a>
                                 <ul class="submenu dropdown-menu">
@@ -136,8 +138,6 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </ul>
                     </li>
                 </ul>
-
-
                 <ul class="navbar-nav text-white ml-auto">
                     <!-- Software -->
                     <li class="nav-item m-0 mr-lg-3 mr-xl-5">
@@ -158,13 +158,13 @@ $cdnUrl = Yii::$app->params['frontend'];
                         <ul class="dropdown-menu">
                             <!-- Recruit -->
                             <!-- Tech support -->
-                            <li><a class="nav-link text-black-50" href="<?= $cdnUrl ?>/#"><i class="fas fa-cogs"></i>
+                            <li class="dropdown-item"><a class="nav-link text-dark" href="<?= $cdnUrl ?>/#"><i
+                                            class="fas fa-cogs"></i>
                                     Hỗ trợ kỹ thuật</a></li>
                             <!-- Contact -->
-                            <li>
-                                <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/site/contact">
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/site/contact">
                                     <i class="fas fa-globe-asia"></i> Liên hệ
-
                                 </a>
                             </li>
                         </ul>
@@ -176,26 +176,28 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </li>
                     <?php else : ?>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light d-md-none d-lg-block shortName" href="#"
-                               id="userDropdown"
-                               role="button"
-                               data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false"><i class="far fa-user"></i>
-                                Hi, <?= Yii::$app->user->identity->name; ?> !
+                            <a class="nav-link dropdown-toggle text-light d-md-none d-lg-block shortName float-right" href="#"
+                               id="userDropdown " role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                <i class="far fa-user"></i> Hi, <?= Yii::$app->user->identity->name; ?> !
                             </a>
                             <a class="nav-link dropdown-toggle text-light d-none d-md-block d-lg-none" href="#"
-                               id="userDropdown"
-                               role="button"
-                               data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false"><i class="far fa-user"></i> Tài khoản
+                               id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                <i class="far fa-user"></i> Tài khoản
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="userDropdown">
-                                <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/user/profile"><i
-                                            class="fas fa-portrait"></i> Hồ sơ cá nhân</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/site/logout"><i
-                                            class="fas fa-sign-out-alt"></i> Logout</a>
-                            </div>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="nav-link text-dark" href="<?= $cdnUrl ?>/user/profile">
+                                        <i class="fas fa-portrait"></i> Hồ sơ cá nhân
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="nav-link text-dark" href="<?= $cdnUrl ?>/site/logout">
+                                        <i class="fas fa-sign-out-alt"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     <?php endif; ?>
                 </ul>
