@@ -98,13 +98,13 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </a>
                         <ul class="dropdown-menu shadow-lg">
                             <!-- Camera -->
-                            <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/abc"><i
+                            <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/product/camera"><i
                                             class="fas fa-camera"></i> Camera <i
                                             class="fas fa-caret-right float-right px-3"></i></a>
                                 <ul class="submenu dropdown-menu shadow-lg">
-                                    <li><a class="dropdown-item" href=""> Third level 1</a></li>
-                                    <li><a class="dropdown-item" href=""> Third level 2</a></li>
-                                    <li><a class="dropdown-item" href=""> Third level 3 <i
+                                    <li><a class="dropdown-item" href="<?= $cdnUrl ?>/product/camera_hd_cvi"> Camera Hd Cvi</a></li>
+                                    <li><a class="dropdown-item" href=""> camera Mini</a></li>
+                                    <li><a class="dropdown-item" href=""> Camera Ip <i
                                                     class="fas fa-caret-right float-right"></i></a>
                                         <ul class="submenu dropdown-menu shadow-lg">
                                             <li><a class="dropdown-item" href=""> Fourth level 1</a></li>
@@ -116,7 +116,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                                 </ul>
                             </li>
                             <!-- Elevator -->
-                            <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/abc"><i
+                            <li><a class="nav-link text-black-50 pl-3" href="<?= $cdnUrl ?>/product/elevator"><i
                                             class="fas fa-hotel"></i> Thang máy <i
                                             class="fas fa-caret-right float-right px-3"></i></a>
                                 <ul class="submenu dropdown-menu">

@@ -45,7 +45,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['get'],
+                    'logout' => ['post'],
                 ],
             ],
         ];
@@ -162,7 +162,6 @@ class SiteController extends Controller
      */
     public function actionSignup()
     {
-        $this->layout = 'empty';
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
             Yii::$app->session->setFlash('success', 'Thank you for registration. Please check your inbox for verification email.');
