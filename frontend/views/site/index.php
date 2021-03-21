@@ -41,6 +41,15 @@ $this->title = 'Kim Khánh Group';
         background: url("<?= $cdnUrl ?>/img/introduction/security.jpg");
         background-attachment: fixed;
     }
+    .bgGray {
+        background-color: #eaeae1;
+    }
+    #slideController {
+        transition: 0.2s;
+    }
+    a:hover#slideController {
+        background-color: #f5f5f0;
+    }
 </style>
 
 <div class="site-index row">
@@ -67,9 +76,9 @@ $this->title = 'Kim Khánh Group';
         </a>
     </div>
     <!-- Offer-->
-    <div class="row m-0 justify-content-between ">
-        <h2 class="col-12 p-5 text-center text-uppercase text-danger">Dịch vụ của chúng tôi</h2>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+    <div class="row m-0 justify-content-between bg-light">
+        <h2 class="col-12 p-5 text-center text-uppercase text-danger border-bottom border-danger">Dịch vụ của chúng tôi</h2>
+        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-university"></i></h1>
             </div>
@@ -79,7 +88,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-school"></i></h1>
             </div>
@@ -89,7 +98,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-hospital"></i></h1>
             </div>
@@ -100,7 +109,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-store-alt"></i></h1>
             </div>
@@ -110,7 +119,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-camera"></i></h1>
             </div>
@@ -120,7 +129,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-home"></i></h1>
             </div>
@@ -130,7 +139,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-motorcycle"></i></h1>
             </div>
@@ -141,7 +150,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-building"></i></h1>
             </div>
@@ -152,7 +161,8 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded p-3 row m-0 text-center text-lg-left rounded ">
+        <div class="col-0 col-sm-3 col-md-3 col-lg-0 col-xl-0 d-lg-none"></div>
+        <div class="col-12 col-sm-6 sol-md-6 col-lg-4  rounded p-3 row m-0 text-center text-lg-left rounded ">
             <div class="col-lg-3">
                 <h1><i class="fas fa-photo-video"></i></h1>
             </div>
@@ -163,94 +173,86 @@ $this->title = 'Kim Khánh Group';
                 <a href="#"><p class="text-danger">Tìm hiểu thêm</p></a>
             </div>
         </div>
+        <div class="col-0 col-sm-3 col-md-3 col-lg-0 col-xl-0"></div>
     </div>
     <!--Best services -->
-    <div class="row m-0 bg-light w-100 p-5 my-lg-5">
-        <h2 class="col-12 text-center text-danger text-uppercase text-center p-5">Tối ưu sản phẩm</h2>
-        <div class="col-lg-3 col-md-6 col-sm-12 p-2">
-            <div class="h1 text-center">
-                <i class="fas fa-tachometer-alt"></i>
+    <div class="m-0 w-100 p-5 my-lg-5 bgGray rounded">
+        <h2 class="text-center text-danger text-uppercase pb-5 text-center border-bottom border-danger">Tối ưu sản phẩm</h2>
+        <div class="row mt-4">
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="h1 text-center">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <div class="text-center font-weight-bold">
+                    <div class="h2 text-uppercase">Tốc độ xử lý</div>
+                </div>
             </div>
-            <div class="text-center font-weight-bold">
-                <div class="h2 text-uppercase">Tốc độ xử lý</div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="h1 text-center">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="text-center font-weight-bold">
+                    <div class="h2 text-uppercase">Độ chính xác</div>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 p-2">
-            <div class="h1 text-center">
-                <i class="fas fa-cogs"></i>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="h1 text-center">
+                    <i class="fas fa-unlock-alt"></i>
+                </div>
+                <div class="text-center font-weight-bold">
+                    <div class="h2 text-uppercase">Tính bảo mật</div>
+                </div>
             </div>
-            <div class="text-center font-weight-bold">
-                <div class="h2 text-uppercase">Độ chính xác</div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 p-2">
-            <div class="h1 text-center">
-                <i class="fas fa-unlock-alt"></i>
-            </div>
-            <div class="text-center font-weight-bold">
-                <div class="h2 text-uppercase">Tính bảo mật</div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 p-2">
-            <div class="h1 text-center">
-                <i class="fas fa-photo-video"></i>
-            </div>
-            <div class="text-center font-weight-bold">
-                <div class="h2 text-uppercase">Hình ảnh</div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="h1 text-center">
+                    <i class="fas fa-photo-video"></i>
+                </div>
+                <div class="text-center font-weight-bold">
+                    <div class="h2 text-uppercase">Hình ảnh</div>
+                </div>
             </div>
         </div>
     </div>
-    <!--    Reasons Why Should Choose Us?-->
-    <div class="row  m-0 reason-background">
-        <div class="col-lg-5 d-flex p-4 align-items-center">
-            <h2 class=" text-center text-white bg-danger p-5 font-weight-bold text-uppercase">
-                Tại sao nên chọn chúng tôi ?
-            </h2>
+    <!--    Security Solutions-->
+    <div class="row p-5 m-0">
+        <h2 class="text-danger text-center col-12 p-4 text-uppercase border-bottom border-dark mb-4">Giải pháp bảo mật</h2>
+        <div class="col-lg-4 p-3 ">
+            <div class="position-relative">
+                <img src="<?= $cdnUrl ?>/img/introduction/security-product.jpg" class="w-100">
+                <div class="p-3 bg-danger text-white position-absolute bottom right"><i class="fas fa-camera"></i>
+                </div>
+            </div>
+            <h5 class="pt-3">Hiển thị hình ảnh âm thanh qua màn hình </h5>
+            <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                viverra quis, feugiat a, tellus</p>
+
         </div>
-        <div class="col-lg-7 row m-0 bg-white">
-            <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
-                <div class="col-lg-3">
-                    <h1><i class="far fa-clock"></i></h1>
-                </div>
-                <div class="col-lg-9">
-                    <p class="font-weight-bold">Hỗ trợ 24/7</p>
-                    <p class="text-muted">Chúng tôi hỗ trợ tư vấn 24/7 trừ các ngày Lễ ,Tết</p>
+        <div class="col-lg-4 p-3 ">
+            <div class="position-relative">
+                <img src="<?= $cdnUrl ?>/img/introduction/security-product.jpg" class="w-100">
+                <div class="p-3 bg-danger text-white position-absolute bottom right"><i class="fas fa-camera"></i>
                 </div>
             </div>
-            <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
-                <div class="col-lg-3">
-                    <h1><i class="fas fa-piggy-bank"></i></i></h1>
-                </div>
-                <div class="col-lg-9">
-                    <p class="font-weight-bold">Tiết kiệm</p>
-                    <p class="text-muted">Chính sách ưu đãi và khuyến mại cực tốt cho mọi khách
-                        hàng
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
-                <div class="col-lg-3">
-                    <h1><i class="fas fa-user-friends"></i></h1>
-                </div>
-                <div class="col-lg-9">
-                    <p class="font-weight-bold">Đội ngũ nhiệt tình</p>
-                    <p class="text-muted">Đội ngũ nhân viên được đào tạo chuyên nghiệp, nhiệt tình.</p>
+            <h5 class="pt-3">Hệ thống cảnh báo chống trộm , bảo mật an toàn</h5>
+            <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                viverra quis, feugiat a, tellus</p>
+
+        </div>
+        <div class="col-lg-4 p-3 ">
+            <div class="position-relative">
+                <img src="<?= $cdnUrl ?>/img/introduction/security-product.jpg" class="w-100">
+                <div class="p-3 bg-danger text-white position-absolute bottom right"><i class="fas fa-camera"></i>
                 </div>
             </div>
-            <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
-                <div class="col-lg-3">
-                    <h1><i class="fas fa-hammer"></i></h1>
-                </div>
-                <div class="col-lg-9">
-                    <p class="font-weight-bold">Bảo hành</p>
-                    <p class="text-muted">Chúng tôi lắp đặt tận nhà, bảo hành tận nơi, an toàn, uy tín.</p>
-                </div>
-            </div>
+            <h5 class="pt-3">Quản lý ngôi nhà của bạn một cách đon giản</h5>
+            <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                viverra quis, feugiat a, tellus</p>
+
         </div>
     </div>
     <!--    Our Best Features-->
-    <div class="row m-0 p-5 w-100 bg-danger mt-5 rounded">
-        <h2 class="col-12 p-5 text-white text-center text-uppercase">Chức năng tốt nhất </h2>
+    <div class="row m-0 p-5 w-100 mt-5 bg-danger rounded">
+        <h2 class="col-12 px-5 pb-4 text-white text-center text-uppercase border-bottom border-light mb-5">Chức năng tốt nhất </h2>
         <div class="col-lg-3 bg-light p-3 rounded">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <div class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
@@ -313,7 +315,7 @@ $this->title = 'Kim Khánh Group';
     <!--    Our Process-->
     <div class="bg-dark">
         <div class="process-backgound row p-5 m-0">
-            <h2 class="col-12 text-light text-center p-3 text-uppercase">Quy trình</h2>
+            <h2 class="col-12 text-light text-center pb-4 text-uppercase mb-4 border-bottom border-light">Quy trình</h2>
             <div class="col-lg-3 col-md-6 p-3  font-weight-bold text-center">
                 <div class="rounded bg-light p-3">
                     <h2 class="text-danger"><i class="fas fa-cogs"></i></h2>
@@ -339,11 +341,11 @@ $this->title = 'Kim Khánh Group';
                 <div class="rounded bg-light p-3">
                     <h2 class="text-danger"><i class="fas fa-couch"></i></i></h2>
                     <h4>Tận hưởng</h4>
-                    <p>Hãy tận hưởng dịch vụ của chúng tôi</p>
+                    <p>Tận hưởng dịch vụ của chúng tôi</p>
                 </div>
             </div>
             <h2 class="col-12 text-center text-light">
-                Bạn cần tư vấn thêm , gãy gọi cho chúng tôi: <span class="text-danger">(00) 1234567890</span>
+                Bạn cần tư vấn thêm , hãy gọi cho chúng tôi: <span class="text-danger">(+84)1234567890</span>
             </h2>
         </div>
     </div>
@@ -381,6 +383,56 @@ $this->title = 'Kim Khánh Group';
             <button class="btn btn-danger">Xem tất cả</button>
         </div>
     </div>
+    <!--    Reasons Why Should Choose Us?-->
+    <div class="row  m-0 reason-background border-top">
+        <div class="col-lg-5 d-flex p-4 align-items-center">
+            <h2 class=" text-center text-white bg-danger p-5 font-weight-bold text-uppercase">
+                Tại sao nên chọn chúng tôi ?
+            </h2>
+        </div>
+        <div class="col-lg-7 row m-0 bg-white">
+            <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
+                <div class="col-lg-3">
+                    <h1><i class="far fa-clock"></i></h1>
+                </div>
+                <div class="col-lg-9">
+                    <p class="font-weight-bold">Hỗ trợ 24/7</p>
+                    <p class="text-muted">Chúng tôi hỗ trợ tư vấn 24/7 trừ các ngày Lễ ,Tết</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
+                <div class="col-lg-3">
+                    <h1><i class="fas fa-piggy-bank"></i></i></h1>
+                </div>
+                <div class="col-lg-9">
+                    <p class="font-weight-bold">Tiết kiệm</p>
+                    <p class="text-muted">Chính sách ưu đãi và khuyến mại cực tốt cho mọi khách
+                        hàng
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
+                <div class="col-lg-3">
+                    <h1><i class="fas fa-user-friends"></i></h1>
+                </div>
+                <div class="col-lg-9">
+                    <p class="font-weight-bold">Đội ngũ nhiệt tình</p>
+                    <p class="text-muted">Đội ngũ nhân viên được đào tạo chuyên nghiệp, nhiệt tình.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 p-3 row m-0 rounded text-center">
+                <div class="col-lg-3">
+                    <h1><i class="fas fa-hammer"></i></h1>
+                </div>
+                <div class="col-lg-9">
+                    <p class="font-weight-bold">Bảo hành</p>
+                    <p class="text-muted">Chúng tôi lắp đặt tận nhà, bảo hành tận nơi, an toàn, uy tín.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!--    Security Alarm System-->
     <div class="row p-5 security-backgorund m-0">
         <div class="col-lg-6 d-none d-lg-block">
@@ -406,43 +458,7 @@ $this->title = 'Kim Khánh Group';
                 Cum sociis natoque penatibus et magnis dis parturient.</p>
         </div>
     </div>
-    <!--    Security Solutions-->
-    <div class="row p-5 m-0 bg-light">
-        <h2 class="text-danger text-center col-12 p-5 text-uppercase">Giải pháp bảo mật</h2>
-        <div class="col-lg-4 p-3 ">
-            <div class="position-relative">
-                <img src="<?= $cdnUrl ?>/img/introduction/security-product.jpg" class="w-100">
-                <div class="p-3 bg-danger text-white position-absolute bottom right"><i class="fas fa-camera"></i>
-                </div>
-            </div>
-            <h5 class="pt-3">Hiển thị hình ảnh âm thanh qua màn hình </h5>
-            <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus</p>
 
-        </div>
-        <div class="col-lg-4 p-3 ">
-            <div class="position-relative">
-                <img src="<?= $cdnUrl ?>/img/introduction/security-product.jpg" class="w-100">
-                <div class="p-3 bg-danger text-white position-absolute bottom right"><i class="fas fa-camera"></i>
-                </div>
-            </div>
-            <h5 class="pt-3">Hệ thống cảnh báo chống trộm , bảo mật an toàn</h5>
-            <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus</p>
-
-        </div>
-        <div class="col-lg-4 p-3 ">
-            <div class="position-relative">
-                <img src="<?= $cdnUrl ?>/img/introduction/security-product.jpg" class="w-100">
-                <div class="p-3 bg-danger text-white position-absolute bottom right"><i class="fas fa-camera"></i>
-                </div>
-            </div>
-            <h5 class="pt-3">Quản lý ngôi nhà của bạn một cách đon giản</h5>
-            <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus</p>
-
-        </div>
-    </div>
     <!--    Hear from our clients-->
     <div class="p-5 text-danger text-center m-auto bg-danger w-100">
         <h2 class="text-center text-white text-uppercase">Phản hồi của khách hàng</h2>
@@ -520,7 +536,7 @@ $this->title = 'Kim Khánh Group';
     </div>
     <!--    Companies We Have as Clients-->
     <div class="row m-0 py-5 text-muted">
-        <h2 class="text-danger text-center col-12 p-5">Đối tác của chúng tôi</h2>
+        <h2 class="text-danger text-center col-12 p-5">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
         <div id="brand" class="carousel slide w-100" data-ride="carousel" >
             <div class="carousel-inner">
                 <div class="carousel-item brand-md active">
@@ -556,11 +572,11 @@ $this->title = 'Kim Khánh Group';
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#brand" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#brand" id="slideController" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next " href="#brand" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#brand" id="slideController" role="button" data-slide="next">
                 <span class="carousel-control-next-icon " aria-hidden="false"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -570,12 +586,12 @@ $this->title = 'Kim Khánh Group';
     <div class="pb-5"></div>
     <script>
         $(window).resize(function() {
-           if( $(window).width() <= 768 ){
-               $('.brand').addClass('carousel-item');
-               $('.brand-md').removeClass('carousel-item');
-               $('.brand-md').removeClass('carousel-item');
-               $('.inner-row').removeClass('row');
-           }
+            if( $(window).width() <= 768 ){
+                $('.brand').addClass('carousel-item');
+                $('.brand-md').removeClass('carousel-item');
+                $('.brand-md').removeClass('carousel-item');
+                $('.inner-row').removeClass('row');
+            }
         });
         if( $(window).width() <= 768 ){
             $('.brand').addClass('carousel-item');
