@@ -69,34 +69,35 @@ $cdnUrl = Yii::$app->params['frontend'];
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-md navbar-dark bg-danger sticky-top py-1">
+    <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1">
         <div class="container font-weight-bold">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            <a href="<?= $cdnUrl ?>" class="navbar-brand d-md-none"><img src="<?= $cdnUrl ?>/img/logoKimKhanh.png" height="48px" width="auto" alt="Kim Khanh"></a>
+            <button class="navbar-toggler ml-auto text-light border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars"></i> MENU
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav text-white">
                     <!-- Home -->
-                    <li class="nav-item borderX px-md-1 px-lg-3">
+                    <li class="nav-item borderX px-md-1 mr-xl-0">
                         <a class="nav-link text-light" href="<?= $cdnUrl ?>"><i class="fas fa-home"><span
-                                        class="d-md-none"> Trang chủ</span></i></a>
+                                        class="d-md-none"> TRANG CHỦ</span></i></a>
                     </li>
                     <!-- Product -->
-                    <li class="nav-item dropdown pr-md-3 border-md-right">
+                    <li class="nav-item dropdown border-md-right">
                         <a class="nav-link dropdown-toggle text-light d-lg-none" href="<?= $cdnUrl ?>/abc"
                            id="categoryDropdown"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-bars px-md-2"></i> Sản phẩm </i>
+                            <i class="fas fa-bars"></i> Sản phẩm </i>
                         </a>
-                        <a class="nav-link dropdown-toggle text-light d-none d-lg-block" href="<?= $cdnUrl ?>/abc"
+                        <a class="nav-link dropdown-toggle text-light d-none d-lg-block pr-lg-3" href="<?= $cdnUrl ?>/abc"
                            id="categoryDropdown"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-bars px-md-2"></i> Danh mục sản phẩm </i>
+                            <i class="fas fa-bars px-md-2"></i> Danh mục sản phẩm
                         </a>
-                        <ul class="dropdown-menu shadow-lg">
+                        <ul class="dropdown-menu shadow-lg" aria-labelledby="categoryDropdown">
                             <!-- Camera -->
                             <li class="dropdown-item"><a class="nav-link text-dark"
                                                          href="<?= $cdnUrl ?>/abc"><i
@@ -139,29 +140,134 @@ $cdnUrl = Yii::$app->params['frontend'];
                     </li>
                 </ul>
                 <ul class="navbar-nav text-white ml-auto">
-                    <!-- Software -->
-                    <li class="nav-item m-0 mr-lg-3 mr-xl-5">
-                        <a class="nav-link text-light" href="<?= $cdnUrl ?>/#"><i class="fas fa-download"></i>Phần
-                            mềm</a>
-                    </li>
-                    <li class="nav-item m-0 mr-lg-3 mr-xl-5">
-                        <a class="nav-link text-light" href="<?= $cdnUrl ?>/#"><i
-                                    class="fas fa-globe-asia"></i>
-                            Tuyển dụng</a></li>
-                    <!-- Support -->
-                    <li class="nav-item dropdown m-0 mr-lg-3 mr-xl-5">
-                        <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/abc" id="categoryDropdown"
+                    <!--About-->
+                    <li class="nav-item dropdown m-0 pr-lg-2 pr-xl-5">
+                        <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/#"
                            role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-compass"></i> Hỗ trợ
+                            <i class="fas fa-compass d-md-none d-lg-inline-block"></i> Giới thiệu
                         </a>
                         <ul class="dropdown-menu">
-                            <!-- Recruit -->
-                            <!-- Tech support -->
-                            <li class="dropdown-item"><a class="nav-link text-dark" href="<?= $cdnUrl ?>/#"><i
-                                            class="fas fa-cogs"></i>
-                                    Hỗ trợ kỹ thuật</a></li>
-                            <!-- Contact -->
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    Dự án
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Quy chuẩn
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Sơ đồ tổ chức
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Lịch sử phát triển
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Tầm nhìn-Sứ mệnh-Giá trị cốt lõi
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Video, hình ảnh
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Services-->
+                    <li class="nav-item dropdown m-0 pr-lg-2 pr-xl-5">
+                        <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/#"
+                           role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-compass d-md-none d-lg-inline-block"></i> Dịch vụ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    Bảo dưỡng
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Vật tư, thiết bị
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Giải pháp thiết kế
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Dịch vụ nâng cấp
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Tra cứu bảo hành, bảo dưỡng
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Tuyển dụng
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Document-->
+                    <li class="nav-item dropdown m-0 pr-lg-2 pr-xl-5">
+                        <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/#"
+                           role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-compass d-md-none d-lg-inline-block"></i> Tài liệu
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    Phần mềm hỗ trợ
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-globe-asia"></i> Hướng dẫn sử dụng(GG Diver)
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Support -->
+                    <li class="nav-item dropdown m-0 pr-lg-2 pr-xl-5">
+                        <a class="nav-link dropdown-toggle text-light" href="<?= $cdnUrl ?>/abc"
+                           role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-compass d-md-none d-lg-inline-block"></i> Hỗ trợ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-cogs"></i> Chính sách bảo hành
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-cogs"></i> Đổi trả hàng
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-cogs"></i> Khuyến cáo
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <i class="fas fa-cogs"></i> Câu hỏi thường gặp
+                                </a>
+                            </li>
                             <li class="dropdown-item">
                                 <a class="nav-link text-dark" href="<?= $cdnUrl ?>/site/contact">
                                     <i class="fas fa-globe-asia"></i> Liên hệ
@@ -170,21 +276,16 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </ul>
                     </li>
                     <?php if (Yii::$app->user->isGuest) : ?>
-                        <li class="nav-item">
+                        <li class="nav-item m-0">
                             <a class="nav-link text-light" href="<?= $cdnUrl ?>/site/login"><i
                                         class="fas fa-sign-in-alt"></i> Login</a>
                         </li>
                     <?php else : ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light d-md-none d-lg-block shortName float-right" href="#"
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle text-light"href="#"
                                id="userDropdown " role="button" data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="false">
-                                <i class="far fa-user"></i> Hi, <?= Yii::$app->user->identity->name; ?> !
-                            </a>
-                            <a class="nav-link dropdown-toggle text-light d-none d-md-block d-lg-none" href="#"
-                               id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">
-                                <i class="far fa-user"></i> Tài khoản
+                                <i class="far fa-user"></i> Tài khoản!
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-item">
