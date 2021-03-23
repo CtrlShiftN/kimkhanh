@@ -7,27 +7,6 @@
         border-left: 1px solid white;
     }
 }
-@media (max-width: 572px) {
-    .shortName {
-        white-space: nowrap;
-        width: 288px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-    .shortName {
-        white-space: nowrap;
-        width: 176px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-@media (min-width: 1200px) {
-    .shortName {
-        white-space: nowrap;
-        width: 288px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.bgNavBar {
+    background-color: #e51b23;
 }
