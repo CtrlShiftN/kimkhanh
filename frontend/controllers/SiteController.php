@@ -1,4 +1,5 @@
 <?php
+
 namespace frontend\controllers;
 
 use frontend\models\ResendVerificationEmailForm;
@@ -267,5 +268,15 @@ class SiteController extends Controller
         return $this->render('resendVerificationEmail', [
             'model' => $model
         ]);
+    }
+
+    /**
+     * Displays FAQ page.
+     *
+     * @return mixed
+     */
+    public function actionFaq()
+    {
+        return $this->render('faq');
     }
 }

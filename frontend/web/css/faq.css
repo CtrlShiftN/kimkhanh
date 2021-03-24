@@ -1,0 +1,78 @@
+.content-faq {
+    color: white;
+}
+
+.content-faq :hover {
+    color: #e27f42;
+}
+
+.title-faq {
+    color: #ff3c3cdb !important;
+}
+
+.bg-title-faq a:hover {
+    text-decoration: none;
+}
+
+.bg-title-faq {
+    background-color: #21252982 !important;
+}
+
+.card {
+    color: white;
+    background-color: #0000006e;
+    border: 1px solid rgba(0, 0, 0, .125)
+}
+
+.list-faq {
+    list-style-type: lower-alpha;
+    color: #ffbe87 !important;
+}
+
+@media only screen and (max-width: 360px) {
+    .title-faq {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .content-faq {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .guide-faq {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .document-faq {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .title-faq {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .content-faq {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .guide-faq {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .document-faq {
+        font-size: 12px;
+    }
+}
