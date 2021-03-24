@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use Codeception\Module\Yii2;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;

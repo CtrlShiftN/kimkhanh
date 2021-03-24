@@ -68,12 +68,4 @@ class UserForm extends User
         ]);
     }
 
-    public function saveUser(){
-        $UserModel = new UserForm();
-        $UserModel->email = $this->email;
-        $UserModel->tel = $this->email;
-        $UserModel->password=$this->password;
-        return $UserModel->saveUser();
-    }
-
 }
