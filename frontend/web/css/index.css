@@ -1,0 +1,215 @@
+.wrap > .container {
+    padding: 0 15px 20px;
+}
+
+#v-pills-tab .active {
+    background: #e51b23 !important;
+}
+
+.full-width {
+    width: 100vw;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.bgGray {
+    background-color: #bfbfbd;
+}
+.durationSlide {
+    --animate-duration: 2s;
+}
+.offerCard {
+    transition: 0.2s;
+}
+div:hover.offerCard {
+    transform: scale(1.03);
+    box-shadow:2px 16px 16px 5px darkred;
+}
+.slideIcon {
+    transition: 0.2s;
+}
+div:hover>.slideIcon {
+    transform: translateY(45px);
+}
+a {
+    text-decoration: none !important;
+}
+.fontTitle {
+    font-family: "Times New Roman";
+    font-size: 36px;
+    font-weight: bold;
+}
+.fontSlide,
+.fontSlideAround {
+    font-family: "Times New Roman";
+    font-weight: bolder;
+}
+.iIcon {
+    color: darkred;
+}
+.row-full {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    clear: both;
+}
+@media (min-width: 1600px) {
+    .transformSlide{
+        transform: translateY(-220px);
+    }
+}
+@media (min-width: 1500px) and (max-width: 1600px){
+    .transformSlide{
+        transform: translateY(-220px);
+    }
+}
+@media (min-width: 1400px) and (max-width: 1500px){
+    .transformSlide{
+        transform: translateY(-210px);
+    }
+}
+@media (min-width: 1300px) and (max-width: 1400px){
+    .transformSlide{
+        transform: translateY(-190px);
+    }
+}
+@media (min-width: 1200px) and (max-width: 1300px){
+    .transformSlide{
+        transform: translateY(-170px);
+    }
+}
+@media (min-width: 1100px) and (max-width: 1200px){
+    .transformSlide{
+        transform: translateY(-150px);
+    }
+    .fontSlide {
+         font-size: 30px;
+    }
+    .fontSlideAround {
+        font-size: 30px;
+    }
+    #btnLink {
+        padding:.5rem 1rem;
+        font-size:1.1rem;
+        line-height:1.4;
+        border-radius:.3rem
+    }
+}
+@media (min-width: 900px) and (max-width: 1100px){
+    .transformSlide{
+        transform: translateY(-130px);
+    }
+    .fontSlide {
+        font-size: 30px;
+    }
+    .fontSlideAround {
+        font-size: 30px;
+    }
+    #btnLink {
+        padding:.5rem 1rem;
+        font-size:1.1rem;
+        line-height:1.4;
+        border-radius:.3rem
+    }
+}
+@media (min-width: 800px) and (max-width: 900px){
+    .transformSlide{
+        transform: translateY(-120px);
+    }
+    .fontSlide {
+        font-size: 30px;
+    }
+    .fontSlideAround {
+        font-size: 30px;
+    }
+    #btnLink {
+        padding:.5rem 1rem;
+        font-size:1.1rem;
+        line-height:1.4;
+        border-radius:.3rem
+    }
+}
+@media (min-width: 700px) and (max-width: 800px){
+    .transformSlide{
+        transform: translateY(-110px);
+    }
+    .fontSlide {
+        font-size: 25px;
+    }
+    .fontSlideAround {
+        font-size: 25px;
+    }
+    #btnLink {
+        padding:.45rem 1rem;
+        font-size:1rem;
+        line-height:1.3;
+        border-radius:.25rem
+    }
+}
+.optionsChoose {
+    transition: 0.2s;
+}
+div:hover.optionsChoose {
+    transform: translateX(-15px);
+    background-color: #c65252;
+    color: white;
+}
+.main {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+}
+.main1 {
+    position:absolute;
+    width: 180px;
+    height: 180px;
+    z-index: 3;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+}
+.main2 {
+    position:absolute;
+    width: 210px;
+    height: 210px;
+    z-index: 2;
+    background-color: rgba(255,0,0,0.7);
+    border-radius: 50%;
+    transition: 0.1s;
+}
+.main3 {
+    position:absolute;
+    width: 240px;
+    height: 240px;
+    z-index: 1;
+    background-color: rgba(255,0,0,0.5);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+div:hover.main>.main2 {
+    width: 230px;
+    height: 230px;
+}
+div:hover.main>.main3 {
+    width: 280px;
+    height: 280px;
+}
+@media (max-width: 576px){
+    #optimal {
+        display:none;
+    }
+}
+div:hover>.iconFeature{
+    visibility: visible!important;
+}
