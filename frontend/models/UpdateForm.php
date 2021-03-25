@@ -1,15 +1,17 @@
 <?php
 
-
 namespace frontend\models;
 
-use common\models\User;
-use Yii;
-use yii\base\Exception;
 use yii\base\Model;
+use yii\web\UploadedFile;
 
 class UpdateForm extends Model
 {
+    /**
+     * @var UploadedFile
+     */
+    public $imageFile;
+
     public function rules()
     {
         return [

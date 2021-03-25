@@ -96,7 +96,7 @@ use yii\widgets\ActiveForm;
 
                             <?= $form->field($update, 'imageFile')->fileInput() ?>
 
-                            <button>Submit</button>
+                            <button type="submit">ok</button>
 
                             <?php ActiveForm::end() ?>
                         </form>

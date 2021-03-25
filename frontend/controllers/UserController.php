@@ -9,6 +9,7 @@ use frontend\models\PasswordForm;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\web\UploadedFile;
 
 
 $cdnUrl = Yii::$app->params['frontend'];
@@ -82,10 +83,12 @@ class UserController extends Controller
         }
 
         $update = new UpdateForm();
-        if ($update->load(yii::$app->request->post()) && $change->validate()) {
+
+        if (Yii::$app->request->isPost) {
+            $update->imageFile = UploadedFile::getInstance($model, 'imageFile');
             if ($update->upload()) {
-                var_dump($update);
-                die;
+                // file is uploaded successfully
+                return;
             }
         }
 
