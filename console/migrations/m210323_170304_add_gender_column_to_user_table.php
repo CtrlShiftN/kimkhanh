@@ -12,7 +12,7 @@ class m210323_170304_add_gender_column_to_user_table extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn('{{%user}}', 'gender', $this->smallInteger(3)->defaultValue()->comment("0:male,1:female")->notNull());
+        $this->addColumn('{{%user}}', 'gender', $this->smallInteger(3)->defaultValue(0)->comment("0:male,1:female,2:other")->notNull());
     }
 
     /**

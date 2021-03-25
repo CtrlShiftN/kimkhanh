@@ -2,19 +2,20 @@
 
 namespace frontend\controllers;
 
-use Codeception\Module\Yii2;
-use common\models\User;
+use frontend\models\UpdateForm;
 use frontend\models\UserForm;
 use Yii;
+use frontend\models\PasswordForm;
+use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use yii\web\UploadedFile;
-use frontend\models\ChangePasswordForm;
+
 
 $cdnUrl = Yii::$app->params['frontend'];
 
-class UserController extends \yii\web\Controller
+class UserController extends Controller
 {
+
     public function behaviors()
     {
         return [
@@ -67,17 +68,33 @@ class UserController extends \yii\web\Controller
     public function actionProfile()
     {
         $model = (new UserForm())::findOne(Yii::$app->user->identity->getId());
-        if ($model->load(yii::$app->request->post())) {
-                if($model->save(false)){
-                    $this->goHome();
-                }
+        if ($model->load(yii::$app->request->post()) && $model->validate()) {
+            if ($model->save(false)) {
+                $this->goBack();
             }
+        }
+
+        $change = new PasswordForm();
+        if ($change->load(yii::$app->request->post()) && $change->validate()) {
+            if ($change->changePassword()) {
+                $this->goBack();
+            }
+        }
+
+        $update = new UpdateForm();
+        if ($update->load(yii::$app->request->post()) && $change->validate()) {
+            if ($update->upload()) {
+                var_dump($update);
+                die;
+            }
+        }
 
         return $this->render('profile', [
-        'model' => $model
-    ]);
+            'model' => $model,
+            'change' => $change,
+            'update' => $update,
+        ]);
     }
 
 }
-
 

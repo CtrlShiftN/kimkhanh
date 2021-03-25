@@ -2,14 +2,8 @@
 $cdnUrl = Yii::$app->params['frontend'];
 
 use yii\helpers\Html;
-use yii\helpers\Url;
-use frontend\assets\AppAsset;
 use yii\widgets\ActiveForm;
-use frontend\widgets\ChangePasswordForm;
 
-AppAsset::register($this);
-
-include 'upload.php';
 
 ?>
 <div class="row">
@@ -62,11 +56,10 @@ include 'upload.php';
                    aria-expanded="false" aria-controls="collapseThree">
                     <i class="fas fa-book"></i> Đơn mua
                 </a>
-
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                 <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+
                 </div>
             </div>
         </div>
@@ -89,20 +82,26 @@ include 'upload.php';
                         <?= $form->field($model, 'tel')->textInput(['placeholder' => 'Số Điện Thoại'])->label(false) ?>
 
                         <b>Giới tính:</b>
-                        <?= $form->field($model, 'gender')->radioList([0 => 'Nữ', 1 => 'nam', 2 => 'khác'])->label(false); ?>
+                        <?= $form->field($model, 'gender')->radioList([0 => 'Nam', 1 => 'Nữ', 2 => 'khác'])->label(false); ?>
                         <label class="control-label" for="datetimepicker-default"><b>Ngày tháng năm sinh</b></label>
                         <input type="datetime-local" id="datetimepicker-default" class="form-control"/><br>
-                        <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary', 'name' => 'login-button']) ?>
+                        <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary', 'name' => 'change']) ?>
 
                         <?php ActiveForm::end(); ?>
                     </div>
                     <div class="text-center col-12 col-lg-5 col-sm-5 col-md-5 col-xl-5">
                         <form action="upload.php" method="post" enctype="multipart/form-data">
                             <img src="<?= $cdnUrl ?>/img/user.png" alt="user" class="col-12">
-                            <input id="input-b2" name="input-b2" type="file" class="file" data-show-preview="false">
+                            <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
+
+                            <?= $form->field($update, 'imageFile')->fileInput() ?>
+
+                            <button>Submit</button>
+
+                            <?php ActiveForm::end() ?>
                         </form>
                         <div>
-                            <button>Facebook</button>
+
                         </div>
                     </div>
                 </div>
@@ -112,12 +111,13 @@ include 'upload.php';
                 <p>Đừng cung cấp thông tin cho bất cứ ai!</p>
                 <hr>
                 <div class="p-3 col-5 mx-auto">
-                    <?php $form = ActiveForm::begin(); ?>
-                    <?= $form->field($model, 'password')->passwordInput()->label('Mật khẩu cũ') ?>
-                    <?= $form->field($model, 'password')->passwordInput()->label('Mật khẩu mới') ?>
-                    <?= $form->field($model, 'password')->passwordInput()->label('Nhập lại Mật khẩu mới') ?>
-                    <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary', 'name' => 'login-button']) ?>
-                    <?php ActiveForm::end(); ?>
+                    <?php $form = ActiveForm::begin();?>
+                    <?= $form->field($change, 'oldPassword')->textInput(['autofocus' => true, 'placeholder' => 'Nhập mật khẩu cũ'])->label(false) ?>
+                    <?= $form->field($change, 'newPassword')->passwordInput(['autofocus' => true, 'placeholder' => 'Nhập mật khẩu mới'])->label(false) ?>
+                    <?= $form->field($change, 'repeatNewPassword')->passwordInput(['autofocus' => true, 'placeholder' => 'Nhập lại mật khẩu mới'])->label(false) ?>
+
+                    <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary']) ?>
+                    <?php ActiveForm::end();?>
                 </div>
             </div>
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">

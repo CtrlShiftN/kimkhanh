@@ -28,6 +28,10 @@ use yii\rbac\Rule;
  */
 class UserForm extends User
 {
+    public $oldPassword;
+    public $newPassword;
+
+
     public function rules()
     {
         return [
@@ -65,7 +69,26 @@ class UserForm extends User
             'avatar' => Yii::t('app', 'Avatar'),
             'banner' => Yii::t('app', 'Banner'),
             'note' => Yii::t('app', 'Note'),
+            'oldPassword' => 'Mật khẩu',
+            'newPassword' => 'Mật khẩu mới',
+            'repeatNewPassword' => 'Mật khẩu mới',
         ]);
     }
 
+    public function changePassword(){
+        $model = User::findOne(Yii::$app->user->getId());
+        $model->setPassword($this->newPassword);
+        $model->updated = date('Y-m-d H:i:s');
+        return $model->save(false);
+    }
+
+    public function findPasswords($attribute, $params)
+    {
+        $user = User::find()->where([
+            'username' => Yii::$app->user->identity->username
+        ])->one();
+        $password = $user->password;
+        if ($password != $this->oldPassword)
+            $this->addError($attribute, 'Mật khẩu không đúng!');
+    }
 }
