@@ -82,7 +82,7 @@ use yii\widgets\ActiveForm;
                         <b>Giới tính:</b>
                         <?= $form->field($userModel, 'gender')->radioList([0 => 'Nam', 1 => 'Nữ', 2 => 'khác'])->label(false); ?>
 
-                        <?= $form->field($userModel, 'date_of_birth')->textInput(['value' => date( 'Y-m-d'),'options' => ['class' => 'form-control'],])->label('Ngày tháng năm sinh'); ?>
+                        <?= $form->field($userModel, 'date_of_birth')->textInput(['value' => date( 'Y-m-d'),'options' => ['class' => 'form-control'],])->label('<b>Ngày tháng năm sinh:git check</b>'); ?>
 
                         <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary', 'name' => 'change']) ?>
 
