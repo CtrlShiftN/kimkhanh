@@ -229,8 +229,8 @@ $cdnUrl = Yii::$app->params['frontend'];
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
-                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
-                                    Phần mềm hỗ trợ
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/tool/download">
+                                    <i class="fas fa-cloud-download-alt"></i> Tải về tài liệu
                                 </a>
                             </li>
                             <li class="dropdown-item">
