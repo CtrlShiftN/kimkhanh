@@ -90,7 +90,7 @@ class DocumentSearch extends Document
             $query->andFilterWhere(['like', 'title', $this->title]);
         }
 
-        if (is_int($this->doc_types)) {
+        if (strlen($this->doc_types)) {
             $query->andFilterWhere(['doc_types' => $this->doc_types]);
         }
 

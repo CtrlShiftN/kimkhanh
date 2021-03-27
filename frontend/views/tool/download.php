@@ -7,8 +7,6 @@ use yii\widgets\Pjax;
 
 $this->title = "Danh sách tài liệu";
 $cdnUrl = Yii::$app->params['frontend'];
-unset($this->assetBundles['yii\bootstrap\BootstrapAsset']);
-
 
 $gridColumns = [
     [
@@ -79,7 +77,7 @@ echo GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
     'options' => ['style' => 'table-layout:fixed;'],
-    'layout' => '{summary}\n{items}\n<div class=\'text-center\'>{pager}</div>',
+    'layout' => '{summary}\n{items}\n{pager}',
     'columns' => $gridColumns,
     'responsive' => true,
     'responsiveWrap' => true,
