@@ -79,8 +79,9 @@ class UserController extends Controller
         if (Yii::$app->request->isPost) {
             $uploadAvatar->image = UploadedFile::getInstance($uploadAvatar, 'image');
             if ($uploadAvatar->upload()) {
-                $this->goHome();
-                return $uploadAvatar->image;
+                if(var_dump($uploadAvatar)){
+                    return ($uploadAvatar->image->name);
+                }
             }
         }
 
