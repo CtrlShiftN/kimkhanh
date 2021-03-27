@@ -17,6 +17,7 @@ $cdnUrl = Yii::$app->params['frontend'];
 class UserController extends Controller
 {
     public $avatar;
+
     public function behaviors()
     {
         return [
@@ -74,16 +75,15 @@ class UserController extends Controller
                 $this->goBack();
             }
         }
-
         $uploadAvatar = new UploadImageForm();
         if (Yii::$app->request->isPost) {
             $uploadAvatar->image = UploadedFile::getInstance($uploadAvatar, 'image');
             if ($uploadAvatar->upload()) {
-                if(var_dump($uploadAvatar)){
-                    return ($uploadAvatar->image->name);
-                }
+                return ($uploadAvatar['image']);
+                $this->goHome();
             }
         }
+
 
         $changePassword = new PasswordForm();
         if ($changePassword->load(yii::$app->request->post()) && $changePassword->validate()) {
