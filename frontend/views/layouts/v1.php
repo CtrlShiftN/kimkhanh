@@ -264,7 +264,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                                 </a>
                             </li>
                             <li class="dropdown-item">
-                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                <a class="nav-link text-dark" href="<?= $cdnUrl ?>/site/faq">
                                     <i class="fas fa-cogs"></i> Câu hỏi thường gặp
                                 </a>
                             </li>

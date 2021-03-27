@@ -2,7 +2,7 @@
     color: white;
 }
 
-.content-faq :hover {
+.content-faq a:hover {
     color: #e27f42;
 }
 
@@ -22,11 +22,6 @@
     color: white;
     background-color: #0000006e;
     border: 1px solid rgba(0, 0, 0, .125)
-}
-
-.list-faq {
-    list-style-type: lower-alpha;
-    color: #ffbe87 !important;
 }
 
 @media only screen and (max-width: 360px) {

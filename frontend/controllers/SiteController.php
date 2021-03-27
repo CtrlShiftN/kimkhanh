@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use frontend\models\Question;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -275,8 +276,14 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionFaq()
-    {
-        return $this->render('faq');
+//    public function actionFaq()
+//    {
+//        return $this->render('faq');
+//    }
+    public function actionFaq(){
+        $arrQuestion = (new Question())->getQuestion();
+        return $this->render('faq',[
+            'arrQuestion'=>$arrQuestion
+        ]);
     }
 }
