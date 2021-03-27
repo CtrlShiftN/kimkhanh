@@ -1,6 +1,8 @@
 <?php
+
 namespace frontend\controllers;
 
+use frontend\models\Document;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -45,7 +47,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['get'],
+                    'logout' => ['POST', 'GET'],
                 ],
             ],
         ];
@@ -227,8 +229,8 @@ class SiteController extends Controller
      * Verify email address
      *
      * @param string $token
-     * @throws BadRequestHttpException
      * @return yii\web\Response
+     * @throws BadRequestHttpException
      */
     public function actionVerifyEmail($token)
     {
