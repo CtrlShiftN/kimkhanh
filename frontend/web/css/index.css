@@ -1,15 +1,9 @@
 .wrap > .container {
     padding: 0 15px 20px;
 }
-
 #v-pills-tab .active {
     background: #e51b23 !important;
 }
-
-.full-width {
-    width: 100vw;
-}
-
 .bottom {
     bottom: 0;
 }
@@ -62,6 +56,12 @@ a {
 @media (min-width: 1600px) {
     .transformSlide{
         transform: translateY(-220px);
+    }
+    .fontSlide {
+        font-size: 50px;
+    }
+    .fontSlideAround {
+        font-size: 50px;
     }
 }
 @media (min-width: 1500px) and (max-width: 1600px){
@@ -168,16 +168,15 @@ div:hover.optionsChoose {
     position: relative;
 }
 .main1 {
-    position:absolute;
     width: 180px;
     height: 180px;
     z-index: 3;
     background-color: #ffffff;
     border-radius: 50%;
+    position:absolute;
     display: flex;
     align-items:center;
     justify-content:center;
-    position: relative;
 }
 .main2 {
     position:absolute;
@@ -193,7 +192,7 @@ div:hover.optionsChoose {
     width: 240px;
     height: 240px;
     z-index: 1;
-    background-color: rgba(255,0,0,0.5);
+    background-color: rgba(255, 0, 0, 0.5);
     border-radius: 50%;
     transition: 0.5s;
 }
@@ -212,4 +211,23 @@ div:hover.main>.main3 {
 }
 div:hover>.iconFeature{
     visibility: visible!important;
+}
+
+@media (max-width: 767px ) {
+    .borderPoint {
+        border: none !important;
+    }
+}
+.reasonIcon {
+    transition: 0.3s;
+    font-size: 28px;
+    border: 2px solid #dc3545;
+}
+div:hover>div>.reasonIcon {
+    background-color: #dc3545;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.linusFont {
+    font-family: "linus";
 }
