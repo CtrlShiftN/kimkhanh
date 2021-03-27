@@ -89,14 +89,12 @@ use yii\widgets\ActiveForm;
                         <?php ActiveForm::end(); ?>
                     </div>
                     <div class="text-center col-12 col-lg-5 col-sm-5 col-md-5 col-xl-5">
-                        <img src="<?= $cdnUrl . "/uploads/avatar".$uploadAvatar['image'] ?>"
+                        <img src="<?= $cdnUrl . "/uploads/avatar/".$uploadAvatar['image'] ?>"
                              class="col-12 avatar border image-responsive">
                         <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
                         <?= $form->field($uploadAvatar, 'image')->fileInput()->label('Chỉ nhận ảnh có đuôi : png, jpg') ?>
                         <button>Submit</button>
                         <?php ActiveForm::end() ?>
-                        <?php
-                        ?>
                     </div>
                 </div>
             </div>

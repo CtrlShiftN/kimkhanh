@@ -78,12 +78,10 @@ class UserController extends Controller
         $uploadAvatar = new UploadImageForm();
         if (Yii::$app->request->isPost) {
             $uploadAvatar->image = UploadedFile::getInstance($uploadAvatar, 'image');
-            if ($uploadAvatar->upload()) {
-                return ($uploadAvatar['image']);
-                $this->goHome();
+            if ($uploadAvatar->upload(true)) {
+      
             }
         }
-
 
         $changePassword = new PasswordForm();
         if ($changePassword->load(yii::$app->request->post()) && $changePassword->validate()) {
