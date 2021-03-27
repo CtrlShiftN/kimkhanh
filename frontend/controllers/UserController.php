@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use frontend\models\UpdateForm;
+use frontend\models\UploadImageForm;
 use frontend\models\UserForm;
 use Yii;
 use frontend\models\PasswordForm;
@@ -16,7 +16,7 @@ $cdnUrl = Yii::$app->params['frontend'];
 
 class UserController extends Controller
 {
-
+    public $avatar;
     public function behaviors()
     {
         return [
@@ -68,34 +68,34 @@ class UserController extends Controller
 
     public function actionProfile()
     {
-        $model = (new UserForm())::findOne(Yii::$app->user->identity->getId());
-        if ($model->load(yii::$app->request->post()) && $model->validate()) {
-            if ($model->save(false)) {
+        $userModel = (new UserForm())::findOne(Yii::$app->user->identity->getId());
+        if ($userModel->load(yii::$app->request->post()) && $userModel->validate()) {
+            if ($userModel->save(false)) {
                 $this->goBack();
             }
         }
 
-        $change = new PasswordForm();
-        if ($change->load(yii::$app->request->post()) && $change->validate()) {
-            if ($change->changePassword()) {
-                $this->goBack();
-            }
-        }
-
-        $update = new UpdateForm();
-
+        $uploadAvatar = new UploadImageForm();
         if (Yii::$app->request->isPost) {
-            $update->imageFile = UploadedFile::getInstance($model, 'imageFile');
-            if ($update->upload()) {
-                // file is uploaded successfully
-                return;
+            $uploadAvatar->image = UploadedFile::getInstance($uploadAvatar, 'image');
+            if ($uploadAvatar->upload()) {
+                $this->goHome();
+                return $uploadAvatar->image;
             }
         }
+
+        $changePassword = new PasswordForm();
+        if ($changePassword->load(yii::$app->request->post()) && $changePassword->validate()) {
+            if ($changePassword->changePassword()) {
+                $this->goBack();
+            }
+        }
+
 
         return $this->render('profile', [
-            'model' => $model,
-            'change' => $change,
-            'update' => $update,
+            'userModel' => $userModel,
+            'uploadAvatar' => $uploadAvatar,
+            'changePassword' => $changePassword,
         ]);
     }
 

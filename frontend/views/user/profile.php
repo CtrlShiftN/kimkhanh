@@ -3,8 +3,6 @@ $cdnUrl = Yii::$app->params['frontend'];
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
-
 ?>
 <div class="row">
     <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3" id="accordion">
@@ -73,36 +71,33 @@ use yii\widgets\ActiveForm;
                         <hr>
                         <?php $form = ActiveForm::begin(); ?>
                         <b>Tên đăng nhập:</b>
-                        <?php echo $model['name']; ?><br>
+                        <?php echo $userModel['name']; ?><br>
 
                         <b>Email:</b>
-                        <?= $form->field($model, 'email')->textInput(['autofocus' => true, 'placeholder' => 'Email'])->label(false) ?>
+                        <?= $form->field($userModel, 'email')->textInput(['autofocus' => true, 'placeholder' => 'Email'])->label(false) ?>
 
                         <b>Số điện thoại:</b>
-                        <?= $form->field($model, 'tel')->textInput(['placeholder' => 'Số Điện Thoại'])->label(false) ?>
+                        <?= $form->field($userModel, 'tel')->textInput(['placeholder' => 'Số Điện Thoại'])->label(false) ?>
 
                         <b>Giới tính:</b>
-                        <?= $form->field($model, 'gender')->radioList([0 => 'Nam', 1 => 'Nữ', 2 => 'khác'])->label(false); ?>
-                        <label class="control-label" for="datetimepicker-default"><b>Ngày tháng năm sinh</b></label>
-                        <input type="datetime-local" id="datetimepicker-default" class="form-control"/><br>
+                        <?= $form->field($userModel, 'gender')->radioList([0 => 'Nam', 1 => 'Nữ', 2 => 'khác'])->label(false); ?>
+
+                        <?= $form->field($userModel, 'date_of_birth')->textInput(['value' => date( 'Y-m-d'),'options' => ['class' => 'form-control'],])->label('Ngày tháng năm sinh'); ?>
+
                         <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary', 'name' => 'change']) ?>
 
                         <?php ActiveForm::end(); ?>
                     </div>
                     <div class="text-center col-12 col-lg-5 col-sm-5 col-md-5 col-xl-5">
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
-                            <img src="<?= $cdnUrl ?>/img/user.png" alt="user" class="col-12">
-                            <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
-
-                            <?= $form->field($update, 'imageFile')->fileInput() ?>
-
-                            <button type="submit">ok</button>
-
-                            <?php ActiveForm::end() ?>
-                        </form>
-                        <div>
-
-                        </div>
+                        <img src="<?= $cdnUrl . "/img/user.png".$uploadAvatar['image'] ?>"
+                             class="col-12 avatar border image-responsive">
+                        <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
+                        <?= $form->field($uploadAvatar, 'image')->fileInput()->label('Chỉ nhận ảnh có đuôi : png, jpg') ?>
+                        <button type="submit" id="upLoadFile">Submit</button>
+                        <?php ActiveForm::end() ?>
+                        <?php
+var_dump($uploadAvatar['image'] );
+                        ?>
                     </div>
                 </div>
             </div>
@@ -111,13 +106,13 @@ use yii\widgets\ActiveForm;
                 <p>Đừng cung cấp thông tin cho bất cứ ai!</p>
                 <hr>
                 <div class="p-3 col-5 mx-auto">
-                    <?php $form = ActiveForm::begin();?>
-                    <?= $form->field($change, 'oldPassword')->textInput(['autofocus' => true, 'placeholder' => 'Nhập mật khẩu cũ'])->label(false) ?>
-                    <?= $form->field($change, 'newPassword')->passwordInput(['autofocus' => true, 'placeholder' => 'Nhập mật khẩu mới'])->label(false) ?>
-                    <?= $form->field($change, 'repeatNewPassword')->passwordInput(['autofocus' => true, 'placeholder' => 'Nhập lại mật khẩu mới'])->label(false) ?>
+                    <?php $form = ActiveForm::begin(); ?>
+                    <?= $form->field($changePassword, 'oldPassword')->textInput(['autofocus' => true, 'placeholder' => 'Nhập mật khẩu cũ'])->label(false) ?>
+                    <?= $form->field($changePassword, 'newPassword')->passwordInput(['autofocus' => true, 'placeholder' => 'Nhập mật khẩu mới'])->label(false) ?>
+                    <?= $form->field($changePassword, 'repeatNewPassword')->passwordInput(['autofocus' => true, 'placeholder' => 'Nhập lại mật khẩu mới'])->label(false) ?>
 
                     <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary']) ?>
-                    <?php ActiveForm::end();?>
+                    <?php ActiveForm::end(); ?>
                 </div>
             </div>
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
@@ -137,13 +132,14 @@ use yii\widgets\ActiveForm;
                  aria-labelledby="v-pills-orderUpdate-tab">
                 <h4>Chưa có thông báo mới.</h4>
             </div>
-            <div class="tab-pane fade pb-3" id="v-pills-discount" role="tabpanel" aria-labelledby="v-pills-discount-tab">
+            <div class="tab-pane fade pb-3" id="v-pills-discount" role="tabpanel"
+                 aria-labelledby="v-pills-discount-tab">
                 <hr>
                 <table>
                     <tr>
                         <td><img src="<?= $cdnUrl ?>/img/background1.jpg" value="giảm giá" width="100px"></td>
                         <td><h4>Giảm giá số lượng lớn</h4>
-                        <p> các loại camera an ninh đời cũ để cập nhật thêm các loại camera giám sát.</p></td>
+                            <p> các loại camera an ninh đời cũ để cập nhật thêm các loại camera giám sát.</p></td>
                     </tr>
                     <button class="btn btn-success float-right">Mua ngay</button>
                 </table>

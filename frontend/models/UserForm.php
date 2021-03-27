@@ -3,8 +3,8 @@
 namespace frontend\models;
 
 use common\models\User;
+use phpDocumentor\Reflection\Types\Integer;
 use Yii;
-use yii\rbac\Rule;
 
 /**
  * This is the model class for table "user".
@@ -28,9 +28,7 @@ use yii\rbac\Rule;
  */
 class UserForm extends User
 {
-    public $oldPassword;
-    public $newPassword;
-
+    public $image;
 
     public function rules()
     {
@@ -44,6 +42,8 @@ class UserForm extends User
             [['username'], 'unique'],
             [['referral_code'], 'unique'],
             [['password_reset_token'], 'unique'],
+            [['gender'],'integer'],
+            [['date_of_birth'],'default', 'value'=>null],
         ];
     }
 
@@ -69,26 +69,9 @@ class UserForm extends User
             'avatar' => Yii::t('app', 'Avatar'),
             'banner' => Yii::t('app', 'Banner'),
             'note' => Yii::t('app', 'Note'),
-            'oldPassword' => 'Mật khẩu',
-            'newPassword' => 'Mật khẩu mới',
-            'repeatNewPassword' => 'Mật khẩu mới',
+            'date_of_birth' => Yii::t('app', 'Date_of_birth'),
         ]);
     }
 
-    public function changePassword(){
-        $model = User::findOne(Yii::$app->user->getId());
-        $model->setPassword($this->newPassword);
-        $model->updated = date('Y-m-d H:i:s');
-        return $model->save(false);
-    }
 
-    public function findPasswords($attribute, $params)
-    {
-        $user = User::find()->where([
-            'username' => Yii::$app->user->identity->username
-        ])->one();
-        $password = $user->password;
-        if ($password != $this->oldPassword)
-            $this->addError($attribute, 'Mật khẩu không đúng!');
-    }
 }

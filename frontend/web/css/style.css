@@ -53,3 +53,13 @@
         font-size: 18px;
     }
 }
+
+.image-responsive {
+    width:100%;
+    height: auto;
+}
+
+.avatar{
+    width: 250px;
+    height: 270px;
+}

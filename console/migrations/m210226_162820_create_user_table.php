@@ -29,6 +29,7 @@ class m210226_162820_create_user_table extends Migration
             'avatar' => $this->string()->defaultValue(null),
             'banner' => $this->string()->defaultValue(null),
             'note' => $this->string()->defaultValue(null),
+            'date_of_birth', $this->date()->comment("Y-m-d"),
         ]);
     }
 
