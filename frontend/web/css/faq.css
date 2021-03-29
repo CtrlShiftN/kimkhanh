@@ -23,3 +23,21 @@
     background-color: #0000006e;
     border: 1px solid rgba(0, 0, 0, .125)
 }
+
+@media only screen and (max-width: 280px) {
+    .title-faq .content-faq .guide-faq .document-faq {
+        font-siz: 10px!important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .title-faq .content-faq .guide-faq .document-faq {
+        font-size: 12px!important;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .title-faq .content-faq .guide-faq .document-faq {
+        font-size: 16px!important;
+    }
+}

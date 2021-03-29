@@ -36,7 +36,7 @@ $cdnUrl = Yii::$app->params['frontend'];
     <h4 class="text-dark title-faq pt-4 pb-2 mb-3 font-weight-bold"><u><i class="far fa-question-circle"></i> CÂU HỎI
             THƯỜNG GẶP:</u></h4>
 </div>
-<div class="bg-img-faq p-3 mb-2">
+<div class="bg-img-faq p-3">
     <div class="container-fluid bg-title-faq" id="accordion">
         <?php foreach ($arrQuestion as $value): ?>
             <div class="content-faq">
