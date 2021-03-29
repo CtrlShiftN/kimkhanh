@@ -72,14 +72,15 @@ class UserController extends Controller
         $userModel = (new UserForm())::findOne(Yii::$app->user->identity->getId());
         if ($userModel->load(yii::$app->request->post()) && $userModel->validate()) {
             if ($userModel->save(false)) {
-                $this->goBack();
+                    $this->goBack();
             }
         }
-        $uploadAvatar = new UploadImageForm();
+
+        $uploadAvatar = (new UploadImageForm())::findOne(Yii::$app->user->identity->getId());
         if (Yii::$app->request->isPost) {
-            $uploadAvatar->image = UploadedFile::getInstance($uploadAvatar, 'image');
-            if ($uploadAvatar->upload(true)) {
-      
+            $uploadAvatar->avatar = UploadedFile::getInstance($uploadAvatar, 'avatar');
+            if ($uploadAvatar->upload()) {
+                $uploadAvatar->saveAvatar();
             }
         }
 

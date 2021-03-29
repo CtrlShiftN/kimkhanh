@@ -1,28 +1,42 @@
 <?php
 
 namespace frontend\models;
+
 use common\models\User;
 use yii\base\Model;
 use yii;
+use yii\web\UploadedFile;
 
-class UploadImageForm extends User {
-    public $image;
-    public function rules() {
+class UploadImageForm extends User
+{
+    public $avatar;
+
+    public function rules()
+    {
         return [
-            [['image'], 'file', 'skipOnEmpty' => false, 'extensions' => 'jpg, png'],
+            [['avatar'], 'file', 'skipOnEmpty' => false, 'extensions' => 'jpg, png'],
+
         ];
     }
-    public function upload() {
-        if ($this->validate()) {
-            $this->image->saveAs('uploads/avatar/' . $this->image->baseName . '.' .
-                $this->image->extension);
 
-            return true;
+    public function upload()
+    {
+        if ($this->validate()) {
+            $this->avatar->saveAs('uploads/avatar/' . $this->avatar->baseName . '.' .
+                $this->avatar->extension);
         } else {
             return false;
         }
     }
 
+    public function saveAvatar()
+    {
+        $uploadAvatar = yii::$app->request->post();
+        $uploadAvatar->avatar;
+
+        return $uploadAvatar->save(true);
+    }
 
 }
+
 ?>

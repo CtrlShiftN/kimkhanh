@@ -82,18 +82,18 @@ use yii\widgets\ActiveForm;
                         <b>Giới tính:</b>
                         <?= $form->field($userModel, 'gender')->radioList([0 => 'Nam', 1 => 'Nữ', 2 => 'khác'])->label(false); ?>
 
-                        <?= $form->field($userModel, 'date_of_birth')->textInput(['value' => date( 'Y-m-d'),'options' => ['class' => 'form-control'],])->label('<b>Ngày tháng năm sinh:git check</b>'); ?>
+                        <?= $form->field($userModel, 'date_of_birth')->textInput(['value' => date( 'Y-m-d'),'options' => ['class' => 'form-control'],])->label('<b>Ngày tháng năm sinh:</b>'); ?>
 
                         <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary', 'name' => 'change']) ?>
 
                         <?php ActiveForm::end(); ?>
                     </div>
                     <div class="text-center col-12 col-lg-5 col-sm-5 col-md-5 col-xl-5">
-                        <img src="<?= $cdnUrl . "/uploads/avatar/".$uploadAvatar['image'] ?>"
-                             class="col-12 avatar border image-responsive">
+                        <img src="<?= $cdnUrl . "/uploads/avatar/".$uploadAvatar['avatar'] ?>"
+                             class="col-12 border image-responsive avatar">
                         <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
-                        <?= $form->field($uploadAvatar, 'image')->fileInput()->label('Chỉ nhận ảnh có đuôi : png, jpg') ?>
-                        <button>Submit</button>
+                        <?= $form->field($uploadAvatar, 'avatar')->fileInput()->label('Chỉ nhận ảnh có đuôi : png, jpg') ?>
+                        <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary']) ?>
                         <?php ActiveForm::end() ?>
                     </div>
                 </div>

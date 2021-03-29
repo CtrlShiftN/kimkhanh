@@ -55,11 +55,13 @@
 }
 
 .image-responsive {
-    width:100%;
-    height: auto;
+    width:auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .avatar{
     width: 250px;
     height: 270px;
+    object-fit: contain;
 }

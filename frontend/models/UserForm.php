@@ -3,7 +3,6 @@
 namespace frontend\models;
 
 use common\models\User;
-use phpDocumentor\Reflection\Types\Integer;
 use Yii;
 
 /**
@@ -69,7 +68,6 @@ class UserForm extends User
             'avatar' => Yii::t('app', 'Avatar'),
             'banner' => Yii::t('app', 'Banner'),
             'note' => Yii::t('app', 'Note'),
-            'date_of_birth' => Yii::t('app', 'Date_of_birth'),
         ]);
     }
 
