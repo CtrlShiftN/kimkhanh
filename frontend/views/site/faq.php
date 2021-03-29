@@ -9,6 +9,7 @@ use yii\helpers\Url;
 $this->title = 'Câu hỏi thường gặp';
 $cdnUrl = Yii::$app->params['frontend'];
 ?>
+<link href="<?= $cdnUrl ?>/css/faq.css" rel="stylesheet" type="text/css">
 <style>
     .bg-img-faq {
         background-image: url('<?= $cdnUrl ?>/img/background-faq.jpg');
@@ -42,9 +43,9 @@ $cdnUrl = Yii::$app->params['frontend'];
                 <div class="card card-header p-0 px-3" id="heading<?= $value['id'] ?>">
                     <a class="text-decoration-none row change-content-faq" href="#" data-toggle="collapse"
                        data-target="#collapse<?= $value['id'] ?>" aria-expanded="false" aria-controls="collapse">
-                        <p class="py-3 mb-0  col-10 font-weight-bold">
+                        <p class="py-3 mb-0  col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 font-weight-bold">
                             <?= $value['id'] ?>. <?= $value['question_html'] ?></p>
-                        <p class="col-2 py-3 mb-0 m-auto  font-weight-bold text-center"><i
+                        <p class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 py-3 mb-0 m-auto  font-weight-bold text-center"><i
                                     class="fas fa-chevron-down rorate"></i></p>
                     </a>
                 </div>

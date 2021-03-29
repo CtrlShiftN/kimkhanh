@@ -672,7 +672,7 @@ uncharted:
   icons:
     - uncharted
   label: Uncharted Software
-  url: 'https://uncharted.software'
+  url: 'https://uncharted.document'
 uniregistry:
   icons:
     - uniregistry
@@ -697,7 +697,7 @@ via:
     - skull-crossbones
     - user-injured
   label: VIA Traffic Software Solutions
-  url: 'https://www.via.software'
+  url: 'https://www.via.document'
 victor-costan:
   icons:
     - otter
