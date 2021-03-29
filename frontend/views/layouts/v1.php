@@ -69,6 +69,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                 </div>
             </div>
         </div>
+
         <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1">
             <div class="container font-weight-bold">
                 <a href="<?= $cdnUrl ?>" class="navbar-brand d-md-none"><img src="<?= $cdnUrl ?>/img/logoKimKhanh.png"
@@ -84,6 +85,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                         <li class="nav-item borderX px-md-1 mr-xl-0">
                             <a class="nav-link text-light" href="<?= $cdnUrl ?>"><i class="fas fa-home"><span
                                             class="d-md-none"> TRANG CHỦ</span></i></a>
+
                         </li>
                         <!-- Product -->
                         <li class="nav-item dropdown border-md-right">
@@ -267,7 +269,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                                     </a>
                                 </li>
                                 <li class="dropdown-item">
-                                    <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <a class="nav-link text-dark" href="<?= $cdnUrl ?>/site/faq">
                                         <i class="fas fa-cogs"></i> Câu hỏi thường gặp
                                     </a>
                                 </li>

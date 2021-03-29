@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use frontend\models\Document;
+use frontend\models\Question;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -268,6 +268,22 @@ class SiteController extends Controller
 
         return $this->render('resendVerificationEmail', [
             'model' => $model
+        ]);
+    }
+
+    /**
+     * Displays FAQ page.
+     *
+     * @return mixed
+     */
+//    public function actionFaq()
+//    {
+//        return $this->render('faq');
+//    }
+    public function actionFaq(){
+        $arrQuestion = (new Question())->getQuestion();
+        return $this->render('faq',[
+            'arrQuestion'=>$arrQuestion
         ]);
     }
 }
