@@ -27,17 +27,44 @@ $cdnUrl = Yii::$app->params['frontend'];
 
     .change-content-faq[aria-expanded="true"] .fa-chevron-down {
         transform: rotate(180deg);
+        transition: 0.35s;
+    }
+    .change-content-faq[aria-expanded="false"] .fa-chevron-down{
+        transition: 0.35s;
     }
     .wrap > .container {
-        padding: 0!important;
+        padding: 0 !important;
     }
+    @media only screen and (max-width: 280px) {
+        .title-faq, .content-faq, .guide-faq, .document-faq {
+            font-size: 80%!important;
+            transition: 0.35s;
+
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        .title-faq, .content-faq, .guide-faq, .document-faq {
+            font-size: 90%!important;
+            transition: 0.5s;
+
+        }
+    }
+
+    @media only screen and (max-width: 760px) {
+        .title-faq, .content-faq, .guide-faq, .document-faq {
+            font-size:100%!important;
+            transition: 0.5s;
+        }
+    }
+
 </style>
 <div class="container-fluid">
     <h4 class="text-dark title-faq pt-4 pb-2 mb-3 font-weight-bold"><u><i class="far fa-question-circle"></i> CÂU HỎI
             THƯỜNG GẶP:</u></h4>
 </div>
 <div class="bg-img-faq p-3">
-    <div class="container-fluid bg-title-faq" id="accordion">
+    <div class="container-fluid bg-title-faq p-3" id="accordion">
         <?php foreach ($arrQuestion as $value): ?>
             <div class="content-faq">
                 <div class="card card-header p-0 px-3" id="heading<?= $value['id'] ?>">
@@ -51,7 +78,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                 </div>
                 <div class="collapse" id="collapse<?= $value['id'] ?>" class="collapse show"
                      aria-labelledby="heading<?= $value['id'] ?>" data-parent="#accordion">
-                    <div class="card card-body border-top p-1">
+                    <div class="card card-body border-top pl-4 p-1">
                         <?= $value['answer_html'] ?>
                     </div>
                 </div>
