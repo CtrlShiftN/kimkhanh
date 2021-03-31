@@ -84,7 +84,7 @@ $this->title = 'Kim Khánh Group';
     <div class="row text-center mb-5">
         <h2 class="col-12 p-5 border-bottom border-darktext-center text-uppercase text-danger fontTitle">
             dịch vụ của chúng tôi</h2>
-        <div class="col-lg-4 col-12 col-sm-6 col-md-6 p-3 row my-auto text-center text-lg-left offerCard">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 p-3 row m-0 text-center text-lg-left offerCard">
             <div class="col-3 offerIcon">
                 <h1><i class="fas fa-school iIcon"></i></h1>
             </div>
@@ -94,7 +94,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#" class="text-danger font-weight-bold">Tìm hiểu thêm ></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 col-sm-6 col-md-6 p-3 row my-auto text-center text-lg-left offerCard">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 p-3 row m-0 text-center text-lg-left offerCard">
             <div class="col-3 offerIcon">
                 <h1><i class="fas fa-hospital iIcon"></i></h1>
             </div>
@@ -104,7 +104,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#" class="text-danger font-weight-bold">Tìm hiểu thêm ></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 col-sm-6 col-md-6 p-3 row my-auto text-center text-lg-left offerCard">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 p-3 row m-0 text-center text-lg-left offerCard">
             <div class="col-3 offerIcon">
                 <h1><i class="fas fa-store-alt iIcon"></i></h1>
             </div>
@@ -114,7 +114,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#" class="text-danger font-weight-bold">Tìm hiểu thêm ></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 col-sm-6 col-md-6 p-3 row my-auto text-center text-lg-left offerCard">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 p-3 row m-0 text-center text-lg-left offerCard">
             <div class="col-3 offerIcon">
                 <h1><i class="fas fa-camera iIcon"></i></h1>
             </div>
@@ -124,7 +124,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#" class="text-danger font-weight-bold">Tìm hiểu thêm ></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 p-3 row my-auto text-center text-lg-left offerCard">
+        <div class="col-12 col-sm-6 sol-md-6 col-lg-4 col-xl-4 p-3 row m-0 text-center text-lg-left offerCard">
             <div class="col-3 offerIcon">
                 <h1><i class="fas fa-home iIcon"></i></h1>
             </div>
@@ -134,7 +134,7 @@ $this->title = 'Kim Khánh Group';
                 <a href="#" class="text-danger font-weight-bold">Tìm hiểu thêm ></a>
             </div>
         </div>
-        <div class="col-lg-4 col-12 col-sm-6 sol-md-6 p-3 row my-auto text-center text-lg-left offerCard">
+        <div class="col-12 col-sm-6 sol-md-6 col-lg-4 col-xl-4 p-3 row m-0 text-center text-lg-left offerCard">
             <div class="col-3 offerIcon">
                 <h1><i class="fas fa-building iIcon"></i></h1>
             </div>
