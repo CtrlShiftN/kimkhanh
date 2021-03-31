@@ -390,3 +390,8 @@ div:hover>div>.reasonIcon {
     color: black;
     border-top: 3px solid #dc3545;
 }
+@media (max-width: 769px){
+    .funcRes {
+        display: none !important;
+    }
+}

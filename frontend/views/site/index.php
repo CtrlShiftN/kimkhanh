@@ -4,8 +4,6 @@
 $cdnUrl = Yii::$app->params['frontend'];
 $this->title = 'Kim Khánh Group';
 ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/index.css">
 <style>
     .reason-background {
@@ -31,6 +29,7 @@ $this->title = 'Kim Khánh Group';
         background-repeat: no-repeat;
         min-height: 500px;
     }
+
     .ideas-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/ideas-bg.jpg");
         background-size: cover;
@@ -38,6 +37,7 @@ $this->title = 'Kim Khánh Group';
         background-attachment: fixed;
         min-height: 500px;
     }
+
     .protect-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/protect-image.png");
         background-size: cover;
@@ -45,6 +45,7 @@ $this->title = 'Kim Khánh Group';
         background-attachment: fixed;
         min-height: 500px;
     }
+
     @font-face {
         font-family: "brand";
         src: url("<?= $cdnUrl ?>/fontface/VNI-Jamai.TTF");
@@ -193,10 +194,6 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
     </div>
-
-
-
-
     <!-- Our Best Features-->
     <div class="row mb-5 w-100">
         <h2 class="col-12 m-0 p-5 text-center text-uppercase text-danger fontTitle">Chức năng tốt
@@ -207,77 +204,105 @@ $this->title = 'Kim Khánh Group';
             <input class="radio" id="three" name="group" type="radio">
             <input class="radio" id="four" name="group" type="radio">
             <div class="tabs row">
-                <label class="tab col-6 col-md-3 text-center p-4" id="one-tab" for="one"><i class="fas fa-camera fa-2x"></i></label>
-                <label class="tab col-6 col-md-3 text-center p-4" id="two-tab" for="two"><i class="fas fa-desktop fa-2x"></i></label>
-                <label class="tab col-6 col-md-3 text-center p-4" id="three-tab" for="three"><i class="fas fa-user-shield fa-2x"></i></label>
-                <label class="tab col-6 col-md-3 text-center p-4" id="four-tab" for="four"><i class="fas fa-brain fa-2x"></i></label>
+                <label class="tab col-6 col-md-3 text-center p-4" id="one-tab" for="one"><i
+                            class="fas fa-camera fa-2x"></i></label>
+                <label class="tab col-6 col-md-3 text-center p-4" id="two-tab" for="two"><i
+                            class="fas fa-desktop fa-2x"></i></label>
+                <label class="tab col-6 col-md-3 text-center p-4" id="three-tab" for="three"><i
+                            class="fas fa-user-shield fa-2x"></i></label>
+                <label class="tab col-6 col-md-3 text-center p-4" id="four-tab" for="four"><i
+                            class="fas fa-brain fa-2x"></i></label>
             </div>
             <div class="panels">
                 <div class="panel" id="one-panel">
                     <div class="row p-5 m-5 border">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
-                            <h1 class="px-3 py-5 bg-danger text-center">hình ảnh chất lượng</h1>
+                        <div class="funcRes col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
+                            <h1 class="px-3 py-5 bg-danger text-center fontTitle">hình ảnh chất lượng</h1>
                         </div>
-                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 px-5 py-3 text-justify">
+                        <h1 class="text-center d-md-none text-uppercase fontTitle">hình ảnh chất lượng</h1>
+                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-md-5 py-md-3 text-justify">
                             Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
-                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể
+                            được kết
+                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế
+                            độ báo
                             trộm cho chủ nhân biết và xử lý.
 
-                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
-                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
-                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
+                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có
+                            hai loại
+                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu
+                            và phương
+                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu
+                            thị…
                         </p>
                     </div>
                 </div>
                 <div class="panel" id="three-panel">
                     <div class="row p-5 m-5 border">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
-                            <h1 class="px-3 py-5 bg-danger text-center">tốc độ cao, ổn định</h1>
+                        <div class="funcRes col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
+                            <h1 class="px-3 py-5 bg-danger text-center fontTitle">tốc độ cao, ổn định</h1>
                         </div>
-                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 px-5 py-3 text-justify">
+                        <h1 class="text-center d-md-none text-uppercase fontTitle">tốc độ cao, ổn định</h1>
+                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-md-5 py-md-3 text-justify">
                             Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
-                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể
+                            được kết
+                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế
+                            độ báo
                             trộm cho chủ nhân biết và xử lý.
 
-                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
-                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
-                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
+                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có
+                            hai loại
+                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu
+                            và phương
+                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu
+                            thị…
                         </p>
                     </div>
                 </div>
                 <div class="panel" id="two-panel">
                     <div class="row p-5 m-5 border">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
-                            <h1 class="px-3 py-5 bg-danger text-center">Bảo mật cao</h1>
+                        <div class="funcRes col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
+                            <h1 class="px-3 py-5 bg-danger text-center fontTitle">Bảo mật cao</h1>
                         </div>
-                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 px-5 py-3 text-justify">
+                        <h1 class="text-center d-md-none text-uppercase fontTitle">Bảo mật cao</h1>
+                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-md-5 py-md-3 text-justify">
                             Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
-                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể
+                            được kết
+                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế
+                            độ báo
                             trộm cho chủ nhân biết và xử lý.
 
-                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
-                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
-                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
+                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có
+                            hai loại
+                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu
+                            và phương
+                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu
+                            thị…
                         </p>
                     </div>
                 </div>
                 <div class="panel" id="four-panel">
                     <div class="row p-5 m-5 border">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
-                            <h1 class="px-3 py-5 bg-danger text-center">Dễ dàng điều khiển</h1>
+                        <div class="funcRes col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
+                            <h1 class="px-3 py-5 bg-danger text-center fontTitle">Dễ dàng điều khiển</h1>
                         </div>
-                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 m-3 p-3 border border-dark text-justify">
+                        <h1 class="text-center d-md-none text-uppercase fontTitle">Dễ dàng điều khiển</h1>
+                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-md-5 py-md-3 text-justify">
                             Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
-                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể
+                            được kết
+                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế
+                            độ báo
                             trộm cho chủ nhân biết và xử lý.
 
-                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
-                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
-                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
+                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có
+                            hai loại
+                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu
+                            và phương
+                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu
+                            thị…
                         </p>
                     </div>
                 </div>
@@ -289,33 +314,30 @@ $this->title = 'Kim Khánh Group';
         <div class="container">
             <div class="row py-5">
                 <div class="col-12 col-sm-5 col-md-5 col-lg-5 p-5">
-                    <h1 class="border-bottom border-light py-sm-2 py-md-3 py-xl-4">MỘT SỐ ĐIỂM NỔI BẬT</h1>
+                    <h1 class="border-bottom border-light py-sm-2 py-md-3 py-xl-4 fontTitle">MỘT SỐ ĐIỂM NỔI
+                        BẬT</h1>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p>Lorem ipsum dolor sit amet</p><br>
-                    <a href="#" class="px-4 py-3 text-decoration-none bg-light text-dark rounded">Xem thêm <i
-                                class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="px-4 py-3 text-decoration-none bg-light text-dark rounded">Xem thêm</a>
                 </div>
                 <div class="col-12 col-sm-7 col-md-7 col-lg-7 row py-5 px-5">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-bottom border-right border-light borderPoint">
-                        <h1 class="counter">1</h1>
-                        <p>Chi nhánh trên toàn quốc
-                        <p>
+                        <h1>1</h1>
+                        <p>Chi nhánh trên toàn quốc</p>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-bottom border-left borderPoint">
-                        <h1><span class="counter">93</span><span>%</span></h1>
+                        <h1>93%</h1>
                         <p>Người dùng đánh giá cao
-                        <p>
+                        </p>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-top border-light border-right borderPoint">
-                        <h1><span class="counter">25</span><span>th</span></h1>
-                        <p>Năm xây dựng và phát triển
-                        <p>
+                        <h1>25th</h1>
+                        <p>Năm xây dựng và phát triển</p>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-top border-left borderPoint">
-                        <h1><span class="counter">50000</span><span>+</span></h1>
-                        <p>Sản phẩm được phân phối toàn quốc
-                        <p>
+                        <h1>50000</h1>
+                        <p>Sản phẩm được phân phối toàn quốc</p>
                     </div>
                 </div>
             </div>
@@ -414,11 +436,9 @@ $this->title = 'Kim Khánh Group';
         <h2 class="d-none d-lg-block col-12 text-center text-light text-uppercase mt-5">Bạn muốn biết thêm? Thật dễ
             dàng!<br>Gọi cho chúng tôi: <a href="#">(+84)123456789</a></h2>
     </div>
-
-
     <!--    Hear from our clients-->
     <div class="p-5 text-danger text-center m-auto bg-danger w-100">
-        <h2 class="font-weight-bold text-center text-white text-uppercase">Phản hồi của khách hàng</h2>
+        <h2 class="font-weight-bold text-center text-white text-uppercase fontTitle">Phản hồi của khách hàng</h2>
     </div>
     <div class="row p-5 m-0 bg-light">
         <div class="col-lg-4 col-12 rounded">
@@ -434,7 +454,8 @@ $this->title = 'Kim Khánh Group';
                     </div>
                 </button>
                 <div class="card-body p-3 collapse" id="firstCard">
-                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết
+                        bị có nhiều chế
                         độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
                         chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
                         nhiều chế độ căn chỉnh nổi bật</p>
@@ -454,7 +475,8 @@ $this->title = 'Kim Khánh Group';
                     </div>
                 </button>
                 <div class="card-body p-3 collapse" id="secondCard">
-                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết
+                        bị có nhiều chế
                         độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
                         chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
                         nhiều chế độ căn chỉnh nổi bật</p>
@@ -473,7 +495,8 @@ $this->title = 'Kim Khánh Group';
                         </div>
                 </button>
                 <div class="card-body p-3 collapse" id="thirdCard">
-                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết
+                        bị có nhiều chế
                         độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
                         chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
                         nhiều chế độ căn chỉnh nổi bật</p>
@@ -484,15 +507,6 @@ $this->title = 'Kim Khánh Group';
             <button class="btn btn-danger">Xem thêm phản hồi</button>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
     <!--    Have any ideas in your mind?-->
     <div class="p-5 ideas-background row-full text-white align-items-center main">
         <div class="container">
@@ -510,7 +524,7 @@ $this->title = 'Kim Khánh Group';
     </div>
     <!--    Companies We Have as Clients-->
     <div class="row m-0 py-5 text-muted">
-        <h2 class="text-danger text-center col-12 p-5 font-weight-bold">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
+        <h2 class="text-danger text-center col-12 p-5 font-weight-bold fontTitle">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
         <div id="brand" class="carousel slide w-100 row col-12" data-ride="carousel">
             <div class="carousel-inner col-12">
                 <div class="carousel-item brand-md active">
@@ -547,12 +561,12 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
             <div class="controls-top col-12 text-center mt-3">
-                <a class="btn btn-danger text-light" href="#brand" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
-                <a class="btn btn-danger text-light" href="#brand" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                <a class="btn btn-danger text-light" href="#brand" data-slide="prev"><i
+                            class="fa fa-chevron-left fa-2x"></i></a>
+                <a class="btn btn-danger text-light" href="#brand" data-slide="next"><i
+                            class="fa fa-chevron-right fa-2x"></i></a>
             </div>
         </div>
     </div>
     <div class="pb-5"></div>
 </div>
-<script>
-</script>
