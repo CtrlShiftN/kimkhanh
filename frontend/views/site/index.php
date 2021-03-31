@@ -31,7 +31,6 @@ $this->title = 'Kim Khánh Group';
         background-repeat: no-repeat;
         min-height: 500px;
     }
-
     .ideas-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/ideas-bg.jpg");
         background-size: cover;
@@ -39,40 +38,53 @@ $this->title = 'Kim Khánh Group';
         background-attachment: fixed;
         min-height: 500px;
     }
-
+    .protect-background {
+        background-image: url("<?= $cdnUrl ?>/img/introduction/protect-image.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 500px;
+    }
     @font-face {
-        font-family: "linus";
-        src: url("<?= $cdnUrl ?>/VNI-Linus.TTF");
+        font-family: "brand";
+        src: url("<?= $cdnUrl ?>/fontface/VNI-Jamai.TTF");
     }
 </style>
 <div class="row">
-    <div class="row-full d-md-none">
+    <div class="row-full slideMinWidth">
         <img src="<?= $cdnUrl ?>/img/slideRes.jpg" class="d-block w-100" alt="ads">
     </div>
-    <div class="row-full d-none d-md-block">
-        <img src="<?= $cdnUrl ?>/img/slide.png" class="d-block w-100" alt="ads">
-        <div class="row text-center text-danger transformSlide">
-            <div class="col-sm-4 animate__animated animate__zoomInLeft durationSlide">
-                <h1 class="fontSlideAround"><i class="fas fa-check"></i> CHẤT LƯỢNG</h1>
-            </div>
-            <div class="col-sm-4 animate__animated animate__zoomIn durationSlide">
-                <h1 class="fontSlide"><i class="fas fa-shield-alt iIcon"></i> AN TOÀN <i
-                            class="fas fa-shield-alt iIcon"></i></h1>
-                <a href="#"
-                   class="btn btn-lg btn-danger animate__animated animate__fadeInUp animate__fast animate__delay-2s mt-3"
-                   id="btnLink">Xem ngay!</a>
-            </div>
-            <div class="col-sm-4 animate__animated animate__zoomInRight durationSlide">
-                <h1 class="fontSlideAround"><i class="fas fa-check"></i> TIỆN LỢI</h1>
-            </div>
+    <div class="row-full position-relative slideMaxWidth">
+        <div class="position-absolute location">
+            <h1 class="px-2 pt-3 pb-2 pb-xl-3 m-0 animate__animated animate__flipInY brandFont fontSzBrand text-danger">
+                KimKhanh-Groups</h1>
+            <ul class="list-unstyled ml-5">
+                <li class="animate__animated animate__flipInX pb-2 pb-xl-3 firstItemSlide">
+                    <h3 class="fontSzSlideTitle fontSlideTitle m-0 font-weight-bold"><i
+                                class="fas fa-check pr-2 slideIcon"></i>AN TOÀN</h3>
+                </li>
+                <li class="pl-3 ml-3 animate__animated pb-2 pb-xl-3 animate__flipInX secondItemSlide">
+                    <h3 class="fontSzSlideTitle fontSlideTitle m-0 font-weight-bold"><i
+                                class="fas fa-check pr-2 slideIcon"></i>CHẤT LƯỢNG</h3>
+                </li>
+                <li class="pl-5 ml-5 animate__animated animate__flipInX pb-2 pb-xl-3 thirdItemSlide">
+                    <h3 class="fontSzSlideTitle fontSlideTitle m-0 font-weight-bold"><i
+                                class="fas fa-check pr-2 slideIcon"></i>TIỆN LỢI</h3>
+                </li>
+                <li>
+                    <a href="<?= $cdnUrl ?>/site/shop"
+                       class="btn-lg btn-danger animate__animated animate__flipInY btnSlide">XEM THÊM</a>
+                </li>
+            </ul>
         </div>
+        <img src="<?= $cdnUrl ?>/img/Sslide.jpg" class="d-block w-100" alt="ads">
     </div>
     <!-- Offer-->
-    <div class="row mb-5 justify-content-between mt-5 mt-md-0">
-        <h2 class="col-12 px-5 pb-3 mb-3 border-bottom border-dark pt-0 text-center text-uppercase text-danger fontTitle">
+    <div class="row text-center mb-5">
+        <h2 class="col-12 p-5 border-bottom border-darktext-center text-uppercase text-danger fontTitle">
             dịch vụ của chúng tôi</h2>
         <div class="col-lg-4 col-12 col-sm-6 col-md-6 p-3 row my-auto text-center text-lg-left offerCard">
-            <div class="col-3 slideIcon">
+            <div class="col-3 offerIcon">
                 <h1><i class="fas fa-school iIcon"></i></h1>
             </div>
             <div class="col-9">
@@ -82,7 +94,7 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
         <div class="col-lg-4 col-12 col-sm-6 col-md-6 p-3 row my-auto text-center text-lg-left offerCard">
-            <div class="col-3 slideIcon">
+            <div class="col-3 offerIcon">
                 <h1><i class="fas fa-hospital iIcon"></i></h1>
             </div>
             <div class="col-9">
@@ -92,7 +104,7 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
         <div class="col-lg-4 col-12 col-sm-6 col-md-6 p-3 row my-auto text-center text-lg-left offerCard">
-            <div class="col-3 slideIcon">
+            <div class="col-3 offerIcon">
                 <h1><i class="fas fa-store-alt iIcon"></i></h1>
             </div>
             <div class="col-9">
@@ -102,7 +114,7 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
         <div class="col-lg-4 col-12 col-sm-6 col-md-6 p-3 row my-auto text-center text-lg-left offerCard">
-            <div class="col-3 slideIcon">
+            <div class="col-3 offerIcon">
                 <h1><i class="fas fa-camera iIcon"></i></h1>
             </div>
             <div class="col-9">
@@ -112,7 +124,7 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
         <div class="col-lg-4 col-12 col-sm-6 sol-md-6 p-3 row my-auto text-center text-lg-left offerCard">
-            <div class="col-3 slideIcon">
+            <div class="col-3 offerIcon">
                 <h1><i class="fas fa-home iIcon"></i></h1>
             </div>
             <div class="col-9">
@@ -122,7 +134,7 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
         <div class="col-lg-4 col-12 col-sm-6 sol-md-6 p-3 row my-auto text-center text-lg-left offerCard">
-            <div class="col-3 slideIcon">
+            <div class="col-3 offerIcon">
                 <h1><i class="fas fa-building iIcon"></i></h1>
             </div>
             <div class="col-9">
@@ -141,114 +153,134 @@ $this->title = 'Kim Khánh Group';
             </h2>
         </div>
         <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-sm-5 row m-0 bg-light">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 p-3 row m-auto text-center">
-                <div class="col-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 p-3 row text-center">
+                <div class="col-12 col-sm-4 col-md-12 col-xl-4 mb-3 mb-xl-0">
                     <i class="far fa-clock iIcon p-3 reasonIcon"></i>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-12 col-sm-8 col-md-12 col-xl-8">
                     <h5 class="font-weight-bold">Hỗ trợ 24/7</h5>
                     <p class="text-muted">Luôn sẵn sàng phục vụ quý khách 24/7 trừ các ngày Lễ Tết</p>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 p-3 row m-auto text-center">
-                <div class="col-lg-3">
-                    <i class="fas fa-piggy-bank iIcon p-3 reasonIcon"></i></i>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 p-3 row text-center">
+                <div class="col-12 col-sm-4 col-md-12 col-xl-4 mb-3 mb-xl-0">
+                    <i class="fas fa-piggy-bank iIcon p-3 reasonIcon"></i>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-12 col-sm-8 col-md-12 col-xl-8">
                     <h5 class="font-weight-bold">Tiết kiệm</h5>
                     <p class="text-muted">Chính sách ưu đãi và khuyến mại cực tốt cho mọi khách
                         hàng
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 p-3 row m-auto text-center">
-                <div class="col-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 p-3 row text-center">
+                <div class="col-12 col-sm-4 col-md-12 col-xl-4 mb-3 mb-xl-0">
                     <i class="fas fa-user-friends iIcon p-3 reasonIcon"></i>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-12 col-sm-8 col-md-12 col-xl-8">
                     <h5 class="font-weight-bold">Đội ngũ nhiệt tình</h5>
                     <p class="text-muted">Đội ngũ nhân viên chuyên nghiệp, nhiệt tình.</p>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 p-3 row m-auto text-center">
-                <div class="col-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 p-3 row text-center">
+                <div class="col-12 col-sm-4 col-md-12 col-xl-4 mb-3 mb-xl-0">
                     <i class="fas fa-hammer iIcon p-3 reasonIcon"></i>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-12 col-sm-8 col-md-12 col-xl-8">
                     <h5 class="font-weight-bold">Bảo hành</h5>
                     <p class="text-muted">Lắp đặt tận nhà, bảo hành tận nơi, an toàn, uy tín.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Our Best Features-->
-    <div class="row my-5 p-5 w-100 bg-light">
-        <h2 class="col-12 px-5 pb-4 text-center text-uppercase border-bottom text-danger mb-5 fontTitle">Chức năng tốt
-            nhất </h2>
-        <div class="col-5 bgGray px-4 py-5">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <div class="nav-link active rounded-0 border-dark border-bottom py-4 optionsChoose"
-                     id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                     aria-controls="v-pills-home" aria-selected="true">
-                    <i class="fas fa-camera"></i> Lắp đặt camera an toàn <i
-                            class="fas fa-angle-right float-right invisible iconFeature"></i>
-                </div>
-                <div class="nav-link rounded-0 border-dark border-top border-bottom py-4 optionsChoose"
-                     id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                     aria-controls="v-pills-profile" aria-selected="false">
-                    <i class="fas fa-desktop"></i> Hệ thống màn hình <i
-                            class="fas fa-angle-right float-right invisible iconFeature"></i>
-                </div>
-                <div class="nav-link rounded-0 border-dark border-top border-bottom py-4 optionsChoose"
-                     id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-                     aria-controls="v-pills-messages" aria-selected="false">
-                    <i class="fas fa-user-shield"></i> Bảo mật chống trộm <i
-                            class="fas fa-angle-right float-right invisible iconFeature"></i>
-                </div>
-                <div class="nav-link rounded-0 border-dark border-top py-4 optionsChoose" id="v-pills-settings-tab"
-                     data-toggle="pill" href="#v-pills-settings" role="tab"
-                     aria-controls="v-pills-settings" aria-selected="false">
-                    <i class="fas fa-brain"></i> Hệ thống thông minh <i
-                            class="fas fa-angle-right float-right invisible iconFeature"></i>
-                </div>
-            </div>
-        </div>
-        <div class="col-7 px-lg-1 px-0 py-lg-0 text-justify border">
-            <div class="tab-content bg-white rounded p-5" id="v-pills-tabContent">
-                <p class="tab-pane fade show active kiwiFont" id="v-pills-home" role="tabpanel"
-                   aria-labelledby="v-pills-home-tab">
-                    Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                    Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
-                    nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
-                    trộm cho chủ nhân biết và xử lý.
 
-                    Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
-                    chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
-                    thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
-                </p>
-                <p class="tab-pane fade kiwiFont" id="v-pills-profile" role="tabpanel"
-                   aria-labelledby="v-pills-profile-tab">
-                    Hệ thống màn hình luôn được chú trọng giúp quản lý hình ảnh từ camera chất lượng hơn . <br>Chúng tôi
-                    tự hào là đon vị đi đầu trong việc đầu tư màn hình cho thiết bị giám sát
-                </p>
-                <p class="tab-pane fade kiwiFont" id="v-pills-messages" role="tabpanel"
-                   aria-labelledby="v-pills-messages-tab">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <p class="tab-pane fade kiwiFont" id="v-pills-settings" role="tabpanel"
-                   aria-labelledby="v-pills-settings-tab">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+
+
+
+    <!-- Our Best Features-->
+    <div class="row mb-5 w-100">
+        <h2 class="col-12 m-0 p-5 text-center text-uppercase text-danger fontTitle">Chức năng tốt
+            nhất </h2>
+        <div class="warpper col-12">
+            <input class="radio" id="one" name="group" type="radio" checked>
+            <input class="radio" id="two" name="group" type="radio">
+            <input class="radio" id="three" name="group" type="radio">
+            <input class="radio" id="four" name="group" type="radio">
+            <div class="tabs row">
+                <label class="tab col-6 col-md-3 text-center p-4" id="one-tab" for="one"><i class="fas fa-camera fa-2x"></i></label>
+                <label class="tab col-6 col-md-3 text-center p-4" id="two-tab" for="two"><i class="fas fa-desktop fa-2x"></i></label>
+                <label class="tab col-6 col-md-3 text-center p-4" id="three-tab" for="three"><i class="fas fa-user-shield fa-2x"></i></label>
+                <label class="tab col-6 col-md-3 text-center p-4" id="four-tab" for="four"><i class="fas fa-brain fa-2x"></i></label>
+            </div>
+            <div class="panels">
+                <div class="panel" id="one-panel">
+                    <div class="row p-5 m-5 border">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
+                            <h1 class="px-3 py-5 bg-danger text-center">hình ảnh chất lượng</h1>
+                        </div>
+                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 px-5 py-3 text-justify">
+                            Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
+                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
+                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                            trộm cho chủ nhân biết và xử lý.
+
+                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
+                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
+                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
+                        </p>
+                    </div>
+                </div>
+                <div class="panel" id="three-panel">
+                    <div class="row p-5 m-5 border">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
+                            <h1 class="px-3 py-5 bg-danger text-center">tốc độ cao, ổn định</h1>
+                        </div>
+                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 px-5 py-3 text-justify">
+                            Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
+                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
+                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                            trộm cho chủ nhân biết và xử lý.
+
+                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
+                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
+                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
+                        </p>
+                    </div>
+                </div>
+                <div class="panel" id="two-panel">
+                    <div class="row p-5 m-5 border">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
+                            <h1 class="px-3 py-5 bg-danger text-center">Bảo mật cao</h1>
+                        </div>
+                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 px-5 py-3 text-justify">
+                            Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
+                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
+                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                            trộm cho chủ nhân biết và xử lý.
+
+                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
+                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
+                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
+                        </p>
+                    </div>
+                </div>
+                <div class="panel" id="four-panel">
+                    <div class="row p-5 m-5 border">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
+                            <h1 class="px-3 py-5 bg-danger text-center">Dễ dàng điều khiển</h1>
+                        </div>
+                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 m-3 p-3 border border-dark text-justify">
+                            Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
+                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể được kết
+                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế độ báo
+                            trộm cho chủ nhân biết và xử lý.
+
+                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có hai loại
+                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu và phương
+                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu thị…
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -257,7 +289,7 @@ $this->title = 'Kim Khánh Group';
         <div class="container">
             <div class="row py-5">
                 <div class="col-12 col-sm-5 col-md-5 col-lg-5 p-5">
-                    <h1 class="linusFont border-bottom border-light">MỘT SỐ ĐIỂM NỔI BẬT</h1>
+                    <h1 class="border-bottom border-light py-sm-2 py-md-3 py-xl-4">MỘT SỐ ĐIỂM NỔI BẬT</h1>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p>Lorem ipsum dolor sit amet</p><br>
@@ -292,136 +324,48 @@ $this->title = 'Kim Khánh Group';
     <div class="row p-5 m-0">
         <h2 class="text-danger text-center col-12 p-4 mb-5 text-uppercase border-bottom border-danger fontTitle">Sản
             phẩm nổi bật</h2>
-        <div id="multi-item-example" class="carousel slide col-12" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
-                                <div class="card-body bg-light">
-                                    <h4 class="card-title">Camera</h4>
-                                    <p class="font-weight-bold ">
-                                        <i>Hệ thống chống trộm (1)</i
-                                    </p>
-                                    <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
-                                </div>
-                            </div>
-                        </div>
+        <div class="row col-12 m-0 p-0">
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
+                    <div class="card-body bg-light">
+                        <h4 class="card-title">Camera</h4>
+                        <p class="font-weight-bold ">
+                            <i>Hệ thống chống trộm (1)</i
+                        </p>
+                        <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
                     </div>
                 </div>
             </div>
-            <div class="controls-top text-center">
-                <a class="btn btn-danger btn-floating" href="#multi-item-example" data-slide="prev"><i
-                            class="fas fa-chevron-left"></i> Prev</a>
-                <a class="btn btn-danger btn-floating" href="#multi-item-example" data-slide="next">Next <i
-                            class="fas fa-chevron-right"></i></a>
+            <div class="col-md-4 d-none d-md-block">
+                <div class="card mb-2">
+                    <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
+                    <div class="card-body bg-light">
+                        <h4 class="card-title">Camera</h4>
+                        <p class="font-weight-bold ">
+                            <i>Hệ thống chống trộm (1)</i
+                        </p>
+                        <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-none d-md-block">
+                <div class="card mb-2">
+                    <img src="<?= $cdnUrl ?>/img/introduction/product.png" class="w-100">
+                    <div class="card-body bg-light">
+                        <h4 class="card-title">Camera</h4>
+                        <p class="font-weight-bold ">
+                            <i>Hệ thống chống trộm (1)</i
+                        </p>
+                        <a href="#" class="text-danger"><p>Tim hiểu thêm ></p></a>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="col-4"></div>
+        <a href="<?= $cdnUrl ?>/site/shop.php" class="col-4 btn btn-danger my-3">Xem thêm <i
+                    class="fas fa-arrow-right"></i></a>
+        <div class="col-4"></div>
     </div>
     <!--Optimal -->
     <div class="row p-5 optimal-background row-full position-relative" id="optimal">
@@ -431,7 +375,7 @@ $this->title = 'Kim Khánh Group';
             <div class="main1">
                 <div class="text-center">
                     <i class="fas fa-tachometer-alt fa-2x"></i><br>
-                    <h2 class="linusFont">TỐC ĐỘ</h2>
+                    <h2>TỐC ĐỘ</h2>
                 </div>
             </div>
             <div class="main2"></div>
@@ -441,7 +385,7 @@ $this->title = 'Kim Khánh Group';
             <div class="main1">
                 <div class="text-center">
                     <i class="fas fa-lock fa-2x"></i><br>
-                    <h2 class="linusFont">BẢO MẬT</h2>
+                    <h2>BẢO MẬT</h2>
                 </div>
             </div>
             <div class="main2"></div>
@@ -451,7 +395,7 @@ $this->title = 'Kim Khánh Group';
             <div class="main1">
                 <div class="text-center">
                     <i class="fas fa-check fa-2x"></i><br>
-                    <h2 class="linusFont">CHẤT LƯỢNG</h2>
+                    <h2>CHẤT LƯỢNG</h2>
                 </div>
             </div>
             <div class="main2"></div>
@@ -461,7 +405,7 @@ $this->title = 'Kim Khánh Group';
             <div class="main1">
                 <div class="text-center">
                     <i class="fas fa-photo-video fa-2x"></i><br>
-                    <h2 class="linusFont">HÌNH ẢNH</h2>
+                    <h2">HÌNH ẢNH</h2>
                 </div>
             </div>
             <div class="main2"></div>
@@ -470,22 +414,27 @@ $this->title = 'Kim Khánh Group';
         <h2 class="d-none d-lg-block col-12 text-center text-light text-uppercase mt-5">Bạn muốn biết thêm? Thật dễ
             dàng!<br>Gọi cho chúng tôi: <a href="#">(+84)123456789</a></h2>
     </div>
+
+
     <!--    Hear from our clients-->
     <div class="p-5 text-danger text-center m-auto bg-danger w-100">
-        <h2 class="text-center text-white text-uppercase">Phản hồi của khách hàng</h2>
+        <h2 class="font-weight-bold text-center text-white text-uppercase">Phản hồi của khách hàng</h2>
     </div>
-    <div class="row p-5 m-0 bg-light border-danger border-bottom-0 border">
+    <div class="row p-5 m-0 bg-light">
         <div class="col-lg-4 col-12 rounded">
             <div class="card d-flex mx-auto">
-                <div class="card-image"><img class="img-fluid d-flex mx-auto"
-                                             src="<?= $cdnUrl ?>/img/introduction/client-01.jpg">
-                </div>
-                <div class="p-3 bg-danger text-white text-center">
-                    <h3 id="name">Micheal SmitH</h3>
-                    <p>Đạo diễn</p>
-                </div>
-                <div class="card-text p-3">
-                    <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                <button type="button" class="btn" data-toggle="collapse" data-target="#firstCard">
+                    <div class="card-image">
+                        <img class="img-fluid d-flex mx-auto" src="<?= $cdnUrl ?>/img/introduction/client-01.jpg">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="name">Micheal SmitH</h3>
+                        <p>Đạo diễn</p>
+                        <h3 class="p-3 text-light bg-danger">Xem</h3>
+                    </div>
+                </button>
+                <div class="card-body p-3 collapse" id="firstCard">
+                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
                         độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
                         chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
                         nhiều chế độ căn chỉnh nổi bật</p>
@@ -494,15 +443,18 @@ $this->title = 'Kim Khánh Group';
         </div>
         <div class="col-lg-4 col-12 rounded">
             <div class="card d-flex mx-auto">
-                <div class="card-image"><img class="img-fluid d-flex mx-auto"
-                                             src="<?= $cdnUrl ?>/img/introduction/client-02.jpg">
-                </div>
-                <div class="p-3 bg-danger text-white text-center">
-                    <h3 id="name">Samama Ader</h3>
-                    <p>Chủ Shop</p>
-                </div>
-                <div class="card-text p-3">
-                    <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                <button type="button" class="btn" data-toggle="collapse" data-target="#secondCard">
+                    <div class="card-image">
+                        <img class="img-fluid d-flex mx-auto" src="<?= $cdnUrl ?>/img/introduction/client-02.jpg">
+                    </div>
+                    <div class="text-center">
+                        <h3 id="name">Samama Ader</h3>
+                        <p>Chủ Shop</p>
+                        <h3 class="p-3 text-light bg-danger">Xem</h3>
+                    </div>
+                </button>
+                <div class="card-body p-3 collapse" id="secondCard">
+                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
                         độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
                         chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
                         nhiều chế độ căn chỉnh nổi bật</p>
@@ -511,15 +463,17 @@ $this->title = 'Kim Khánh Group';
         </div>
         <div class="col-lg-4 col-12 rounded">
             <div class="card d-flex mx-auto">
-                <div class="card-image"><img class="img-fluid d-flex mx-auto"
-                                             src="<?= $cdnUrl ?>/img/introduction/client-03.jpg"">
-                </div>
-                <div class="p-3 bg-danger text-white text-center">
-                    <h3 id="name">Nami Oala</h3>
-                    <p>Streamer</p>
-                </div>
-                <div class="card-text p-3">
-                    <p class="text-dark">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
+                <button type="button" class="btn" data-toggle="collapse" data-target="#thirdCard">
+                    <div class="card-image"><img class="img-fluid d-flex mx-auto"
+                                                 src="<?= $cdnUrl ?>/img/introduction/client-03.jpg"">
+                        <div class="text-center">
+                            <h3 id="name">Nami Oala</h3>
+                            <p>Streamer</p>
+                            <h3 class="p-3 text-light bg-danger">Xem</h3>
+                        </div>
+                </button>
+                <div class="card-body p-3 collapse" id="thirdCard">
+                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều chế
                         độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
                         chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
                         nhiều chế độ căn chỉnh nổi bật</p>
@@ -530,13 +484,22 @@ $this->title = 'Kim Khánh Group';
             <button class="btn btn-danger">Xem thêm phản hồi</button>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
     <!--    Have any ideas in your mind?-->
     <div class="p-5 ideas-background row-full text-white align-items-center main">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8">
                     <h1 style="font-size: 50px"><b><i>BẠN CÓ Ý TƯỞNG ???</i></b></h1>
-                    <h4 class="font-weight-lighter linusFont">LIÊN HỆ NGAY VỚI CHÚNG TÔI...</h4>
+                    <h4 class="font-weight-lighter">LIÊN HỆ NGAY VỚI CHÚNG TÔI...</h4>
                 </div>
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center mt-5 mt-md-0">
                     <a href="<?= $cdnUrl ?>/site/contact" class="btn-lg btn-light">LIÊN HỆ NGAY <i
@@ -547,9 +510,9 @@ $this->title = 'Kim Khánh Group';
     </div>
     <!--    Companies We Have as Clients-->
     <div class="row m-0 py-5 text-muted">
-        <h2 class="text-danger text-center col-12 p-5 linusFont">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
-        <div id="brand" class="carousel slide w-100" data-ride="carousel">
-            <div class="carousel-inner">
+        <h2 class="text-danger text-center col-12 p-5 font-weight-bold">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
+        <div id="brand" class="carousel slide w-100 row col-12" data-ride="carousel">
+            <div class="carousel-inner col-12">
                 <div class="carousel-item brand-md active">
                     <div class="row inner-row">
                         <div class="col-md-3 brand active">
@@ -583,23 +546,13 @@ $this->title = 'Kim Khánh Group';
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#brand" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#brand" role="button" data-slide="next">
-                <span class="carousel-control-next-icon " aria-hidden="false"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="controls-top col-12 text-center mt-3">
+                <a class="btn btn-danger text-light" href="#brand" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                <a class="btn btn-danger text-light" href="#brand" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+            </div>
         </div>
     </div>
     <div class="pb-5"></div>
 </div>
 <script>
-    $(document).ready(function () {
-        $(".counter").counterUp({
-            delay: 10,
-            time: 300
-        });
-    });
 </script>
