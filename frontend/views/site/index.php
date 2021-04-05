@@ -5,6 +5,12 @@ $cdnUrl = Yii::$app->params['frontend'];
 $this->title = 'Kim Khánh Group';
 ?>
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/index.css">
+<link rel="stylesheet" href="<?= $cdnUrl ?>/css/prism.css">
+<link rel="stylesheet" href="<?= $cdnUrl ?>/css/testi.css">
+<script src="<?= $cdnUrl ?>/js/masonry.pkgd.min.js"></script>
+<script src="<?= $cdnUrl ?>/js/jquery.flexslider-min.js"></script>
+<script src="<?= $cdnUrl ?>/js/main.js"></script>
+<script src="<?= $cdnUrl ?>/js/modernizr.js"></script>
 <style>
     .reason-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/reason.jpg");
@@ -37,21 +43,31 @@ $this->title = 'Kim Khánh Group';
         background-attachment: fixed;
         min-height: 500px;
     }
-
-    .protect-background {
-        background-image: url("<?= $cdnUrl ?>/img/introduction/protect-image.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        min-height: 500px;
-    }
-
     @font-face {
         font-family: "brand";
         src: url("<?= $cdnUrl ?>/fontface/VNI-Jamai.TTF");
     }
+    .testimonial {
+        min-height: 375px;
+        position: relative;
+        background: url("<?= $cdnUrl ?>/img/introduction/testimonials.jpg");
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .goals-background {
+        background-image: url("<?= $cdnUrl ?>/img/introduction/futureGoals.png");
+        background-repeat: no-repeat;
+    }
+    .goals-respon-background {
+        background-image: url("<?= $cdnUrl ?>/img/introduction/futureGoals.jpg");
+        background-repeat: no-repeat;
+    }
 </style>
-<div class="row">
+< class="row">
     <div class="row-full slideMinWidth">
         <img src="<?= $cdnUrl ?>/img/slideRes.jpg" class="d-block w-100" alt="ads">
     </div>
@@ -72,7 +88,7 @@ $this->title = 'Kim Khánh Group';
                     <h3 class="fontSzSlideTitle fontSlideTitle m-0 font-weight-bold"><i
                                 class="fas fa-check pr-2 slideIcon"></i>TIỆN LỢI</h3>
                 </li>
-                <li>
+                <li class="mt-xl-3">
                     <a href="<?= $cdnUrl ?>/site/shop"
                        class="btn-lg btn-danger animate__animated animate__flipInY btnSlide">XEM THÊM</a>
                 </li>
@@ -147,9 +163,8 @@ $this->title = 'Kim Khánh Group';
     </div>
     <!--    Reasons Why Should Choose Us?-->
     <div class="row reason-background row-full">
-        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 d-flex my-5 justify-content-center">
-            <h2 class="text-white bg-danger p-5 m-5 font-weight-bold text-uppercase fontTitle text-center"
-                style="font-size: 48px">
+        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 d-flex my-5 p-5 justify-content-center align-items-center">
+            <h2 class="text-white bg-danger p-5 text-uppercase fontTitle text-center">
                 Tại sao nên chọn<br> chúng tôi ?
             </h2>
         </div>
@@ -194,122 +209,7 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
     </div>
-    <!-- Our Best Features-->
-    <div class="row mb-5 w-100">
-        <h2 class="col-12 m-0 p-5 text-center text-uppercase text-danger fontTitle">Chức năng tốt
-            nhất </h2>
-        <div class="warpper col-12">
-            <input class="radio" id="one" name="group" type="radio" checked>
-            <input class="radio" id="two" name="group" type="radio">
-            <input class="radio" id="three" name="group" type="radio">
-            <input class="radio" id="four" name="group" type="radio">
-            <div class="tabs row">
-                <label class="tab col-6 col-md-3 text-center p-4" id="one-tab" for="one"><i
-                            class="fas fa-camera fa-2x"></i></label>
-                <label class="tab col-6 col-md-3 text-center p-4" id="two-tab" for="two"><i
-                            class="fas fa-desktop fa-2x"></i></label>
-                <label class="tab col-6 col-md-3 text-center p-4" id="three-tab" for="three"><i
-                            class="fas fa-user-shield fa-2x"></i></label>
-                <label class="tab col-6 col-md-3 text-center p-4" id="four-tab" for="four"><i
-                            class="fas fa-brain fa-2x"></i></label>
-            </div>
-            <div class="panels">
-                <div class="panel" id="one-panel">
-                    <div class="row p-5 m-5 border">
-                        <div class="funcRes col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
-                            <h1 class="px-3 py-5 bg-danger text-center fontTitle">hình ảnh chất lượng</h1>
-                        </div>
-                        <h1 class="text-center d-md-none text-uppercase fontTitle">hình ảnh chất lượng</h1>
-                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-md-5 py-md-3 text-justify">
-                            Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể
-                            được kết
-                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế
-                            độ báo
-                            trộm cho chủ nhân biết và xử lý.
-
-                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có
-                            hai loại
-                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu
-                            và phương
-                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu
-                            thị…
-                        </p>
-                    </div>
-                </div>
-                <div class="panel" id="three-panel">
-                    <div class="row p-5 m-5 border">
-                        <div class="funcRes col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
-                            <h1 class="px-3 py-5 bg-danger text-center fontTitle">tốc độ cao, ổn định</h1>
-                        </div>
-                        <h1 class="text-center d-md-none text-uppercase fontTitle">tốc độ cao, ổn định</h1>
-                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-md-5 py-md-3 text-justify">
-                            Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể
-                            được kết
-                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế
-                            độ báo
-                            trộm cho chủ nhân biết và xử lý.
-
-                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có
-                            hai loại
-                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu
-                            và phương
-                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu
-                            thị…
-                        </p>
-                    </div>
-                </div>
-                <div class="panel" id="two-panel">
-                    <div class="row p-5 m-5 border">
-                        <div class="funcRes col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
-                            <h1 class="px-3 py-5 bg-danger text-center fontTitle">Bảo mật cao</h1>
-                        </div>
-                        <h1 class="text-center d-md-none text-uppercase fontTitle">Bảo mật cao</h1>
-                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-md-5 py-md-3 text-justify">
-                            Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể
-                            được kết
-                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế
-                            độ báo
-                            trộm cho chủ nhân biết và xử lý.
-
-                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có
-                            hai loại
-                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu
-                            và phương
-                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu
-                            thị…
-                        </p>
-                    </div>
-                </div>
-                <div class="panel" id="four-panel">
-                    <div class="row p-5 m-5 border">
-                        <div class="funcRes col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center text-uppercase protect-background text-light">
-                            <h1 class="px-3 py-5 bg-danger text-center fontTitle">Dễ dàng điều khiển</h1>
-                        </div>
-                        <h1 class="text-center d-md-none text-uppercase fontTitle">Dễ dàng điều khiển</h1>
-                        <p class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-md-5 py-md-3 text-justify">
-                            Chúng tôi lắp đặt hoàn chỉnh những loại camera chất lượng
-                            Camera an ninh ngoài trời là thiết bị giám sát khu vực bằng hình ảnh và âm thanh. Nó có thể
-                            được kết
-                            nối với điện thoại, máy tính hoặc laptop. Một số camera an ninh gia đình giá rẻ còn có chế
-                            độ báo
-                            trộm cho chủ nhân biết và xử lý.
-
-                            Camera sử dụng nguồn điện dân dụng nên có thể giám sát 24/24. Hiện nay, hệ thống camera có
-                            hai loại
-                            chính là camera có dây và camera ip không dây (còn gọi là camera ip wifi). Tùy vào nhu cầu
-                            và phương
-                            thức của nó mà bạn lựa chọn thiết bị phù hợp dành cho gia đình, văn phòng, cửa hàng, siêu
-                            thị…
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Point-->
+    <!-- Point-->
     <div class="row-full red-background text-light">
         <div class="container">
             <div class="row py-5">
@@ -322,27 +222,30 @@ $this->title = 'Kim Khánh Group';
                     <a href="#" class="px-4 py-3 text-decoration-none bg-light text-dark rounded">Xem thêm</a>
                 </div>
                 <div class="col-12 col-sm-7 col-md-7 col-lg-7 row py-5 px-5">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-bottom border-right border-light borderPoint">
-                        <h1>1</h1>
-                        <p>Chi nhánh trên toàn quốc</p>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-bottom border-right borderPoint">
+                        <h1 class="mr-2"><span class='numscroller' data-slno='1' data-min='0' data-max='93' data-delay='1' data-increment="1">0</span><span>%</span></h1>
+                        <p style="font-size: 20px">Người dùng đánh giá cao</p>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-bottom border-left borderPoint">
-                        <h1>93%</h1>
-                        <p>Người dùng đánh giá cao
-                        </p>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-bottom border-light border-left borderPoint">
+                        <h1 class="mr-2"><span class='numscroller' data-slno='1' data-min='0' data-max='25' data-delay='1' data-increment="1">0</span><span>th</span></h1>
+                        <p style="font-size: 20px">Năm xây dựng và phát triển</p>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-top border-light border-right borderPoint">
-                        <h1>25th</h1>
-                        <p>Năm xây dựng và phát triển</p>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-top border-right border-light borderPoint">
+                        <h1 class="mr-2"><span class='numscroller' data-slno='1' data-min='0' data-max='20' data-delay='1' data-increment="1">0</span><span>+</span></h1>
+                        <p style="font-size: 20px">Đối tác trên toàn quốc và nước ngoài</p>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-top border-left borderPoint">
-                        <h1>50000</h1>
-                        <p>Sản phẩm được phân phối toàn quốc</p>
+                        <h1 class="mr-2"><span class='numscroller' data-slno='1' data-min='0' data-max='50' data-delay='1' data-increment="2">0</span><span>K+</span></h1>
+                        <p style="font-size: 20px">Sản phẩm được phân phối toàn quốc</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Future goals-->
+
+    <!--best -->
     <div class="row p-5 m-0">
         <h2 class="text-danger text-center col-12 p-4 mb-5 text-uppercase border-bottom border-danger fontTitle">Sản
             phẩm nổi bật</h2>
@@ -391,7 +294,7 @@ $this->title = 'Kim Khánh Group';
     </div>
     <!--Optimal -->
     <div class="row p-5 optimal-background row-full position-relative" id="optimal">
-        <h2 class="col-12 text-center text-light border-bottom border-light text-uppercase py-3 mb-5 fontTitle"
+        <h2 class="col-12 text-center text-light heading white-heading py-3 mb-5 fontTitle"
             style="height:100px">Tối ưu sản phẩm</h2>
         <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
             <div class="main1">
@@ -436,86 +339,215 @@ $this->title = 'Kim Khánh Group';
         <h2 class="d-none d-lg-block col-12 text-center text-light text-uppercase mt-5">Bạn muốn biết thêm? Thật dễ
             dàng!<br>Gọi cho chúng tôi: <a href="#">(+84)123456789</a></h2>
     </div>
-    <!--    Hear from our clients-->
-    <div class="p-5 text-danger text-center m-auto bg-danger w-100">
-        <h2 class="font-weight-bold text-center text-white text-uppercase fontTitle">Phản hồi của khách hàng</h2>
-    </div>
-    <div class="row p-5 m-0 bg-light">
-        <div class="col-lg-4 col-12 rounded">
-            <div class="card d-flex mx-auto">
-                <button type="button" class="btn" data-toggle="collapse" data-target="#firstCard">
-                    <div class="card-image">
-                        <img class="img-fluid d-flex mx-auto" src="<?= $cdnUrl ?>/img/introduction/client-01.jpg">
-                    </div>
-                    <div class="text-center">
-                        <h3 id="name">Micheal SmitH</h3>
-                        <p>Đạo diễn</p>
-                        <h3 class="p-3 text-light bg-danger">Xem</h3>
-                    </div>
-                </button>
-                <div class="card-body p-3 collapse" id="firstCard">
-                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết
-                        bị có nhiều chế
-                        độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
-                        chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
-                        nhiều chế độ căn chỉnh nổi bật</p>
-                </div>
+    <!-- TODO:   Hear from our clients-->
+    <div class="container text-center mb-5">
+        <h1 class="text-danger text-uppercase m-0 fontTitle p-5">
+            phản hồi của khách hàng
+        </h1>
+        <div class="slider text-center">
+            <input type="radio" name="testimonial" id="t-1">
+            <input type="radio" name="testimonial" id="t-2">
+            <input type="radio" name="testimonial" id="t-3" checked>
+            <input type="radio" name="testimonial" id="t-4">
+            <input type="radio" name="testimonial" id="t-5">
+            <div class="testimonials">
+                <label class="item" for="t-1">
+                    <img src="https://dummyimage.com/150" alt="picture">
+                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+                    <h2>- Princy, Web Developer</h2>
+                </label>
+                <label class="item" for="t-2">
+                    <img src="https://dummyimage.com/150" alt="picture">
+                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+                    <h2>- Princy, Web Developer</h2>
+                </label>
+                <label class="item" for="t-3">
+                    <img src="https://dummyimage.com/150" alt="picture">
+                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+                    <h2>- Princy, Web Developer</h2>
+                </label>
+                <label class="item" for="t-4">
+                    <img src="https://dummyimage.com/150" alt="picture">
+                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+                    <h2>- Princy, Web Developer</h2>
+                </label>
+                <label class="item" for="t-5">
+                    <img src="https://dummyimage.com/150" alt="picture">
+                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
+                    <h2>- Princy, Web Developer</h2>
+                </label>
+            </div>
+            <div class="dots">
+                <label for="t-1"></label>
+                <label for="t-2"></label>
+                <label for="t-3"></label>
+                <label for="t-4"></label>
+                <label for="t-5"></label>
             </div>
         </div>
-        <div class="col-lg-4 col-12 rounded">
-            <div class="card d-flex mx-auto">
-                <button type="button" class="btn" data-toggle="collapse" data-target="#secondCard">
-                    <div class="card-image">
-                        <img class="img-fluid d-flex mx-auto" src="<?= $cdnUrl ?>/img/introduction/client-02.jpg">
-                    </div>
-                    <div class="text-center">
-                        <h3 id="name">Samama Ader</h3>
-                        <p>Chủ Shop</p>
-                        <h3 class="p-3 text-light bg-danger">Xem</h3>
-                    </div>
-                </button>
-                <div class="card-body p-3 collapse" id="secondCard">
-                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết
-                        bị có nhiều chế
-                        độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
-                        chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
-                        nhiều chế độ căn chỉnh nổi bật</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-12 rounded">
-            <div class="card d-flex mx-auto">
-                <button type="button" class="btn" data-toggle="collapse" data-target="#thirdCard">
-                    <div class="card-image"><img class="img-fluid d-flex mx-auto"
-                                                 src="<?= $cdnUrl ?>/img/introduction/client-03.jpg"">
-                        <div class="text-center">
-                            <h3 id="name">Nami Oala</h3>
-                            <p>Streamer</p>
-                            <h3 class="p-3 text-light bg-danger">Xem</h3>
+        <a href="#0" class="cd-see-all btn btn-danger mt-2" id="hide">xem tất cả</a>
+        <div class="cd-testimonials-all" style="z-index: 100">
+            <div class="cd-testimonials-all-wrapper">
+                <ul class="d-flex justify-content-center align-items-center">
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-1.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
                         </div>
-                </button>
-                <div class="card-body p-3 collapse" id="thirdCard">
-                    <p class="text-light bg-danger p-3">Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết
-                        bị có nhiều chế
-                        độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có nhiều
-                        chế độ căn chỉnh nổi bật Chất lượng hình ảnh và âm thanh rất tuyệt hảo , đặc biệt thiết bị có
-                        nhiều chế độ căn chỉnh nổi bật</p>
-                </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nostrum nisi, doloremque error hic nam nemo doloribus porro impedit perferendis. Tempora, distinctio hic suscipit. At ullam eaque atque recusandae modi fugiat voluptatem laborum laboriosam rerum, consequatur reprehenderit omnis, enim pariatur nam, quidem, quas vel reiciendis aspernatur consequuntur. Commodi quasi enim, nisi alias fugit architecto, doloremque, eligendi quam autem exercitationem consectetur.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-2.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quibusdam eveniet, molestiae laborum voluptatibus minima hic quasi accusamus ut facere, eius expedita, voluptatem? Repellat incidunt veniam quaerat, qui laboriosam dicta. Quidem ducimus laudantium dolorum enim qui at ipsum, a error.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-3.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptates officiis tempore quae officia! Beatae quia deleniti cum corporis eos perferendis libero reiciendis nemo iusto accusamus, debitis tempora voluptas praesentium repudiandae laboriosam excepturi laborum, nisi optio repellat explicabo, incidunt ex numquam. Ullam perferendis officiis harum doloribus quae corrupti minima quia, aliquam nostrum expedita pariatur maxime repellat, voluptas sunt unde, inventore.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-4.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-5.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quia quas, quis illo adipisci voluptate ex harum iste commodi nulla dolor. Eius ratione quod ab!</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-6.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, dignissimos iure rem fugiat consequuntur officiis.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-1.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus tempora necessitatibus reiciendis provident deserunt maxime sit id. Dicta aut voluptatibus placeat quibusdam vel, dolore.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-2.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis iusto sapiente, excepturi velit, beatae possimus est tenetur cumque fugit tempore dolore fugiat! Recusandae, vel suscipit? Perspiciatis non similique sint suscipit officia illo, accusamus dolorum, voluptate vitae quia ea amet optio magni voluptatem nemo, natus nihil.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-3.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quasi officiis pariatur, fugit minus omnis animi ut assumenda quod commodi, ad a alias maxime unde suscipit magnam, voluptas laboriosam ipsam quibusdam quidem, dolorem deleniti id.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-4.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus tempora necessitatibus reiciendis provident deserunt maxime sit id. Dicta aut voluptatibus placeat quibusdam vel, dolore.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-5.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="cd-testimonials-item">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore ipsam, eos suscipit nostrum molestias reprehenderit, rerum amet cum similique a, ipsum soluta delectus explicabo nihil repellat incidunt! Minima magni possimus mollitia deserunt facere, tempore earum modi, ea ipsa dicta temporibus suscipit quidem ut quibusdam vero voluptatibus nostrum excepturi explicabo nulla harum, molestiae alias. Ab, quidem rem fugit delectus quod.</p>
+
+                        <div class="cd-author">
+                            <img src="<?= $cdnUrl ?>/img/introduction/avatar-6.jpg" alt="Author image">
+                            <ul class="cd-author-info">
+                                <li>MyName</li>
+                                <li>CEO, CompanyName</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="text-center cd-testimonials-item text-uppercase"><blockquote><i>~ end ~</i></blockquote></li>
+                </ul>
+
             </div>
-        </div>
-        <div class="mx-auto mt-5">
-            <button class="btn btn-danger">Xem thêm phản hồi</button>
-        </div>
+            <a href="#0" class="close-btn" id="show">Close</a>
+        </div> <!-- cd-testimonials-all -->
     </div>
     <!--    Have any ideas in your mind?-->
-    <div class="p-5 ideas-background row-full text-white align-items-center main">
+    <div class="p-5 ideas-background row-full text-white main">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8">
                     <h1 style="font-size: 50px"><b><i>BẠN CÓ Ý TƯỞNG ???</i></b></h1>
                     <h4 class="font-weight-lighter">LIÊN HỆ NGAY VỚI CHÚNG TÔI...</h4>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center mt-5 mt-md-0">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center mt-5">
                     <a href="<?= $cdnUrl ?>/site/contact" class="btn-lg btn-light">LIÊN HỆ NGAY <i
                                 class="fas fa-arrow-right"></i></a>
                 </div>
@@ -569,4 +601,22 @@ $this->title = 'Kim Khánh Group';
         </div>
     </div>
     <div class="pb-5"></div>
+    <script src="<?= $cdnUrl ?>/js/numscroller-1.0.js"></script>
+    <script src="<?= $cdnUrl ?>/js/prism.js"></script>
+    <script>
+        $("#accordion").on("hide.bs.collapse show.bs.collapse", e => {
+            $(e.target)
+                .prev()
+                .find("i:last-child")
+                .toggleClass("fa-minus fa-plus");
+        });
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#nav").hide();
+            });
+            $("#show").click(function(){
+                $("#nav").show();
+            });
+        });
+    </script>
 </div>
