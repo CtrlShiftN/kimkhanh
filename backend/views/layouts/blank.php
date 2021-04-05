@@ -1,10 +1,11 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
-use backend\assets\AppAsset;
 use yii\helpers\Html;
+use frontend\assets\AppAsset;
 
 AppAsset::register($this);
 ?>
@@ -18,19 +19,17 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <?= $this->render('_head') ?>
 </head>
-<body class="blank">
+<body>
 <?php $this->beginBody() ?>
 
-<div class="container">
-
-    <div class="wrap">
+<div class="wrap">
+    <div class="container">
         <?= $content ?>
     </div>
-
 </div>
 
 <?php $this->endBody() ?>
 </body>
 </html>
-<?php $this->endPage() ?>
