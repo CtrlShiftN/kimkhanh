@@ -7,6 +7,7 @@ $this->title = 'Kim Khánh Group';
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/index.css">
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/prism.css">
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/testi.css">
+<link href="<?= $cdnUrl ?>/css/animate.min.css" rel="stylesheet" type="text/css">
 <script src="<?= $cdnUrl ?>/js/masonry.pkgd.min.js"></script>
 <script src="<?= $cdnUrl ?>/js/jquery.flexslider-min.js"></script>
 <script src="<?= $cdnUrl ?>/js/main.js"></script>
@@ -67,7 +68,6 @@ $this->title = 'Kim Khánh Group';
         background-repeat: no-repeat;
     }
 </style>
-< class="row">
     <div class="row-full slideMinWidth">
         <img src="<?= $cdnUrl ?>/img/slideRes.jpg" class="d-block w-100" alt="ads">
     </div>
@@ -88,9 +88,12 @@ $this->title = 'Kim Khánh Group';
                     <h3 class="fontSzSlideTitle fontSlideTitle m-0 font-weight-bold"><i
                                 class="fas fa-check pr-2 slideIcon"></i>TIỆN LỢI</h3>
                 </li>
-                <li class="mt-xl-3">
-                    <a href="<?= $cdnUrl ?>/site/shop"
-                       class="btn-lg btn-danger animate__animated animate__flipInY btnSlide">XEM THÊM</a>
+                <li class="pl-5 ml-5">
+                    <a href="<?= $cdnUrl ?>/site/shop" class=" animate__animated animate__flipInY btnSlide">
+                        <div class="btnSpecial btnHover m-0">
+                            <span>XEM THÊM</span>
+                        </div>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -294,7 +297,7 @@ $this->title = 'Kim Khánh Group';
     </div>
     <!--Optimal -->
     <div class="row p-5 optimal-background row-full position-relative" id="optimal">
-        <h2 class="col-12 text-center text-light heading white-heading py-3 mb-5 fontTitle"
+        <h2 class="col-12 text-center text-light border-light border-bottom py-3 mb-3 fontTitle"
             style="height:100px">Tối ưu sản phẩm</h2>
         <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
             <div class="main1">
@@ -330,7 +333,7 @@ $this->title = 'Kim Khánh Group';
             <div class="main1">
                 <div class="text-center">
                     <i class="fas fa-photo-video fa-2x"></i><br>
-                    <h2">HÌNH ẢNH</h2>
+                    <h2>HÌNH ẢNH</h2>
                 </div>
             </div>
             <div class="main2"></div>
@@ -543,7 +546,7 @@ $this->title = 'Kim Khánh Group';
     <div class="p-5 ideas-background row-full text-white main">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 text-center text-md-left">
                     <h1 style="font-size: 50px"><b><i>BẠN CÓ Ý TƯỞNG ???</i></b></h1>
                     <h4 class="font-weight-lighter">LIÊN HỆ NGAY VỚI CHÚNG TÔI...</h4>
                 </div>

@@ -11,7 +11,65 @@
 .right {
     right: 0;
 }
-
+/*button*/
+.btnSpecial {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 15px;
+}
+.btnHover {
+    color: red;
+    transition: all 0.3s;
+    position: relative;
+}
+.btnHover span {
+    transition: all 0.3s;
+}
+.btnHover::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,0,0,0.5);
+    border-bottom-color: rgba(255,0,0,0.5);
+    transform: scale(0.1, 1);
+}
+.btnHover:hover span {
+    letter-spacing: 2px;
+}
+.btnHover:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.btnHover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,0,0,0.1);
+}
+.btnHover:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+/*endbtn*/
 .bgGray {
     background-color: #bfbfbd;
 }
@@ -125,7 +183,7 @@
         display: none !important;
     }
 }
-@media (min-width: 1000px) and (max-width: 1130px) {
+@media (min-width: 1100px) and (max-width: 1130px) {
     .location {
         right: 30px;
         top: 17%;
@@ -148,7 +206,7 @@
         display: none !important;
     }
 }
-@media (min-width: 892px) and (max-width: 1000px) {
+@media (min-width: 892px) and (max-width: 1100px) {
     .location {
         right: 15px;
         top: 20%;
@@ -220,7 +278,6 @@
     }
 }
 .btnSlide {
-    margin-left: 136px;
     animation-delay: 1.8s!important;
 }
 .firstItemSlide {
