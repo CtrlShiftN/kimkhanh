@@ -1,11 +1,11 @@
 <?php
 namespace backend\controllers;
 
+use backend\models\LoginForm;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
 
 /**
  * Site controller
@@ -20,13 +20,9 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
+                'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -35,7 +31,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['POST', 'GET'],
                 ],
             ],
         ];
@@ -51,6 +47,15 @@ class SiteController extends Controller
                 'class' => 'yii\web\ErrorAction',
             ],
         ];
+    }
+
+    public function beforeAction($action)
+    {
+        $this->layout = 'main';
+        if (!parent::beforeAction($action)) {
+            return false;
+        }
+        return true; // or false to not run the action
     }
 
     /**
@@ -70,18 +75,16 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = 'blank';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
-        $this->layout = 'empty';
-
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        if ($model->load(Yii::$app->request->post()) && $model->adminlogin()) {
             return $this->goBack();
         } else {
             $model->password = '';
-
             return $this->render('login', [
                 'model' => $model,
             ]);
