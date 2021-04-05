@@ -37,7 +37,7 @@ class PasswordForm extends Model
         return [
             'oldPassword' => 'Mật khẩu',
             'newPassword' => 'Mật khẩu mới',
-            'repeatNewPassword' => 'Mật khẩu mới',
+            'repeatNewPassword' => '',
         ];
     }
 

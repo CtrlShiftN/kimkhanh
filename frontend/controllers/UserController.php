@@ -72,32 +72,36 @@ class UserController extends Controller
         $userModel = (new UserForm())::findOne(Yii::$app->user->identity->getId());
         if ($userModel->load(yii::$app->request->post()) && $userModel->validate()) {
             if ($userModel->save(false)) {
-                    $this->goBack();
+                $this->goBack();
             }
         }
 
         $uploadAvatar = (new UploadImageForm())::findOne(Yii::$app->user->identity->getId());
-        if (Yii::$app->request->isPost) {
+        if (Yii::$app->request->isPost  && $userModel->validate()) {
             $uploadAvatar->avatar = UploadedFile::getInstance($uploadAvatar, 'avatar');
             if ($uploadAvatar->upload()) {
                 $uploadAvatar->saveAvatar();
             }
         }
 
+        return $this->render('profile', [
+            'userModel' => $userModel,
+            'uploadAvatar' => $uploadAvatar,
+        ]);
+    }
+
+    public function actionChangePassword(){
         $changePassword = new PasswordForm();
         if ($changePassword->load(yii::$app->request->post()) && $changePassword->validate()) {
             if ($changePassword->changePassword()) {
                 $this->goBack();
             }
         }
-
-
-        return $this->render('profile', [
-            'userModel' => $userModel,
-            'uploadAvatar' => $uploadAvatar,
-            'changePassword' => $changePassword,
-        ]);
+        return $this->render('changePassword',['changePassword' => $changePassword,]);
     }
 
+    public function actionAddress(){
+        return $this->render('address');
+    }
 }
 
