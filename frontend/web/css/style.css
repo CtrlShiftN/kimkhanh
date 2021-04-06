@@ -60,9 +60,14 @@
     object-fit: cover;
 }
 
-.avatar{
+.avatar {
     width: 250px;
     height: 270px;
     object-fit: contain;
+}
+
+.image-recommend {
+    width: 300px;
+    height: 180px;
 }
 

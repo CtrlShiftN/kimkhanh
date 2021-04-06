@@ -167,6 +167,12 @@ $cdnUrl = Yii::$app->params['frontend'];
 
                                 </a>
                             </li>
+                            <li>
+                                <a class="nav-link text-black-50" href="<?= $cdnUrl ?>/recommend/prevention">
+                                    <i class="fas fa-exclamation"></i> Khuyến cáo
+
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <?php if (Yii::$app->user->isGuest) : ?>
