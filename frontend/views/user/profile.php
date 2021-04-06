@@ -22,8 +22,8 @@ use yii\widgets\ActiveForm;
                 </div>
             </div>
         </div>
-
     </div>
+
     <div class="col-12 col-md-10 col-lg-10 col-sm-10 col-xl-10">
         <div class="border">
             <div class="p-3 row">
@@ -54,10 +54,12 @@ use yii\widgets\ActiveForm;
                     <?= $form->field($uploadAvatar, 'avatar')->fileInput()->label('Chỉ nhận ảnh có đuôi : png, jpg') ?>
                     <?= Html::submitButton('Lưu', ['class' => 'form-control btn btn-primary']) ?>
                     <?php ActiveForm::end() ?>
+                    <?php echo $userModel['name'] ?>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 
 

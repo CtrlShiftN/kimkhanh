@@ -80,7 +80,7 @@ class UserController extends Controller
         if (Yii::$app->request->isPost  && $userModel->validate()) {
             $uploadAvatar->avatar = UploadedFile::getInstance($uploadAvatar, 'avatar');
             if ($uploadAvatar->upload()) {
-                $uploadAvatar->saveAvatar();
+
             }
         }
 

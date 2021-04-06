@@ -24,17 +24,10 @@ class UploadImageForm extends User
         if ($this->validate()) {
             $this->avatar->saveAs('uploads/avatar/' . $this->avatar->baseName . '.' .
                 $this->avatar->extension);
+            return true;
         } else {
             return false;
         }
-    }
-
-    public function saveAvatar()
-    {
-        $uploadAvatar = yii::$app->request->post();
-        $uploadAvatar->avatar;
-
-        return $uploadAvatar->save(true);
     }
 
 }
