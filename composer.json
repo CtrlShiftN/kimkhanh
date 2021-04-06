@@ -21,7 +21,8 @@
         "yiisoft/yii2-bootstrap4": "^2.0",
         "kartik-v/yii2-nav-x": "^1.2",
         "kartik-v/yii2-grid": "^3.3",
-        "kartik-v/yii2-widget-select2": "^2.2"
+        "kartik-v/yii2-widget-select2": "^2.2",
+        "kartik-v/yii2-widget-datepicker": "^1.4"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

@@ -3,6 +3,8 @@
 namespace frontend\controllers;
 
 use frontend\models\Question;
+use frontend\models\Recruitment;
+use frontend\models\RecruitmentForm;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -284,6 +286,22 @@ class SiteController extends Controller
         $arrQuestion = (new Question())->getQuestion();
         return $this->render('faq',[
             'arrQuestion'=>$arrQuestion
+        ]);
+    }
+    public function actionRecruitment()
+    {
+        $model = new RecruitmentForm();
+        if ($model->load(Yii::$app->request->post())){
+            print_r($model);die;
+            $model->created = date('Y-m-d H:i:s');
+            $model->updated = date('Y-m-d H:i:s');
+            $model->note = 'this is a note';
+            if($model->save(false)){
+                $this->goHome();
+            }
+        }
+        return $this->render('recruitment',[
+            'model' => $model
         ]);
     }
 }

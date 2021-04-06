@@ -17,3 +17,5 @@ $cdnUrl = Yii::$app->params['frontend'];
 <link href="<?= $cdnUrl ?>/css/style.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/site.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/navbar.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?= $cdnUrl ?>/js/cropper.js"></script>
+<link href="<?= $cdnUrl ?>/css/cropper.css" rel="stylesheet" type="text/css">
