@@ -48,25 +48,6 @@ $this->title = 'Kim Khánh Group';
         font-family: "brand";
         src: url("<?= $cdnUrl ?>/fontface/VNI-Jamai.TTF");
     }
-    .testimonial {
-        min-height: 375px;
-        position: relative;
-        background: url("<?= $cdnUrl ?>/img/introduction/testimonials.jpg");
-        padding-top: 50px;
-        padding-bottom: 50px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-    .goals-background {
-        background-image: url("<?= $cdnUrl ?>/img/introduction/futureGoals.png");
-        background-repeat: no-repeat;
-    }
-    .goals-respon-background {
-        background-image: url("<?= $cdnUrl ?>/img/introduction/futureGoals.jpg");
-        background-repeat: no-repeat;
-    }
 </style>
     <div class="row-full slideMinWidth">
         <img src="<?= $cdnUrl ?>/img/slideRes.jpg" class="d-block w-100" alt="ads">
@@ -296,50 +277,52 @@ $this->title = 'Kim Khánh Group';
         <div class="col-4"></div>
     </div>
     <!--Optimal -->
-    <div class="row p-5 optimal-background row-full position-relative" id="optimal">
-        <h2 class="col-12 text-center text-light border-light border-bottom py-3 mb-3 fontTitle"
+    <div class="row p-5 optimal-background row-full" id="optimal">
+        <h2 class="col-12 text-center text-light border-light border-bottom py-3 fontTitle"
             style="height:100px">Tối ưu sản phẩm</h2>
-        <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
-            <div class="main1">
-                <div class="text-center">
-                    <i class="fas fa-tachometer-alt fa-2x"></i><br>
-                    <h2>TỐC ĐỘ</h2>
+        <div class="col-12 row position-relative">
+            <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
+                <div class="main1">
+                    <div class="text-center">
+                        <i class="fas fa-tachometer-alt fa-2x"></i><br>
+                        <h2>TỐC ĐỘ</h2>
+                    </div>
                 </div>
+                <div class="main2"></div>
+                <div class="main3"></div>
             </div>
-            <div class="main2"></div>
-            <div class="main3"></div>
-        </div>
-        <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
-            <div class="main1">
-                <div class="text-center">
-                    <i class="fas fa-lock fa-2x"></i><br>
-                    <h2>BẢO MẬT</h2>
+            <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
+                <div class="main1">
+                    <div class="text-center">
+                        <i class="fas fa-lock fa-2x"></i><br>
+                        <h2>BẢO MẬT</h2>
+                    </div>
                 </div>
+                <div class="main2"></div>
+                <div class="main3"></div>
             </div>
-            <div class="main2"></div>
-            <div class="main3"></div>
-        </div>
-        <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
-            <div class="main1">
-                <div class="text-center">
-                    <i class="fas fa-check fa-2x"></i><br>
-                    <h2>CHẤT LƯỢNG</h2>
+            <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
+                <div class="main1">
+                    <div class="text-center">
+                        <i class="fas fa-check fa-2x"></i><br>
+                        <h2>CHẤT LƯỢNG</h2>
+                    </div>
                 </div>
+                <div class="main2"></div>
+                <div class="main3"></div>
             </div>
-            <div class="main2"></div>
-            <div class="main3"></div>
-        </div>
-        <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
-            <div class="main1">
-                <div class="text-center">
-                    <i class="fas fa-photo-video fa-2x"></i><br>
-                    <h2>HÌNH ẢNH</h2>
+            <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
+                <div class="main1">
+                    <div class="text-center">
+                        <i class="fas fa-photo-video fa-2x"></i><br>
+                        <h2>HÌNH ẢNH</h2>
+                    </div>
                 </div>
+                <div class="main2"></div>
+                <div class="main3"></div>
             </div>
-            <div class="main2"></div>
-            <div class="main3"></div>
         </div>
-        <h2 class="d-none d-lg-block col-12 text-center text-light text-uppercase mt-5">Bạn muốn biết thêm? Thật dễ
+        <h2 class="d-none d-lg-block col-12 text-center text-light text-uppercase mt-3" style="top: 70px">Bạn muốn biết thêm? Thật dễ
             dàng!<br>Gọi cho chúng tôi: <a href="#">(+84)123456789</a></h2>
     </div>
     <!-- TODO:   Hear from our clients-->
@@ -347,6 +330,43 @@ $this->title = 'Kim Khánh Group';
         <h1 class="text-danger text-uppercase m-0 fontTitle p-5">
             phản hồi của khách hàng
         </h1>
+        <div class="cd-testimonials-wrapper cd-container">
+            <ul class="cd-testimonials">
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="cd-author">
+                        <img src="img/avatar-1.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>MyName</li>
+                            <li>CEO, AmberCreative</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ea, perferendis error repudiandae numquam dolor fuga temporibus. Unde omnis, consequuntur.</p>
+                    <div class="cd-author">
+                        <img src="img/avatar-2.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>MyName</li>
+                            <li>Designer, CodyHouse</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam nulla est, illo molestiae maxime officiis, quae ad, ipsum vitae deserunt molestias eius alias.</p>
+                    <div class="cd-author">
+                        <img src="img/avatar-3.jpg" alt="Author image">
+                        <ul class="cd-author-info">
+                            <li>MyName</li>
+                            <li>CEO, CompanyName</li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul> <!-- cd-testimonials -->
+            <a href="#0" class="cd-see-all">See all</a>
+        </div> <!-- cd-testimonials-wrapper -->
+
         <div class="slider text-center">
             <input type="radio" name="testimonial" id="t-1">
             <input type="radio" name="testimonial" id="t-2">

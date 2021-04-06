@@ -484,46 +484,6 @@ div:hover>div>.reasonIcon {
         height: 25vw;
     }
 }
-/*carousel clients*/
-.heading {
-    text-align: center;
-    color: #454343;
-    font-size: 30px;
-    font-weight: 700;
-    position: relative;
-    margin-bottom: 70px;
-    text-transform: uppercase;
-    z-index: 4;
-}
-.white-heading{
-    color: #ffffff;
-}
-.heading:after {
-    content: ' ';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    height: 40px;
-    width: 180px;
-    border-radius: 4px;
-    transform: translateX(-50%);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.white-heading:after {
-    background: url(https://i.ibb.co/d7tSD1R/heading-line-white.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.heading #spanTesti {
-    font-size: 18px;
-    display: block;
-    font-weight: 500;
-}
-.white-heading #spanTesti {
-    color: #ffffff;
-}
 /*testomonials*/
 .slider {
     width: 100%;
