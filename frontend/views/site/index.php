@@ -278,7 +278,7 @@ $this->title = 'Kim Khánh Group';
     </div>
     <!--Optimal -->
     <div class="row p-5 optimal-background row-full" id="optimal">
-        <h2 class="col-12 text-center text-light border-light border-bottom py-3 fontTitle"
+        <h2 class="col-12 text-center text-light border-light border-bottom py-3 fontTitle text-uppercase"
             style="height:100px">Tối ưu sản phẩm</h2>
         <div class="col-12 row position-relative">
             <div class="h-25 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-5 my-lg-0 py-5 py-lg-0 main">
@@ -330,44 +330,70 @@ $this->title = 'Kim Khánh Group';
         <h1 class="text-danger text-uppercase m-0 fontTitle p-5">
             phản hồi của khách hàng
         </h1>
-        <div class="cd-testimonials-wrapper cd-container">
-            <ul class="cd-testimonials">
-                <li>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="cd-author">
-                        <img src="img/avatar-1.jpg" alt="Author image">
-                        <ul class="cd-author-info">
-                            <li>MyName</li>
-                            <li>CEO, AmberCreative</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ea, perferendis error repudiandae numquam dolor fuga temporibus. Unde omnis, consequuntur.</p>
-                    <div class="cd-author">
-                        <img src="img/avatar-2.jpg" alt="Author image">
-                        <ul class="cd-author-info">
-                            <li>MyName</li>
-                            <li>Designer, CodyHouse</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam nulla est, illo molestiae maxime officiis, quae ad, ipsum vitae deserunt molestias eius alias.</p>
-                    <div class="cd-author">
-                        <img src="img/avatar-3.jpg" alt="Author image">
-                        <ul class="cd-author-info">
-                            <li>MyName</li>
-                            <li>CEO, CompanyName</li>
-                        </ul>
-                    </div>
-                </li>
+        <section class="testimonialsRes d-md-none">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators-->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
 
-            </ul> <!-- cd-testimonials -->
-            <a href="#0" class="cd-see-all">See all</a>
-        </div> <!-- cd-testimonials-wrapper -->
+                            <div class="carousel-inner">
+                                <!-- Item-1 -->
+                                <div class="carousel-item active text-center">
+                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="center-block team">
+                                    <h3>Alamin Musa</h3>
+                                    <h4>Front End Developer</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                        porttitordapibus dictum.<br>
+                                        Fusce faucibus ligula scelerisque, eleifend turpis in</p>
+                                </div>
+                                <!-- Item-2 -->
+                                <div class="carousel-item text-center">
+                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="center-block team">
+                                    <h3>Alamin Musa</h3>
+                                    <h4>Front End Developer</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                        porttitordapibus dictum.<br>
+                                        Fusce faucibus ligula scelerisque, eleifend turpis in</p>
+                                </div>
+                                <!-- Item-3 -->
+                                <div class="carousel-item text-center">
+                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="center-block team">
+                                    <h3>Alamin Musa</h3>
+                                    <h4>Front End Developer</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                        porttitordapibus dictum.<br>
+                                        Fusce faucibus ligula scelerisque, eleifend turpis in</p>
+                                </div>
 
-        <div class="slider text-center">
+                            </div>
+                            <a
+                                    class="carousel-control-prev control"
+                                    data-target="#carouselExampleIndicators"
+                                    role="button"
+                                    data-slide="prev">
+                                <i class="fas fa-angle-left iconRes"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a
+                                    class="carousel-control-next control"
+                                    data-target="#carouselExampleIndicators"
+                                    role="button"
+                                    data-slide="next">
+                                <i class="fas fa-angle-right iconRes"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slider text-center d-none d-md-block">
             <input type="radio" name="testimonial" id="t-1">
             <input type="radio" name="testimonial" id="t-2">
             <input type="radio" name="testimonial" id="t-3" checked>
@@ -375,27 +401,27 @@ $this->title = 'Kim Khánh Group';
             <input type="radio" name="testimonial" id="t-5">
             <div class="testimonials">
                 <label class="item" for="t-1">
-                    <img src="https://dummyimage.com/150" alt="picture">
+                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-1.jpg" alt="picture">
                     <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
                     <h2>- Princy, Web Developer</h2>
                 </label>
                 <label class="item" for="t-2">
-                    <img src="https://dummyimage.com/150" alt="picture">
+                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-5.jpg" alt="picture">
                     <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
                     <h2>- Princy, Web Developer</h2>
                 </label>
                 <label class="item" for="t-3">
-                    <img src="https://dummyimage.com/150" alt="picture">
+                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-2.jpg" alt="picture">
                     <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
                     <h2>- Princy, Web Developer</h2>
                 </label>
                 <label class="item" for="t-4">
-                    <img src="https://dummyimage.com/150" alt="picture">
+                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-3.jpg" alt="picture">
                     <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
                     <h2>- Princy, Web Developer</h2>
                 </label>
                 <label class="item" for="t-5">
-                    <img src="https://dummyimage.com/150" alt="picture">
+                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-4.jpg" alt="picture">
                     <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
                     <h2>- Princy, Web Developer</h2>
                 </label>
@@ -580,36 +606,36 @@ $this->title = 'Kim Khánh Group';
     <!--    Companies We Have as Clients-->
     <div class="row m-0 py-5 text-muted">
         <h2 class="text-danger text-center col-12 p-5 font-weight-bold fontTitle">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
-        <div id="brand" class="carousel slide w-100 row col-12" data-ride="carousel">
-            <div class="carousel-inner col-12">
-                <div class="carousel-item brand-md active">
-                    <div class="row inner-row">
-                        <div class="col-md-3 brand active">
+        <div id="brand" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-3 active">
                             <img src="<?= $cdnUrl ?>/img/brand/sony.png" class="d-block w-100" alt="...">
                         </div>
-                        <div class="col-md-3 brand">
+                        <div class="col-md-3">
                             <img src="<?= $cdnUrl ?>/img/brand/hitachi.png" class="d-block w-100" alt="...">
                         </div>
-                        <div class=" col-md-3 brand">
+                        <div class=" col-md-3">
                             <img src="<?= $cdnUrl ?>/img/brand/lg.png" class="d-block w-100" alt="...">
                         </div>
-                        <div class=" col-md-3 brand">
+                        <div class=" col-md-3">
                             <img src="<?= $cdnUrl ?>/img/brand/fpt.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item brand-md">
-                    <div class="row inner-row">
-                        <div class=" col-md-3 brand">
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class=" col-md-3">
                             <img src="<?= $cdnUrl ?>/img/brand/hikvision.png" class="d-block w-100" alt="...">
                         </div>
-                        <div class=" col-md-3 brand">
+                        <div class=" col-md-3">
                             <img src="<?= $cdnUrl ?>/img/brand/samtech.png" class="d-block w-100" alt="...">
                         </div>
-                        <div class=" col-md-3 brand">
+                        <div class=" col-md-3">
                             <img src="<?= $cdnUrl ?>/img/brand/imou.png" class="d-block w-100" alt="...">
                         </div>
-                        <div class=" col-md-3 brand">
+                        <div class=" col-md-3">
                             <img src="<?= $cdnUrl ?>/img/brand/logitech.png" class="d-block w-100" alt="...">
                         </div>
                     </div>

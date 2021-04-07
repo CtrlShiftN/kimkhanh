@@ -505,14 +505,14 @@ div:hover>div>.reasonIcon {
     position: absolute;
     box-sizing: border-box;
     background-color: #ffffff;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 15px;
     padding: 30px;
     width: 450px;
     text-align: center;
     transition: transform 0.4s;
     -webkit-transform-style: preserve-3d;
-    box-shadow: 0 0 30px rgba(134, 134, 134, 0.3);
+    box-shadow: 5px 16px 16px 0 rgba(134, 134, 134, 0.3);
     user-select: none;
     cursor: pointer;
 }
@@ -685,4 +685,82 @@ div:hover>div>.reasonIcon {
 }
 #t-5:checked ~ .testimonials label[for="t-5"] {
     z-index: 4;
+}
+/*carousel */
+.testimonialsRes {
+    background: url("https://i.ibb.co/JRrHmhv/shanghai.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0 70px;
+    position: relative;
+}
+.testimonialsRes:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+}
+
+.testimonialsRes p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #d1e5e7;
+    margin: 20px 0;
+    padding: 0;
+}
+
+/* Image */
+.testimonialsRes .carousel-inner .carousel-item .team {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ff0000;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 50px 0 15px;
+}
+
+.testimonialsRes .carousel-inner .carousel-item h3 {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.testimonialsRes .carousel-inner .carousel-item h4 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #e2e1e1;
+    margin-bottom: 20px;
+}
+
+.testimonialsRes .carousel-indicators {
+    bottom: -30px;
+}
+
+.testimonialsRes .carousel-indicators li {
+    background-color: #b8b7b7;
+    border-radius: 30px;
+    height: 4px;
+    width: 40px;
+}
+
+.testimonialsRes .carousel-indicators .active {
+    background-color: #ff0000;
+}
+
+.testimonialsRes .control span {
+    cursor: pointer;
+}
+
+.testimonialsRes .iconRes {
+    height: 40px;
+    width: 40px;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    font-size: 30px;
+    background-image: none;
+    color: #ffffff;
 }
