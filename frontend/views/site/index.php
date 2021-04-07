@@ -198,8 +198,8 @@ $this->title = 'Kim Khánh Group';
         <div class="container">
             <div class="row py-5">
                 <div class="col-12 col-sm-5 col-md-5 col-lg-5 p-5">
-                    <h1 class="border-bottom border-light py-sm-2 py-md-3 py-xl-4 fontTitle">MỘT SỐ ĐIỂM NỔI
-                        BẬT</h1>
+                    <h2 class="border-bottom border-light py-sm-2 py-md-3 py-xl-4 fontTitle">MỘT SỐ ĐIỂM NỔI
+                        BẬT</h2>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p>Lorem ipsum dolor sit amet</p><br>
@@ -327,9 +327,9 @@ $this->title = 'Kim Khánh Group';
     </div>
     <!-- TODO:   Hear from our clients-->
     <div class="container text-center mb-5">
-        <h1 class="text-danger text-uppercase m-0 fontTitle p-5">
+        <h2 class="text-danger text-uppercase mb-5 fontTitle p-5 border-bottom border-danger">
             phản hồi của khách hàng
-        </h1>
+        </h2>
         <section class="testimonialsRes d-md-none">
             <div class="container">
                 <div class="row text-center">
@@ -604,8 +604,8 @@ $this->title = 'Kim Khánh Group';
         </div>
     </div>
     <!--    Companies We Have as Clients-->
-    <div class="row m-0 py-5 text-muted">
-        <h2 class="text-danger text-center col-12 p-5 font-weight-bold fontTitle">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
+    <div class="row m-0 pb-5 text-muted">
+        <h2 class="text-danger text-center col-12 p-5 font-weight-bold fontTitle border-bottom border-danger">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
         <div id="brand" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
