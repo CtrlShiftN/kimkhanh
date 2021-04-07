@@ -1,6 +1,8 @@
 <?php
+
 namespace frontend\controllers;
 
+use frontend\models\Question;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -9,7 +11,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
+use frontend\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -45,7 +47,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['get'],
+                    'logout' => ['POST', 'GET'],
                 ],
             ],
         ];
@@ -227,8 +229,8 @@ class SiteController extends Controller
      * Verify email address
      *
      * @param string $token
-     * @throws BadRequestHttpException
      * @return yii\web\Response
+     * @throws BadRequestHttpException
      */
     public function actionVerifyEmail($token)
     {
@@ -266,6 +268,22 @@ class SiteController extends Controller
 
         return $this->render('resendVerificationEmail', [
             'model' => $model
+        ]);
+    }
+
+    /**
+     * Displays FAQ page.
+     *
+     * @return mixed
+     */
+//    public function actionFaq()
+//    {
+//        return $this->render('faq');
+//    }
+    public function actionFaq(){
+        $arrQuestion = (new Question())->getQuestion();
+        return $this->render('faq',[
+            'arrQuestion'=>$arrQuestion
         ]);
     }
 }
