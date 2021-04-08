@@ -48,6 +48,13 @@ $this->title = 'Kim Khánh Group';
         font-family: "brand";
         src: url("<?= $cdnUrl ?>/fontface/VNI-Jamai.TTF");
     }
+    .testimonialsRes {
+        background: url("<?= $cdnUrl ?>/img/introduction/shanghai.jpg") center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 50px 0 70px;
+        position: relative;
+    }
 </style>
     <div class="row-full slideMinWidth">
         <img src="<?= $cdnUrl ?>/img/slideRes.jpg" class="d-block w-100" alt="ads">
@@ -70,11 +77,7 @@ $this->title = 'Kim Khánh Group';
                                 class="fas fa-check pr-2 slideIcon"></i>TIỆN LỢI</h3>
                 </li>
                 <li class="pl-5 ml-5">
-                    <a href="<?= $cdnUrl ?>/site/shop" class=" animate__animated animate__flipInY btnSlide">
-                        <div class="btnSpecial btnHover m-0">
-                            <span>XEM THÊM</span>
-                        </div>
-                    </a>
+                    <a href="<?= $cdnUrl ?>/site/shop" class="animate__animated animate__flipInY btnSlide btn btn-sm animated-button thar-three">Xem thêm</a>
                 </li>
             </ul>
         </div>
@@ -197,16 +200,21 @@ $this->title = 'Kim Khánh Group';
     <div class="row-full red-background text-light">
         <div class="container">
             <div class="row py-5">
-                <div class="col-12 col-sm-5 col-md-5 col-lg-5 p-5">
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 p-5">
                     <h2 class="border-bottom border-light py-sm-2 py-md-3 py-xl-4 fontTitle">MỘT SỐ ĐIỂM NỔI
                         BẬT</h2>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p>Lorem ipsum dolor sit amet</p>
                     <p>Lorem ipsum dolor sit amet</p><br>
-                    <a href="#" class="px-4 py-3 text-decoration-none bg-light text-dark rounded">Xem thêm</a>
+                    <div class="buttonPoints">
+                        <a href="#">
+                            XEM&nbsp;THÊM&nbsp;
+                            <span class="shift">›</span>
+                        </a>
+                        <div class="mask"></div>
+                    </div>
                 </div>
-                <div class="col-12 col-sm-7 col-md-7 col-lg-7 row py-5 px-5">
-
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 row py-5 px-5">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center border-bottom border-right borderPoint">
                         <h1 class="mr-2"><span class='numscroller' data-slno='1' data-min='0' data-max='93' data-delay='1' data-increment="1">0</span><span>%</span></h1>
                         <p style="font-size: 20px">Người dùng đánh giá cao</p>
@@ -227,10 +235,8 @@ $this->title = 'Kim Khánh Group';
             </div>
         </div>
     </div>
-    <!-- Future goals-->
-
     <!--best -->
-    <div class="row p-5 m-0">
+    <div class="row p-5 m-0 text-center">
         <h2 class="text-danger text-center col-12 p-4 mb-5 text-uppercase border-bottom border-danger fontTitle">Sản
             phẩm nổi bật</h2>
         <div class="row col-12 m-0 p-0">
@@ -271,10 +277,9 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
         </div>
-        <div class="col-4"></div>
-        <a href="<?= $cdnUrl ?>/site/shop.php" class="col-4 btn btn-danger my-3">Xem thêm <i
-                    class="fas fa-arrow-right"></i></a>
-        <div class="col-4"></div>
+        <div class="col-12 text-center position-relative">
+            <a href="<?= $cdnUrl ?>/site/shop" class="btn btn-sm animated-button thar-two btnShowMore">Xem thêm</a>
+        </div>
     </div>
     <!--Optimal -->
     <div class="row p-5 optimal-background row-full" id="optimal">
@@ -330,7 +335,7 @@ $this->title = 'Kim Khánh Group';
         <h2 class="text-danger text-uppercase mb-5 fontTitle p-5 border-bottom border-danger">
             phản hồi của khách hàng
         </h2>
-        <section class="testimonialsRes d-md-none">
+        <section class="testimonialsRes">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
@@ -345,7 +350,7 @@ $this->title = 'Kim Khánh Group';
                             <div class="carousel-inner">
                                 <!-- Item-1 -->
                                 <div class="carousel-item active text-center">
-                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="center-block team">
+                                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-1.jpg" alt="" class="center-block team">
                                     <h3>Alamin Musa</h3>
                                     <h4>Front End Developer</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -354,7 +359,7 @@ $this->title = 'Kim Khánh Group';
                                 </div>
                                 <!-- Item-2 -->
                                 <div class="carousel-item text-center">
-                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="center-block team">
+                                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-2.jpg" alt="" class="center-block team">
                                     <h3>Alamin Musa</h3>
                                     <h4>Front End Developer</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -363,7 +368,7 @@ $this->title = 'Kim Khánh Group';
                                 </div>
                                 <!-- Item-3 -->
                                 <div class="carousel-item text-center">
-                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="center-block team">
+                                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-3.jpg" alt="" class="center-block team">
                                     <h3>Alamin Musa</h3>
                                     <h4>Front End Developer</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -372,16 +377,14 @@ $this->title = 'Kim Khánh Group';
                                 </div>
 
                             </div>
-                            <a
-                                    class="carousel-control-prev control"
+                            <a class="carousel-control-prev control"
                                     data-target="#carouselExampleIndicators"
                                     role="button"
                                     data-slide="prev">
                                 <i class="fas fa-angle-left iconRes"></i>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a
-                                    class="carousel-control-next control"
+                            <a class="carousel-control-next control"
                                     data-target="#carouselExampleIndicators"
                                     role="button"
                                     data-slide="next">
@@ -393,54 +396,15 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
         </section>
-        <div class="slider text-center d-none d-md-block">
-            <input type="radio" name="testimonial" id="t-1">
-            <input type="radio" name="testimonial" id="t-2">
-            <input type="radio" name="testimonial" id="t-3" checked>
-            <input type="radio" name="testimonial" id="t-4">
-            <input type="radio" name="testimonial" id="t-5">
-            <div class="testimonials">
-                <label class="item" for="t-1">
-                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-1.jpg" alt="picture">
-                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-                    <h2>- Princy, Web Developer</h2>
-                </label>
-                <label class="item" for="t-2">
-                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-5.jpg" alt="picture">
-                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-                    <h2>- Princy, Web Developer</h2>
-                </label>
-                <label class="item" for="t-3">
-                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-2.jpg" alt="picture">
-                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-                    <h2>- Princy, Web Developer</h2>
-                </label>
-                <label class="item" for="t-4">
-                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-3.jpg" alt="picture">
-                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-                    <h2>- Princy, Web Developer</h2>
-                </label>
-                <label class="item" for="t-5">
-                    <img src="<?= $cdnUrl ?>/img/introduction/avatar-4.jpg" alt="picture">
-                    <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse."</p>
-                    <h2>- Princy, Web Developer</h2>
-                </label>
-            </div>
-            <div class="dots">
-                <label for="t-1"></label>
-                <label for="t-2"></label>
-                <label for="t-3"></label>
-                <label for="t-4"></label>
-                <label for="t-5"></label>
-            </div>
-        </div>
-        <a href="#0" class="cd-see-all btn btn-danger mt-2" id="hide">xem tất cả</a>
+        <a href="#0" id="hide" class="cd-see-all mt-2 btn btn-sm animated-button thar-two btnShowMore">Xem tất cả</a>
         <div class="cd-testimonials-all" style="z-index: 100">
             <div class="cd-testimonials-all-wrapper">
                 <ul class="d-flex justify-content-center align-items-center">
+                    <li class="cd-testimonials-item text-center">
+                        <h1>~ <i>PHẢN HỒI CỦA KHÁCH HÀNG</i> ~</h1>
+                    </li>
                     <li class="cd-testimonials-item">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
-
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-1.jpg" alt="Author image">
                             <ul class="cd-author-info">
@@ -449,7 +413,6 @@ $this->title = 'Kim Khánh Group';
                             </ul>
                         </div>
                     </li>
-
                     <li class="cd-testimonials-item">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nostrum nisi, doloremque error hic nam nemo doloribus porro impedit perferendis. Tempora, distinctio hic suscipit. At ullam eaque atque recusandae modi fugiat voluptatem laborum laboriosam rerum, consequatur reprehenderit omnis, enim pariatur nam, quidem, quas vel reiciendis aspernatur consequuntur. Commodi quasi enim, nisi alias fugit architecto, doloremque, eligendi quam autem exercitationem consectetur.</p>
 
@@ -596,15 +559,16 @@ $this->title = 'Kim Khánh Group';
                     <h1 style="font-size: 50px"><b><i>BẠN CÓ Ý TƯỞNG ???</i></b></h1>
                     <h4 class="font-weight-lighter">LIÊN HỆ NGAY VỚI CHÚNG TÔI...</h4>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center mt-5">
-                    <a href="<?= $cdnUrl ?>/site/contact" class="btn-lg btn-light">LIÊN HỆ NGAY <i
-                                class="fas fa-arrow-right"></i></a>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center d-flex justify-content-center align-items-center">
+                    <a href="<?= $cdnUrl?>/site/contact" class="contact-button">
+                        Liên hệ ngay!<span>kimkhanhgroups.com</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
     <!--    Companies We Have as Clients-->
-    <div class="row m-0 pb-5 text-muted">
+    <div class="row m-0 text-muted">
         <h2 class="text-danger text-center col-12 p-5 font-weight-bold fontTitle border-bottom border-danger">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
         <div id="brand" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -641,12 +605,12 @@ $this->title = 'Kim Khánh Group';
                     </div>
                 </div>
             </div>
-            <div class="controls-top col-12 text-center mt-3">
-                <a class="btn btn-danger text-light" href="#brand" data-slide="prev"><i
-                            class="fa fa-chevron-left fa-2x"></i></a>
-                <a class="btn btn-danger text-light" href="#brand" data-slide="next"><i
-                            class="fa fa-chevron-right fa-2x"></i></a>
-            </div>
+            <a class="carousel-control-prev" href="#brand" data-slide="prev">
+                <i class="fas fa-angle-left fa-2x"></i>
+            </a>
+            <a class="carousel-control-next" href="#brand" data-slide="next">
+                <i class="fas fa-angle-right fa-2x"></i>
+            </a>
         </div>
     </div>
     <div class="pb-5"></div>
