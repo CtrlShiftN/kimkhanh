@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <h2 class="text-center p-2 text-danger mb-3">Gửi thông tin liên hệ</h2>
             <div class="float-start">
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+                <?php $form = ActiveForm::begin(); ?>
 
                 <?= $form->field($model, 'name')->textInput(['autofocus' => true, 'placeholder' => 'Nguyễn Văn A']) ?>
 
@@ -42,10 +42,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'subject')->textInput(['placeholder' => 'Bạn đang gặp vấn đề gì?']) ?>
 
-                <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+                <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-success col-12', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton('Gửi', ['class' => 'btn btn-success col-12', 'name' => 'contact-button']) ?>
                 </div>
 
                 <?php ActiveForm::end(); ?>
