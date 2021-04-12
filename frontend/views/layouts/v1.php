@@ -407,7 +407,7 @@ $cdnUrl = Yii::$app->params['frontend'];
         <section class="kh-copyright">
         </section>
     </footer>
-    <div class="fix-footer bg-danger d-none d-sm-none d-md-block" style="z-index: 9999">
+    <div class="fix-footer bg-danger d-none d-sm-none d-md-block" id="taskbar">
         <div class="container text-white">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
