@@ -10,3 +10,6 @@
 .bgNavBar {
     background-color: #e51b23;
 }
+#taskbar {
+    z-index: 9999;
+}

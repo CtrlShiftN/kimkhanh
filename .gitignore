@@ -38,3 +38,5 @@ phpunit.phar
 /frontend/config
 /backend/config
 /common/config
+/frontend/controllers/TestController.php
+/frontend/views/test/test.php
