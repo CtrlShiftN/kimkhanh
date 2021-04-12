@@ -7,7 +7,21 @@
 .bottom {
     bottom: 0;
 }
-
+#idea {
+    font-size: 50px;
+}
+#infoPoint {
+    font-size: 20px;
+}
+#titleOptimal {
+    height: 100px;
+}
+#moreOptimal {
+    top: 70px;
+}
+#feedBack {
+    z-index: 100px;
+}
 .right {
     right: 0;
 }
