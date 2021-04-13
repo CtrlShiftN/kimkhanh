@@ -13,7 +13,10 @@ $cdnUrl = Yii::$app->params['frontend'];
 <script type="text/javascript" src="<?= $cdnUrl ?>/js/jquery-3.3.1.slim.min.js"></script>
 <script type="text/javascript" src="<?= $cdnUrl ?>/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?= $cdnUrl ?>/js/popper.min.js"></script>
+<script type="text/javascript" src="<?= $cdnUrl ?>/js/sidenav.min.js"></script>
+<script src="<?= $cdnUrl ?>/js/cropper.min.js"></script>
 <link href="<?= $cdnUrl ?>/css/fontawesome/CSS/all.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/style.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/site.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/navbar.css" rel="stylesheet" type="text/css">
+<link href="<?= $cdnUrl ?>/css/cropper.min.css" rel="stylesheet" type="text/css"/>

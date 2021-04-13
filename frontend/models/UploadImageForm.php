@@ -15,7 +15,6 @@ class UploadImageForm extends User
     {
         return [
             [['avatar'], 'file', 'skipOnEmpty' => false, 'extensions' => 'jpg, png'],
-
         ];
     }
 
@@ -24,7 +23,6 @@ class UploadImageForm extends User
         if ($this->validate()) {
             $this->avatar->saveAs('uploads/avatar/' . $this->avatar->baseName . '.' .
                 $this->avatar->extension);
-            return true;
         } else {
             return false;
         }
