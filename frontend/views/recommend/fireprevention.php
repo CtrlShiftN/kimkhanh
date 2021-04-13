@@ -52,5 +52,11 @@
 <h4>Kim Khánh Groups</h4>
 <span><b>Miền bắc:</b>Văn phòng: Số 1 đường Khương Đình, Kim Giang, Hà Nội.</span>
 <p><b>Miền nam:</b>Văn phòng: Số 1 đường Khương Đình, Kim Giang, Hà Nội.</p>
+<h4>Một số bài viết liên quan</h4>
+<ul>
+    <li><a href="hdmi-prevention">Thông báo gấp</a></li>
+    <li><a href="hdmi-prevention">Hỗ trợ mới</a></li>
+    <li><a href="hdmi-prevention">khuyến mại</a></li>
+</ul>
 
 

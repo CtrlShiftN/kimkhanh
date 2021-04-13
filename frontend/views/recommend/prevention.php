@@ -43,21 +43,20 @@ $cdnUrl = Yii::$app->params['frontend'];
     </div>
     <div class="row mt-5">
         <div class="col-12 col-sm-4">
-            <img src="<?= $cdnUrl ?>/img/hack-lock.jpg" class="image-recommend image-responsive"
-                 alt="warranty-recovery">
+            <a href="warranty-notice">
+                <img src="<?= $cdnUrl ?>/img/warranty-notice.jpg" class="image-recommend image-responsive"
+                     alt="warranty-recovery">
+            </a>
         </div>
         <div class="col-12 col-sm-8 bord">
             <p>
-                <a>
-                    <b>TẠI SAO CÁC SẢN PHẨM CỦA KIM KHANH CÓ TÍNH BẢO MẬT CAO?
-
-                    </b>
-                </a><br>
-                Các ông lớn công nghệ hàng đầu thế giới như Apple, Microsoft, IBM,… trong quá trình sáng tạo, phát triển
-                sản phẩm vấn đề bảo mật thông tin được đặt lên đầu tiên. Là một trong những nhà cung cấp hàng đầu thế
-                giới về các sản phẩm giám sát hình ảnh và các giải […]
+                <b>THÔNG BÁO VỀ TÍNH NĂNG KIỂM TRA BẢO HÀNH ONLINE VÀ DV HỖ TRỢ KỸ THUẬT</b>
+                <br>
+                THÔNG BÁO VỀ TÍNH NĂNG KIỂM TRA BẢO HÀNH ONLINE VÀ DỊCH VỤ HỖ TRỢ KỸ THUẬT KÍNH GỬI: – QUÝ ĐỐI TÁC,
+                KHÁCH HÀNG Công ty Cổ Phần Nhà An Toàn xin trân trọng cảm ơn Quý đối tác , khách hàng đã đồng hành và sử
+                dụng dịch vụ kỹ thuật và bảo […]
             </p>
-            <span><a class="btn btn-danger" href="">Đọc thêm </a></span>
+            <span><a class="btn btn-danger" href="warranty-notice">Đọc thêm </a></span>
         </div>
     </div>
 </div>

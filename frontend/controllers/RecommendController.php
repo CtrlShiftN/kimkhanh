@@ -69,4 +69,7 @@ class RecommendController extends \yii\web\Controller
     public function actionHdmiPrevention(){
         return $this->render('hdmiprevention');
     }
+    public function actionWarrantyNotice(){
+        return $this->render('warrantynotice');
+    }
 }
