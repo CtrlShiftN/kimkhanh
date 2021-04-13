@@ -13,35 +13,28 @@ $this->title = 'Kim Khánh Group';
 <script src="<?= $cdnUrl ?>/js/main.js"></script>
 <script src="<?= $cdnUrl ?>/js/modernizr.js"></script>
 <style>
-    .reason-background {
-        background-image: url("<?= $cdnUrl ?>/img/introduction/reason.jpg");
+    .reason-background,.optimal-background,.red-background,.ideas-background {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    .reason-background {
+        background-image: url("<?= $cdnUrl ?>/img/introduction/reason.jpg");
         min-height: 300px;
     }
 
     .optimal-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/camera-background.jpg");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
         min-height: 750px;
     }
 
     .red-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/4K-red-bg.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
         min-height: 500px;
     }
 
     .ideas-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/ideas-bg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
         min-height: 500px;
     }
     @font-face {
