@@ -50,6 +50,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php ActiveForm::end(); ?>
             </div>
+            <?php if (Yii::$app->session->hasFlash('success')): ?>
+                <div class="alert alert-success alert-dismissable">
+                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                    <h4><i class="icon fa fa-check"></i> !</h4>
+                    <?= Yii::$app->session->getFlash('success') ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if (Yii::$app->session->hasFlash('error')): ?>
+                <div class="alert alert-danger alert-dismissable">
+                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                    <h4><i class="fas fa-times"></i> LỖI!</h4>
+                    <?= Yii::$app->session->getFlash('error') ?>
+                </div>
+            <?php endif; ?>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
             <div class="text-center">
