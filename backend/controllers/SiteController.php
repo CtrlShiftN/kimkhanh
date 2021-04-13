@@ -93,9 +93,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Login action.
-     *
-     * @return string
+     * @return string|\yii\web\Response
      */
     public function actionLogin()
     {
@@ -116,9 +114,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logout action.
-     *
-     * @return string
+     * @return \yii\web\Response
      */
     public function actionLogout()
     {
