@@ -466,10 +466,14 @@ $this->title = 'Kim Khánh Group';
                     <h1 id="idea"><b><i>BẠN CÓ Ý TƯỞNG ???</i></b></h1>
                     <h4 class="font-weight-lighter">LIÊN HỆ NGAY VỚI CHÚNG TÔI...</h4>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4 mt-3 mt-md-0 col-lg-4 text-center d-flex justify-content-center align-items-center">
-                    <a href="<?= $cdnUrl?>/site/contact" class="contact-button">
-                        Liên hệ ngay!<span>kimkhanhgroups.com</span>
-                    </a>
+                <div class="col-12 col-sm-12 col-lg-4 col-md-4 d-flex align-items-center justify-content-center">
+                    <div class="buttonPoints">
+                        <a href="<?= $cdnUrl?>/site/contact">
+                            LIÊN HỆ NGAY
+                            <span class="shift">›</span>
+                        </a>
+                        <div class="mask"></div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -84,64 +84,6 @@
     transform: scale(0.1, 1);
 }
 
-.contact-button {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: 1.2em;
-    border: 2px solid white;
-    border-radius: 4px;
-    padding: 20px 60px 20px 55px;
-    transition: 0.3s ease-in-out;
-}
-.contact-button span {
-    text-transform: none;
-    position: absolute;
-    color: #ee283e;
-    top: 20px;
-    left: 32px;
-    opacity: 0;
-    transition: all 0s ease 0s;
-}
-.contact-button:hover {
-    transition: 0.3s ease-in-out;
-    border: 2px solid white;
-    border-radius: 50px;
-    background-color: white;
-    color: white;
-}
-.contact-button:hover > span {
-    opacity: 1;
-    transition: all 0.25s ease-in-out 0.1s;
-}
-.contact-button:hover:before {
-    transition: 0.3s ease-in-out;
-    background-color: #ee283e;
-}
-.contact-button:before, .contact-button:after {
-    content: "";
-    position: absolute;
-    top: -14px;
-    left: -12px;
-    width: 132px;
-    height: 25px;
-}
-.contact-button:before {
-    border: 2px solid #ee283e;
-    background-color: #1f3944;
-    transform: skew(-25deg);
-    transition: 0.3s ease-in-out;
-}
-.contact-button:after {
-    content: "Luôn sẵn sàng phục vụ !";
-    font-size: 0.45em;
-    top: -7px;
-    left: -10px;
-    color: white !important;
-}
 .buttonPoints {
     border: 2px solid #9b9b9b;
     cursor: pointer;
@@ -160,7 +102,7 @@
 }
 
 .buttonPoints a {
-    color: #9b9b9b;
+    color: #b1b1b1;
     font-family: "Times New Roman", sans-serif;
     text-decoration: none;
 }
@@ -186,6 +128,9 @@
     border-color: #fff;
     box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
     transition: background 0s;
+}
+.buttonPoints:hover a{
+    color: #fff;
 }
 
 .button:hover a {
@@ -567,8 +512,7 @@ a {
 }
 .row-full {
     width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    margin-left: calc(-50vw + 49%);
 }
 .optionsChoose {
     transition: 0.2s;

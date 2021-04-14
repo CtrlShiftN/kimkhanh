@@ -27,7 +27,7 @@ $cdnUrl = Yii::$app->params['frontend'];
     <?php $this->beginBody() ?>
 
     <div class="wrap">
-        <div class="container-fluid bg-danger">
+        <div class="container-fluid bg-danger row-full">
             <div class="container text-white">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-4 col-lg-3 px-0 bg-warning text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
@@ -313,7 +313,7 @@ $cdnUrl = Yii::$app->params['frontend'];
             <?= $content ?>
         </div>
     </div>
-    <footer class="footer bg-danger">
+    <footer class="footer bg-danger row-full">
         <section class="kh-footer">
             <div class="container text-white">
                 <div class="row">
