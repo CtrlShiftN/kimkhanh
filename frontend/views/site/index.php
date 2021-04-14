@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 $cdnUrl = Yii::$app->params['frontend'];
-$this->title = 'Kim Khánh Group';
+$this->title = 'Minh Khánh Group';
 ?>
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/index.css">
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/prism.css">
@@ -62,7 +62,7 @@ $this->title = 'Kim Khánh Group';
     <div class="row-full position-relative slideMaxWidth">
         <div class="position-absolute location">
             <h1 class="px-2 pt-3 pb-2 pb-xl-3 m-0 animate__animated animate__flipInY brandFont fontSzBrand text-danger">
-                KimKhanh-Groups</h1>
+                MinhKhanh-Groups</h1>
             <ul class="list-unstyled ml-5">
                 <li class="animate__animated animate__flipInX pb-2 pb-xl-3 firstItemSlide">
                     <h3 class="fontSzSlideTitle fontSlideTitle m-0 font-weight-bold"><i
@@ -472,7 +472,7 @@ $this->title = 'Kim Khánh Group';
                 </div>
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center d-flex justify-content-center align-items-center">
                     <a href="<?= $cdnUrl?>/site/contact" class="contact-button">
-                        Liên hệ ngay!<span>kimkhanhgroups.com</span>
+                        Liên hệ ngay!<span>minhkhanhgroups.com</span>
                     </a>
                 </div>
             </div>

@@ -296,31 +296,6 @@ a.animated-button.thar-three:before {
     background: #e51b23;
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
-@media (min-width: 1200px) {
-    .btnShowMore {
-        left: 43.2%;
-    }
-}
-@media (min-width: 992px) and (max-width: 1200px){
-    .btnShowMore {
-        left: 40.5%;
-    }
-}
-@media (min-width: 768px) and (max-width: 992px){
-    .btnShowMore {
-        left: 36.5%;
-    }
-}
-@media (min-width: 576px) and (max-width: 768px){
-    .btnShowMore {
-        left: 29.5%;
-    }
-}
-@media (max-width: 576px){
-    .btnShowMore {
-        left: 29.2%
-    }
-}
 /*endbtn*/
 .bgGray {
     background-color: #bfbfbd;
@@ -412,7 +387,7 @@ a.animated-button.thar-three:before {
         margin-left: 34px;
     }
 }
-@media (min-width: 1130px) and (max-width: 1250px) {
+@media (min-width: 1190px) and (max-width: 1250px) {
     .location {
         right: 15px;
         top: 15%;
@@ -435,7 +410,7 @@ a.animated-button.thar-three:before {
         display: none !important;
     }
 }
-@media (min-width: 1100px) and (max-width: 1130px) {
+@media (min-width: 1100px) and (max-width: 1190px) {
     .location {
         right: 30px;
         top: 17%;
@@ -458,7 +433,7 @@ a.animated-button.thar-three:before {
         display: none !important;
     }
 }
-@media (min-width: 892px) and (max-width: 1100px) {
+@media (min-width: 945px) and (max-width: 1100px) {
     .location {
         right: 15px;
         top: 20%;
@@ -484,7 +459,7 @@ a.animated-button.thar-three:before {
         display: none !important;
     }
 }
-@media (min-width: 800px) and (max-width: 892px) {
+@media (min-width: 872px) and (max-width: 945px) {
     .location {
         right: 10px;
         top: 17%;
@@ -510,7 +485,7 @@ a.animated-button.thar-three:before {
         display: none !important;
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 872px) {
     .slideMinWidth {
         display: block !important;
     }
