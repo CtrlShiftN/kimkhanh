@@ -26,11 +26,11 @@ $cdnUrl = Yii::$app->params['backend'];
         <!-- Google Font: Source Sans Pro -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
         <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="assets/layoutv1/plugins/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="vendor/layoutv1/plugins/fontawesome-free/css/all.min.css">
         <!-- IonIcons -->
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Theme style -->
-        <link rel="stylesheet" href="assets/layoutv1/dist/css/adminlte.min.css">
+        <link rel="stylesheet" href="vendor/layoutv1/dist/css/adminlte.min.css">
     </head>
     <body class="hold-transition sidebar-mini">
     <?php $this->beginBody() ?>
@@ -85,7 +85,7 @@ $cdnUrl = Yii::$app->params['backend'];
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="assets/layoutv1/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                <img src="vendor/layoutv1/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Brad Diesel
@@ -101,7 +101,7 @@ $cdnUrl = Yii::$app->params['backend'];
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="assets/layoutv1/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                                <img src="vendor/layoutv1/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         John Pierce
@@ -117,7 +117,7 @@ $cdnUrl = Yii::$app->params['backend'];
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="assets/layoutv1/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                                <img src="vendor/layoutv1/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Nora Silvester
@@ -178,7 +178,7 @@ $cdnUrl = Yii::$app->params['backend'];
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="assets/layoutv1/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="vendor/layoutv1/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">AdminLTE 3</span>
             </a>
 
@@ -187,7 +187,7 @@ $cdnUrl = Yii::$app->params['backend'];
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="assets/layoutv1/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="vendor/layoutv1/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">Alexander Pierce</a>
@@ -938,7 +938,7 @@ $cdnUrl = Yii::$app->params['backend'];
                                         <tbody>
                                         <tr>
                                             <td>
-                                                <img src="assets/layoutv1/dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
+                                                <img src="vendor/layoutv1/dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">
                                                 Some Product
                                             </td>
                                             <td>$13 USD</td>
@@ -1138,18 +1138,18 @@ $cdnUrl = Yii::$app->params['backend'];
         </footer>
     </div>
     <!-- jQuery -->
-    <script src="assets/layoutv1/plugins/jquery/jquery.min.js"></script>
+    <script src="vendor/layoutv1/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="assets/layoutv1/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/layoutv1/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE -->
-    <script src="assets/layoutv1/dist/js/adminlte.js"></script>
+    <script src="vendor/layoutv1/dist/js/adminlte.js"></script>
 
     <!-- OPTIONAL SCRIPTS -->
-    <script src="assets/layoutv1/plugins/chart.js/Chart.min.js"></script>
+    <script src="vendor/layoutv1/plugins/chart.js/Chart.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="assets/layoutv1/dist/js/demo.js"></script>
+    <script src="vendor/layoutv1/dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="assets/layoutv1/dist/js/pages/dashboard3.js"></script>
+    <script src="vendor/layoutv1/dist/js/pages/dashboard3.js"></script>
     <?php $this->endBody() ?>
     </body>
     </html>
