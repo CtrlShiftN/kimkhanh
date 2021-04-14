@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d764d4a1909d65502d23cd041a20e84",
+    "content-hash": "e76375f01908a42f65414570fe5a0e8e",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -770,6 +770,109 @@
                 }
             ],
             "time": "2020-09-28T15:15:52+00:00"
+        },
+        {
+            "name": "leafo/scssphp",
+            "version": "v0.7.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/scssphp.git",
+                "reference": "a384906af3d078e98b089d7d36f6ceab8703f7ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/scssphp/zipball/a384906af3d078e98b089d7d36f6ceab8703f7ff",
+                "reference": "a384906af3d078e98b089d7d36f6ceab8703f7ff",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6",
+                "squizlabs/php_codesniffer": "~2.5"
+            },
+            "bin": [
+                "bin/pscss"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Leafo\\ScssPhp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://leafo.github.io/scssphp/",
+            "keywords": [
+                "css",
+                "less",
+                "sass",
+                "scss",
+                "stylesheet"
+            ],
+            "support": {
+                "issues": "https://github.com/leafo/scssphp/issues",
+                "source": "https://github.com/leafo/scssphp/tree/v0.7.8"
+            },
+            "abandoned": "scssphp/scssphp",
+            "time": "2019-04-24T18:10:10+00:00"
+        },
+        {
+            "name": "lucidtaz/yii2-scssphp",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LucidTaZ/yii2-scssphp.git",
+                "reference": "ea897fec7e30c521d9487b15cd936db0767cd22b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LucidTaZ/yii2-scssphp/zipball/ea897fec7e30c521d9487b15cd936db0767cd22b",
+                "reference": "ea897fec7e30c521d9487b15cd936db0767cd22b",
+                "shasum": ""
+            },
+            "require": {
+                "leafo/scssphp": "^0.7.5",
+                "php": ">=7.0.0",
+                "yiisoft/yii2": "^2.0.13"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "~0.9.0",
+                "phpunit/phpunit": "^6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "lucidtaz\\yii2scssphp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thijs Zumbrink",
+                    "email": "thijs@schalpoen.nl"
+                }
+            ],
+            "description": "Yii2 bindings for leafo/scssphp",
+            "support": {
+                "issues": "https://github.com/LucidTaZ/yii2-scssphp/issues",
+                "source": "https://github.com/LucidTaZ/yii2-scssphp/tree/master"
+            },
+            "time": "2018-04-22T19:40:52+00:00"
         },
         {
             "name": "npm-asset/bootstrap",

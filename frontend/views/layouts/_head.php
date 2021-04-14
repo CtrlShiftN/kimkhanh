@@ -4,7 +4,6 @@
  * Date: 21 Feb 2021
  * Time: 2:15 AM
  */
-
 $cdnUrl = Yii::$app->params['frontend'];
 ?>
 <link rel="shortcut icon" href="<?= $cdnUrl ?>/favicon.ico"/>
@@ -20,3 +19,4 @@ $cdnUrl = Yii::$app->params['frontend'];
 <link href="<?= $cdnUrl ?>/css/site.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/navbar.css" rel="stylesheet" type="text/css">
 <link href="<?= $cdnUrl ?>/css/cropper.min.css" rel="stylesheet" type="text/css"/>
+

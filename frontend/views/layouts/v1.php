@@ -69,8 +69,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                 </div>
             </div>
         </div>
-
-        <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1">
+        <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1" id="nav">
             <div class="container font-weight-bold">
                 <a href="<?= $cdnUrl ?>" class="navbar-brand d-md-none"><img src="<?= $cdnUrl ?>/img/logoKimKhanh.png"
                                                                              height="48px" width="auto" alt="Kim Khanh"></a>
@@ -310,12 +309,10 @@ $cdnUrl = Yii::$app->params['frontend'];
                 </div>
             </div> <!-- navbar-collapse.// -->
         </nav>
-
         <div class="container">
             <?= $content ?>
         </div>
     </div>
-
     <footer class="footer bg-danger">
         <section class="kh-footer">
             <div class="container text-white">
@@ -410,7 +407,7 @@ $cdnUrl = Yii::$app->params['frontend'];
         <section class="kh-copyright">
         </section>
     </footer>
-    <div class="fix-footer bg-danger d-none d-sm-none d-md-block">
+    <div class="fix-footer bg-danger d-none d-sm-none d-md-block" id="taskbar">
         <div class="container text-white">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
