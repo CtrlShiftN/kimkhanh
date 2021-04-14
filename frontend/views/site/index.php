@@ -397,8 +397,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-2.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>Alamin Musa</li>
+                                <li>BackEnd Developer</li>
                             </ul>
                         </div>
                     </li>
@@ -409,8 +409,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-3.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>Charlote Kartlyn</li>
+                                <li>FrontEnd Developer</li>
                             </ul>
                         </div>
                     </li>
@@ -421,8 +421,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-4.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>William Karma</li>
+                                <li>CEO</li>
                             </ul>
                         </div>
                     </li>
@@ -433,8 +433,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-5.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>Cleopatra</li>
+                                <li>Bác Sĩ</li>
                             </ul>
                         </div>
                     </li>
@@ -445,8 +445,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-6.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>Jhin</li>
+                                <li>Vận động viên bắn súng</li>
                             </ul>
                         </div>
                     </li>
