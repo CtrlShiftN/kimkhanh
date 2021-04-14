@@ -7,7 +7,6 @@ $cdnUrl = Yii::$app->params['frontend'];
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use yii\captcha\Captcha;
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
@@ -15,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <link href="<?= $cdnUrl ?>/css/contact.css" rel="stylesheet" type="text/css">
 <div class="row shadow-lg">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.201257961549!2d105.7639463153368!3d21.04019029276296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b60773a811%3A0xe064604bcb54667f!2zMTI4IMSQxrDhu51uZyBI4buTIFTDuW5nIE3huq11LCBNYWkgROG7i2NoLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1615878737843!5m2!1svi!2s"
-            width="100%" height="400px" style="border:0;padding:0;margin:0" allowfullscreen="" loading="lazy"></iframe>
+            width="100%" height="400px" style="border:0;padding:0;margin:0" allowfullscreen=""></iframe>
 </div>
 <div class="site-contact">
     <div class="row border-bottom">
@@ -33,11 +32,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="row">
                     <div class="col-6 col-sm-7 col-md-7 col-lg-6 col-xl-6">
-                        <?= $form->field($model, 'email')->textInput(['placeholder' => 'info@kimkhanh.vn'],) ?>
+                        <?= $form->field($model, 'email')->textInput(['placeholder' => 'info@kimkhanh.vn']) ?>
                     </div>
 
                     <div class="col-6 col-sm-5 col-md-5 col-lg-6 col-xl-6">
-                        <?= $form->field($model, 'phone')->textInput(['placeholder' => '(+84)123456789'],) ?>
+                        <?= $form->field($model, 'phone')->textInput(['placeholder' => '(+84)123456789']) ?>
                     </div>
                 </div>
 
@@ -55,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
             <div class="text-center">
                 <img src="<?= $cdnUrl ?>/img/favicon.jpg" alt="kimkhanhgroup" class="rounded-circle" width="88px"
-                     height="88px" ;>
+                     height="88px">
                 <h3 class="text-danger pt-2">KIM KHANH COMPANY</h3>
             </div>
             <hr>
