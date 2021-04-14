@@ -69,7 +69,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1" id="nav">
+        <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1 row-full" id="nav">
             <div class="container font-weight-bold">
                 <a href="<?= $cdnUrl ?>" class="navbar-brand d-md-none"><img src="<?= $cdnUrl ?>/img/logoKimKhanh.png"
                                                                              height="48px" width="auto" alt="Kim Khanh"></a>

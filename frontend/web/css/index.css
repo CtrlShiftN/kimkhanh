@@ -220,6 +220,7 @@ a.animated-button:link, a.animated-button:visited {
     width: 70%;
     position: relative;
     display: block;
+    margin: 25px auto;
     padding: 14px 15px;
     color: #fff;
     font-size:14px;

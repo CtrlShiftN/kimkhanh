@@ -27,6 +27,7 @@ $this->title = 'Kim Khánh Group';
         background-image: url("<?= $cdnUrl ?>/img/introduction/camera-background.jpg");
         min-height: 750px;
     }
+    
 
     .red-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/4K-red-bg.jpg");
@@ -268,9 +269,11 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
         </div>
-        <div class="col-12 text-center position-relative">
-            <a href="<?= $cdnUrl ?>/site/shop" class="btn btn-sm animated-button thar-two btnShowMore">Xem thêm</a>
+        <div class="col-4 m-0 p-0"></div>
+        <div class="col-4 m-0 p-0">
+            <a href="<?= $cdnUrl ?>/site/shop" class="animated-button thar-two">Xem thêm</a>
         </div>
+        <div class="col-4 m-0 p-0"></div>
     </div>
     <!--Optimal -->
     <div class="row p-5 optimal-background row-full" id="optimal">
@@ -381,7 +384,7 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
         </section>
-        <a href="#0" id="hide" class="cd-see-all mt-2 btn btn-sm animated-button thar-two btnShowMore">Xem tất cả</a>
+        <a href="#0" id="hide" class="cd-see-all animated-button thar-two">Xem tất cả</a>
         <div class="cd-testimonials-all" id="feedBack">
             <div class="cd-testimonials-all-wrapper">
                 <ul class="d-flex justify-content-center align-items-center">
@@ -463,7 +466,7 @@ $this->title = 'Kim Khánh Group';
                     <h1 id="idea"><b><i>BẠN CÓ Ý TƯỞNG ???</i></b></h1>
                     <h4 class="font-weight-lighter">LIÊN HỆ NGAY VỚI CHÚNG TÔI...</h4>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center d-flex justify-content-center align-items-center">
+                <div class="col-12 col-sm-12 col-md-4 mt-3 mt-md-0 col-lg-4 text-center d-flex justify-content-center align-items-center">
                     <a href="<?= $cdnUrl?>/site/contact" class="contact-button">
                         Liên hệ ngay!<span>kimkhanhgroups.com</span>
                     </a>
@@ -510,10 +513,10 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
             <a class="carousel-control-prev" href="#brand" data-slide="prev">
-                <i class="fas fa-angle-left fa-2x"></i>
+                <i class="fas fa-angle-left fa-2x text-danger"></i>
             </a>
             <a class="carousel-control-next" href="#brand" data-slide="next">
-                <i class="fas fa-angle-right fa-2x"></i>
+                <i class="fas fa-angle-right fa-2x text-danger"></i>
             </a>
         </div>
     </div>
