@@ -20,9 +20,15 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                'only' => ['logout', 'signup', 'index'],
                 'rules' => [
                     [
+                        'actions' => ['signup'],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -45,13 +51,27 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
+                'layout' => 'blank'
             ],
         ];
     }
 
+    /**
+     * @return string
+     */
+    public function actionError(){
+        $this->layout = 'blank';
+        return $this->render('error');
+    }
+
+    /**
+     * @param \yii\base\Action $action
+     * @return bool
+     * @throws \yii\web\BadRequestHttpException
+     */
     public function beforeAction($action)
     {
-        $this->layout = 'main';
+        $this->layout = 'v1';
         if (!parent::beforeAction($action)) {
             return false;
         }
@@ -65,13 +85,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+//        if (!Yii::$app->user->isGuest){
+//            return $this->redirect(['dashboard/index']);
+//        }
+        $this->layout = 'v1';
         return $this->render('index');
     }
 
     /**
-     * Login action.
-     *
-     * @return string
+     * @return string|\yii\web\Response
      */
     public function actionLogin()
     {
@@ -92,9 +114,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logout action.
-     *
-     * @return string
+     * @return \yii\web\Response
      */
     public function actionLogout()
     {
