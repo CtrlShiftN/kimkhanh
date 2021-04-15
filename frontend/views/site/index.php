@@ -470,7 +470,7 @@ $this->title = 'Minh Khánh Group';
                 </li>
 
                 <li class="text-center cd-testimonials-item text-uppercase">
-                    <blockquote><i>~ end ~</i></blockquote>
+                    <blockquote><i>~ End ~</i></blockquote>
                 </li>
             </ul>
 
@@ -564,4 +564,3 @@ $this->title = 'Minh Khánh Group';
         });
     });
 </script>
-</div>
