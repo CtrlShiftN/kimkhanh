@@ -20,7 +20,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'index'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
@@ -28,7 +28,7 @@ class SiteController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -51,7 +51,7 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-                'layout' => 'blank'
+                'layout' => 'error'
             ],
         ];
     }
@@ -60,7 +60,7 @@ class SiteController extends Controller
      * @return string
      */
     public function actionError(){
-        $this->layout = 'blank';
+        $this->layout = 'error';
         return $this->render('error');
     }
 
@@ -71,7 +71,7 @@ class SiteController extends Controller
      */
     public function beforeAction($action)
     {
-        $this->layout = 'v1';
+        $this->layout = 'adminlte3';
         if (!parent::beforeAction($action)) {
             return false;
         }
@@ -79,16 +79,14 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
-     *
-     * @return string
+     * @return string|\yii\web\Response
      */
     public function actionIndex()
     {
-//        if (!Yii::$app->user->isGuest){
-//            return $this->redirect(['dashboard/index']);
-//        }
-        $this->layout = 'v1';
+        if (!Yii::$app->user->isGuest){
+            return $this->redirect(['dashboard/index']);
+        }
+        $this->layout = 'blank';
         return $this->render('index');
     }
 
