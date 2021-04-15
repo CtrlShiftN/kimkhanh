@@ -13,3 +13,7 @@
 #taskbar {
     z-index: 9999;
 }
+.row-full {
+    width: 100vw;
+    margin-left: calc(-50vw + 49%);
+}
