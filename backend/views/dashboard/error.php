@@ -18,7 +18,7 @@ $cdnUrl = Yii::$app->params['backend'];
             <h1><?= nl2br(Html::encode($message)) ?></h1>
             <p>You are half way around the word, but OOPS you make the wrong turn,
                 let us lead you to the right way,</p>
-            <p><a class="btn btn-danger" href='<?= $cdnUrl ?>' title='HOME'>Quay về trang chủ</a></p>
+            <p><a class="btn btn-danger" href='<?= $cdnUrl ?>' title='Minh Khánh'>Quay về trang chủ</a></p>
         </div>
     </div>
     <canvas id="c"></canvas>
