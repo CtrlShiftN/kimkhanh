@@ -13,35 +13,29 @@ $this->title = 'Kim Khánh Group';
 <script src="<?= $cdnUrl ?>/js/main.js"></script>
 <script src="<?= $cdnUrl ?>/js/modernizr.js"></script>
 <style>
-    .reason-background {
-        background-image: url("<?= $cdnUrl ?>/img/introduction/reason.jpg");
+    .reason-background,.optimal-background,.red-background,.ideas-background {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    .reason-background {
+        background-image: url("<?= $cdnUrl ?>/img/introduction/reason.jpg");
         min-height: 300px;
     }
 
     .optimal-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/camera-background.jpg");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
         min-height: 750px;
     }
+    
 
     .red-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/4K-red-bg.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
         min-height: 500px;
     }
 
     .ideas-background {
         background-image: url("<?= $cdnUrl ?>/img/introduction/ideas-bg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
         min-height: 500px;
     }
     @font-face {
@@ -275,9 +269,11 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
         </div>
-        <div class="col-12 text-center position-relative">
-            <a href="<?= $cdnUrl ?>/site/shop" class="btn btn-sm animated-button thar-two btnShowMore">Xem thêm</a>
+        <div class="col-4 m-0 p-0"></div>
+        <div class="col-4 m-0 p-0">
+            <a href="<?= $cdnUrl ?>/site/shop" class="animated-button thar-two">Xem thêm</a>
         </div>
+        <div class="col-4 m-0 p-0"></div>
     </div>
     <!--Optimal -->
     <div class="row p-5 optimal-background row-full" id="optimal">
@@ -388,7 +384,7 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
         </section>
-        <a href="#0" id="hide" class="cd-see-all mt-2 btn btn-sm animated-button thar-two btnShowMore">Xem tất cả</a>
+        <a href="#0" id="hide" class="cd-see-all animated-button thar-two">Xem tất cả</a>
         <div class="cd-testimonials-all" id="feedBack">
             <div class="cd-testimonials-all-wrapper">
                 <ul class="d-flex justify-content-center align-items-center">
@@ -401,8 +397,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-2.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>Alamin Musa</li>
+                                <li>BackEnd Developer</li>
                             </ul>
                         </div>
                     </li>
@@ -413,8 +409,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-3.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>Charlote Kartlyn</li>
+                                <li>FrontEnd Developer</li>
                             </ul>
                         </div>
                     </li>
@@ -425,8 +421,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-4.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>William Karma</li>
+                                <li>CEO</li>
                             </ul>
                         </div>
                     </li>
@@ -437,8 +433,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-5.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>Cleopatra</li>
+                                <li>Bác Sĩ</li>
                             </ul>
                         </div>
                     </li>
@@ -449,8 +445,8 @@ $this->title = 'Kim Khánh Group';
                         <div class="cd-author">
                             <img src="<?= $cdnUrl ?>/img/introduction/avatar-6.jpg" alt="Author image">
                             <ul class="cd-author-info">
-                                <li>MyName</li>
-                                <li>CEO, CompanyName</li>
+                                <li>Jhin</li>
+                                <li>Vận động viên bắn súng</li>
                             </ul>
                         </div>
                     </li>
@@ -470,10 +466,14 @@ $this->title = 'Kim Khánh Group';
                     <h1 id="idea"><b><i>BẠN CÓ Ý TƯỞNG ???</i></b></h1>
                     <h4 class="font-weight-lighter">LIÊN HỆ NGAY VỚI CHÚNG TÔI...</h4>
                 </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center d-flex justify-content-center align-items-center">
-                    <a href="<?= $cdnUrl?>/site/contact" class="contact-button">
-                        Liên hệ ngay!<span>kimkhanhgroups.com</span>
-                    </a>
+                <div class="col-12 col-sm-12 col-lg-4 col-md-4 d-flex align-items-center justify-content-center">
+                    <div class="buttonPoints">
+                        <a href="<?= $cdnUrl?>/site/contact">
+                            LIÊN HỆ NGAY
+                            <span class="shift">›</span>
+                        </a>
+                        <div class="mask"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -517,10 +517,10 @@ $this->title = 'Kim Khánh Group';
                 </div>
             </div>
             <a class="carousel-control-prev" href="#brand" data-slide="prev">
-                <i class="fas fa-angle-left fa-2x"></i>
+                <i class="fas fa-angle-left fa-2x text-danger"></i>
             </a>
             <a class="carousel-control-next" href="#brand" data-slide="next">
-                <i class="fas fa-angle-right fa-2x"></i>
+                <i class="fas fa-angle-right fa-2x text-danger"></i>
             </a>
         </div>
     </div>
