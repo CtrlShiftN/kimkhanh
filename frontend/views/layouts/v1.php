@@ -30,19 +30,19 @@ $cdnUrl = Yii::$app->params['frontend'];
         <div class="container-fluid bg-danger row-full">
             <div class="container text-white">
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 px-0 bg-warning text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 px-0 bg-warning text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
                         <i class="far fa-clock"></i> <?= date('l, d F Y') ?>
                     </div>
                     <div class="col-12 col-sm-12 col-md-5 col-lg-5 px-0 text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
                         <div class="typewriter-text">Welcome to Minh Khanh's website!</div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-3 col-lg-4 px-0 pl-md-3 text-center text-lg-left py-2 font-weight-bold">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-0 pl-md-3 text-center text-lg-left py-2 font-weight-bold">
                         <div class="row">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5 px-0">
                                 <a class="text-white" href="tel:555-555-5555"><i class="fas fa-headset"></i>
                                     0908.090.503</a>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 px-0">
                                 <a class="text-white" href="mailto:minhkhanh@gmail.com"><i class="fas fa-envelope"></i>
                                     minhkhanh@gmail.com</a>
                             </div>
