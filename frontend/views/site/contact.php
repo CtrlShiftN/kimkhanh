@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="row">
                     <div class="col-6 col-sm-7 col-md-7 col-lg-6 col-xl-6">
-                        <?= $form->field($model, 'email')->textInput(['placeholder' => 'info@kimkhanh.vn']) ?>
+                        <?= $form->field($model, 'email')->textInput(['placeholder' => 'minhkhanhgroups.com']) ?>
                     </div>
 
                     <div class="col-6 col-sm-5 col-md-5 col-lg-6 col-xl-6">
@@ -53,9 +53,9 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
             <div class="text-center">
-                <img src="<?= $cdnUrl ?>/img/favicon.jpg" alt="kimkhanhgroup" class="rounded-circle" width="88px"
+                <img src="<?= $cdnUrl ?>/img/favicon.ico" alt="minhkhanhgroup" class="rounded-circle" width="88px"
                      height="88px">
-                <h3 class="text-danger pt-2">KIM KHANH COMPANY</h3>
+                <h3 class="text-danger pt-2">MINHKHANH-GROUP</h3>
             </div>
             <hr>
             <div class="col-12 px-4">
