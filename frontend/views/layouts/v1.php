@@ -71,7 +71,7 @@ $cdnUrl = Yii::$app->params['frontend'];
         </div>
         <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1" id="nav">
             <div class="container font-weight-bold">
-                <a href="<?= $cdnUrl ?>" class="navbar-brand d-md-none"><img src="<?= $cdnUrl ?>/img/logoMinhKhanh.png"
+                <a href="<?= $cdnUrl ?>" class="navbar-brand d-md-none"><img src="<?= $cdnUrl ?>/img/logoMinhKhanhRespon.png"
                                                                              height="48px" width="auto" alt="Minh Khanh"></a>
                 <button class="navbar-toggler ml-auto text-light border-0" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
