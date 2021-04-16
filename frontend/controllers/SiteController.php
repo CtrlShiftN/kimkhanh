@@ -30,7 +30,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'index', 'error'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
@@ -41,6 +41,11 @@ class SiteController extends Controller
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['error', 'index'],
+                        'allow' => true,
+                        'roles' => ['?', '@'],
                     ],
                 ],
             ],
@@ -61,12 +66,18 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'layout' => 'error'
             ],
         ];
+    }
+
+    /**
+     * @return string
+     */
+    public function actionError()
+    {
+        $this->layout = 'error';
+        return $this->render('error');
     }
 
     public function beforeAction($action)
@@ -280,10 +291,11 @@ class SiteController extends Controller
 //    {
 //        return $this->render('faq');
 //    }
-    public function actionFaq(){
+    public function actionFaq()
+    {
         $arrQuestion = (new Question())->getQuestion();
-        return $this->render('faq',[
-            'arrQuestion'=>$arrQuestion
+        return $this->render('faq', [
+            'arrQuestion' => $arrQuestion
         ]);
     }
 }
