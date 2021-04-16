@@ -33,14 +33,19 @@ class SiteController extends Controller
                 'only' => ['logout', 'signup', 'index', 'error'],
                 'rules' => [
                     [
-                        'actions' => ['signup', 'error'],
+                        'actions' => ['signup'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout', 'index', 'error'],
+                        'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['error', 'index'],
+                        'allow' => true,
+                        'roles' => ['?', '@'],
                     ],
                 ],
             ],
@@ -69,7 +74,8 @@ class SiteController extends Controller
     /**
      * @return string
      */
-    public function actionError(){
+    public function actionError()
+    {
         $this->layout = 'error';
         return $this->render('error');
     }
@@ -285,10 +291,11 @@ class SiteController extends Controller
 //    {
 //        return $this->render('faq');
 //    }
-    public function actionFaq(){
+    public function actionFaq()
+    {
         $arrQuestion = (new Question())->getQuestion();
-        return $this->render('faq',[
-            'arrQuestion'=>$arrQuestion
+        return $this->render('faq', [
+            'arrQuestion' => $arrQuestion
         ]);
     }
 }
