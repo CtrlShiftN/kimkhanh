@@ -20,9 +20,15 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                'only' => ['logout', 'signup', 'index', 'error'],
                 'rules' => [
                     [
+                        'actions' => ['signup', 'error'],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['logout', 'index', 'error'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -45,13 +51,27 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
+                'layout' => 'error'
             ],
         ];
     }
 
+    /**
+     * @return string
+     */
+    public function actionError(){
+        $this->layout = 'error';
+        return $this->render('error');
+    }
+
+    /**
+     * @param \yii\base\Action $action
+     * @return bool
+     * @throws \yii\web\BadRequestHttpException
+     */
     public function beforeAction($action)
     {
-        $this->layout = 'main';
+        $this->layout = 'adminlte3';
         if (!parent::beforeAction($action)) {
             return false;
         }
@@ -59,19 +79,19 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
-     *
-     * @return string
+     * @return string|\yii\web\Response
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->isGuest){
+            return $this->redirect(['dashboard/index']);
+        }
+        $this->layout = 'blank';
         return $this->render('index');
     }
 
     /**
-     * Login action.
-     *
-     * @return string
+     * @return string|\yii\web\Response
      */
     public function actionLogin()
     {
@@ -92,9 +112,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logout action.
-     *
-     * @return string
+     * @return \yii\web\Response
      */
     public function actionLogout()
     {

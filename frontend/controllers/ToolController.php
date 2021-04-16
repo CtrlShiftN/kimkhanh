@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use frontend\models\DocumentSearch;
+use frontend\models\RecommendSearch;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
@@ -67,6 +68,41 @@ class ToolController extends \yii\web\Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider
         ]);
+    }
+
+    /**
+     * Show all recommend from db
+     * @return string
+     * @author QuyenNV
+     */
+    public function actionRecommend()
+    {
+        $searchModel = new RecommendSearch();
+        $arrRecommend = $searchModel->getAllRecommend();
+        return $this->render('recommend', [
+            'arrRecommend' => $arrRecommend
+        ]);
+    }
+
+    /**
+     * @return string|\yii\web\Response
+     */
+    public function actionRecommendDetail()
+    {
+        $searchModel = new RecommendSearch();
+        if (isset($_REQUEST['detail'])) {
+            $detailID = $_REQUEST['detail'];
+            $recommendDetail = $searchModel->getRecommendById($detailID);
+            if (!empty($recommendDetail)) {
+                return $this->render('recommend_detail', [
+                    'recommendDetail' => $recommendDetail
+                ]);
+            } else {
+                return $this->redirect('recommend');
+            }
+        } else {
+            return $this->redirect('recommend');
+        }
     }
 
 }

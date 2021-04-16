@@ -27,24 +27,24 @@ $cdnUrl = Yii::$app->params['frontend'];
     <?php $this->beginBody() ?>
 
     <div class="wrap">
-        <div class="container-fluid bg-danger">
+        <div class="container-fluid bg-danger row-full">
             <div class="container text-white">
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 px-0 bg-warning text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 px-0 bg-warning text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
                         <i class="far fa-clock"></i> <?= date('l, d F Y') ?>
                     </div>
                     <div class="col-12 col-sm-12 col-md-5 col-lg-5 px-0 text-center font-weight-bold py-2 py-sm-2 py-md-3 py-lg-3 py-xl-2">
-                        <div class="typewriter-text">Welcome to Kim Khanh's website!</div>
+                        <div class="typewriter-text">Welcome to Minh Khanh's website!</div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-3 col-lg-4 px-0 pl-md-3 text-center text-lg-left py-2 font-weight-bold">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 px-0 pl-md-3 text-center text-lg-left py-2 font-weight-bold">
                         <div class="row">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5 px-0">
                                 <a class="text-white" href="tel:555-555-5555"><i class="fas fa-headset"></i>
                                     0908.090.503</a>
                             </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 px-0">
-                                <a class="text-white" href="mailto:kimkhanh@gmail.com"><i class="fas fa-envelope"></i>
-                                    kimkhanh@gmail.com</a>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 px-0">
+                                <a class="text-white" href="mailto:minhkhanh@gmail.com"><i class="fas fa-envelope"></i>
+                                    minhkhanh@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -52,27 +52,27 @@ $cdnUrl = Yii::$app->params['frontend'];
             </div>
         </div>
         <div class="container pt-3">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 px-0 text-center pt-3 d-none d-sm-none d-md-block">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 px-0 text-center d-none d-sm-none d-md-block">
                     <a class="navbar-brand pt-0" href="<?php echo Url::home() ?>" target="_blank"
-                       title="Trang chủ Kim Khánh Group">
-                        <img class="img-fluid img-responsive" src="<?php echo Url::base() . '/img/logo.png' ?>"
-                             alt="Kim Khánh">
+                       title="Trang chủ Minh Khánh Group">
+                        <img class="img-fluid img-responsive" src="<?php echo Url::base() . '/img/logoMinhKhanh.png' ?>"
+                             alt="Minh Khánh">
                     </a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-9 col-lg-9 px-0 text-center pl-3 pl-sm-0">
                     <a class="navbar-brand" href="<?php echo Url::home() ?>" target="_blank"
-                       title="Trang chủ Kim Khánh Groups">
+                       title="Trang chủ Minh Khánh Groups">
                         <img class="img-fluid img-responsive" src="<?php echo Url::base() . '/img/khuyenmai.jpg' ?>"
-                             alt="Kim Khánh khuyến mại">
+                             alt="Minh Khánh khuyến mại">
                     </a>
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1" id="nav">
+        <nav class="navbar navbar-expand-md navbar-dark bgNavBar sticky-top py-1 row-full" id="nav">
             <div class="container font-weight-bold">
-                <a href="<?= $cdnUrl ?>" class="navbar-brand d-md-none"><img src="<?= $cdnUrl ?>/img/logoKimKhanh.png"
-                                                                             height="48px" width="auto" alt="Kim Khanh"></a>
+                <a href="<?= $cdnUrl ?>" class="navbar-brand d-md-none"><img src="<?= $cdnUrl ?>/img/logoMinhKhanhRespon.png"
+                                                                             height="48px" width="auto" alt="Minh Khanh"></a>
                 <button class="navbar-toggler ml-auto text-light border-0" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -313,12 +313,12 @@ $cdnUrl = Yii::$app->params['frontend'];
             <?= $content ?>
         </div>
     </div>
-    <footer class="footer bg-danger">
+    <footer class="footer bg-danger row-full">
         <section class="kh-footer">
             <div class="container text-white">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                        <h3 class="pb-4">Kim Khánh Groups</h3>
+                        <h3 class="pb-4">Minh Khánh Groups</h3>
                         <address>
                             <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i> Trụ sở: Số 1 đường
                                 Khương
@@ -331,11 +331,11 @@ $cdnUrl = Yii::$app->params['frontend'];
                                                                                                   href="tel:0916354248">0916354248</a>
                             </p>
                             <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
-                                                                                                 href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                                                                                                 href="mailto:minhkhanh@gmail.com">minhkhanh@gmail.com</a>
                             </p>
                             <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
-                                                                                                   href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
-                                - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                                                                                                   href="<?= $cdnUrl ?>">www.minhkhanhgroups.com</a>
+                                - <a class="text-white" href="<?= $cdnUrl ?>">www.minhkhanhgroups.com</a></p>
                             <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
                             <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
                                 <a class="text-white"
@@ -364,11 +364,11 @@ $cdnUrl = Yii::$app->params['frontend'];
                                                                                                   href="tel:0916354248">0916354248</a>
                             </p>
                             <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
-                                                                                                 href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                                                                                                 href="mailto:minhkhanh@gmail.com">minhkhanh@gmail.com</a>
                             </p>
                             <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
-                                                                                                   href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
-                                - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                                                                                                   href="<?= $cdnUrl ?>">www.minhkhanhgroups.com</a>
+                                - <a class="text-white" href="<?= $cdnUrl ?>">www.minhkhanhgroups.com</a></p>
                             <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
                             <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
                                 <a class="text-white"
@@ -388,11 +388,11 @@ $cdnUrl = Yii::$app->params['frontend'];
                                                                                                   href="tel:0916354248">0916354248</a>
                             </p>
                             <p class="effect"><i class="fa fa-envelope my-border-radius"></i> <a class="text-white"
-                                                                                                 href="mailto:kimkhanh@gmail.com">kimkhanh@gmail.com</a>
+                                                                                                 href="mailto:minhkhanh@gmail.com">minhkhanh@gmail.com</a>
                             </p>
                             <p class="effect"><i class="fa fa-globe-asia my-border-radius"></i> <a class="text-white"
-                                                                                                   href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a>
-                                - <a class="text-white" href="<?= $cdnUrl ?>">www.kimkhanhgroups.com</a></p>
+                                                                                                   href="<?= $cdnUrl ?>">www.minhkhanhgroups.com</a>
+                                - <a class="text-white" href="<?= $cdnUrl ?>">www.minhkhanhgroups.com</a></p>
                             <p class="effect"><i class="fa fa-barcode my-border-radius"></i> MST: 01010xxxx</p>
                             <p class="effect"><i class="fa fa-map-marker-alt my-border-radius"></i>
                                 <a class="text-white"
@@ -424,7 +424,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <a href="http://hikvision.vn/danh-cho-dai-ly/dang-ky-dai-ly" target="_blank"
                        class="text-white font-weight-bold">
-                        <i class="fab fa-facebook text-white"></i> FB Kim Khánh
+                        <i class="fab fa-facebook text-white"></i> FB Minh Khánh
                     </a>
                 </div>
             </div>
