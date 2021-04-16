@@ -287,15 +287,16 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-//    public function actionFaq()
-//    {
-//        return $this->render('faq');
-//    }
     public function actionFaq()
     {
         $arrQuestion = (new Question())->getQuestion();
         return $this->render('faq', [
             'arrQuestion' => $arrQuestion
         ]);
+    }
+
+    public function actionReturnGoods()
+    {
+        return $this->render('returnGoods');
     }
 }
