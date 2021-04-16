@@ -38,7 +38,7 @@ class SiteController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'error'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -63,11 +63,15 @@ class SiteController extends Controller
                 'class' => 'yii\web\ErrorAction',
                 'layout' => 'error'
             ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
         ];
+    }
+
+    /**
+     * @return string
+     */
+    public function actionError(){
+        $this->layout = 'error';
+        return $this->render('error');
     }
 
     public function beforeAction($action)
