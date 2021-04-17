@@ -3,18 +3,16 @@ $this->title = "Khuyến cáo";
 $cdnUrl = Yii::$app->params['frontend'];
 
 ?>
-
-
 <?php foreach ($arrRecommend as $key => $value) : ?>
-    <div class="row">
-        <div class="col-sm-4">
-            <img src="<?= $cdnUrl.'/'.$value['feature_image'] ?>" alt="<?= $value['title'] ?>" width="240px">
+    <div class="row pb-5">
+        <div class="col-3">
+            <img src="<?= $cdnUrl.'/'.$value['feature_image'] ?>" alt="<?= $value['title'] ?>" width="100%">
         </div>
-        <div class="col-sm-8">
-            <h4><?= $value['title'] ?></h4>
-            <?= $value['description'] ?><br>
-            <a class="btn btn-success text-white" href="<?= $cdnUrl ?>/tool/recommend-detail?detail=<?= $value['id'] ?>">Xem
-                thêm</a>
+        <div class="col-9">
+            <h4 class="text-uppercase"><?= $value['title'] ?></h4>
+            <p><?= $value['description'] ?></p>
+            <a class="btn btn-danger" href="<?= $cdnUrl ?>/tool/recommend-detail?detail=<?= $value['id'] ?>">Xem
+                thêm >></a>
         </div>
     </div>
 <?php endforeach; ?>

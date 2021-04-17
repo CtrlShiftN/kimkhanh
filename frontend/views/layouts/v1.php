@@ -56,7 +56,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 px-0 text-center d-none d-sm-none d-md-block">
                     <a class="navbar-brand pt-0" href="<?php echo Url::home() ?>" target="_blank"
                        title="Trang chủ Minh Khánh Group">
-                        <img class="img-fluid img-responsive" src="<?php echo Url::base() . '/img/logoMinhKhanh.png' ?>"
+                        <img class="img-fluid img-responsive" src="<?php echo Url::base() . '/img/logo200.png' ?>"
                              alt="Minh Khánh">
                     </a>
                 </div>
