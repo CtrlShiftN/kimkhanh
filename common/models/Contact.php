@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace common\models;
 
 use Yii;
 
@@ -16,7 +16,7 @@ use Yii;
  * @property string|null $created
  * @property string|null $updated
  */
-class ContactForm extends \yii\db\ActiveRecord
+class Contact extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -38,7 +38,6 @@ class ContactForm extends \yii\db\ActiveRecord
             [['name', 'subject', 'content'], 'string', 'max' => 255],
             [['email'], 'email'],
             [['phone'], 'phoneValidate']
-
         ];
     }
 
@@ -57,25 +56,5 @@ class ContactForm extends \yii\db\ActiveRecord
             'created' => Yii::t('app', 'Created'),
             'updated' => Yii::t('app', 'Updated'),
         ];
-    }
-
-    public function phoneValidate($attribute)
-    {
-        if (!preg_match('/^0[0-9]{9}$/', $this->$attribute)) {
-            $this->addError($attribute, 'Bao gồm 10 ký tự số bắt đầu từ "0"');
-        }
-    }
-
-    public function saveContactData()
-    {
-        $contactModel = new ContactForm();
-        $contactModel -> name = $this->name;
-        $contactModel -> email = $this->email;
-        $contactModel -> phone = $this->phone;
-        $contactModel -> subject = $this->subject;
-        $contactModel -> content = $this->content;
-        $contactModel -> created = date('Y-m-d H:i:s');
-        $contactModel -> updated = date('Y-m-d H:i:s');
-        return $contactModel ->save();
     }
 }
