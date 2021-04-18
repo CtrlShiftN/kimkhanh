@@ -263,7 +263,7 @@ $cdnUrl = Yii::$app->params['frontend'];
                                     </a>
                                 </li>
                                 <li class="dropdown-item">
-                                    <a class="nav-link text-dark" href="<?= $cdnUrl ?>/#">
+                                    <a class="nav-link text-dark" href="<?= $cdnUrl ?>/tool/recommend">
                                         <i class="fas fa-cogs"></i> Khuyến cáo
                                     </a>
                                 </li>
