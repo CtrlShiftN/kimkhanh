@@ -69,14 +69,14 @@ class UserController extends Controller
 
     public function actionProfile()
     {
-        $userModel = (new UserForm())::findOne(Yii::$app->user->identity->getId());
+        $userModel = new UserForm();
         if ($userModel->load(yii::$app->request->post()) && $userModel->validate()) {
             if ($userModel->save(false)) {
                 $this->goBack();
             }
         }
 
-        $uploadAvatar = (new UploadImageForm())::findOne(Yii::$app->user->identity->getId());
+        $uploadAvatar = new UploadImageForm();
         if (Yii::$app->request->isPost  && $uploadAvatar->validate(false)) {
             $uploadAvatar->avatar = UploadedFile::getInstance($uploadAvatar, 'avatar');
             if ($uploadAvatar->upload()) {
@@ -98,7 +98,7 @@ class UserController extends Controller
             }
         }
 
-        $userModel = (new UserForm())::findOne(Yii::$app->user->identity->getId());
+        $userModel = new UserForm();
         if ($userModel->load(yii::$app->request->post()) && $userModel->validate()) {
             if ($userModel->save(false)) {
                 $this->goBack();
@@ -112,7 +112,7 @@ class UserController extends Controller
     }
 
     public function actionAddress(){
-        $userModel = (new UserForm())::findOne(Yii::$app->user->identity->getId());
+        $userModel = new UserForm();
         if ($userModel->load(yii::$app->request->post()) && $userModel->validate()) {
             if ($userModel->save(false)) {
                 $this->goBack();
