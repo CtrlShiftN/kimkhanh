@@ -103,13 +103,13 @@ use yii\widgets\ActiveForm;
 <!--                        hồ sơ của tôi-->
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="profile" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Hồ sơ</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="change-password" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Đổi mật khẩu</p>
                                 </a>
@@ -239,7 +239,7 @@ use yii\widgets\ActiveForm;
 </div>
 <aside class="control-sidebar control-sidebar-dark">
 </aside>
-</div>
+
 <script src="<?= $cdnUrl ?>/assets/adminlte3/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="<?= $cdnUrl ?>/assets/adminlte3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
