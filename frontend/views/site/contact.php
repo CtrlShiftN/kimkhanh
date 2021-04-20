@@ -26,13 +26,13 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <h2 class="text-center p-2 text-danger mb-3">Gửi thông tin liên hệ</h2>
             <div class="float-start">
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+                <?php $form = ActiveForm::begin(); ?>
 
                 <?= $form->field($model, 'name')->textInput(['autofocus' => true, 'placeholder' => 'Nguyễn Văn A']) ?>
 
                 <div class="row">
                     <div class="col-6 col-sm-7 col-md-7 col-lg-6 col-xl-6">
-                        <?= $form->field($model, 'email')->textInput(['placeholder' => 'info@kimkhanh.vn']) ?>
+                        <?= $form->field($model, 'email')->textInput(['placeholder' => 'minhkhanhgroups.com']) ?>
                     </div>
 
                     <div class="col-6 col-sm-5 col-md-5 col-lg-6 col-xl-6">
@@ -42,20 +42,35 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'subject')->textInput(['placeholder' => 'Bạn đang gặp vấn đề gì?']) ?>
 
-                <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+                <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-success col-12', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton('Gửi', ['class' => 'btn btn-success col-12', 'name' => 'contact-button']) ?>
                 </div>
 
                 <?php ActiveForm::end(); ?>
             </div>
+            <?php if (Yii::$app->session->hasFlash('success')): ?>
+                <div class="alert alert-success alert-dismissable">
+                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                    <h4><i class="icon fa fa-check"></i> THÀNH CÔNG!</h4>
+                    <?= Yii::$app->session->getFlash('success') ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if (Yii::$app->session->hasFlash('error')): ?>
+                <div class="alert alert-danger alert-dismissable">
+                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                    <h4><i class="fas fa-times"></i> LỖI!</h4>
+                    <?= Yii::$app->session->getFlash('error') ?>
+                </div>
+            <?php endif; ?>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-md-block">
             <div class="text-center">
-                <img src="<?= $cdnUrl ?>/img/favicon.jpg" alt="kimkhanhgroup" class="rounded-circle" width="88px"
+                <img src="<?= $cdnUrl ?>/img/favicon.ico" alt="minhkhanhgroup" class="rounded-circle" width="88px"
                      height="88px">
-                <h3 class="text-danger pt-2">KIM KHANH COMPANY</h3>
+                <h3 class="text-danger pt-2">MINHKHANH-GROUP</h3>
             </div>
             <hr>
             <div class="col-12 px-4">

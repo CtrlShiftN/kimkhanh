@@ -20,7 +20,7 @@
     top: 70px;
 }
 #feedBack {
-    z-index: 100px;
+    z-index: 100;
 }
 .right {
     right: 0;
@@ -84,64 +84,6 @@
     transform: scale(0.1, 1);
 }
 
-.contact-button {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: 1.2em;
-    border: 2px solid white;
-    border-radius: 4px;
-    padding: 20px 60px 20px 55px;
-    transition: 0.3s ease-in-out;
-}
-.contact-button span {
-    text-transform: none;
-    position: absolute;
-    color: #ee283e;
-    top: 20px;
-    left: 32px;
-    opacity: 0;
-    transition: all 0s ease 0s;
-}
-.contact-button:hover {
-    transition: 0.3s ease-in-out;
-    border: 2px solid white;
-    border-radius: 50px;
-    background-color: white;
-    color: white;
-}
-.contact-button:hover > span {
-    opacity: 1;
-    transition: all 0.25s ease-in-out 0.1s;
-}
-.contact-button:hover:before {
-    transition: 0.3s ease-in-out;
-    background-color: #ee283e;
-}
-.contact-button:before, .contact-button:after {
-    content: "";
-    position: absolute;
-    top: -14px;
-    left: -12px;
-    width: 132px;
-    height: 25px;
-}
-.contact-button:before {
-    border: 2px solid #ee283e;
-    background-color: #1f3944;
-    transform: skew(-25deg);
-    transition: 0.3s ease-in-out;
-}
-.contact-button:after {
-    content: "Luôn sẵn sàng phục vụ !";
-    font-size: 0.45em;
-    top: -7px;
-    left: -10px;
-    color: white !important;
-}
 .buttonPoints {
     border: 2px solid #9b9b9b;
     cursor: pointer;
@@ -160,7 +102,7 @@
 }
 
 .buttonPoints a {
-    color: #9b9b9b;
+    color: #b1b1b1;
     font-family: "Times New Roman", sans-serif;
     text-decoration: none;
 }
@@ -186,6 +128,9 @@
     border-color: #fff;
     box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
     transition: background 0s;
+}
+.buttonPoints:hover a{
+    color: #fff;
 }
 
 .button:hover a {
@@ -220,6 +165,7 @@ a.animated-button:link, a.animated-button:visited {
     width: 70%;
     position: relative;
     display: block;
+    margin: 25px auto;
     padding: 14px 15px;
     color: #fff;
     font-size:14px;
@@ -295,31 +241,6 @@ a.animated-button.thar-three:before {
     color: #000 !important;
     background: #e51b23;
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-}
-@media (min-width: 1200px) {
-    .btnShowMore {
-        left: 43.2%;
-    }
-}
-@media (min-width: 992px) and (max-width: 1200px){
-    .btnShowMore {
-        left: 40.5%;
-    }
-}
-@media (min-width: 768px) and (max-width: 992px){
-    .btnShowMore {
-        left: 36.5%;
-    }
-}
-@media (min-width: 576px) and (max-width: 768px){
-    .btnShowMore {
-        left: 29.5%;
-    }
-}
-@media (max-width: 576px){
-    .btnShowMore {
-        left: 29.2%
-    }
 }
 /*endbtn*/
 .bgGray {
@@ -412,7 +333,7 @@ a.animated-button.thar-three:before {
         margin-left: 34px;
     }
 }
-@media (min-width: 1130px) and (max-width: 1250px) {
+@media (min-width: 1190px) and (max-width: 1250px) {
     .location {
         right: 15px;
         top: 15%;
@@ -435,7 +356,7 @@ a.animated-button.thar-three:before {
         display: none !important;
     }
 }
-@media (min-width: 1100px) and (max-width: 1130px) {
+@media (min-width: 1100px) and (max-width: 1190px) {
     .location {
         right: 30px;
         top: 17%;
@@ -458,7 +379,7 @@ a.animated-button.thar-three:before {
         display: none !important;
     }
 }
-@media (min-width: 892px) and (max-width: 1100px) {
+@media (min-width: 945px) and (max-width: 1100px) {
     .location {
         right: 15px;
         top: 20%;
@@ -484,7 +405,7 @@ a.animated-button.thar-three:before {
         display: none !important;
     }
 }
-@media (min-width: 800px) and (max-width: 892px) {
+@media (min-width: 872px) and (max-width: 945px) {
     .location {
         right: 10px;
         top: 17%;
@@ -510,7 +431,7 @@ a.animated-button.thar-three:before {
         display: none !important;
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 872px) {
     .slideMinWidth {
         display: block !important;
     }
@@ -566,8 +487,7 @@ a {
 }
 .row-full {
     width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    margin-left: calc(-50vw + 49%);
 }
 .optionsChoose {
     transition: 0.2s;
