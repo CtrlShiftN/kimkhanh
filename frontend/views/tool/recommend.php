@@ -12,7 +12,7 @@ $cdnUrl = Yii::$app->params['frontend'];
         <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9 pb-3 pb-sm-0">
             <h4 class="text-uppercase"><?= $value['title'] ?></h4>
             <p><?= $value['description'] ?></p>
-            <a class="btn btn-danger" href="<?= $cdnUrl ?>/tool/recommend-detail?detail=<?= $value['id'] ?>">Xem
+            <a class="btn btn-danger" href="<?= $cdnUrl ?>/tool/recommend-detail?detail=<?= \common\components\encrypt\CryptHelper::encryptString($value['id']) ?>">Xem
                 thêm >></a>
         </div>
     </div>
