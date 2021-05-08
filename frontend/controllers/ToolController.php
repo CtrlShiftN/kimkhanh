@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use frontend\models\DocumentSearch;
+use frontend\models\ProductSearch;
 use frontend\models\RecommendSearch;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -105,4 +106,12 @@ class ToolController extends \yii\web\Controller
         }
     }
 
+    public function actionProduct()
+    {
+        $searchModel = new ProductSearch();
+        $arrProduct = $searchModel->getAllPoduct();
+        return $this->render('product',[
+            'arrProduct' => $arrProduct
+        ]);
+    }
 }
