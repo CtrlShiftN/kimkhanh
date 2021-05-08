@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\components\encrypt\CryptHelper;
 use frontend\models\DocumentSearch;
 use frontend\models\ProductSearch;
 use frontend\models\RecommendSearch;
@@ -93,6 +94,7 @@ class ToolController extends \yii\web\Controller
         $searchModel = new RecommendSearch();
         if (isset($_REQUEST['detail'])) {
             $detailID = $_REQUEST['detail'];
+            $detailID = CryptHelper::decryptString($detailID);
             $recommendDetail = $searchModel->getRecommendById($detailID);
             if (!empty($recommendDetail)) {
                 return $this->render('recommend_detail', [
