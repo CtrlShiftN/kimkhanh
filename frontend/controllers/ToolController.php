@@ -86,6 +86,7 @@ class ToolController extends \yii\web\Controller
     }
 
     /**
+     * Show recommend details by id
      * @return string|\yii\web\Response
      */
     public function actionRecommendDetail()
