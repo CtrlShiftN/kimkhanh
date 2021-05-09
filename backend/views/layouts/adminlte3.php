@@ -61,7 +61,7 @@ $cdnUrl = Yii::$app->params['backend'];
             <a href="index3.html" class="brand-link">
                 <img src="<?= $cdnUrl ?>/vendor/layoutv1/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                      class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Kim Khánh</span>
+                <span class="brand-text font-weight-light">Minh Khánh</span>
             </a>
 
             <!-- Sidebar -->
