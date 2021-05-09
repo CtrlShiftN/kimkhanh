@@ -3,6 +3,7 @@
 namespace frontend\models;
 
 use common\models\Product;
+use common\models\Recommend;
 use Yii;
 
 /**
@@ -76,5 +77,10 @@ class ProductSearch extends \yii\db\ActiveRecord
     public function getAllPoduct()
     {
         return Product::find()->where(['and','status'=>1])->asArray()->all();
+    }
+
+    public function getProductById($recommendId)
+    {
+        return Recommend::find()->where(['id' => $productId, 'status' => 1])->asArray()->one();
     }
 }

@@ -41,6 +41,10 @@ $cdnUrl = Yii::$app->params['frontend'];
             <div class="row ml-2 ml-md-0" id="filter">
                 <h4 class="font-title">Phân loại:</h4>
                 <form class="w-100 pr-3">
+
+
+
+
                     <div class="form-group col-12 m-0 p-0 pb-2">
                         <select data-filter="code" class="filter-code w-100 filter form-control">
                             <option value="">Loại</option>
@@ -50,6 +54,12 @@ $cdnUrl = Yii::$app->params['frontend'];
                             <?php endforeach; ?>
                         </select>
                     </div>
+
+
+
+
+
+
                     <div class="form-group col-12 m-0 p-0 pb-2">
                         <select data-filter="tradeMark" class="filter-trade-mark w-100 filter form-control">
                             <option value="">Hãng</option>
@@ -119,7 +129,6 @@ $cdnUrl = Yii::$app->params['frontend'];
         if (filters == "") {
             $(".product").show();
         } else {
-            $(".product").hide();
             $(".product").hide().filter(filters).show();
         }
     });
