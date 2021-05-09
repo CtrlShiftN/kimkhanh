@@ -33,10 +33,28 @@ $cdnUrl = Yii::$app->params['backend'];
         <!-- Theme style -->
         <link rel="stylesheet" href="<?= $cdnUrl ?>/vendor/layoutv1/dist/css/adminlte.min.css">
     </head>
-    <body class="hold-transition sidebar-mini">
+    <body class="hold-transition sidebar-mini layout-navbar-fixed">
     <?php $this->beginBody() ?>
 
-    <div class="wrap">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
@@ -65,8 +83,8 @@ $cdnUrl = Yii::$app->params['backend'];
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
-                        <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-user-circle"></i>
                                 <p>
                                     Tài khoản
@@ -88,6 +106,31 @@ $cdnUrl = Yii::$app->params['backend'];
                                 </li>
                             </ul>
                         </li>
+                        <!-- Post -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-book nav-icon"></i>
+                                <p>
+                                    Bài viết
+                                    <i class="right fas fa-angle-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="<?= $cdnUrl ?>/dashboard/post" class="nav-link">
+                                        <i class="fas fa-blog nav-icon"></i>
+                                        <p>Quản lý bài viết</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= $cdnUrl ?>/dashboard/post-category" class="nav-link">
+                                        <i class="fas fa-stream nav-icon"></i>tr
+                                        <p>Quản lý danh mục</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Post -->
                         <!-- An option -->
                         <li class="nav-item">
                             <a href="pages/widgets.html" class="nav-link">
@@ -159,14 +202,14 @@ $cdnUrl = Yii::$app->params['backend'];
             <!-- Control sidebar content goes here -->
         </aside>
         <!-- /.control-sidebar -->
+        <footer class="main-footer text-center">
+            <strong>Copyright &copy; <?= date('Y') ?> <a href="https://adminlte.io">Minh Khánh Groups</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 3.1.0
+            </div>
+        </footer>
     </div>
-    <footer class="main-footer">
-        <strong>Copyright &copy; <?= date('Y') ?> <a href="https://adminlte.io">Kim Khánh Groups</a>.</strong>
-        All rights reserved.
-        <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 3.1.0
-        </div>
-    </footer>
     <!-- jQuery -->
     <script src="<?= $cdnUrl ?>/vendor/layoutv1/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->

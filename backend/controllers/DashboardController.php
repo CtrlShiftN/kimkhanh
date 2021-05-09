@@ -44,8 +44,9 @@ class DashboardController extends \yii\web\Controller
     /**
      * @return string
      */
-    public function actionError(){
-        $this->layout = 'blank';
+    public function actionError()
+    {
+        $this->layout = 'error';
         return $this->render('error');
     }
 
@@ -66,6 +67,11 @@ class DashboardController extends \yii\web\Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionPost()
+    {
+
     }
 
 }
