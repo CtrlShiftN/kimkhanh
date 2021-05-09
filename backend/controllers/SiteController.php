@@ -1,4 +1,5 @@
 <?php
+
 namespace backend\controllers;
 
 use backend\models\LoginForm;
@@ -20,17 +21,22 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup', 'index', 'error'],
+                'only' => ['logout', 'index', 'error'],
                 'rules' => [
                     [
-                        'actions' => ['signup', 'error'],
+                        'actions' => ['error'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout', 'index', 'error'],
+                        'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['error'],
+                        'allow' => true,
+                        'roles' => ['?', '@'],
                     ],
                 ],
             ],
@@ -59,7 +65,8 @@ class SiteController extends Controller
     /**
      * @return string
      */
-    public function actionError(){
+    public function actionError()
+    {
         $this->layout = 'error';
         return $this->render('error');
     }
@@ -83,7 +90,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        if (!Yii::$app->user->isGuest){
+        if (!Yii::$app->user->isGuest) {
             return $this->redirect(['dashboard/index']);
         }
         $this->layout = 'blank';
@@ -117,7 +124,6 @@ class SiteController extends Controller
     public function actionLogout()
     {
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
 }
