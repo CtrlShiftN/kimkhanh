@@ -43,45 +43,18 @@ class AjaxController extends ActiveController
         echo json_encode($respone);
     }
 
-//    public function actionTestAjax(){
-//        // lay ve cac param
-//        $infProduct = ParamHelper::getParamValue("inf_product");
-//        // truy xuat tu db
-//        $rows = (new \yii\db\Query())->from('product')->where(['like', 'name', $infProduct])->all();
-//        $response = [
-//            'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
-//            'infProduct' => $infProduct,
-//            'product' => $rows
-//        ];
-//
-//        echo json_encode($response);
-//        exit;
-//    }
-
-    public function actionProductAjax() {
+    public function actionTestAjax(){
         // lay ve cac param
         $infProduct = ParamHelper::getParamValue("inf_product");
         // truy xuat tu db
-        $rows = (new \yii\db\Query())->from('product')->where(['like','name', $infProduct])->all(); //arr
+        $rows = (new \yii\db\Query())->from('product')->where(['like', 'name', $infProduct])->all();
         $response = [
             'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
             'infProduct' => $infProduct,
-            'product' => $rows       //tra ve arr
+            'product' => $rows
         ];
 
         echo json_encode($response);
         exit;
     }
-
-//    public function actionDeleteCandidateJobHistory()
-//    {
-//        $candidateJobHistoryId = RequestParamRetriever::getParamValue('job_history_id');
-//        $queryDeleteCandidateJobHistory = CandidateJobHistory::deleteAll(['candidate_job_history_id' => $candidateJobHistoryId]);
-//        if ($queryDeleteCandidateJobHistory) {
-//            echo json_encode(['status' => HopeConstant::HOPE_API_SUCCESS_STATUS, 'message' => '']);
-//        } else {
-//            echo json_encode(['status' => HopeConstant::HOPE_API_UNSUCCESS_STATUS]);
-//        }
-//        exit;
-//    }
 }

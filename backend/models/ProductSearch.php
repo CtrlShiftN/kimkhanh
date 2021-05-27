@@ -73,14 +73,4 @@ class ProductSearch extends \yii\db\ActiveRecord
             'is_discount' => Yii::t('app', '0: no, 1:yes'),
         ];
     }
-
-    public function getAllPoduct()
-    {
-        return Product::find()->where(['status'=>1])->asArray()->all();
-    }
-
-    public function getProductById($recommendId)
-    {
-        return Recommend::find()->where(['id' => $productId, 'status' => 1])->asArray()->one();
-    }
 }
