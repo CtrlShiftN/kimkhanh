@@ -280,7 +280,7 @@ $this->title = 'Minh Khánh Group';
     </div>
     <div class="col-4 m-0 p-0"></div>
     <div class="col-4 m-0 p-0">
-        <a href="<?= $cdnUrl ?>/site/shop" class="animated-button thar-two">Xem thêm</a>
+        <a href="<?= $cdnUrl ?>site/shop" class="animated-button thar-two">Xem thêm</a>
     </div>
     <div class="col-4 m-0 p-0"></div>
 </div>

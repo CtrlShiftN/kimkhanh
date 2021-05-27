@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\controllers\api;
+namespace frontend\controllers\api;
 
 use common\components\encrypt\CryptHelper;
 use common\components\helpers\HeaderHelper;
@@ -43,22 +43,7 @@ class AjaxController extends ActiveController
         echo json_encode($respone);
     }
 
-//    public function actionTestAjax(){
-//        // lay ve cac param
-//        $infProduct = ParamHelper::getParamValue("inf_product");
-//        // truy xuat tu db
-//        $rows = (new \yii\db\Query())->from('product')->where(['like', 'name', $infProduct])->all();
-//        $response = [
-//            'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
-//            'infProduct' => $infProduct,
-//            'product' => $rows
-//        ];
-//
-//        echo json_encode($response);
-//        exit;
-//    }
-
-    public function actionProductAjax() {
+    public function actionProductSearchAjax() {
         // lay ve cac param
         $infProduct = ParamHelper::getParamValue("inf_product");
         // truy xuat tu db
@@ -73,15 +58,31 @@ class AjaxController extends ActiveController
         exit;
     }
 
-//    public function actionDeleteCandidateJobHistory()
-//    {
-//        $candidateJobHistoryId = RequestParamRetriever::getParamValue('job_history_id');
-//        $queryDeleteCandidateJobHistory = CandidateJobHistory::deleteAll(['candidate_job_history_id' => $candidateJobHistoryId]);
-//        if ($queryDeleteCandidateJobHistory) {
-//            echo json_encode(['status' => HopeConstant::HOPE_API_SUCCESS_STATUS, 'message' => '']);
-//        } else {
-//            echo json_encode(['status' => HopeConstant::HOPE_API_UNSUCCESS_STATUS]);
-//        }
-//        exit;
-//    }
+    public function actionSearchCameraAjax() {
+        // lay ve cac param
+        $typeCam = ParamHelper::getParamValue("type_cam");
+        $trademarkCam = ParamHelper::getParamValue("trademark_cam");
+        // truy xuat tu db
+        $rows = (new \yii\db\Query())->from('product')->where(['and',['like','category_id', $typeCam],['like','trademark',$trademarkCam]])->all(); //arr
+        $response = [
+            'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
+            'camera' => $rows       //tra ve arr
+        ];
+        echo json_encode($response);
+        exit;
+    }
+
+    public function actionSearchElevatorAjax() {
+        // lay ve cac param
+        $typeElevator = ParamHelper::getParamValue("type_elevator");
+        $trademarkElevator = ParamHelper::getParamValue("trademark_elevator");
+        // truy xuat tu db
+        $rows = (new \yii\db\Query())->from('product')->where(['and',['like','category_id', $typeElevator],['like','trademark',$trademarkElevator]])->all(); //arr
+        $response = [
+            'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
+            'elevator' => $rows       //tra ve arr
+        ];
+        echo json_encode($response);
+        exit;
+    }
 }

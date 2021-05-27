@@ -3,6 +3,8 @@
 namespace backend\controllers;
 
 use backend\models\LoginForm;
+use backend\models\ProductSearch;
+use common\components\encrypt\CryptHelper;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -125,5 +127,13 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
         return $this->goHome();
+    }
+
+    public function actionTest(){
+        $searchModel = new ProductSearch();
+        $arrProduct = $searchModel->getAllPoduct();
+        return $this->render('test',[
+            'arrProduct' => $arrProduct
+        ]);
     }
 }

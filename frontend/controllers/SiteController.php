@@ -2,10 +2,15 @@
 
 namespace frontend\controllers;
 
+use common\components\encrypt\CryptHelper;
+use frontend\models\CategorySearch;
+use frontend\models\ProductSearch;
 use frontend\models\Question;
 use frontend\models\ResendVerificationEmailForm;
+use frontend\models\TrademarkSearch;
 use frontend\models\VerifyEmailForm;
 use Yii;
+use yii\base\BaseObject;
 use yii\base\InvalidArgumentException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -296,5 +301,43 @@ class SiteController extends Controller
         return $this->render('faq', [
             'arrQuestion' => $arrQuestion
         ]);
+    }
+
+    public function actionProduct()
+    {
+        $searchModelProduct = new ProductSearch();
+        $searchModelCategory = new CategorySearch();
+        $searchModelTrademark = new TrademarkSearch();
+        $arrProduct = $searchModelProduct->getAllPoduct();
+        $arrCameraType = $searchModelCategory->getCameraTypeProduct();
+        $arrElevatorType = $searchModelCategory->getElevatorTypeProduct();
+        $arrTrademarkOfCamera = $searchModelTrademark->getTrademarkOfCamera();
+        $arrTrademarkOfElevator = $searchModelTrademark->getTrademarkOfElevator();
+        return $this->render('product',[
+            'arrProduct' => $arrProduct,
+            'arrCameraType' => $arrCameraType,
+            'arrElevatorType' => $arrElevatorType,
+            'arrTrademarkOfCamera' => $arrTrademarkOfCamera,
+            'arrTrademarkOfElevator' => $arrTrademarkOfElevator
+        ]);
+    }
+
+    public function actionProductDetail()
+    {
+        $searchModel = new ProductSearch();
+        if (isset($_REQUEST['detail'])) {
+            $detailID = $_REQUEST['detail'];
+            $detailID = CryptHelper::decryptString($detailID);
+            $productDetail = $searchModel->getProductById($detailID);
+            if (!empty($recommendDetail)) {
+                return $this->render('product_detail', [
+                    'productDetail' => $productDetail
+                ]);
+            } else {
+                return $this->redirect('product');
+            }
+        } else {
+            return $this->redirect('product');
+        }
     }
 }

@@ -3,9 +3,12 @@
 namespace frontend\controllers;
 
 use common\components\encrypt\CryptHelper;
+use common\models\Category;
+use frontend\models\CategorySearch;
 use frontend\models\DocumentSearch;
 use frontend\models\ProductSearch;
 use frontend\models\RecommendSearch;
+use frontend\models\TrademarkSearch;
 use yii\base\BaseObject;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -107,34 +110,6 @@ class ToolController extends \yii\web\Controller
             }
         } else {
             return $this->redirect('recommend');
-        }
-    }
-
-    public function actionProduct()
-    {
-        $searchModel = new ProductSearch();
-        $arrProduct = $searchModel->getAllPoduct();
-        return $this->render('product',[
-            'arrProduct' => $arrProduct
-        ]);
-    }
-
-    public function actionProductDetail()
-    {
-        $searchModel = new ProductSearch();
-        if (isset($_REQUEST['detail'])) {
-            $detailID = $_REQUEST['detail'];
-            $detailID = CryptHelper::decryptString($detailID);
-            $productDetail = $searchModel->getProductById($detailID);
-            if (!empty($recommendDetail)) {
-                return $this->render('recommend_detail', [
-                    'productDetail' => $productDetail
-                ]);
-            } else {
-                return $this->redirect('product');
-            }
-        } else {
-            return $this->redirect('product');
         }
     }
 }

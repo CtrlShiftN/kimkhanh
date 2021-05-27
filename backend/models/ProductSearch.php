@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace backend\models;
 
 use common\models\Product;
 use common\models\Recommend;
@@ -79,8 +79,8 @@ class ProductSearch extends \yii\db\ActiveRecord
         return Product::find()->where(['status'=>1])->asArray()->all();
     }
 
-    public function getProductById($productId)
+    public function getProductById($recommendId)
     {
-        return Product::find()->where(['id' => $productId, 'status' => 1])->asArray()->one();
+        return Recommend::find()->where(['id' => $productId, 'status' => 1])->asArray()->one();
     }
 }
