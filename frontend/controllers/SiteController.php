@@ -321,23 +321,4 @@ class SiteController extends Controller
             'arrTrademarkOfElevator' => $arrTrademarkOfElevator
         ]);
     }
-
-    public function actionProductDetail()
-    {
-        $searchModel = new ProductSearch();
-        if (isset($_REQUEST['detail'])) {
-            $detailID = $_REQUEST['detail'];
-            $detailID = CryptHelper::decryptString($detailID);
-            $productDetail = $searchModel->getProductById($detailID);
-            if (!empty($recommendDetail)) {
-                return $this->render('product_detail', [
-                    'productDetail' => $productDetail
-                ]);
-            } else {
-                return $this->redirect('product');
-            }
-        } else {
-            return $this->redirect('product');
-        }
-    }
 }
