@@ -2,8 +2,11 @@
 
 namespace frontend\controllers;
 
+use frontend\models\CategorySearch;
+use frontend\models\ProductSearch;
 use frontend\models\Question;
 use frontend\models\ResendVerificationEmailForm;
+use frontend\models\TrademarkSearch;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -295,6 +298,25 @@ class SiteController extends Controller
         $arrQuestion = (new Question())->getQuestion();
         return $this->render('faq', [
             'arrQuestion' => $arrQuestion
+        ]);
+    }
+
+    public function actionProduct()
+    {
+        $searchModelProduct = new ProductSearch();
+        $searchModelCategory = new CategorySearch();
+        $searchModelTrademark = new TrademarkSearch();
+        $arrProduct = $searchModelProduct->getAllProduct();
+        $arrCameraType = $searchModelCategory->getCameraTypeProduct();
+        $arrElevatorType = $searchModelCategory->getElevatorTypeProduct();
+        $arrTrademarkOfCamera = $searchModelTrademark->getTrademarkOfCamera();
+        $arrTrademarkOfElevator = $searchModelTrademark->getTrademarkOfElevator();
+        return $this->render('product',[
+            'arrProduct' => $arrProduct,
+            'arrCameraType' => $arrCameraType,
+            'arrElevatorType' => $arrElevatorType,
+            'arrTrademarkOfCamera' => $arrTrademarkOfCamera,
+            'arrTrademarkOfElevator' => $arrTrademarkOfElevator
         ]);
     }
 }
