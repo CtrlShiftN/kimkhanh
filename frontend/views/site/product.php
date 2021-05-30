@@ -114,3 +114,6 @@ $this->title = "Shop";
     </div>
 </div>
 <script src="<?= $cdnUrl ?>/js/product.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var imgUrl = "<?= $imgUrl ?>";
+</script>

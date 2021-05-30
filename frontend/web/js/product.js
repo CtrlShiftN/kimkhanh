@@ -1,4 +1,3 @@
-var imgUrl = "http://localhost:81/kimkhanh/common";
 $("#filterPluginsCamera").addClass("displayForm");
 $("#filterPluginsElevator").addClass("displayForm");
 $("#selectType").change(function () {
