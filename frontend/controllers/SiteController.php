@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use frontend\models\CategorySearch;
 use frontend\models\ProductSearch;
+use frontend\models\ProductTypeSearch;
 use frontend\models\Question;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\TrademarkSearch;
@@ -306,17 +307,20 @@ class SiteController extends Controller
         $searchModelProduct = new ProductSearch();
         $searchModelCategory = new CategorySearch();
         $searchModelTrademark = new TrademarkSearch();
+        $searchModelProductType = new ProductTypeSearch();
         $arrProduct = $searchModelProduct->getRepresentativeCamera();
         $arrCameraType = $searchModelCategory->getCameraTypeProduct();
         $arrElevatorType = $searchModelCategory->getElevatorTypeProduct();
         $arrTrademarkOfCamera = $searchModelTrademark->getTrademarkOfCamera();
         $arrTrademarkOfElevator = $searchModelTrademark->getTrademarkOfElevator();
+        $arrProductType = $searchModelProductType->getAllType();
         return $this->render('product',[
             'arrProduct' => $arrProduct,
             'arrCameraType' => $arrCameraType,
             'arrElevatorType' => $arrElevatorType,
             'arrTrademarkOfCamera' => $arrTrademarkOfCamera,
-            'arrTrademarkOfElevator' => $arrTrademarkOfElevator
+            'arrTrademarkOfElevator' => $arrTrademarkOfElevator,
+            'arrProductType' => $arrProductType
         ]);
     }
 }
