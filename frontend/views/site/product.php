@@ -30,7 +30,7 @@ $this->title = "Shop";
         </div>
         <form id="search-form" action="" method="POST" enctype="multipart/form-data" class="w-100 form-inline mb-3">
             <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 p-0 pr-md-2">
-                <input class="form-control w-100 mb-3 mb-md-0" type="text" placeholder="Tìm kiếm toàn bộ sản phẩm" name="inf-product"
+                <input class="form-control w-100 mb-3 mb-md-0" type="text" placeholder="TÌM KIẾM TOÀN BỘ SẢN PHẨM" name="inf-product"
                        id="search-inf">
             </div>
             <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 m-0 p-0">
