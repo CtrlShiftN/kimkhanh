@@ -44,14 +44,12 @@ class AjaxController extends ActiveController
     }
 
     public function actionProductSearchAjax() {
-        // lay ve cac param
         $infProduct = ParamHelper::getParamValue("inf_product");
-        // truy xuat tu db
-        $rows = (new \yii\db\Query())->from('product')->where(['like','name', $infProduct])->all(); //arr
+        $rows = (new \yii\db\Query())->from('product')->where(['and',['like','name', $infProduct],'status'=>1])->all(); //arr
         $response = [
             'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
             'infProduct' => $infProduct,
-            'product' => $rows       //tra ve arr
+            'product' => $rows
         ];
 
         echo json_encode($response);
@@ -59,28 +57,24 @@ class AjaxController extends ActiveController
     }
 
     public function actionSearchCameraAjax() {
-        // lay ve cac param
         $typeCam = ParamHelper::getParamValue("type_cam");
         $trademarkCam = ParamHelper::getParamValue("trademark_cam");
-        // truy xuat tu db
-        $rows = (new \yii\db\Query())->from('product')->where(['and',['like','category_id', $typeCam],['like','trademark',$trademarkCam]])->all(); //arr
+        $rows = (new \yii\db\Query())->from('product')->where(['and',['and',['like','category_id', $typeCam],['like','name',$trademarkCam]],'status'=>1])->all();
         $response = [
             'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
-            'camera' => $rows       //tra ve arr
+            'camera' => $rows
         ];
         echo json_encode($response);
         exit;
     }
 
     public function actionSearchElevatorAjax() {
-        // lay ve cac param
         $typeElevator = ParamHelper::getParamValue("type_elevator");
         $trademarkElevator = ParamHelper::getParamValue("trademark_elevator");
-        // truy xuat tu db
-        $rows = (new \yii\db\Query())->from('product')->where(['and',['like','category_id', $typeElevator],['like','trademark',$trademarkElevator]])->all(); //arr
+        $rows = (new \yii\db\Query())->from('product')->where(['and',['and',['like','category_id', $typeElevator],['like','name',$trademarkElevator]],'status'=>1])->all();
         $response = [
             'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
-            'elevator' => $rows       //tra ve arr
+            'elevator' => $rows
         ];
         echo json_encode($response);
         exit;

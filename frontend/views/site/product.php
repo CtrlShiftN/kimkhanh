@@ -60,7 +60,7 @@ $this->title = "Shop";
                     <option value="0" hidden>Chọn hãng</option>
                     <option value="0">Tất cả</option>
                     <?php foreach ($arrTrademarkOfCamera as $key => $value) : ?>
-                        <option value="<?= $value['trade_mark'] ?>"><?= $value['trade_mark'] ?></option>
+                        <option value="<?= $value['name'] ?>"><?= $value['name'] ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -83,7 +83,7 @@ $this->title = "Shop";
                     <option value="0" hidden>Chọn hãng</option>
                     <option value="0">Tất cả</option>
                     <?php foreach ($arrTrademarkOfElevator as $key => $value) : ?>
-                        <option value="<?= $value['trade_mark'] ?>"><?= $value['trade_mark'] ?></option>
+                        <option value="<?= $value['name'] ?>"><?= $value['name'] ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -104,7 +104,7 @@ $this->title = "Shop";
                     </div>
                     <div class="cardBody col-6 col-md-12 my-auto">
                         <h5 class="mx-md-2 heightNameProduct"><?= $value['name'] ?></h5>
-                        <p class="m-0"><b>Hãng:</b> <?= $value['trademark'] ?></p>
+                        <p class="m-0"><b>Hãng:</b> <?= $value['trade_mark'] ?></p>
                         <p><b>Giá:</b> <?= $value['selling_price'] ?> <sup>&#8363;</sup></p>
                         <a href="#" class="btn btn-danger">Mua ngay</a>
                     </div>

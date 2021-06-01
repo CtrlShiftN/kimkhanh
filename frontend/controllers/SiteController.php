@@ -306,7 +306,7 @@ class SiteController extends Controller
         $searchModelProduct = new ProductSearch();
         $searchModelCategory = new CategorySearch();
         $searchModelTrademark = new TrademarkSearch();
-        $arrProduct = $searchModelProduct->getAllProduct();
+        $arrProduct = $searchModelProduct->getRepresentativeCamera();
         $arrCameraType = $searchModelCategory->getCameraTypeProduct();
         $arrElevatorType = $searchModelCategory->getElevatorTypeProduct();
         $arrTrademarkOfCamera = $searchModelTrademark->getTrademarkOfCamera();
