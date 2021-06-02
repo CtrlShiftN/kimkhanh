@@ -60,10 +60,10 @@ class CategorySearch extends \yii\db\ActiveRecord
 
     public function getCameraTypeProduct()
     {
-        return Category::find()->where(["type" => 1])->asArray()->all();
+        return Category::find()->where(['and',"type" => 1,'status'=>1])->asArray()->all();
     }
 
     public function getElevatorTypeProduct() {
-        return Category::find()->where(["type"=>2])->asArray()->all();
+        return Category::find()->where(['and',"type"=>2,'status'=>1])->asArray()->all();
     }
 }
