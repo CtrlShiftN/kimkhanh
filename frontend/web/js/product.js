@@ -1,93 +1,93 @@
-$("#filterPluginsCamera").addClass("displayForm");
-$("#filterPluginsElevator").addClass("displayForm");
-$("#selectType").change(function () {
-    if ($(this).val() == 1) {
-        $("#filterPluginsElevator").addClass("displayForm");
-        $("#filterPluginsCamera").removeClass("displayForm");
-        $("#filterPluginsCamera").submit(function (e) {
-            e.preventDefault();
-            let infTypeCamera = $("#inf-filter-type-camera").val();
-            let infTrademarkCamera = $("#inf-filter-trademark-camera").val();
-            if ($("#inf-filter-type-camera").val() == 0) {
-                infTypeCamera = "";
-            }
-            if ($("#inf-filter-trademark-camera").val() == 0) {
-                infTrademarkCamera = "";
-            }
-            let request = $.ajax({
-                url: "../api/ajax/search-camera-ajax",
-                method: "POST",
-                data: {type_cam: infTypeCamera, trademark_cam: infTrademarkCamera},
-            });
-            request.done(function (response) {
-                arrRes = $.parseJSON(response);
-                if (arrRes.status === 1) {
-                    let result = "";
-                    for (let i = 0; i < arrRes.camera.length; i++) {
-                        result += '<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 w-100 pb-4 mx-auto mx-sm-0 row px-0 text-center"><div class="col-6 col-sm-6 col-md-12 w-100"><img src="' + imgUrl + '/media/uploads/' + arrRes.camera[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-md-2 heightNameProduct">' + arrRes.camera[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.camera[i].trademark + '</p><p><b>Giá: </b>' + arrRes.camera[i].selling_price + '<sup>&#8363;</sup></p><a href="#" class="btn btn-danger">Mua ngay</a></div></div>';
-                    }
-                    $("#result").html(result);
-                }
-            });
-            request.fail(function (jqXHR, textStatus) {
-                alert("Request failed: ");
-            });
+var type = $("#selectType");
+var checkboxes = $("input[type=checkbox]");
+var tradeMark = [];
+// lang nghe su kien trademark
+checkboxes.change(function() {
+    tradeMark = checkboxes
+        .filter(":checked") // Filter out unchecked boxes.
+        .map(function() { // Extract values using jQuery map.
+            return this.value;
         })
-    }
-    else {
-        $("#filterPluginsCamera").addClass("displayForm");
-        $("#filterPluginsElevator").removeClass("displayForm");
-        $("#filterPluginsElevator").submit(function (e) {
-            e.preventDefault();
-            let infTypeElevator = $("#inf-filter-type-elevator").val();
-            let infTrademarkElevator = $("#inf-filter-trademark-elevator").val();
-            if ($("#inf-filter-type-elevator").val() == 0) {
-                infTypeElevator = "";
-            }
-            if ($("#inf-filter-trademark-elevator").val() == 0) {
-                infTrademarkElevator = "";
-            }
-            let request = $.ajax({
-                url: "../api/ajax/search-elevator-ajax",
-                method: "POST",
-                data: {type_elevator: infTypeElevator, trademark_elevator: infTrademarkElevator},
-            });
-            request.done(function (response) {
-                arrRes = $.parseJSON(response);
-                if (arrRes.status === 1) {
-                    let result = "";
-                    for (let i = 0; i < arrRes.elevator.length; i++) {
-                        result += '<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 w-100 pb-4 mx-auto mx-sm-0 row px-0 text-center"><div class="col-6 col-sm-6 col-md-12 w-100"><img src="' + imgUrl + '/media/uploads/' + arrRes.elevator[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-md-2 heightNameProduct">' + arrRes.elevator[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.elevator[i].trademark + '</p><p><b>Giá: </b>' + arrRes.elevator[i].selling_price + '<sup>&#8363;</sup></p><a href="#" class="btn btn-danger">Mua ngay</a></div></div>';
-                    }
-                    $("#result").html(result);
-                }
-            });
-            request.fail(function (jqXHR, textStatus) {
-                alert("Request failed: ");
-            });
-        })
+        .get() // Get array.
+});
+type.change(function () {
+    if(type.val() == 0) {
+        $(".typeCam").removeClass('d-none');
+        $(".typeElevator").removeClass('d-none');
+        $(".typeRecorder").removeClass('d-none');
+        $(".trademarkCam").removeClass('d-none');
+        $(".trademarkElevator").removeClass('d-none');
+        $(".trademarkRecorder").removeClass('d-none');
+        requestData();
+    } else if(type.val() == typeCamVal){
+        $(".typeCam").removeClass('d-none');
+        $(".typeElevator").addClass('d-none');
+        $(".typeRecorder").addClass('d-none');
+        $(".trademarkCam").removeClass('d-none');
+        $(".trademarkElevator").addClass('d-none');
+        $(".trademarkRecorder").addClass('d-none');
+        requestData();
+    } else if(type.val() == typeElevatorVal) {
+        $(".typeElevator").removeClass('d-none');
+        $(".typeCam").addClass('d-none');
+        $(".typeRecorder").addClass('d-none');
+        $(".trademarkCam").addClass('d-none');
+        $(".trademarkElevator").removeClass('d-none');
+        $(".trademarkRecorder").addClass('d-none');
+        requestData();
+    } else {
+        $(".typeRecorder").removeClass('d-none');
+        $(".typeElevator").addClass('d-none');
+        $(".typeCam").addClass('d-none');
+        $(".trademarkCam").addClass('d-none');
+        $(".trademarkElevator").addClass('d-none');
+        $(".trademarkRecorder").removeClass('d-none');
+        requestData();
     }
 });
-//search form ajax
-$("#search-form").submit(function (e) {
-    e.preventDefault();
-    let inf = $("#search-inf").val().toLowerCase();
+
+
+
+// xoa
+$("#btnDeleteFilter").click(function () {
+    if(checkboxes.attr('checked')){
+        checkboxes.attr('checked',false);
+    }
+    else{
+        checkboxes.attr('checked',false);
+    }
+});
+
+// sort
+// filter khasc
+// function requestGetAllData(){
+//     let request = $.ajax({
+//        url: "../api/ajax/product-get-all-data",
+//         method:"POST";
+//        data: {}
+//     });
+// }
+function requestData(){
     let request = $.ajax({
-        url: "../api/ajax/product-search-ajax",
+        // TODO: cỗ nyàô
+        url: "../api/ajax/product-filter-ajax",
         method: "POST",
-        data: {inf_product: inf},
+        contentType: "application/json; charset=utf-8",
+        data: {type: '1'} // gui het toan bo type, trademark, sort,...
     });
-    request.done(function (response) {
-        arrRes = $.parseJSON(response);
-        if (arrRes.status === 1) {
-            var result = "";
-            for (let i = 0; i < arrRes.product.length; i++) {
-                result += '<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 w-100 pb-4 mx-auto mx-sm-0"><div class="text-center row px-0"><div class="col-6 col-sm-6 col-md-12"><img src="' + imgUrl + '/media/uploads/' + arrRes.product[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-3 heightNameProduct">' + arrRes.product[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.product[i].trademark + '</p><p><b>Giá: </b>' + arrRes.product[i].selling_price + '<sup>&#8363;</sup></p><a href="#" class="btn btn-danger">Mua ngay</a></div></div></div>';
-            }
-            $("#result").html(result);
-        }
+    // request.done(function (response) {
+    request.done(function () {
+        alert("Request success: ");
+        // arrRes = $.parseJSON(response);
+        // if (arrRes.status === 1) {
+        //     var result = "";
+        //     for (let i = 0; i < arrRes.product.length; i++) {
+        //         result += '<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 w-100 pb-4 mx-auto mx-sm-0"><div class="text-center row px-0"><div class="col-6 col-sm-6 col-md-12"><img src="' + imgUrl + '/media/uploads/' + arrRes.product[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-3 heightNameProduct">' + arrRes.product[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.product[i].trade_mark + '</p><p><b>Giá: </b>' + arrRes.product[i].selling_price + '<sup>&#8363;</sup></p><a href="#" class="btn btn-danger">Mua ngay</a></div></div></div>';
+        //     }
+        //     $("#result").html(result);
+        // }
     });
     request.fail(function (jqXHR, textStatus) {
         alert("Request failed: ");
     });
-})
+}

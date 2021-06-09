@@ -44,7 +44,7 @@ class AjaxController extends ActiveController
     }
 
     public function actionProductSearchAjax() {
-        $infProduct = ParamHelper::getParamValue("inf_product");
+        $infProduct = CryptHelper::decryptString("inf_product");
         $rows = (new \yii\db\Query())->from('product')->where(['and',['like','name', $infProduct],'status'=>1])->all(); //arr
         $response = [
             'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
@@ -56,25 +56,28 @@ class AjaxController extends ActiveController
         exit;
     }
 
-    public function actionSearchCameraAjax() {
-        $typeCam = ParamHelper::getParamValue("type_cam");
-        $trademarkCam = ParamHelper::getParamValue("trademark_cam");
-        $rows = (new \yii\db\Query())->from('product')->where(['and',['and',['like','category_id', $typeCam],['like','name',$trademarkCam]],'status'=>1])->all();
+    public function actionProductFilterAjax() {
+        $type = CryptHelper::decryptString("type");
+        $dataCb= CryptHelper::decryptString("dataCb");
+        $rows = (new \yii\db\Query())->from('product');
+        if (!isEmpty($type)) {
+            if ($type==0){
+                $rows->where(['type'=> '']);
+            } else {
+                $rows->where(['type' => $type]);
+            }
+        }
+        print_r($dataCb);
+        $rows->andWhere(["status"=>1])->all();
+        //TODO: check rows sau do tra ve cho tung ket qua cua truy van
+        if (isEmpty($rows)){
+            $response = [
+                'status' => SystemConstant::HOPE_API_UNSUCCESS_STATUS,
+            ];
+        }
         $response = [
             'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
-            'camera' => $rows
-        ];
-        echo json_encode($response);
-        exit;
-    }
-
-    public function actionSearchElevatorAjax() {
-        $typeElevator = ParamHelper::getParamValue("type_elevator");
-        $trademarkElevator = ParamHelper::getParamValue("trademark_elevator");
-        $rows = (new \yii\db\Query())->from('product')->where(['and',['and',['like','category_id', $typeElevator],['like','name',$trademarkElevator]],'status'=>1])->all();
-        $response = [
-            'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
-            'elevator' => $rows
+            'product' => $rows
         ];
         echo json_encode($response);
         exit;

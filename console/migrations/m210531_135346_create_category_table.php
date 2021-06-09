@@ -14,7 +14,7 @@ class m210531_135346_create_category_table extends Migration
     {
         $this->createTable('{{%category}}', [
             'id' => $this->primaryKey(),
-            'type' => $this->smallInteger()->comment('1:camera, 2:elevator'),
+            'type' => $this->smallInteger()->comment('1:camera, 2:elevator, 3:recorder'),
             'code' => $this->smallInteger(),
             'name' => $this->string(),
             'slug' => $this->string(),

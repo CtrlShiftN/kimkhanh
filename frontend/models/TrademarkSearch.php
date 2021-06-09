@@ -52,11 +52,31 @@ class TrademarkSearch extends \yii\db\ActiveRecord
         ];
     }
 
-    public function getTrademarkOfCamera() {
-        return Trademark::find()->where(['and','type'=>1,'status'=>1])->asArray()->all();
+    /**
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function getAllTrademark() {
+        return Trademark::find()->where(['status' => 1])->asArray()->all();
     }
 
+    /**
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function getTrademarkOfCamera() {
+        return Trademark::find()->where(['type'=>1])->andWhere(['status' => 1])->asArray()->all();
+    }
+
+    /**
+     * @return array|\yii\db\ActiveRecord[]
+     */
     public function getTrademarkOfElevator() {
-        return Trademark::find()->where(['and','type'=>2,'status'=>1])->asArray()->all();
+        return Trademark::find()->where(['type'=>2])->andWhere(['status' => 1])->asArray()->all();
+    }
+
+    /**
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function getTrademarkOfRecorder() {
+        return Trademark::find()->where(['type'=>3])->andWhere(['status' => 1])->asArray()->all();
     }
 }

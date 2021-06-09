@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Category;
 use frontend\models\CategorySearch;
 use frontend\models\ProductSearch;
 use frontend\models\Question;
@@ -303,20 +304,33 @@ class SiteController extends Controller
 
     public function actionProduct()
     {
+        $arrType = (new CategorySearch())->getAllType();
         $searchModelProduct = new ProductSearch();
         $searchModelCategory = new CategorySearch();
         $searchModelTrademark = new TrademarkSearch();
+        //show representative product when entering page
         $arrProduct = $searchModelProduct->getRepresentativeCamera();
+        //get type of product
         $arrCameraType = $searchModelCategory->getCameraTypeProduct();
         $arrElevatorType = $searchModelCategory->getElevatorTypeProduct();
+        $arrRecorderType = $searchModelCategory->getRecorderTypeProduct();
+        //get trademark of product
+        $arrTrademark = $searchModelTrademark->getAllTrademark();
         $arrTrademarkOfCamera = $searchModelTrademark->getTrademarkOfCamera();
         $arrTrademarkOfElevator = $searchModelTrademark->getTrademarkOfElevator();
+        $arrTrademarkOfRecorder = $searchModelTrademark->getTrademarkOfRecorder();
         return $this->render('product',[
+            'type' => $arrType,
             'arrProduct' => $arrProduct,
+
             'arrCameraType' => $arrCameraType,
             'arrElevatorType' => $arrElevatorType,
+            'arrRecorderType'=> $arrRecorderType,
+
+            'arrTrademark' => $arrTrademark,
             'arrTrademarkOfCamera' => $arrTrademarkOfCamera,
-            'arrTrademarkOfElevator' => $arrTrademarkOfElevator
+            'arrTrademarkOfElevator' => $arrTrademarkOfElevator,
+            'arrTrademarkOfRecorder' => $arrTrademarkOfRecorder
         ]);
     }
 }

@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use common\models\Category;
 use Yii;
+use yii\db\Query;
 
 /**
  * This is the model class for table "category".
@@ -58,12 +59,32 @@ class CategorySearch extends \yii\db\ActiveRecord
         ];
     }
 
+    /**
+     * @return array|\yii\db\ActiveRecord[]
+     */
     public function getCameraTypeProduct()
     {
-        return Category::find()->where(['and',"type" => 1,'status'=>1])->asArray()->all();
+        return Category::find()->where(["type" => 1])->andWhere(['status' => 1])->asArray()->all();
     }
 
+    /**
+     * @return array|\yii\db\ActiveRecord[]
+     */
     public function getElevatorTypeProduct() {
-        return Category::find()->where(['and',"type"=>2,'status'=>1])->asArray()->all();
+        return Category::find()->where(["type" => 2])->andWhere(['status' => 1])->asArray()->all();
+    }
+
+    /**
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public function getRecorderTypeProduct() {
+        return Category::find()->where(["type" => 3])->andWhere(['status' => 1])->asArray()->all();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAllType(){
+        return (new \yii\db\Query())->select("type")->from("category")->where(["status" => 1])->groupBy("type")->all();
     }
 }
