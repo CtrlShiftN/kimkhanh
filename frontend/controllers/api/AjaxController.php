@@ -7,6 +7,8 @@ use common\components\helpers\HeaderHelper;
 use common\components\helpers\ParamHelper;
 use common\components\SystemConstant;
 use Yii;
+use yii\db\conditions\InCondition;
+use yii\db\conditions\OrCondition;
 use yii\rest\ActiveController;
 
 class AjaxController extends ActiveController
@@ -36,49 +38,97 @@ class AjaxController extends ActiveController
     public function actionIndex()
     {
         $respone = [
-            'success' => SystemConstant::HOPE_API_SUCCESS_STATUS,
+            'success' => SystemConstant::API_SUCCESS_STATUS,
             'error' => 0,
             'error_code' => 0
         ];
         echo json_encode($respone);
     }
 
-    public function actionProductSearchAjax() {
-        $infProduct = CryptHelper::decryptString("inf_product");
-        $rows = (new \yii\db\Query())->from('product')->where(['and',['like','name', $infProduct],'status'=>1])->all(); //arr
-        $response = [
-            'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
-            'infProduct' => $infProduct,
-            'product' => $rows
-        ];
+    public function actionProductSearchAjax()
+    {
+        $infProduct = ParamHelper::getParamValue("inf_product");
+        $rows = (new \yii\db\Query())->from('product')->where(['like', 'name', $infProduct])->andWhere(['status' => 1])->all();
+        if (empty($rows)) {
+            $response = [
+                'status' => SystemConstant::API_UNSUCCESS_STATUS,
+                'notify' => 'Không có sản phẩm để hiển thị!'
+            ];
+        } else {
+            $response = [
+                'status' => SystemConstant::API_SUCCESS_STATUS,
+                'product' => $rows
+            ];
+        }
 
         echo json_encode($response);
         exit;
     }
 
-    public function actionProductFilterAjax() {
-        $type = CryptHelper::decryptString("type");
-        $dataCb= CryptHelper::decryptString("dataCb");
+    public function actionProductFilterAjax()
+    {
+        $getType = ParamHelper::getParamValue('type');
+        $getTrademark = ParamHelper::getParamValue("trademark");
+        $getCategory = ParamHelper::getParamValue("category");
+        $sort = ParamHelper::getParamValue('sort');
+        $priceFrom = ParamHelper::getParamValue('priceFrom');
+        $priceTo = ParamHelper::getParamValue('priceTo');
+
         $rows = (new \yii\db\Query())->from('product');
-        if (!isEmpty($type)) {
-            if ($type==0){
-                $rows->where(['type'=> '']);
+        if (empty($getType)) {
+            if (!empty($getTrademark)) {
+                $convertTrademark = explode(",", $getTrademark);
+                $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
+                $rows->where(['trade_mark' => $trademark]);
+            };
+        } else {
+            $convertType = explode(",", $getType);
+            $type = CryptHelper::decryptAllElementInArray($convertType);
+            $rows->where(['type' => $type]);
+            if (!empty($getTrademark)) {
+                $convertTrademark = explode(",", $getTrademark);
+                $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
+                $rows->andWhere(['trade_mark' => $trademark]);
+            };
+        };
+
+        if (!empty($getCategory)) {
+            $convertCategory = explode(",", $getCategory);
+            $category = CryptHelper::decryptAllElementInArray($convertCategory);
+            $rows->andWhere(['category_id' => $category]);
+        };
+
+        if (!empty($sort)) {
+            if ($sort == 1) {
+                $rows->orderBy("selling_price ASC");
+            } else if ($sort == 2) {
+                $rows->orderBy('selling_price DESC');
             } else {
-                $rows->where(['type' => $type]);
+                $rows->orderBy("updated DESC");
             }
         }
-        print_r($dataCb);
-        $rows->andWhere(["status"=>1])->all();
-        //TODO: check rows sau do tra ve cho tung ket qua cua truy van
-        if (isEmpty($rows)){
+
+        if (!empty($priceFrom) && !empty($priceTo)) {
+            $rows->andWhere(['between', 'selling_price', $priceFrom, $priceTo]);
+        } elseif (!empty($priceFrom) && empty($priceTo)) {
+            $rows->andWhere(['>', 'selling_price', $priceFrom]);
+        } elseif (empty($priceFrom) && !empty($priceTo)) {
+            $rows->andWhere(['<', 'selling_price', $priceFrom]);
+        }
+
+        $rows->andWhere(["status" => 1]);
+
+        if (empty($rows->all())) {
             $response = [
-                'status' => SystemConstant::HOPE_API_UNSUCCESS_STATUS,
+                'status' => SystemConstant::API_UNSUCCESS_STATUS,
+                'notify' => 'Không có sản phẩm để hiển thị!'
+            ];
+        } else {
+            $response = [
+                'status' => SystemConstant::API_SUCCESS_STATUS,
+                'product' => $rows->all()
             ];
         }
-        $response = [
-            'status' => SystemConstant::HOPE_API_SUCCESS_STATUS,
-            'product' => $rows
-        ];
         echo json_encode($response);
         exit;
     }

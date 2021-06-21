@@ -73,9 +73,9 @@ class ProductSearch extends \yii\db\ActiveRecord
         ];
     }
 
-    public function getRepresentativeCamera()
+    public function getAllProduct()
     {
-        return Product::find()->where(['and','status'=>1,'type'=>1])->asArray()->all();
+        return Product::find()->where(['status' => 1])->asArray()->all();
     }
 
     public function getProductById($productId)
