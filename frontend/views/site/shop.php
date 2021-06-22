@@ -45,6 +45,24 @@ $type = array_column($type, 'type');
             padding: 10px;
         }
     }
+
+    #page_navigation {
+        clear: both;
+        margin: 20px 0;
+    }
+
+    #page_navigation a {
+        padding: 3px 6px;
+        border: 1px solid #2e6da4;
+        margin: 2px;
+        color: black;
+        text-decoration: none
+    }
+
+    .active_page {
+        background: #e51b23;
+        color: white !important;
+    }
 </style>
 <div class="container px-0">
     <div class="row">
@@ -164,7 +182,7 @@ $type = array_column($type, 'type');
         <!--show product-->
         <div class="col-12 col-md-8 m-0 p-0">
             <div class="bgFilter p-2 position-relative text-center" id="tools">
-                <span class="mr-2"><b>Sắp xếp</b>/span>
+                <span class="mr-2"><b>Sắp xếp</b></span>
 
                 <button type="button" class="btn btn-danger" id="btnSortByDate">Mới nhất</button>
                 <div class="dropdown d-inline-block mx-2">
@@ -177,7 +195,10 @@ $type = array_column($type, 'type');
                         <a class="dropdown-item" href="#" id="highToLow">Cao đến thấp</a>
                     </div>
                 </div>
+                <div id='page_navigation'></div>
             </div>
+            <input type='hidden' id='current_page'>
+            <input type='hidden' id='show_per_page'>
             <div id="result" class="row">
                 <?php foreach ($arrAllProduct as $key => $value) : ?>
                     <div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0'>
@@ -204,3 +225,4 @@ $type = array_column($type, 'type');
     var imgUrl = "<?= $imgUrl ?>";
     var cdnUrl = "<?= $cdnUrl ?>";
 </script>
+<script src="<?= $cdnUrl ?>/js/pagination.js" type="text/javascript"></script>

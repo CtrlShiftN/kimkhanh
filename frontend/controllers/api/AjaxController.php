@@ -118,7 +118,8 @@ class AjaxController extends ActiveController
 
         $rows->andWhere(["status" => 1]);
 
-        if (empty($rows->all())) {
+        $result = $rows->all();
+        if (empty($result)) {
             $response = [
                 'status' => SystemConstant::API_UNSUCCESS_STATUS,
                 'notify' => 'Không có sản phẩm để hiển thị!'
@@ -126,7 +127,8 @@ class AjaxController extends ActiveController
         } else {
             $response = [
                 'status' => SystemConstant::API_SUCCESS_STATUS,
-                'product' => $rows->all()
+                'product' => $result,
+                'count' => count($result)
             ];
         }
         echo json_encode($response);
