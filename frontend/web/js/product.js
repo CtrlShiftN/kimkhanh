@@ -30,22 +30,22 @@ function getAllCheckedboxes() {
     trademark = arrCheckedboxTrademark.toString();
     var arrCheckedboxCategory = getCheckedboxes(categoryCb);
     category = arrCheckedboxCategory.toString();
-    sort = priceTo = priceFrom = null;
+    sort = priceTo = priceFrom = cursor = null;
 }
 
 //get value from checkboxes
 function getCheckedboxes(checkbox) {
     return checkbox.filter(":checked")
-        .map(function () {
-            return this.value;
-        })
-        .get();
+    .map(function () {
+        return this.value;
+    })
+    .get();
 }
 
 // delete filter
 $("#btnDeleteFilter").click(function (e) {
     e.preventDefault();
-    trademark = type = category = sort = priceTo = priceFrom = null;
+    trademark = type = category = sort = priceTo = priceFrom = cursor = null;
     checkboxes.prop("checked", false);
     requestData();
 });
@@ -102,21 +102,17 @@ function requestData() {
     let request = $.ajax({
         url: cdnUrl + "/api/ajax/product-filter-ajax",
         method: "POST",
-        data: {type: type, trademark: trademark, category: category, sort: sort, priceFrom: priceFrom, priceTo: priceTo} // gui het toan bo type, trademark, sort,...
+        data: {type: type, trademark: trademark, category: category, sort: sort, priceFrom: priceFrom, priceTo: priceTo, cursor: cursor} // gui het toan bo type, trademark, sort,...
     });
     request.done(function (response) {
         let arrRes = $.parseJSON(response);
+        console.log(arrRes);
         if (arrRes.status === 1) {
             var result = "";
             for (let i = 0; i < arrRes.product.length; i++) {
                 result += '<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0"><div class="text-center row px-0"><div class="col-6 col-sm-6 col-md-12"><img src="' + imgUrl + '/media/uploads/' + arrRes.product[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-3 heightNameProduct">' + arrRes.product[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.product[i].trade_mark + '</p><p><b>Giá: </b>' + arrRes.product[i].selling_price + '<sup>&#8363;</sup></p><a href="#" class="btn btn-danger">Mua ngay</a></div></div></div>';
             }
             $("#result").html(result);
-            go_to_page(0);
-            //hide all the elements inside pagingBox div
-            $('#result').children().css('display', 'none');
-            //and show the first n (show_per_page) elements
-            $('#result').children().slice(0, show_per_page).css('display', 'block');
         } else {
             var result = '<div class="text-center col-12"><h1 class="mainColor"><i class="fab fa-sistrix"></i></h1><h5 class="mainColor"><i>Không có sản phẩm để hiển thị</i></h5><h5 class="mainColor"><i>Bạn hãy thử tìm kiếm lại!</i></h5></div>';
             $("#result").html(result);
@@ -146,7 +142,7 @@ $("#search-form").submit(function (e) {
             }
             $("#result").html(result);
         } else {
-            var result = arrRes.notify;
+            var result = '<div class="text-center col-12"><h1 class="mainColor"><i class="fab fa-sistrix"></i></h1><h5 class="mainColor"><i>Không có sản phẩm để hiển thị</i></h5><h5 class="mainColor"><i>Bạn hãy thử tìm kiếm lại!</i></h5></div>';
             $("#result").html(result);
         }
     });

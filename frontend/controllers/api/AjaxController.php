@@ -73,6 +73,7 @@ class AjaxController extends ActiveController
         $sort = ParamHelper::getParamValue('sort');
         $priceFrom = ParamHelper::getParamValue('priceFrom');
         $priceTo = ParamHelper::getParamValue('priceTo');
+        $getCursor = ParamHelper::getParamValue('cursor');
 
         $rows = (new \yii\db\Query())->from('product');
         if (empty($getType)) {
@@ -116,9 +117,21 @@ class AjaxController extends ActiveController
             $rows->andWhere(['<', 'selling_price', $priceFrom]);
         }
 
-        $rows->andWhere(["status" => 1]);
+        if (!empty($getCursor)) {
+            $cursor = intval($getCursor);
+            $limitPerPage = SystemConstant::LIMIT_PER_PAGE;
+            $offset = ($cursor - 1) * $limitPerPage;
+            $limit = $cursor * $limitPerPage;
+            $rows->offset($offset)->limit($limit);
+//            echo json_encode([$cursor, $limit, $offset]);die;
+        } else {
+            $rows->offset(0)->limit(SystemConstant::LIMIT_PER_PAGE);
+        }
 
+        $rows->andWhere(["status" => 1]);
+//        echo json_encode($rows->createCommand()->rawSql);die;
         $result = $rows->all();
+//        echo json_encode($result);die;
         if (empty($result)) {
             $response = [
                 'status' => SystemConstant::API_UNSUCCESS_STATUS,

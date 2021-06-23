@@ -195,7 +195,7 @@ $type = array_column($type, 'type');
                         <a class="dropdown-item" href="#" id="highToLow">Cao đến thấp</a>
                     </div>
                 </div>
-                <div id='page_navigation'></div>
+
             </div>
             <input type='hidden' id='current_page'>
             <input type='hidden' id='show_per_page'>
@@ -215,6 +215,9 @@ $type = array_column($type, 'type');
                         </div>
                     </div>
                 <?php endforeach; ?>
+            </div>
+            <div class="bgFilter text-center">
+                <div id='page_navigation' class="p-2"></div>
             </div>
         </div>
         <!--end show-->

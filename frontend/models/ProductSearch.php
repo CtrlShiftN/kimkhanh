@@ -2,6 +2,7 @@
 
 namespace frontend\models;
 
+use common\components\SystemConstant;
 use common\models\Product;
 use Yii;
 
@@ -73,7 +74,7 @@ class ProductSearch extends \yii\db\ActiveRecord
         ];
     }
 
-    public function getAllProduct()
+    public function getAllProduct($cursor = 0)
     {
         return Product::find()->where(['status' => 1])->asArray()->all();
     }
