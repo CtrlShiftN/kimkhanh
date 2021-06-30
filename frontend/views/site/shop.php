@@ -96,9 +96,6 @@ $type = array_column($type, 'type');
                     <input class="form-control w-100 mb-3 mb-md-0" type="text" placeholder="Tìm kiếm..."
                            name="inf-product"
                            id="search-inf">
-                    <div class="text-center text-danger d-none mb-2" id="notifySearch"><small>Vui lòng điền khoảng
-                            giá
-                            phù hợp</small></div>
                 </div>
                 <div class="col-12 m-0 p-0">
                     <button type="button" onclick="searchData()" class="btn btn-danger w-100" id="btnSearch">Tìm kiếm

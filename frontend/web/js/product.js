@@ -53,6 +53,8 @@ $("#btnDeleteFilter").click(function (e) {
     e.preventDefault();
     trademark = type = category = sort = priceTo = priceFrom = cursor = inf = null;
     $("#search-inf").val('');
+    $("#from").val('');
+    $("#to").val('');
     checkboxes.prop("checked", false);
     $('#current_page').val(0);
     requestData();
@@ -86,7 +88,7 @@ $("#btnPriceRange").click(function () {
     if ($("#from").val().trim() === '' && $("#to").val().trim() === '') {
         $("#notifyPrice").removeClass("d-none");
     } else if ($("#from").val().trim() != '' && $("#to").val().trim() != '') {
-        if ($("#from").val().trim() > $("#to").val().trim()) {
+        if ($("#from").val().trim() < $("#to").val().trim()) {
             $("#notifyPrice").removeClass("d-none");
         } else {
             priceFrom = $("#from").val().trim();
@@ -109,17 +111,12 @@ $("#btnPriceRange").click(function () {
 
 //search with information from input
 function searchData() {
-    if ($("#search-inf").val().trim() == '') {
-        $('#notifySearch').show();
-    } else {
-        $('#notifySearch').hide();
-        $('#secPagination').addClass('d-none');
-        inf = $("#search-inf").val().trim().toLowerCase();
-        trademark = type = category = sort = priceTo = priceFrom = cursor = null;
-        checkboxes.prop("checked", false);
-        $('#current_page').val(0);
-        requestData();
-    }
+    $('#secPagination').addClass('d-none');
+    inf = $("#search-inf").val().trim().toLowerCase();
+    trademark = type = category = sort = priceTo = priceFrom = cursor = null;
+    checkboxes.prop("checked", false);
+    $('#current_page').val(0);
+    requestData();
 }
 
 //search data with enter key press
