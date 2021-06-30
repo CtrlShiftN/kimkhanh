@@ -2,6 +2,8 @@
 
 namespace frontend\controllers;
 
+use common\components\helpers\ParamHelper;
+use common\components\SystemConstant;
 use common\models\Category;
 use frontend\models\CategorySearch;
 use frontend\models\ProductSearch;
@@ -12,6 +14,7 @@ use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\BaseObject;
 use yii\base\InvalidArgumentException;
+use yii\data\Pagination;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -308,10 +311,18 @@ class SiteController extends Controller
         $searchModelCategory = new CategorySearch();
         $searchModelTrademark = new TrademarkSearch();
 
+        $cursor = ParamHelper::getParamValue('page');
         $arrProduct = ["Camera", "Thang máy", "Bộ điều khiển"];
         $arrType = (new CategorySearch())->getAllType();
         //show representative product when entering page
         $arrAllProduct = $searchModelProduct->getAllProduct();
+
+        $count = count($arrAllProduct->asArray()->all());
+        $pages = new Pagination(['totalCount' => $arrAllProduct->count(), 'defaultPageSize' => SystemConstant::LIMIT_PER_PAGE]);
+        $arrAllProduct = $arrAllProduct->offset($cursor)
+            ->limit(SystemConstant::LIMIT_PER_PAGE)
+            ->asArray()
+            ->all();
         //get type of product
         $arrCameraType = $searchModelCategory->getCameraTypeProduct();
         $arrElevatorType = $searchModelCategory->getElevatorTypeProduct();
@@ -326,7 +337,8 @@ class SiteController extends Controller
 
             'type' => $arrType,
             'arrAllProduct' => $arrAllProduct,
-
+            'pages' => $pages,
+            'count' => $count,
             'arrCameraType' => $arrCameraType,
             'arrElevatorType' => $arrElevatorType,
             'arrRecorderType' => $arrRecorderType,

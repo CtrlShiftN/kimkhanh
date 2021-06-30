@@ -7,6 +7,8 @@ use common\components\helpers\HeaderHelper;
 use common\components\helpers\ParamHelper;
 use common\components\SystemConstant;
 use Yii;
+use yii\base\BaseObject;
+use yii\data\Pagination;
 use yii\db\conditions\InCondition;
 use yii\db\conditions\OrCondition;
 use yii\rest\ActiveController;
@@ -45,28 +47,12 @@ class AjaxController extends ActiveController
         echo json_encode($respone);
     }
 
-    public function actionProductSearchAjax()
-    {
-        $infProduct = ParamHelper::getParamValue("inf_product");
-        $rows = (new \yii\db\Query())->from('product')->where(['like', 'name', $infProduct])->andWhere(['status' => 1])->all();
-        if (empty($rows)) {
-            $response = [
-                'status' => SystemConstant::API_UNSUCCESS_STATUS,
-                'notify' => 'Không có sản phẩm để hiển thị!'
-            ];
-        } else {
-            $response = [
-                'status' => SystemConstant::API_SUCCESS_STATUS,
-                'product' => $rows
-            ];
-        }
-
-        echo json_encode($response);
-        exit;
-    }
-
+    /**
+     * query data from database with ajax & return data to Shop view
+     */
     public function actionProductFilterAjax()
     {
+        $infProduct = ParamHelper::getParamValue("inf");
         $getType = ParamHelper::getParamValue('type');
         $getTrademark = ParamHelper::getParamValue("trademark");
         $getCategory = ParamHelper::getParamValue("category");
@@ -76,20 +62,40 @@ class AjaxController extends ActiveController
         $getCursor = ParamHelper::getParamValue('cursor');
 
         $rows = (new \yii\db\Query())->from('product');
-        if (empty($getType)) {
-            if (!empty($getTrademark)) {
-                $convertTrademark = explode(",", $getTrademark);
-                $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
-                $rows->where(['trade_mark' => $trademark]);
+        if (empty($infProduct)) {
+            if (empty($getType)) {
+                if (!empty($getTrademark)) {
+                    $convertTrademark = explode(",", $getTrademark);
+                    $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
+                    $rows->where(['trade_mark' => $trademark]);
+                };
+            } else {
+                $convertType = explode(",", $getType);
+                $type = CryptHelper::decryptAllElementInArray($convertType);
+                $rows->where(['type' => $type]);
+                if (!empty($getTrademark)) {
+                    $convertTrademark = explode(",", $getTrademark);
+                    $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
+                    $rows->andWhere(['trade_mark' => $trademark]);
+                };
             };
         } else {
-            $convertType = explode(",", $getType);
-            $type = CryptHelper::decryptAllElementInArray($convertType);
-            $rows->where(['type' => $type]);
-            if (!empty($getTrademark)) {
-                $convertTrademark = explode(",", $getTrademark);
-                $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
-                $rows->andWhere(['trade_mark' => $trademark]);
+            $rows->where(['like', 'name', $infProduct]);
+            if (empty($getType)) {
+                if (!empty($getTrademark)) {
+                    $convertTrademark = explode(",", $getTrademark);
+                    $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
+                    $rows->andWhere(['trade_mark' => $trademark]);
+                };
+            } else {
+                $convertType = explode(",", $getType);
+                $type = CryptHelper::decryptAllElementInArray($convertType);
+                $rows->andWhere(['type' => $type]);
+                if (!empty($getTrademark)) {
+                    $convertTrademark = explode(",", $getTrademark);
+                    $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
+                    $rows->andWhere(['trade_mark' => $trademark]);
+                };
             };
         };
 
@@ -117,21 +123,21 @@ class AjaxController extends ActiveController
             $rows->andWhere(['<', 'selling_price', $priceFrom]);
         }
 
+        $count = count($rows->all());
+
         if (!empty($getCursor)) {
             $cursor = intval($getCursor);
-            $limitPerPage = SystemConstant::LIMIT_PER_PAGE;
-            $offset = ($cursor - 1) * $limitPerPage;
-            $limit = $cursor * $limitPerPage;
-            $rows->offset($offset)->limit($limit);
-//            echo json_encode([$cursor, $limit, $offset]);die;
+            $limit = SystemConstant::LIMIT_PER_PAGE;
+            $offset = $cursor * $limit;
+            $rows->limit($limit)->offset($offset);
         } else {
-            $rows->offset(0)->limit(SystemConstant::LIMIT_PER_PAGE);
+            $rows->limit(SystemConstant::LIMIT_PER_PAGE)->offset(0);
         }
 
         $rows->andWhere(["status" => 1]);
-//        echo json_encode($rows->createCommand()->rawSql);die;
+
         $result = $rows->all();
-//        echo json_encode($result);die;
+
         if (empty($result)) {
             $response = [
                 'status' => SystemConstant::API_UNSUCCESS_STATUS,
@@ -141,7 +147,8 @@ class AjaxController extends ActiveController
             $response = [
                 'status' => SystemConstant::API_SUCCESS_STATUS,
                 'product' => $result,
-                'count' => count($result)
+                'count' => $count,
+                'sql' => $rows->createCommand()->rawSql
             ];
         }
         echo json_encode($response);

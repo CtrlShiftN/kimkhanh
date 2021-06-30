@@ -1,11 +1,15 @@
 <?php
 
 /* @var $this yii\web\View */
+
+use justinvoelker\separatedpager\LinkPager;
+
 $cdnUrl = Yii::$app->params['frontend'];
 $imgUrl = Yii::$app->params['common'];
 $this->title = "Shop";
 $type = array_column($type, 'type');
 ?>
+<script src="<?= $cdnUrl ?>/js/jquery.twbsPagination.min.js" type="text/javascript"></script>
 <style>
     .bgFilter {
         background-color: #ececec;
@@ -46,22 +50,38 @@ $type = array_column($type, 'type');
         }
     }
 
+    .p-active {
+        border-color: #dc3545 !important;
+    }
+
+    .p-active a {
+        color: #fff !important;
+    }
+
+    .p-inactive {
+        cursor: not-allowed;
+    }
+
+    .p-inactive a, .p-inactive span {
+        color: #bababa !important;
+        border-color: #bababa !important;
+    }
+
+    .page_link, .previous_link, .next_link,
+    .last_link, .first_link {
+        padding: 8px 16px;
+        border: 1px solid #dee2e6;
+        text-decoration: none !important;
+        color: #000;
+    }
+
+    .page_link:hover, .previous_link:hover, .next_link:hover,
+    .last_link:hover, .first_link:hover {
+        color: #000;
+    }
+
     #page_navigation {
-        clear: both;
-        margin: 20px 0;
-    }
-
-    #page_navigation a {
-        padding: 3px 6px;
-        border: 1px solid #2e6da4;
-        margin: 2px;
-        color: black;
-        text-decoration: none
-    }
-
-    .active_page {
-        background: #e51b23;
-        color: white !important;
+        line-height: 42px;
     }
 </style>
 <div class="container px-0">
@@ -72,13 +92,17 @@ $type = array_column($type, 'type');
                 <h4 class="py-3">TÌM KIẾM</h4>
             </div>
             <form id="search-form" action="" method="POST" enctype="multipart/form-data" class="w-100 mb-3">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 mb-2">
+                <div class="col-12 p-0 mb-2">
                     <input class="form-control w-100 mb-3 mb-md-0" type="text" placeholder="Tìm kiếm..."
                            name="inf-product"
                            id="search-inf">
+                    <div class="text-center text-danger d-none mb-2" id="notifySearch"><small>Vui lòng điền khoảng
+                            giá
+                            phù hợp</small></div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 p-0">
-                    <button type="submit" class="btn btn-danger w-100" id="btnSearch">Tìm kiếm</button>
+                <div class="col-12 m-0 p-0">
+                    <button type="button" onclick="searchData()" class="btn btn-danger w-100" id="btnSearch">Tìm kiếm
+                    </button>
                 </div>
             </form>
 
@@ -167,7 +191,7 @@ $type = array_column($type, 'type');
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-2">
+            <div class="col-12 my-2">
                 <h4 id="price">Khoảng giá</h4>
                 <input id="from" type="text" class="form-control" placeholder="&#8363; TỪ">
                 <input id="to" type="text" class="form-control my-2" placeholder="&#8363; ĐẾN">
@@ -175,7 +199,7 @@ $type = array_column($type, 'type');
                         phù hợp</small></div>
                 <button type="button" class="btn btn-danger w-100" id="btnPriceRange">Áp dụng</button>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 mt-3">
+            <div class="col-12 p-0 mt-3">
                 <button type="button" class="btn btn-danger w-100" id="btnDeleteFilter">Xóa bộ lọc</button>
             </div>
         </div>
@@ -216,16 +240,50 @@ $type = array_column($type, 'type');
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="bgFilter text-center">
-                <div id='page_navigation' class="p-2"></div>
+            <div class="mt-2 text-center" id="firstPagination">
+                <input type='hidden' id='current_page'>
+                <div id='page_navigation'></div>
+            </div>
+            <div class="mt-2 text-center" id="secPagination">
+                <?php
+                // display pagination
+                echo LinkPager::widget([
+                    'pagination' => $pages,
+                    //Css option for container
+                    'options' => ['class' => 'list-unstyled d-flex align-items-center justify-content-center', 'id' => "pagination"],
+                    //First option value
+                    'firstPageLabel' => '&#10094;&#10094;',
+                    //Last option value
+                    'lastPageLabel' => '&#10095;&#10095;',
+                    //Previous option value
+                    'prevPageLabel' => '&#10094;',
+                    //Next option value
+                    'nextPageLabel' => '&#10095;',
+                    //Current Active option value
+                    'activePageCssClass' => 'bg-danger p-active',
+                    //Max count of allowed options
+                    'maxButtonCount' => 5,
+
+                    // Css for each options. Links
+                    'linkOptions' => ['class' => 'text-decoration-none'],
+                    'disabledPageCssClass' => 'disabled p-2 border p-inactive',
+
+                    // Customzing CSS class for navigating link
+                    'prevPageCssClass' => 'p-back',
+                    'nextPageCssClass' => 'p-next',
+                    'firstPageCssClass' => 'p-first',
+                    'lastPageCssClass' => 'p-last',
+                ])
+                ?>
             </div>
         </div>
         <!--end show-->
     </div>
 </div>
-<script src="<?= $cdnUrl ?>/js/product.js" type="text/javascript"></script>
 <script type="text/javascript">
     var imgUrl = "<?= $imgUrl ?>";
     var cdnUrl = "<?= $cdnUrl ?>";
+    var show_per_page = <?= \common\components\SystemConstant::LIMIT_PER_PAGE ?>;
+    $("#pagination").children().addClass("d-inline-block py-2 px-3 border mx-1").children().addClass("text-dark");
 </script>
-<script src="<?= $cdnUrl ?>/js/pagination.js" type="text/javascript"></script>
+<script src="<?= $cdnUrl ?>/js/product.js" type="text/javascript"></script>

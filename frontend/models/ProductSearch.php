@@ -76,7 +76,7 @@ class ProductSearch extends \yii\db\ActiveRecord
 
     public function getAllProduct($cursor = 0)
     {
-        return Product::find()->where(['status' => 1])->asArray()->all();
+        return Product::find()->where(['status' => 1]);
     }
 
     public function getProductById($productId)

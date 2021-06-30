@@ -29,7 +29,8 @@
     "kartik-v/yii2-widget-select2": "^2.2",
     "lucidtaz/yii2-scssphp": "^0.2.1",
     "ext-openssl": "*",
-    "ext-json": "*"
+    "ext-json": "*",
+    "justinvoelker/yii2-separatedpager": "*"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",
@@ -48,7 +49,7 @@
       "enabled": false
     },
     "platform": {
-      "php": "7.3"
+      "php": "7.4"
     }
   },
   "repositories": [
