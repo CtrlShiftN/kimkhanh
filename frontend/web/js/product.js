@@ -122,6 +122,14 @@ function searchData() {
     }
 }
 
+//search data with enter key press
+$("#search-inf").keypress(function (event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        searchData()
+    }
+});
+
 //send request to get html
 function requestData() {
     $('#secPagination').addClass('d-none');
