@@ -52,7 +52,7 @@ class AjaxController extends ActiveController
      */
     public function actionProductFilterAjax()
     {
-        $infProduct = ParamHelper::getParamValue("inf");
+        $keyword = ParamHelper::getParamValue("keyword");
         $getType = ParamHelper::getParamValue('type');
         $getTrademark = ParamHelper::getParamValue("trademark");
         $getCategory = ParamHelper::getParamValue("category");
@@ -62,46 +62,23 @@ class AjaxController extends ActiveController
         $getCursor = ParamHelper::getParamValue('cursor');
 
         $rows = (new \yii\db\Query())->from('product');
-        if (empty($infProduct)) {
-            if (empty($getType)) {
-                if (!empty($getTrademark)) {
-                    $convertTrademark = explode(",", $getTrademark);
-                    $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
-                    $rows->where(['trade_mark' => $trademark]);
-                };
-            } else {
-                $convertType = explode(",", $getType);
-                $type = CryptHelper::decryptAllElementInArray($convertType);
-                $rows->where(['type' => $type]);
-                if (!empty($getTrademark)) {
-                    $convertTrademark = explode(",", $getTrademark);
-                    $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
-                    $rows->andWhere(['trade_mark' => $trademark]);
-                };
-            };
-        } else {
-            $rows->where(['like', 'name', $infProduct]);
-            if (empty($getType)) {
-                if (!empty($getTrademark)) {
-                    $convertTrademark = explode(",", $getTrademark);
-                    $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
-                    $rows->andWhere(['trade_mark' => $trademark]);
-                };
-            } else {
-                $convertType = explode(",", $getType);
-                $type = CryptHelper::decryptAllElementInArray($convertType);
-                $rows->andWhere(['type' => $type]);
-                if (!empty($getTrademark)) {
-                    $convertTrademark = explode(",", $getTrademark);
-                    $trademark = CryptHelper::decryptAllElementInArray($convertTrademark);
-                    $rows->andWhere(['trade_mark' => $trademark]);
-                };
-            };
+        $rows->where(["status" => 1]);
+        if (!empty($keyword)) {
+            $rows->where(['like', 'name', $keyword]);
+        }
+
+        if (!empty($getType)) {
+            $type = CryptHelper::decryptAllElementInArray(explode(",", $getType));
+            $rows->andWhere(['type' => $type]);
+        }
+
+        if (!empty($getTrademark)) {
+            $trademark = CryptHelper::decryptAllElementInArray(explode(",", $getTrademark));
+            $rows->andWhere(['trade_mark' => $trademark]);
         };
 
         if (!empty($getCategory)) {
-            $convertCategory = explode(",", $getCategory);
-            $category = CryptHelper::decryptAllElementInArray($convertCategory);
+            $category = CryptHelper::decryptAllElementInArray(explode(",", $getCategory));
             $rows->andWhere(['category_id' => $category]);
         };
 
@@ -126,15 +103,12 @@ class AjaxController extends ActiveController
         $count = count($rows->all());
 
         if (!empty($getCursor)) {
-            $cursor = intval($getCursor);
             $limit = SystemConstant::LIMIT_PER_PAGE;
-            $offset = $cursor * $limit;
+            $offset = intval($getCursor) * $limit;
             $rows->limit($limit)->offset($offset);
         } else {
             $rows->limit(SystemConstant::LIMIT_PER_PAGE)->offset(0);
         }
-
-        $rows->andWhere(["status" => 1]);
 
         $result = $rows->all();
 

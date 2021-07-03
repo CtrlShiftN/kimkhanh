@@ -3,6 +3,9 @@
 /* @var $this yii\web\View */
 
 use justinvoelker\separatedpager\LinkPager;
+use kartik\range\RangeInput;
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
 
 $cdnUrl = Yii::$app->params['frontend'];
 $imgUrl = Yii::$app->params['common'];
@@ -54,7 +57,7 @@ $type = array_column($type, 'type');
         border-color: #dc3545 !important;
     }
 
-    .p-active a {
+    #pagination .p-active a {
         color: #fff !important;
     }
 
@@ -63,8 +66,8 @@ $type = array_column($type, 'type');
     }
 
     .p-inactive a, .p-inactive span {
-        color: #bababa !important;
-        border-color: #bababa !important;
+        color: #dee2e6 !important;
+        border-color: #dee2e6 !important;
     }
 
     .page_link, .previous_link, .next_link,
@@ -96,6 +99,9 @@ $type = array_column($type, 'type');
                     <input class="form-control w-100 mb-3 mb-md-0" type="text" placeholder="Tìm kiếm..."
                            name="inf-product"
                            id="search-inf">
+                    <div class="text-center text-danger d-none mb-2" id="notifySearch"><small>Vui lòng điền khoảng
+                            giá
+                            phù hợp</small></div>
                 </div>
                 <div class="col-12 m-0 p-0">
                     <button type="button" onclick="searchData()" class="btn btn-danger w-100" id="btnSearch">Tìm kiếm
@@ -230,7 +236,7 @@ $type = array_column($type, 'type');
                             <div class="cardBody col-6 col-md-12 my-auto">
                                 <h5 class="mx-md-2 heightNameProduct"><?= $value['name'] ?></h5>
                                 <p class="m-0"><b>Hãng:</b> <?= $value['trade_mark'] ?></p>
-                                <p><b>Giá:</b> <?= $value['selling_price'] ?><sup>&#8363;</sup></p>
+                                <p><b>Giá:</b> <?= $value['selling_price'] ?><sup> VNĐ</sup></p>
                                 <a href="#" class="btn btn-danger">Mua ngay</a>
                             </div>
                         </div>
@@ -281,6 +287,7 @@ $type = array_column($type, 'type');
     var imgUrl = "<?= $imgUrl ?>";
     var cdnUrl = "<?= $cdnUrl ?>";
     var show_per_page = <?= \common\components\SystemConstant::LIMIT_PER_PAGE ?>;
+    // var number_of_items;
     $("#pagination").children().addClass("d-inline-block py-2 px-3 border mx-1").children().addClass("text-dark");
 </script>
 <script src="<?= $cdnUrl ?>/js/product.js" type="text/javascript"></script>
