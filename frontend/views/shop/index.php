@@ -2,45 +2,35 @@
 
 /* @var $this yii\web\View */
 
-use justinvoelker\separatedpager\LinkPager;
-use kartik\range\RangeInput;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-
 $cdnUrl = Yii::$app->params['frontend'];
 $imgUrl = Yii::$app->params['common'];
 $this->title = "Shop";
 $type = array_column($type, 'type');
 ?>
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/shop.css" type="text/css">
-<div class="container px-0">
+<div class="container p-0">
     <div class="row">
         <!--tools-->
-        <div class="col-12 col-md-4 h-100 bgFilter py-3">
+        <div class="col-12 col-md-4 h-100 bgFilter pb-3">
             <div class="text-center col-12 bgMainColor text-light rounded">
                 <h4 class="py-3">TÌM KIẾM</h4>
             </div>
-            <form id="search-form" action="" method="POST" enctype="multipart/form-data" class="w-100 mb-3">
-                <div class="col-12 p-0 mb-2">
-                    <input class="form-control w-100 mb-3 mb-md-0" type="text" placeholder="Tìm kiếm..."
-                           name="inf-product"
-                           id="search-inf">
-                    <div class="text-center text-danger d-none mb-2" id="notifySearch"><small>Vui lòng điền khoảng
-                            giá
-                            phù hợp</small></div>
-                </div>
-                <div class="col-12 m-0 p-0">
-                    <button type="button" onclick="searchData()" class="btn btn-danger w-100" id="btnSearch">Tìm kiếm
-                    </button>
-                </div>
-            </form>
+            <div class="col-12 p-0 mb-2">
+                <input class="form-control w-100 mb-3 mb-md-0" type="text" placeholder="Tìm kiếm..."
+                       name="keywordProductSearch"
+                       id="keywordProductSearch">
+            </div>
+            <div class="col-12 m-0 p-0">
+                <button type="button" onclick="searchData()" class="btn btn-danger w-100" id="btnSearch">Tìm kiếm
+                </button>
+            </div>
 
             <!--filter-->
             <div class="text-center bgMainColor text-light col-12 rounded mt-5">
                 <h4 class="py-3">LỌC SẢN PHẨM</h4>
             </div>
             <div id="filter">
-                <h4>Sản phẩm</h4>
+                <h4 class="px-md-3">Sản phẩm</h4>
                 <div class="typeCb px-3">
                     <?php foreach ($type as $key => $value) : ?>
                         <input type="checkbox" class="cameraOptions" id="<?= $value ?><?= $value ?>"
@@ -50,7 +40,7 @@ $type = array_column($type, 'type');
                         <br>
                     <?php endforeach; ?>
                 </div>
-                <h4>Thương hiệu</h4>
+                <h4 class="px-md-3">Thương hiệu</h4>
                 <div class="trademarkCb px-3">
                     <div class="trademarkCam">
                         <span>*Camera</span><br>
@@ -80,7 +70,7 @@ $type = array_column($type, 'type');
                         <?php endforeach; ?>
                     </div>
                 </div>
-                <h4 id="titleTypeProduct">Loại</h4>
+                <h4 id="titleTypeProduct" class="px-md-3">Loại</h4>
                 <div class="categoryCb px-3">
                     <div class="typeCam">
                         <span>*Camera</span><br>
@@ -121,14 +111,16 @@ $type = array_column($type, 'type');
                 </div>
             </div>
             <div class="col-12 my-2 mx-0 row">
-                <h4 id="price" class="col-12">Khoảng giá</h4>
+                <h4 id="price" class="col-12 pl-0 text-center text-md-left text-uppercase">Khoảng giá</h4>
                 <span class="rangeNumberInput col-12 row">
-                    <input id="from" type='text' class="form-control border-0 col-6 col-md-12 col-lg-6 pl-0" placeholder="&#8363; TỪ" disabled="disabled">
-                    <input id="to" type='text' class="form-control border-0 col-6 col-md-12 col-lg-6 pl-0" placeholder="&#8363; ĐẾN" disabled="disabled">
+                    <input id="from" type='text' class="form-control border-0 col-6 col-md-12 col-lg-6 pl-0"
+                           placeholder="&#8363; TỪ" disabled="disabled">
+                    <input id="to" type='text' class="form-control border-0 col-6 col-md-12 col-lg-6 pl-0"
+                           placeholder="&#8363; ĐẾN" disabled="disabled">
                 </span>
                 <div class="sliderId pb-3 pt-2 col-12 px-0">
-                    <input value="0" min="0" max="100" step=".1" type="range"class='rangeInput'>
-                    <input value="50" min="0" max="100" step=".1" type="range"class='rangeInput'>
+                    <input value="0.1" min="0.1" max="100" step=".1" type="range" class='rangeInput'>
+                    <input value="50" min="0.1" max="100" step=".1" type="range" class='rangeInput'>
                 </div>
                 <button type="button" class="btn btn-danger w-100 my-2" id="btnPriceRange">Áp dụng</button>
             </div>
@@ -138,9 +130,8 @@ $type = array_column($type, 'type');
         </div>
         <!--show product-->
         <div class="col-12 col-md-8 m-0 p-0">
-            <div class="bgFilter p-2 position-relative text-center" id="tools">
+            <div class="bgFilter p-2 text-center w-100" id="tools">
                 <span class="mr-2"><b>Sắp xếp</b></span>
-
                 <button type="button" class="btn btn-danger" id="btnSortByDate">Mới nhất</button>
                 <div class="dropdown d-inline-block mx-2">
                     <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -152,19 +143,17 @@ $type = array_column($type, 'type');
                         <a class="dropdown-item" href="#" id="highToLow">Cao đến thấp</a>
                     </div>
                 </div>
-
             </div>
-            <input type='hidden' id='current_page'>
-            <input type='hidden' id='show_per_page'>
-            <div id="result" class="row">
+            <input type='hidden' id='current_page' class="w-100">
+            <div id="result" class="w-100 row m-0 p-0 my-3">
                 <?php foreach ($arrAllProduct as $key => $value) : ?>
-                    <div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0'>
+                    <div class='col-12 col-md-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0'>
                         <div class='text-center row px-0'>
-                            <div class="col-6 col-sm-6 col-md-12">
+                            <div class="col-6 col-md-12">
                                 <img src="<?= $imgUrl . '/media/uploads/' . $value['avatar'] ?>" class="w-img">
                             </div>
-                            <div class="cardBody col-6 col-md-12 my-auto">
-                                <h5 class="mx-md-2 heightNameProduct"><?= $value['name'] ?></h5>
+                            <div class="cardBody col-6 col-md-12 m-0 p-0">
+                                <h5 class="mx-3 heightNameProduct"><?= $value['name'] ?></h5>
                                 <p class="m-0"><b>Hãng:</b> <?= $value['trade_mark'] ?></p>
                                 <p><b>Giá:</b> <?= $value['selling_price'] ?><sup>&#8363;</sup></p>
                                 <a href="#" class="btn btn-danger">Mua ngay</a>
@@ -173,41 +162,9 @@ $type = array_column($type, 'type');
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="mt-2 text-center" id="firstPagination">
+            <div class="mt-2 text-center w-100" id="pagination">
                 <input type='hidden' id='current_page'>
                 <div id='page_navigation'></div>
-            </div>
-            <div class="mt-2 text-center" id="secPagination">
-                <?php
-                // display pagination
-                echo LinkPager::widget([
-                    'pagination' => $pages,
-                    //Css option for container
-                    'options' => ['class' => 'list-unstyled d-flex align-items-center justify-content-center', 'id' => "pagination"],
-                    //First option value
-                    'firstPageLabel' => '&#10094;&#10094;',
-                    //Last option value
-                    'lastPageLabel' => '&#10095;&#10095;',
-                    //Previous option value
-                    'prevPageLabel' => '&#10094;',
-                    //Next option value
-                    'nextPageLabel' => '&#10095;',
-                    //Current Active option value
-                    'activePageCssClass' => 'bg-danger p-active',
-                    //Max count of allowed options
-                    'maxButtonCount' => 5,
-
-                    // Css for each options. Links
-                    'linkOptions' => ['class' => 'text-decoration-none'],
-                    'disabledPageCssClass' => 'disabled p-2 border p-inactive',
-
-                    // Customzing CSS class for navigating link
-                    'prevPageCssClass' => 'p-back',
-                    'nextPageCssClass' => 'p-next',
-                    'firstPageCssClass' => 'p-first',
-                    'lastPageCssClass' => 'p-last',
-                ])
-                ?>
             </div>
         </div>
         <!--end show-->
@@ -217,7 +174,5 @@ $type = array_column($type, 'type');
     var imgUrl = "<?= $imgUrl ?>";
     var cdnUrl = "<?= $cdnUrl ?>";
     var show_per_page = <?= \common\components\SystemConstant::LIMIT_PER_PAGE ?>;
-    // var number_of_items;
-    $("#pagination").children().addClass("d-inline-block py-2 px-3 border mx-1").children().addClass("text-dark");
 </script>
 <script src="<?= $cdnUrl ?>/js/product.js" type="text/javascript"></script>

@@ -2,12 +2,11 @@ var checkboxes = $("input[type=checkbox]");
 var typeCb = $(".typeCb input[type=checkbox]");
 var trademarkCb = $(".trademarkCb input[type=checkbox]");
 var categoryCb = $(".categoryCb input[type=checkbox]");
-var type, trademark, category, sort, priceFrom, priceTo, cursor, keyword;
+var type, trademark, category, sort, priceFrom, priceTo, cursor, keyword, number_of_items;
 
 jQuery(document).ready(function () {
     $('#current_page').val(0);
-    $('#firstPagination').addClass('d-none');
-    $('#secPagination').removeClass('d-none');
+    requestData();
 });
 
 //get type value when click checkbox
@@ -58,8 +57,6 @@ $("#btnDeleteFilter").click(function (e) {
     checkboxes.prop("checked", false);
     $('#current_page').val(0);
     requestData();
-    $('#firstPagination').addClass('d-none');
-    $('#secPagination').removeClass('d-none');
 });
 
 // sort
@@ -112,14 +109,14 @@ $("#btnSortByDate").click(function () {
 
 //sort by price range
 $("#btnPriceRange").click(function () {
-    priceFrom = parseInt($("#from").val()) * 1000000;
-    priceTo = parseInt($("#to").val()) * 1000000;
+    priceFrom = parseFloat($("#from").val()) * 1000000;
+    priceTo = parseFloat($("#to").val()) * 1000000;
+    console.log([priceFrom, priceTo])
     requestData();
 });
 
 //search with information from input
 function searchData() {
-    $('#secPagination').addClass('d-none');
     keyword = $("#keywordProductSearch").val().trim().toLowerCase();
     trademark = type = category = sort = priceTo = priceFrom = cursor = null;
     checkboxes.prop("checked", false);
@@ -137,9 +134,6 @@ $("#keywordProductSearch").keypress(function (event) {
 
 //send request to get html
 function requestData() {
-    $('#secPagination').addClass('d-none');
-    $('#firstPagination').removeClass('d-none');
-
     let request = $.ajax({
         url: cdnUrl + "/api/ajax/product-filter-ajax",
         method: "POST",
@@ -157,7 +151,7 @@ function requestData() {
     request.done(function (response) {
         let arrRes = $.parseJSON(response);
         if (arrRes.status === 1) {
-            $('#firstPagination').show();
+            $('#pagination').show();
             var result = "";
             for (let i = 0; i < arrRes.product.length; i++) {
                 result += '<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0"><div class="text-center row px-0"><div class="col-6 col-sm-6 col-md-12"><img src="' + imgUrl + '/media/uploads/' + arrRes.product[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-3 heightNameProduct">' + arrRes.product[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.product[i].trade_mark + '</p><p><b>Giá: </b>' + arrRes.product[i].selling_price + ' VNĐ</p><a href="#" class="btn btn-danger">Mua ngay</a></div></div></div>';
@@ -212,8 +206,8 @@ function requestData() {
                 $('html').scrollTop(0);
             });
         } else {
-            var result = '<div class="text-center col-12"><h1 class="mainColor"><i class="fab fa-sistrix"></i></h1><h5 class="mainColor"><i>Không có sản phẩm để hiển thị</i></h5><h5 class="mainColor"><i>Bạn hãy thử tìm kiếm lại!</i></h5></div>';
-            $('#firstPagination').hide();
+            var result = '<div class="text-center col-12 p-0"><h1 class="mainColor"><i class="fab fa-sistrix"></i></h1><h5 class="mainColor"><i>Không có sản phẩm để hiển thị</i></h5><h5 class="mainColor"><i>Bạn hãy thử tìm kiếm lại!</i></h5></div>';
+            $('#pagination').hide();
             $("#result").html(result);
         }
     });

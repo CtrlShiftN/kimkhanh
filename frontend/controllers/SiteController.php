@@ -14,7 +14,6 @@ use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\BaseObject;
 use yii\base\InvalidArgumentException;
-use yii\data\Pagination;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -112,6 +111,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+
     public function actionLogin()
     {
         $this->layout = 'empty';

@@ -91,8 +91,9 @@ class AjaxController extends ActiveController
                 $rows->orderBy("updated DESC");
             }
         }
-
-        $rows->andWhere(['between', 'selling_price', $priceFrom, $priceTo]);
+        if (!empty($priceFrom) && !empty($priceTo)) {
+            $rows->andWhere(['between', 'selling_price', $priceFrom, $priceTo]);
+        }
 
         $count = count($rows->all());
 
