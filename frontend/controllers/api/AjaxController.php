@@ -57,8 +57,8 @@ class AjaxController extends ActiveController
         $getTrademark = ParamHelper::getParamValue("trademark");
         $getCategory = ParamHelper::getParamValue("category");
         $sort = ParamHelper::getParamValue('sort');
-        $priceFrom = ParamHelper::getParamValue('priceFrom');
-        $priceTo = ParamHelper::getParamValue('priceTo');
+        $priceFrom = intval(ParamHelper::getParamValue('priceFrom'));
+        $priceTo = intval(ParamHelper::getParamValue('priceTo'));
         $getCursor = ParamHelper::getParamValue('cursor');
 
         $rows = (new \yii\db\Query())->from('product');
@@ -92,13 +92,7 @@ class AjaxController extends ActiveController
             }
         }
 
-        if (!empty($priceFrom) && !empty($priceTo)) {
-            $rows->andWhere(['between', 'selling_price', $priceFrom, $priceTo]);
-        } elseif (!empty($priceFrom) && empty($priceTo)) {
-            $rows->andWhere(['>', 'selling_price', $priceFrom]);
-        } elseif (empty($priceFrom) && !empty($priceTo)) {
-            $rows->andWhere(['<', 'selling_price', $priceFrom]);
-        }
+        $rows->andWhere(['between', 'selling_price', $priceFrom, $priceTo]);
 
         $count = count($rows->all());
 

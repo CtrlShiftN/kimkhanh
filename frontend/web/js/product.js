@@ -77,36 +77,50 @@ $("#btnSortByDate").click(function () {
 });
 
 //only number can press into text-input
-$("#from, #to").keypress(function (e) {
-    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-        return false;
-    }
-});
+// $("#from, #to").keypress(function () {
+//     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+//         return false;
+//     }
+// });
+
+//get value from range input & set them for rangeNumberInput to show price
+(function () {
+    let rangeSlide = document.querySelectorAll("input[class=rangeInput]");
+    let numberSlide = document.querySelectorAll(".rangeNumberInput input[type=text]");
+    rangeSlide.forEach(function (el) {
+        el.oninput = function () {
+            let tmp;
+            let slide1 = parseFloat(rangeSlide[0].value);
+            let slide2 = parseFloat(rangeSlide[1].value);
+            if (slide1 > slide2) {
+                tmp = slide2;
+                slide2 = slide1;
+                slide1 = tmp;
+            }
+            numberSlide[0].value = slide1 + ' triệu VNĐ';
+            numberSlide[1].value = slide2 + ' triệu VNĐ';
+        }
+    });
+    numberSlide.forEach(function (el) {
+        el.oninput = function () {
+            let number1 = parseFloat(numberSlide[0].value);
+            let number2 = parseFloat(numberSlide[1].value);
+            if (number1 > number2) {
+                let tmp = number1;
+                numberSlide[0].value = number2;
+                numberSlide[1].value = tmp;
+            }
+            rangeSlide[0].value = number1;
+            rangeSlide[1].value = number2;
+        }
+    });
+})();
 
 //sort by price range
 $("#btnPriceRange").click(function () {
-    if ($("#from").val().trim() === '' && $("#to").val().trim() === '') {
-        $("#notifyPrice").removeClass("d-none");
-    } else if ($("#from").val().trim() != '' && $("#to").val().trim() != '') {
-        if ($("#from").val().trim() < $("#to").val().trim()) {
-            $("#notifyPrice").removeClass("d-none");
-        } else {
-            priceFrom = $("#from").val().trim();
-            priceTo = $("#to").val().trim();
-            $("#notifyPrice").addClass("d-none");
-            requestData();
-        }
-    } else if ($("#from").val().trim() != '' && $("#to").val().trim() === '') {
-        priceFrom = $("#from").val().trim();
-        priceTo = null;
-        $("#notifyPrice").addClass("d-none");
-        requestData();
-    } else if ($("#from").val().trim() === '' && $("#to").val().trim() != '') {
-        priceTo = $("#to").val().trim();
-        priceFrom = null;
-        $("#notifyPrice").addClass("d-none");
-        requestData();
-    }
+    priceFrom = parseInt($("#from").val()) * 1000000;
+    priceTo = parseInt($("#to").val()) * 1000000;
+    requestData();
 });
 
 //search with information from input
@@ -242,3 +256,4 @@ function go_to_page(page_num) {
     $('#current_page').val(page_num);
     requestData();
 }
+

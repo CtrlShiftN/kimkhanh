@@ -12,81 +12,7 @@ $imgUrl = Yii::$app->params['common'];
 $this->title = "Shop";
 $type = array_column($type, 'type');
 ?>
-<script src="<?= $cdnUrl ?>/js/jquery.twbsPagination.min.js" type="text/javascript"></script>
-<style>
-    .bgFilter {
-        background-color: #ececec;
-    }
-
-    .bgMainColor {
-        background-color: #e51b23;
-    }
-
-    .mainColor {
-        color: #727272;
-    }
-
-    .w-img {
-        width: 100%;
-    }
-
-    @media (min-width: 450px) {
-        .w-img {
-            width: 210px !important;
-            height: 210px !important;
-        }
-    }
-
-    @media (min-width: 450px) {
-        .heightNameProduct {
-            box-sizing: border-box;
-            height: 60px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        #filter {
-            height: 450px;
-            overflow: scroll;
-            background-color: #f6f6f6;
-            padding: 10px;
-        }
-    }
-
-    .p-active {
-        border-color: #dc3545 !important;
-    }
-
-    #pagination .p-active a {
-        color: #fff !important;
-    }
-
-    .p-inactive {
-        cursor: not-allowed;
-    }
-
-    .p-inactive a, .p-inactive span {
-        color: #dee2e6 !important;
-        border-color: #dee2e6 !important;
-    }
-
-    .page_link, .previous_link, .next_link,
-    .last_link, .first_link {
-        padding: 8px 16px;
-        border: 1px solid #dee2e6;
-        text-decoration: none !important;
-        color: #000;
-    }
-
-    .page_link:hover, .previous_link:hover, .next_link:hover,
-    .last_link:hover, .first_link:hover {
-        color: #000;
-    }
-
-    #page_navigation {
-        line-height: 42px;
-    }
-</style>
+<link rel="stylesheet" href="<?= $cdnUrl ?>/css/shop.css" type="text/css">
 <div class="container px-0">
     <div class="row">
         <!--tools-->
@@ -194,13 +120,17 @@ $type = array_column($type, 'type');
                     </div>
                 </div>
             </div>
-            <div class="col-12 my-2">
-                <h4 id="price">Khoảng giá</h4>
-                <input id="from" type="text" class="form-control" placeholder="&#8363; TỪ">
-                <input id="to" type="text" class="form-control my-2" placeholder="&#8363; ĐẾN">
-                <div class="text-center text-danger d-none mb-2" id="notifyPrice"><small>Vui lòng điền khoảng giá
-                        phù hợp</small></div>
-                <button type="button" class="btn btn-danger w-100" id="btnPriceRange">Áp dụng</button>
+            <div class="col-12 my-2 mx-0 row">
+                <h4 id="price" class="col-12">Khoảng giá</h4>
+                <span class="rangeNumberInput col-12 row">
+                    <input id="from" type='text' class="form-control border-0 col-6 col-md-12 col-lg-6 pl-0" placeholder="&#8363; TỪ" disabled="disabled">
+                    <input id="to" type='text' class="form-control border-0 col-6 col-md-12 col-lg-6 pl-0" placeholder="&#8363; ĐẾN" disabled="disabled">
+                </span>
+                <div class="sliderId pb-3 pt-2 col-12 px-0">
+                    <input value="0" min="0" max="100" step=".1" type="range"class='rangeInput'>
+                    <input value="50" min="0" max="100" step=".1" type="range"class='rangeInput'>
+                </div>
+                <button type="button" class="btn btn-danger w-100 my-2" id="btnPriceRange">Áp dụng</button>
             </div>
             <div class="col-12 p-0 mt-3">
                 <button type="button" class="btn btn-danger w-100" id="btnDeleteFilter">Xóa bộ lọc</button>
@@ -236,7 +166,7 @@ $type = array_column($type, 'type');
                             <div class="cardBody col-6 col-md-12 my-auto">
                                 <h5 class="mx-md-2 heightNameProduct"><?= $value['name'] ?></h5>
                                 <p class="m-0"><b>Hãng:</b> <?= $value['trade_mark'] ?></p>
-                                <p><b>Giá:</b> <?= $value['selling_price'] ?><sup> VNĐ</sup></p>
+                                <p><b>Giá:</b> <?= $value['selling_price'] ?><sup>&#8363;</sup></p>
                                 <a href="#" class="btn btn-danger">Mua ngay</a>
                             </div>
                         </div>
