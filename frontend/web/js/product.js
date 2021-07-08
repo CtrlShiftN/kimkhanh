@@ -76,12 +76,6 @@ $("#btnSortByDate").click(function () {
     requestData();
 });
 
-//only number can press into text-input
-// $("#from, #to").keypress(function () {
-//     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-//         return false;
-//     }
-// });
 
 //get value from range input & set them for rangeNumberInput to show price
 (function () {
