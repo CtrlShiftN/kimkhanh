@@ -6,6 +6,7 @@ use frontend\models\Question;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
+use yii\base\BaseObject;
 use yii\base\InvalidArgumentException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -104,6 +105,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+
     public function actionLogin()
     {
         $this->layout = 'empty';
@@ -144,10 +146,10 @@ class SiteController extends Controller
     {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            if ($model -> saveContactData()){
+            if ($model->saveContactData()) {
                 Yii::$app->session->setFlash('success', "Cảm ơn quý khách đã gửi phản hồi. Chúng tôi sẽ sớm hồi âm lại với quý khách");
             } else {
-                Yii::$app->session->setFlash('error',"Chưa thể gửi phản hồi. Xin quý khách vui lòng thử lại.");
+                Yii::$app->session->setFlash('error', "Chưa thể gửi phản hồi. Xin quý khách vui lòng thử lại.");
             }
             return $this->refresh();
         }
@@ -286,10 +288,6 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-//    public function actionFaq()
-//    {
-//        return $this->render('faq');
-//    }
     public function actionFaq()
     {
         $arrQuestion = (new Question())->getQuestion();

@@ -20,6 +20,11 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
     <?= $this->render('_head') ?>
+    <style>
+        *{
+            font-family: Roboto, sans-serif;
+        }
+    </style>
 </head>
 <body>
 <?php $this->beginBody() ?>
