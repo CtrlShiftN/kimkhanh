@@ -7,10 +7,6 @@ use common\components\helpers\HeaderHelper;
 use common\components\helpers\ParamHelper;
 use common\components\SystemConstant;
 use Yii;
-use yii\base\BaseObject;
-use yii\data\Pagination;
-use yii\db\conditions\InCondition;
-use yii\db\conditions\OrCondition;
 use yii\rest\ActiveController;
 
 class AjaxController extends ActiveController
@@ -91,8 +87,11 @@ class AjaxController extends ActiveController
                 $rows->orderBy("updated DESC");
             }
         }
+
         if (!empty($priceFrom) && !empty($priceTo)) {
             $rows->andWhere(['between', 'selling_price', $priceFrom, $priceTo]);
+        } else if (empty($priceFrom) && !empty($priceTo)) {
+            $rows->andWhere(['<', 'selling_price', $priceTo]);
         }
 
         $count = count($rows->all());

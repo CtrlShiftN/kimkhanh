@@ -2,63 +2,13 @@
 
 namespace frontend\controllers;
 
-use common\components\helpers\ParamHelper;
-use common\components\SystemConstant;
 use frontend\models\CategorySearch;
-use frontend\models\ProductSearch;
 use frontend\models\TrademarkSearch;
-use yii\base\BaseObject;
-use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
 class ShopController extends \yii\web\Controller
 {
-    public function actionIndex()
-    {
-        $searchModelProduct = new ProductSearch();
-        $searchModelCategory = new CategorySearch();
-        $searchModelTrademark = new TrademarkSearch();
-
-        $cursor = ParamHelper::getParamValue('page');
-        $arrProduct = ["Camera", "Thang máy", "Bộ điều khiển"];
-        $arrType = (new CategorySearch())->getAllType();
-        //show representative product when entering page
-        $arrAllProduct = $searchModelProduct->getAllProduct();
-
-        $count = count($arrAllProduct->asArray()->all());
-        $pages = new Pagination(['totalCount' => $arrAllProduct->count(), 'defaultPageSize' => SystemConstant::LIMIT_PER_PAGE]);
-        $arrAllProduct = $arrAllProduct->offset($cursor)
-            ->limit(SystemConstant::LIMIT_PER_PAGE)
-            ->asArray()
-            ->all();
-        //get type of product
-        $arrCameraType = $searchModelCategory->getCameraTypeProduct();
-        $arrElevatorType = $searchModelCategory->getElevatorTypeProduct();
-        $arrRecorderType = $searchModelCategory->getRecorderTypeProduct();
-        //get trademark of product
-        $arrTrademark = $searchModelTrademark->getAllTrademark();
-        $arrTrademarkOfCamera = $searchModelTrademark->getTrademarkOfCamera();
-        $arrTrademarkOfElevator = $searchModelTrademark->getTrademarkOfElevator();
-        $arrTrademarkOfRecorder = $searchModelTrademark->getTrademarkOfRecorder();
-        return $this->render('index', [
-            'arrProduct' => $arrProduct,
-
-            'type' => $arrType,
-            'arrAllProduct' => $arrAllProduct,
-            'pages' => $pages,
-            'count' => $count,
-            'arrCameraType' => $arrCameraType,
-            'arrElevatorType' => $arrElevatorType,
-            'arrRecorderType' => $arrRecorderType,
-
-            'arrTrademark' => $arrTrademark,
-            'arrTrademarkOfCamera' => $arrTrademarkOfCamera,
-            'arrTrademarkOfElevator' => $arrTrademarkOfElevator,
-            'arrTrademarkOfRecorder' => $arrTrademarkOfRecorder
-        ]);
-    }
-
     /**
      * @return array[]
      */
@@ -95,6 +45,15 @@ class ShopController extends \yii\web\Controller
         ];
     }
 
+    /**
+     * @return string
+     */
+    public function actionError()
+    {
+        $this->layout = 'error';
+        return $this->render('error');
+    }
+
     public function beforeAction($action)
     {
         $this->layout = 'v1';
@@ -104,8 +63,38 @@ class ShopController extends \yii\web\Controller
         return true; // or false to not run the action
     }
 
-    public function actionShop()
+    /**
+     * @return string
+     */
+    public function actionIndex()
     {
+        $searchModelCategory = new CategorySearch();
+        $searchModelTrademark = new TrademarkSearch();
 
+        $arrProduct = ["Camera", "Thang máy", "Bộ điều khiển"];
+        $arrType = (new CategorySearch())->getAllType();
+
+        //get type of product
+        $arrCameraType = $searchModelCategory->getCameraTypeProduct();
+        $arrElevatorType = $searchModelCategory->getElevatorTypeProduct();
+        $arrRecorderType = $searchModelCategory->getRecorderTypeProduct();
+        //get trademark of product
+        $arrTrademark = $searchModelTrademark->getAllTrademark();
+        $arrTrademarkOfCamera = $searchModelTrademark->getTrademarkOfCamera();
+        $arrTrademarkOfElevator = $searchModelTrademark->getTrademarkOfElevator();
+        $arrTrademarkOfRecorder = $searchModelTrademark->getTrademarkOfRecorder();
+        return $this->render('index', [
+            'arrProduct' => $arrProduct,
+
+            'type' => $arrType,
+            'arrCameraType' => $arrCameraType,
+            'arrElevatorType' => $arrElevatorType,
+            'arrRecorderType' => $arrRecorderType,
+
+            'arrTrademark' => $arrTrademark,
+            'arrTrademarkOfCamera' => $arrTrademarkOfCamera,
+            'arrTrademarkOfElevator' => $arrTrademarkOfElevator,
+            'arrTrademarkOfRecorder' => $arrTrademarkOfRecorder
+        ]);
     }
 }

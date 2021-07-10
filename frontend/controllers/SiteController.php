@@ -2,14 +2,8 @@
 
 namespace frontend\controllers;
 
-use common\components\helpers\ParamHelper;
-use common\components\SystemConstant;
-use common\models\Category;
-use frontend\models\CategorySearch;
-use frontend\models\ProductSearch;
 use frontend\models\Question;
 use frontend\models\ResendVerificationEmailForm;
-use frontend\models\TrademarkSearch;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\BaseObject;

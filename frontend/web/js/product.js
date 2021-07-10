@@ -52,8 +52,10 @@ $("#btnDeleteFilter").click(function (e) {
     e.preventDefault();
     trademark = type = category = sort = priceTo = priceFrom = cursor = keyword = null;
     $("#keywordProductSearch").val('');
-    $("#from").val('');
-    $("#to").val('');
+    $("#from").val('0 triệu VNĐ');
+    $("#to").val('100 triệu VNĐ');
+    $('.fromRangeInput').val(0);
+    $('.toRangeInput').val(100);
     checkboxes.prop("checked", false);
     $('#current_page').val(0);
     requestData();
@@ -76,7 +78,7 @@ $("#btnSortByDate").click(function () {
 
 //get value from range input & set them for rangeNumberInput to show price
 (function () {
-    let rangeSlide = document.querySelectorAll("input[class=rangeInput]");
+    let rangeSlide = document.querySelectorAll(".sliderId input[type=range]");
     let numberSlide = document.querySelectorAll(".rangeNumberInput input[type=text]");
     rangeSlide.forEach(function (el) {
         el.oninput = function () {
@@ -109,9 +111,8 @@ $("#btnSortByDate").click(function () {
 
 //sort by price range
 $("#btnPriceRange").click(function () {
-    priceFrom = parseFloat($("#from").val()) * 1000000;
-    priceTo = parseFloat($("#to").val()) * 1000000;
-    console.log([priceFrom, priceTo])
+    priceFrom = parseFloat($(".fromRangeInput").val()) * 1000000;
+    priceTo = parseFloat($(".toRangeInput").val()) * 1000000;
     requestData();
 });
 
@@ -154,9 +155,12 @@ function requestData() {
             $('#pagination').show();
             var result = "";
             for (let i = 0; i < arrRes.product.length; i++) {
-                result += '<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0"><div class="text-center row px-0"><div class="col-6 col-sm-6 col-md-12"><img src="' + imgUrl + '/media/uploads/' + arrRes.product[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-3 heightNameProduct">' + arrRes.product[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.product[i].trade_mark + '</p><p><b>Giá: </b>' + arrRes.product[i].selling_price + ' VNĐ</p><a href="#" class="btn btn-danger">Mua ngay</a></div></div></div>';
+                //format price
+                var price = Intl.NumberFormat(['ban', 'id']).format(arrRes.product[i].selling_price);
+                result += '<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0"><div class="text-center row px-0"><div class="col-6 col-sm-6 col-md-12"><img src="' + imgUrl + '/media/uploads/' + arrRes.product[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-3 heightNameProduct">' + arrRes.product[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.product[i].trade_mark + '</p><p><b>Giá: </b>' + price + ' VNĐ</p><a href="#" class="btn btn-danger">Mua ngay</a></div></div></div>';
             }
             $("#result").html(result);
+            //show pagination
             var number_of_items = arrRes.count;
             var number_of_pages = Math.ceil(number_of_items / show_per_page);
             jQuery(document).ready(function () {
@@ -170,6 +174,7 @@ function requestData() {
                 $('#page_navigation').html(navigation_html);
                 var active = parseInt($('#current_page').val()) + 1;
                 $('#page' + active + '').addClass('p-active bg-danger text-light');
+                //hide button when first or last page is active
                 if (active == 1) {
                     $('.first_link, .previous_link').css({
                         'color': '#dee2e6',
@@ -182,6 +187,11 @@ function requestData() {
                         'border-color': '#dee2e6',
                         'cursor': 'not-allowed'
                     });
+                }
+                if (number_of_pages == 1) {
+                    $('#page_navigation').hide();
+                } else {
+                    $('#page_navigation').show();
                 }
                 if (number_of_pages > 5) {
                     if (active < 4) {
@@ -217,7 +227,9 @@ function requestData() {
 }
 
 function first() {
-    go_to_page(0);
+    if ($('#current_page').val() != 0) {
+        go_to_page(0);
+    }
 }
 
 function previous() {
@@ -236,7 +248,9 @@ function next() {
 
 function last() {
     let number_of_pages = $("#page_navigation").children(".page_link").length;
-    go_to_page(number_of_pages - 1);
+    if ($('#current_page').val() != number_of_pages - 1) {
+        go_to_page(number_of_pages - 1);
+    }
 }
 
 function go_to_page(page_num) {
