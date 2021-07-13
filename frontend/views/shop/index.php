@@ -145,8 +145,7 @@ $type = array_column($type, 'type');
             </div>
         </div>
         <input type='hidden' id='current_page' class="w-100">
-        <div id="result" class="w-100 row m-0 p-0 my-3">
-        </div>
+        <div id="result" class="w-100 row m-0 p-0 my-3"></div>
         <div class="mt-2 text-center w-100" id="pagination">
             <input type='hidden' id='current_page'>
             <div id='page_navigation'></div>

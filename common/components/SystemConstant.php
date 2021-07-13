@@ -6,4 +6,5 @@ class SystemConstant
     const API_SUCCESS_STATUS = 1;
     const API_UNSUCCESS_STATUS = 0;
     const LIMIT_PER_PAGE = 12;
+    const LIMIT_OTHER_PRODUCT = 4;
 }

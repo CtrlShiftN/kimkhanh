@@ -157,7 +157,7 @@ function requestData() {
             for (let i = 0; i < arrRes.product.length; i++) {
                 //format price
                 var price = Intl.NumberFormat(['ban', 'id']).format(arrRes.product[i].selling_price);
-                result += '<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0"><div class="text-center row px-0"><div class="col-6 col-sm-6 col-md-12"><img src="' + imgUrl + '/media/uploads/' + arrRes.product[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-3 heightNameProduct">' + arrRes.product[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.product[i].trade_mark + '</p><p><b>Giá: </b>' + price + ' VNĐ</p><a href="#" class="btn btn-danger">Mua ngay</a></div></div></div>';
+                result += '<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 w-100 pb-4 mx-auto mx-sm-0"><div class="text-center row px-0"><div class="col-6 col-sm-6 col-md-12"><img src="' + imgUrl + '/' + arrRes.product[i].avatar + '" class="w-img"></div><div class="cardBody col-6 col-md-12 my-auto"><h5 class="mx-3 heightNameProduct">' + arrRes.product[i].name + '</h5><p class="m-0"><b>Hãng: </b>' + arrRes.product[i].trade_mark + '</p><p><b>Giá: </b>' + price + ' VNĐ</p><a href="' + cdnUrl + '/shop/detail?detail='+ arrRes.product[i].id +'" class="btn btn-danger">Mua ngay</a></div></div></div>';
             }
             $("#result").html(result);
             //show pagination
