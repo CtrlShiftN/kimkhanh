@@ -113,18 +113,13 @@ class ShopController extends \yii\web\Controller
                 $arrProduct[$key] = $value;
                 $arrProduct[$key]['id'] = CryptHelper::encryptString($value['id']);
             }
-            if ($productDetail['type'] == 1){
-                $type = 'Camera';
-            } else if ($productDetail['type'] == 2){
-                $type = 'Thang máy';
-            } else {
-                $type = 'Bộ đầu ghi';
-            }
+            $type = ['Camera','Thang máy','Bộ đầu ghi'];
+
             if(!empty($productDetail)){
                 return $this->render('detail',[
                     'productDetail' => $productDetail,
                     'categoryType' => $categoryType,
-                    'type' => $type,
+                    'type' => $type[$productDetail['type'] - 1],
                     'arrProduct' => $arrProduct
                 ]);
             } else {

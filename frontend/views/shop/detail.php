@@ -11,9 +11,6 @@ $this->title = "Chi tiết sản phẩm";
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/swiper-bundle.min.css" type="text/css">
 <script src="<?= $cdnUrl ?>/js/easyzoom.js" type="text/javascript"></script>
 <script src="<?= $cdnUrl ?>/js/swiper-bundle.min.js" type="text/javascript"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
 <?php $imgArr = explode(',', $productDetail['images']); ?>
 <div class="container">
     <div class="row py-3">
@@ -45,8 +42,8 @@ $this->title = "Chi tiết sản phẩm";
             </div>
         </div>
         <div class="col-12 col-md-7">
-            <h3 class="py-2 m-0 text-bold mulishFont"><?= $productDetail['name'] ?></h3>
-            <h3 class="bgGrayColor p-3 text-danger my-3 mulishFont"><?= number_format($productDetail['selling_price']) ?>
+            <h3 class="py-2 m-0 text-bold"><?= $productDetail['name'] ?></h3>
+            <h3 class="bgGrayColor p-3 text-danger my-3"><?= number_format($productDetail['selling_price']) ?>
                 VNĐ</h3>
             <div class="row pt-3 pb-4 border-bottom">
                 <!--promotion-->
@@ -92,17 +89,17 @@ $this->title = "Chi tiết sản phẩm";
                 <div class="col-12 row my-2 mx-0">
                     <div class="col-12 col-sm-6 col-md-12 col-lg-6 text-center p-0">
                         <a class="btn p-3 btn-light w-100 border-danger" href="#" id="btnAdd"><i
-                                class="fas fa-cart-plus text-danger"></i> Thêm vào giỏ hàng</a>
+                                    class="fas fa-cart-plus text-danger"></i> Thêm vào giỏ hàng</a>
                     </div>
                     <div class="col-12 col-sm-6 col-md-12 col-lg-6 mt-md-2 mt-lg-0 p-0 text-center">
                         <a class="btn p-3 btn-danger text-light w-100" href="#" id="btnBuyNow"><i
-                                class="fas fa-dollar-sign text-light"></i> Mua ngay</a>
+                                    class="fas fa-dollar-sign text-light"></i> Mua ngay</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 py-3">
                 <span class="text-bold"><img src="<?= $cdnUrl ?>/img/favicon.ico"> MinhKhanh cam kết: </span> <i
-                    class="notifyColor mt-md-2 mt-lg-2 mt-xl-0 ml-2">3 Ngày trả hàng / Hoàn tiền</i>
+                        class="notifyColor mt-md-2 mt-lg-2 mt-xl-0 ml-2">3 Ngày trả hàng / Hoàn tiền</i>
             </div>
         </div>
     </div>
@@ -127,25 +124,24 @@ $this->title = "Chi tiết sản phẩm";
         <div class="col-12">
             <h3 class="text-uppercase py-3 px-2 m-0 text-center bgGrayColor mb-3">sản phẩm tương tự</h3>
         </div>
-        <?php foreach ($arrProduct
-
-        as $key => $value) : ?>
-        <div class="col-6 col-md-4 col-lg-3 w-100 pb-4">
-            <div class="text-center p-2 m-0 border bgGrayColor">
-                <a href="<?= $cdnUrl ?>/shop/detail?detail=<?= $arrProduct[$key]['id'] ?>"
-                   class="text-decoration-none linkOtherProduct">
-                    <img src="<?= $imgUrl ?>/<?= $arrProduct[$key]['avatar'] ?>" class="w-100">
-                    <div class="cardBody my-auto border-top py-2">
-                        <h5 class="mb-0"><?= $type ?></h5>
-                        <h5 class="mb-0 crop"><?= $arrProduct[$key]['code'] ?></h5>
-                        <h5 class="text-danger text-l"><?= number_format($arrProduct[$key]['selling_price']) ?> VNĐ</h5>
-                        <a href="<?= $cdnUrl ?>/shop/detail?detail=<?= $arrProduct[$key]['id'] ?>"
-                           class="btn btn-danger">Xem thêm</a>
-                </a>
+        <?php foreach ($arrProduct as $key => $value) : ?>
+            <div class="col-6 col-md-4 col-lg-3 w-100 pb-4">
+                <div class="text-center p-2 m-0 border bgGrayColor">
+                    <a href="<?= $cdnUrl ?>/shop/detail?detail=<?= $arrProduct[$key]['id'] ?>"
+                       class="text-decoration-none linkOtherProduct">
+                        <img src="<?= $imgUrl ?>/<?= $arrProduct[$key]['avatar'] ?>" class="w-100">
+                        <div class="cardBody my-auto border-top py-2">
+                            <h5 class="mb-0"><?= $type ?></h5>
+                            <h5 class="mb-0 crop"><?= $arrProduct[$key]['code'] ?></h5>
+                            <h5 class="text-danger text-l"><?= number_format($arrProduct[$key]['selling_price']) ?>
+                                VNĐ</h5>
+                            <a href="<?= $cdnUrl ?>/shop/detail?detail=<?= $arrProduct[$key]['id'] ?>"
+                               class="btn btn-danger">Xem thêm</a>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
+        <?php endforeach; ?>
     </div>
-    <?php endforeach; ?>
-</div>
 </div>
 <script src="<?= $cdnUrl ?>/js/productDetail.js" type="text/javascript"></script>
