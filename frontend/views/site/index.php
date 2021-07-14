@@ -73,7 +73,7 @@ $this->title = 'Minh Khánh Group';
                             class="fas fa-check pr-2 slideIcon"></i>TIỆN LỢI</h3>
             </li>
             <li class="pl-5 ml-5">
-                <a href="<?= $cdnUrl ?>/site/shop"
+                <a href="<?= $cdnUrl ?>/shop/index"
                    class="animate__animated animate__flipInY btnSlide btn btn-sm animated-button thar-three">Xem
                     thêm</a>
             </li>
@@ -280,7 +280,7 @@ $this->title = 'Minh Khánh Group';
     </div>
     <div class="col-4 m-0 p-0"></div>
     <div class="col-4 m-0 p-0">
-        <a href="<?= $cdnUrl ?>/site/shop" class="animated-button thar-two">Xem thêm</a>
+        <a href="<?= $cdnUrl ?>/shop/index" class="animated-button thar-two">Xem thêm</a>
     </div>
     <div class="col-4 m-0 p-0"></div>
 </div>
