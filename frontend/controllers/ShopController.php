@@ -129,4 +129,8 @@ class ShopController extends \yii\web\Controller
             return $this->redirect('index');
         }
     }
+
+    public function actionCart() {
+
+    }
 }

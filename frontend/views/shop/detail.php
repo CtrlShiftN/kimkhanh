@@ -11,9 +11,27 @@ $this->title = "Chi tiết sản phẩm";
 <link rel="stylesheet" href="<?= $cdnUrl ?>/css/swiper-bundle.min.css" type="text/css">
 <script src="<?= $cdnUrl ?>/js/easyzoom.js" type="text/javascript"></script>
 <script src="<?= $cdnUrl ?>/js/swiper-bundle.min.js" type="text/javascript"></script>
+<style>
+    .cart {
+        box-sizing: border-box;
+        width: 52px;
+        height: 52px;
+        padding: 8px;
+        border-radius: 50%;
+    }
+</style>
 <?php $imgArr = explode(',', $productDetail['images']); ?>
 <div class="container">
-    <div class="row py-3">
+    <div class="row pb-3">
+        <div class="col-12 text-right pb-3 border-bottom mb-3 form-inline">
+            <div class="alert alert-danger alert-dismissible fade show my-auto ml-auto" role="alert">
+                Nhấp vào giỏ hàng để kiểm tra hàng bạn đã thêm!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <a href="#" class="btn btn-danger p-0 d-flex align-items-center justify-content-center cart ml-auto"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        </div>
         <div class="col-12 col-md-5">
             <div class="product__carousel">
                 <div class="swiper-container gallery-top h-50">
