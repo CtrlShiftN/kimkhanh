@@ -2,7 +2,9 @@
 
 namespace frontend\controllers;
 
+use common\components\encrypt\CryptHelper;
 use frontend\models\CategorySearch;
+use frontend\models\ProductSearch;
 use frontend\models\TrademarkSearch;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -96,5 +98,39 @@ class ShopController extends \yii\web\Controller
             'arrTrademarkOfElevator' => $arrTrademarkOfElevator,
             'arrTrademarkOfRecorder' => $arrTrademarkOfRecorder
         ]);
+    }
+
+    public function actionDetail() {
+        $searchModelProduct = new ProductSearch();
+        $searchModelCategory = new CategorySearch();
+        if(isset($_REQUEST['detail'])){
+            $detailID = CryptHelper::decryptString($_REQUEST['detail']);
+            $productDetail = $searchModelProduct->getProductById($detailID);
+            $categoryType = $searchModelCategory->getTypeByCategoryId($productDetail['category_id']);
+            $productOther = $searchModelProduct->getProductOther($detailID,$productDetail['type']);
+            $arrProduct = [];
+            foreach ($productOther as $key => $value) {
+                $arrProduct[$key] = $value;
+                $arrProduct[$key]['id'] = CryptHelper::encryptString($value['id']);
+            }
+            $type = ['Camera','Thang máy','Bộ đầu ghi'];
+
+            if(!empty($productDetail)){
+                return $this->render('detail',[
+                    'productDetail' => $productDetail,
+                    'categoryType' => $categoryType,
+                    'type' => $type[$productDetail['type'] - 1],
+                    'arrProduct' => $arrProduct
+                ]);
+            } else {
+                return $this->redirect('index');
+            }
+        } else {
+            return $this->redirect('index');
+        }
+    }
+
+    public function actionCart() {
+
     }
 }

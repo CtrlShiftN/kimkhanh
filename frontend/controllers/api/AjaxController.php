@@ -94,8 +94,6 @@ class AjaxController extends ActiveController
             $rows->andWhere(['<', 'selling_price', $priceTo]);
         }
 
-        $count = count($rows->all());
-
         if (!empty($getCursor)) {
             $limit = SystemConstant::LIMIT_PER_PAGE;
             $offset = intval($getCursor) * $limit;
@@ -106,6 +104,12 @@ class AjaxController extends ActiveController
 
         $result = $rows->all();
 
+        $arrProduct = [];
+        foreach ($result as $key => $value) {
+            $arrProduct[$key] = $value;
+            $arrProduct[$key]['id'] = CryptHelper::encryptString($value['id']);
+        }
+
         if (empty($result)) {
             $response = [
                 'status' => SystemConstant::API_UNSUCCESS_STATUS,
@@ -114,9 +118,7 @@ class AjaxController extends ActiveController
         } else {
             $response = [
                 'status' => SystemConstant::API_SUCCESS_STATUS,
-                'product' => $result,
-                'count' => $count,
-                'sql' => $rows->createCommand()->rawSql
+                'product' => $arrProduct
             ];
         }
         echo json_encode($response);
